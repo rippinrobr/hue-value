@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Monochrome Palette</title>
+<title>Value Mix</title>
 <meta name="description" content="Turn a reference photo into a value map and paint-mixing sheet for one-color studies.">
 <meta name="theme-color" content="#2c3c96">
 <link rel="manifest" href="manifest.webmanifest">
@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Monochrome Palette">
+<meta name="apple-mobile-web-app-title" content="Value Mix">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,7 +167,7 @@ textarea#fallback{width:100%;height:160px;font:12px var(--mono);background:var(-
 
 <div class="wrap">
   <header>
-    <h1>Monochrome Palette</h1>
+    <h1>Value Mix</h1>
     <p class="lede">Load a reference photo. The app groups it into tones or colors, then tells you how to mix each one from your palette: one color for a monochromatic study, or a classic limited palette.</p>
     <div class="scale" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
   </header>
@@ -1015,7 +1015,7 @@ async function buildSheet(){
   });
   y+=24;
   g.fillStyle=C.line;g.fillRect(PAD,y,CW,2);y+=22;
-  font(400,18,F.b);y=wrap('Ratios are estimates from a paint-mixing model. Brands vary, so mix the first tone, test it on a card next to your reference, and adjust. Made with Monochrome Palette.',PAD,y,CW,26,C.muted);
+  font(400,18,F.b);y=wrap('Ratios are estimates from a paint-mixing model. Brands vary, so mix the first tone, test it on a card next to your reference, and adjust. Made with Value Mix.',PAD,y,CW,26,C.muted);
 
   const H=Math.ceil(y+PAD),out=document.createElement('canvas');out.width=SW;out.height=H;
   out.getContext('2d').drawImage(cv,0,0);

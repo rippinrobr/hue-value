@@ -1,6 +1,6 @@
-# Monochrome Palette
+# Value Mix
 
-A small web app for planning one-color (monochrome) paintings in water-mixable oil or acrylic.
+A small web app for planning value studies and limited-palette paintings in water-mixable oil or acrylic.
 
 Load a reference photo and it will:
 
@@ -24,4 +24,4 @@ Ratios come from a Kubelka–Munk paint-mixing model with typical pigment data. 
 
 ## Updating
 
-Edit `index.html`, then change `VERSION` in `sw.js` (for example `monochrome-palette-v3`) so installed copies pick up the change.
+Edit `index.html`, then change `VERSION` in `sw.js` (for example `value-mix-v11`) so installed copies pick up the change.

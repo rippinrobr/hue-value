@@ -1,6 +1,6 @@
 {
-  "name": "Monochrome Palette",
-  "short_name": "Monochrome Palette",
+  "name": "Value Mix",
+  "short_name": "Value Mix",
   "description": "Turn a reference photo into a value map and paint-mixing sheet for one-color studies.",
   "start_url": "./",
   "scope": "./",
