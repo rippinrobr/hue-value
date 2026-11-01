@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: a studio worksheet. Photo, controls and value maps on the left; the mixing sheet on the right. Stacks to one column on phones. */
+/* Layout: one working column on phones (picture, palette, scale, recipes); on wide screens the picture column stays put while recipes and settings scroll beside it. */
 :root{
   --bg:#e9ebe9; --surface:#f7f8f6; --sunk:#dfe2e0; --fg:#1b1d20; --muted:#596067; --line:#c9cecb;
   --accent:#2c3c96; --accent-ink:#ffffff; --warn:#9a4a12;
@@ -34,58 +34,120 @@
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);
-  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:20px 48px}
-.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
-header{display:flex;flex-direction:column;gap:6px}
-h1{font:700 clamp(28px,5vw,42px)/1.05 var(--display);letter-spacing:-.01em;margin:0;text-wrap:balance}
-.ver{font:500 12px/1 var(--mono);color:var(--muted);letter-spacing:.04em}
-.lede{margin:0;color:var(--muted);max-width:62ch}
-.scale{display:grid;grid-template-columns:repeat(11,1fr);height:10px;border-radius:2px;overflow:hidden;max-width:420px;margin-top:6px}
-.scale span:nth-child(1){background:#1a1a1a}.scale span:nth-child(2){background:#2e2e2e}.scale span:nth-child(3){background:#474747}
-.scale span:nth-child(4){background:#5e5e5e}.scale span:nth-child(5){background:#777}.scale span:nth-child(6){background:#919191}
-.scale span:nth-child(7){background:#ababab}.scale span:nth-child(8){background:#c6c6c6}.scale span:nth-child(9){background:#dedede}
-.scale span:nth-child(10){background:#efefef}.scale span:nth-child(11){background:#fafafa}
-
-.grid{display:grid;grid-template-columns:1fr;gap:20px}
-@media (min-width:900px){.grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:start}}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:16px;min-width:0}
-h2{font:600 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0}
-h3{font:700 22px/1.15 var(--display);margin:0;text-wrap:balance}
-
-.drop{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.btn{font:600 14px/1 var(--body);border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);
-  padding:11px 16px;border-radius:4px;cursor:pointer}
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0 calc(92px + env(safe-area-inset-bottom, 0px))}
+button{font:inherit}
+.btn{font:600 14px/1 var(--body);border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);padding:11px 16px;border-radius:6px;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--accent)}
-.btn:focus-visible,.seg button:focus-visible,select:focus-visible,input:focus-visible,.row:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.hint{font-size:13px;color:var(--muted)}
-.tag{font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--warn)}
+.btn:focus-visible,.seg button:focus-visible,.chips button:focus-visible,input:focus-visible,.row:focus-visible,.iconbtn:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-.maps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
-figcaption{font:500 12px/1.3 var(--mono);color:var(--muted)}
-canvas.map{width:100%;height:auto;display:block;border-radius:3px;background:var(--sunk)}
+/* top bar */
+.top{display:flex;align-items:center;gap:10px;padding-block:14px 12px;max-width:1180px;margin:0 auto}
+.top h1{font:700 26px/1 var(--display);letter-spacing:-.01em;margin:0;flex:1}
+.iconbtn{width:42px;height:40px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);display:grid;place-items:center;cursor:pointer;flex:none}
 
-.controls{display:grid;grid-template-columns:1fr;gap:14px}
-@media (min-width:520px){.controls{grid-template-columns:1fr 1fr}}
+/* page grid */
+.app{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.left,.right{display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (min-width:900px){.app{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start}
+  .left{position:sticky;top:12px;max-height:calc(100vh - 96px);overflow-y:auto;padding:2px;margin:-2px}
+  .app #mainC{max-height:42vh}}
+
+/* picture */
+.viewer{display:flex;flex-direction:column;gap:8px}
+.stage{position:relative;border-radius:8px;overflow:hidden;background:var(--sunk);display:flex;justify-content:center}
+#mainC{display:block;width:100%;height:auto;max-height:60vh;object-fit:contain}
+#mainC.brushing{cursor:crosshair;touch-action:none}
+.zoom{position:absolute;top:8px;right:8px;width:36px;height:36px;border:0;border-radius:6px;background:rgba(20,21,24,.66);color:#fff;display:grid;place-items:center;cursor:zoom-in}
+.viewbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.caption{margin:0;font:500 12.5px/1.35 var(--mono);color:var(--muted)}
+.caption .tag{color:var(--warn);text-transform:uppercase;letter-spacing:.06em}
+.brushbar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#ffc21a;color:#1b1d20;border-radius:6px;padding:8px 8px 8px 12px;font-size:14px;font-weight:500}
+.brushbar button{border:0;border-radius:5px;background:#1b1d20;color:#fff;padding:8px 12px;font-weight:600;cursor:pointer}
+
+/* controls */
+.seg{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
+.seg button{flex:1;font:500 13px/1.2 var(--body);padding:9px 8px;border:0;background:transparent;color:var(--fg);cursor:pointer;white-space:nowrap}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.seg.small button{padding:7px 10px;font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button,.chips .curpick{flex:none;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 13px;font:500 14px/1.1 var(--body);cursor:pointer;white-space:nowrap}
+.chips button[aria-pressed="true"],.chips .curpick{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chips .more{color:var(--accent);border-style:dashed}
+#pigSeg{display:contents}
+.block{display:flex;flex-direction:column;gap:8px}
+.label{font:600 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.labelrow{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hint{margin:0;font-size:13px;line-height:1.4;color:var(--muted)}
+.hint a{color:var(--accent)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex:none;box-shadow:0 0 0 1px var(--line)}
+.tubes{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;font-weight:500}
+.tube{display:inline-flex;align-items:center;gap:7px}
+.strip{display:flex;height:52px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.strip div{flex:1;min-width:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;font:500 12px var(--mono);cursor:pointer}
+.darkrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.darkrow .hint{flex:1;min-width:12ch}
+
+/* cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 14px 10px}
+.card h2,.card summary{font:600 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0}
+.mixhead{display:flex;flex-direction:column;gap:4px;margin-bottom:6px}
+.mixhead h3{font:700 21px/1.15 var(--display);margin:0;text-wrap:balance}
+.meta{margin:0;font:400 12.5px/1.4 var(--mono);color:var(--muted)}
+details.card{padding:0}
+details.card>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 14px;cursor:pointer}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-right:4px;flex:none}
+details.card[open]>summary::after{transform:rotate(-135deg)}
+details.card>summary .sumtxt{font:400 12.5px/1.2 var(--mono);letter-spacing:0;text-transform:none;color:var(--muted);flex:1;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.inner{padding:0 14px 16px;display:flex;flex-direction:column;gap:16px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field label,.field .lbl{font:600 13px/1.2 var(--body)}
-.field small{color:var(--muted);font-size:12.5px;line-height:1.4}
-select{font:15px var(--body);padding:9px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg);width:100%}
 input[type=range]{width:100%;accent-color:var(--accent)}
 .rangehead{display:flex;justify-content:space-between;align-items:baseline}
 .rangehead output{font:500 14px var(--mono)}
-.seg{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.seg button{flex:1;font:500 13px/1.2 var(--body);padding:9px 6px;border:0;background:var(--bg);color:var(--fg);cursor:pointer}
-.seg button+button{border-left:1px solid var(--line)}
-.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-.pickrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.curpick{display:inline-flex;align-items:center;gap:6px;font-size:14px;padding:6px 10px;border-radius:4px;background:var(--fg);color:var(--bg)}
-.curpick b{font-weight:600}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap}
+.btn.ghost[aria-pressed="true"]{background:#ffc21a;border-color:#ffc21a;color:#1b1d20}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* recipes */
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;padding:10px 4px;border-top:1px solid var(--line);cursor:pointer;border-radius:4px}
+.row:hover{background:var(--sunk)}
+.row.sel{background:var(--sunk);box-shadow:inset 3px 0 0 #ff3d7f}
+.sw{display:grid;grid-template-rows:1fr 1fr;width:44px;height:44px;border-radius:5px;overflow:hidden;border:1px solid var(--line)}
+.ratio{font:600 15.5px/1.3 var(--body)}
+.rmeta{font:400 12px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;margin-top:2px}
+.sub{font-size:13px;line-height:1.4;color:var(--muted);margin-top:4px}
+.flag{font-size:13px;line-height:1.4;color:var(--warn);margin-top:4px}
+.legend{margin:8px 0 0;font:400 12px/1.4 var(--mono);color:var(--muted)}
+.paints{display:flex;flex-direction:column;gap:10px;margin:12px 0 4px;padding:0;list-style:none}
+.paints li{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.chip{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);margin-top:1px}
+.paints b{font-weight:600;font-size:14.5px}
+.paints p{margin:1px 0 0;color:var(--muted);font-size:13px;line-height:1.4}
+.tips{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:14px;max-width:65ch}
+.foot{margin:0;font-size:12px;color:var(--muted);max-width:70ch}
+
+/* fixed save bar */
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;justify-content:center}
+.savebar .btn{flex:1;max-width:440px;padding:14px 16px;font-size:15px}
+
+/* settings, color picker, lightbox */
+.dlg{position:fixed;inset:0;z-index:40;background:rgba(10,11,13,.45);display:flex;align-items:flex-end;justify-content:center}
+.dlgbox{width:100%;max-width:520px;background:var(--surface);border-radius:12px 12px 0 0;display:flex;flex-direction:column;gap:16px;
+  padding:16px max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+@media (min-width:600px){.dlg{align-items:center}.dlgbox{border-radius:12px}}
+.dlghead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dlghead h3{font:700 22px/1.15 var(--display);margin:0}
+.ver{font:500 12px/1.4 var(--mono);color:var(--muted)}
 .picker{position:fixed;inset:0;z-index:40;background:var(--surface);display:flex;flex-direction:column;gap:12px;
   padding:calc(env(safe-area-inset-top,0px) + 14px) max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
 .pickhead{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .pickhead h3{font:700 22px/1.15 var(--display);margin:0}
-#pickSearch{font:16px var(--body);padding:11px 12px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg);width:100%}
+#pickSearch{font:16px var(--body);padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%}
 .picklist{flex:1;min-height:0;overflow-y:auto;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 20px);display:flex;flex-direction:column;gap:18px}
 .pickgroup{display:flex;flex-direction:column}
 .pickgroup h4{margin:0 0 6px;font:600 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
@@ -96,121 +158,110 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .pickitem .pn{font-weight:600;font-size:15px}
 .pickitem .pm{font:12px var(--mono);color:var(--muted)}
 .pickempty{color:var(--muted);font-size:14px}
-.col{display:flex;flex-direction:column;gap:20px;min-width:0}
-.field.full{grid-column:1/-1}
-.stripwrap{display:flex;flex-direction:column;gap:5px;padding:6px;border-radius:5px;border:1px solid transparent}
-.stripwrap.on{border-color:var(--accent)}
-.striplbl{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
-.striplbl b{color:var(--fg);font-weight:600}
-.inuse{font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:var(--accent-ink);padding:3px 6px;border-radius:3px}
-.mapbtn{position:relative;display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%}
-.mapbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.zoomtag{position:absolute;right:6px;bottom:6px;font:500 11px/1 var(--mono);background:rgba(20,21,24,.72);color:#fff;padding:4px 6px;border-radius:3px}
 .lightbox{position:fixed;inset:0;z-index:50;background:#0e0f11;display:flex;flex-direction:column;
   padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 12px) max(16px,env(safe-area-inset-left,0px))}
 .lbbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:10px}
 .lbtitle{color:#e8e7e3;font:600 14px var(--body)}
-.lbactions{display:flex;gap:8px}
+.lbactions{display:flex;gap:8px;flex-wrap:wrap}
 .lightbox .btn{background:#9aa8f2;border-color:#9aa8f2;color:#11131a}
-.lightbox .lbclose{background:transparent;color:#e8e7e3;border-color:#555}
+.lightbox .btn.ghost{background:transparent;color:#e8e7e3;border-color:#555}
 .lbstage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto}
 .lbstage canvas{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
 .lightbox.sheet .lbstage{align-items:flex-start;-webkit-overflow-scrolling:touch}
 .lightbox.sheet .lbstage canvas{width:100%;max-width:820px;max-height:none;margin:0 auto}
-.sheetsave{margin-top:10px}
 .lbmsg{color:#a2a7ad;font-size:13px;min-height:18px;padding-top:8px}
-.brushrow{display:flex;gap:10px;flex-wrap:wrap}
-.btn.ghost[aria-pressed="true"]{background:#ffc21a;border-color:#ffc21a;color:#1b1d20}
-canvas.brushing{cursor:crosshair;touch-action:none;outline:2px solid #ffc21a;outline-offset:2px}
-#pigSeg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
-#pigSeg button{border-left:0;padding:10px 4px}
-#palSeg{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
-#palSeg button{border-left:0}
-.tubes{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;font-weight:500}
-.tube{display:inline-flex;align-items:center}
-#palNote a{color:var(--accent)}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;box-shadow:0 0 0 1px var(--line)}
-
-.strip{display:flex;height:54px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
-.strip div{flex:1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;font:500 12px var(--mono);cursor:pointer}
-
-.sheethead{display:flex;flex-direction:column;gap:4px}
-.meta{font:400 13px/1.4 var(--mono);color:var(--muted)}
-.paints{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
-.paints li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
-.chip{width:28px;height:28px;border-radius:50%;border:1px solid var(--line)}
-.paints b{font-weight:600}
-.paints p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
-
-.rows{display:flex;flex-direction:column;border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;padding:12px 4px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:3px}
-.row:hover{background:var(--sunk)}
-.row.sel{background:var(--sunk);box-shadow:inset 3px 0 0 #ff3d7f}
-.sw{display:grid;grid-template-rows:1fr 1fr;width:56px;height:56px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
-.rowtop{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
-.rowtop strong{font:700 17px var(--display)}
-.rowtop span{font:400 12.5px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.ratio{font:600 15px/1.35 var(--body);margin-top:2px}
-.sub{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.flag{font-size:13px;color:var(--warn);margin-top:2px}
-.legend{display:flex;gap:14px;font:12px var(--mono);color:var(--muted);flex-wrap:wrap}
-.legend i{display:inline-block;width:10px;height:10px;border:1px solid var(--line);vertical-align:-1px;margin-right:5px}
-
-.tips{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;max-width:65ch}
-.foot{font-size:12.5px;color:var(--muted);max-width:70ch}
-.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-textarea#fallback{width:100%;height:160px;font:12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:4px;padding:8px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+#fallback{width:100%;height:140px;font:12px var(--mono);background:#1d1f23;color:#e8e7e3;border:1px solid #363a40;border-radius:4px;padding:8px;margin-top:8px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
+<header class="top">
+  <h1>Value Mix</h1>
+  <button class="btn" id="pick" type="button">Choose photo</button>
+  <input type="file" id="file" accept="image/*" hidden>
+  <button class="iconbtn" id="setBtn" type="button" aria-label="Settings: brand and paint type">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1.08 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+  </button>
+</header>
 
-<div class="wrap">
-  <header>
-    <h1>Value Mix</h1>
-    <span class="ver" id="ver">Version 2026.10.31.2 · palette under the images</span>
-    <p class="lede">Load a reference photo. The app groups it into tones or colors, then tells you how to mix each one from your palette: one color for a monochromatic study, or a classic limited palette.</p>
-    <div class="scale" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-  </header>
-
-  <div class="grid">
-    <div class="col">
-    <section class="panel" aria-label="Photo and tones">
-      <h2 id="photoH2">Photo &amp; tones</h2>
-      <div class="drop" id="drop">
-        <button class="btn" id="pick" type="button">Choose a photo</button>
-        <input type="file" id="file" accept="image/*" hidden>
-        <span class="hint" id="srcLabel"><span class="tag">Example image</span> · or drop a photo here</span>
+<main class="app">
+  <div class="left">
+    <div class="viewer">
+      <div class="stage">
+        <canvas id="mainC" aria-label="Your photo or its value map"></canvas>
+        <button class="zoom" id="enlarge" type="button" aria-label="Enlarge the picture">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </button>
       </div>
-
-      <div class="maps">
-        <figure><canvas class="map" id="grayC"></canvas><figcaption id="grayCap">Photo in grayscale</figcaption></figure>
-        <figure><button class="mapbtn" id="enlarge" type="button" aria-label="Enlarge the value map"><canvas class="map" id="posterC"></canvas><span class="zoomtag">Tap to enlarge</span></button><figcaption id="posterCap">Value map</figcaption></figure>
-      </div>
-
-      <div class="field" id="scaleField" hidden>
-        <span class="lbl" id="scaleLbl">Tone scale · tap a scale to use it for the map and mixing sheet</span>
-        <div class="stripwrap" id="stripWrap"><div class="striplbl" id="nearLbl"></div><div class="strip" id="strip"></div></div>
-        <div class="stripwrap" id="strip2Wrap"><div class="striplbl" id="compLbl"></div><div class="strip" id="strip2"></div></div>
-      </div>
-
-      <div class="field">
-        <span class="lbl" id="palLbl">Choose a palette</span>
-        <div class="seg" id="palSeg">
-          <button type="button" data-v="mono" aria-pressed="false">Monochromatic</button>
-          <button type="button" data-v="zorn" aria-pressed="false">Zorn</button>
-          <button type="button" data-v="primary" aria-pressed="false">Primary colors</button>
-          <button type="button" data-v="warmcool" aria-pressed="false">Warm &amp; cool</button>
+      <div class="brushbar" id="brushBar" hidden><span>Rub over the area you want brighter.</span><button id="brushDone" type="button">Done</button></div>
+      <div class="viewbar">
+        <div class="seg small" id="showSeg">
+          <button type="button" data-v="photo" aria-pressed="false">Photo</button>
+          <button type="button" data-v="values" aria-pressed="true">Values</button>
+          <button type="button" data-v="map" aria-pressed="false" id="showMap" hidden>Paint map</button>
         </div>
-        <small id="palHint">Pick one to see its tone scale and mixing recipes.</small>
       </div>
+      <p class="caption" id="viewCap"></p>
+    </div>
 
-      <div class="controls">
+    <div class="block">
+      <span class="label">Palette</span>
+      <div class="chips" id="palSeg" role="group" aria-label="Palette">
+        <button type="button" data-v="mono" aria-pressed="false">Monochromatic</button>
+        <button type="button" data-v="zorn" aria-pressed="false">Zorn</button>
+        <button type="button" data-v="primary" aria-pressed="false">Primary</button>
+        <button type="button" data-v="warmcool" aria-pressed="false">Warm &amp; cool</button>
+      </div>
+      <p class="hint" id="palHint">Choose a palette to get your mixing recipes.</p>
+    </div>
+
+    <div class="block needs-pick" id="colorRow" hidden>
+      <span class="label">Color</span>
+      <div class="chips">
+        <div id="pigSeg" role="group" aria-label="Color"></div>
+        <span class="curpick" id="pigCurrent" hidden><span class="dot" id="pigCurDot"></span><span id="pigCurName"></span></span>
+        <button class="more" id="moreColors" type="button">More colors…</button>
+      </div>
+      <p class="hint" id="pigNote"></p>
+    </div>
+
+    <div class="block" id="palRow" hidden>
+      <span class="label">Paints in this palette</span>
+      <div class="tubes" id="palTubes"></div>
+      <p class="hint" id="palNote"></p>
+    </div>
+
+    <div class="block needs-pick" id="scaleBlock" hidden>
+      <div class="labelrow"><span class="label" id="scaleLbl">Tone scale</span><span class="hint">Tap a swatch for its recipe</span></div>
+      <div class="strip" id="strip"></div>
+      <div class="darkrow" id="darkRow">
+        <div class="seg small" id="darkSeg">
+          <button type="button" data-v="near" aria-pressed="true">Same family</button>
+          <button type="button" data-v="comp" aria-pressed="false">Complement</button>
+        </div>
+        <p class="hint" id="darkInfo"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right needs-pick" hidden>
+    <section class="card" aria-labelledby="sheetTitle">
+      <div class="mixhead">
+        <h2>Mixes</h2>
+        <h3 id="sheetTitle"></h3>
+        <p class="meta" id="sheetMeta"></p>
+      </div>
+      <div class="rows" id="rows"></div>
+      <p class="legend" id="lgTt"></p>
+    </section>
+
+    <details class="card" id="adjust">
+      <summary><span>Adjust</span><span class="sumtxt" id="adjSum"></span></summary>
+      <div class="inner">
         <div class="field">
           <div class="rangehead"><label for="nTones" id="nLbl">Number of tones</label><output id="nOut">5</output></div>
           <input type="range" id="nTones" min="3" max="9" value="5">
-          <small id="nHint">3–5 for a quick block-in, 7–9 for a finished grisaille.</small>
         </div>
         <div class="field" id="modeField">
           <span class="lbl">How tones are chosen</span>
@@ -218,87 +269,33 @@ textarea#fallback{width:100%;height:160px;font:12px var(--mono);background:var(-
             <button type="button" data-v="fit" aria-pressed="true">Fit the photo</button>
             <button type="button" data-v="even" aria-pressed="false">Even steps</button>
           </div>
-          <small>Fit follows the photo's real tone groups. Even steps spaces them like a value scale.</small>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" aria-label="Paints">
-      <h2>Paints</h2>
-      <div class="controls">
-        <div class="field full" id="palField" hidden>
-          <span class="lbl">Paints in this palette</span>
-          <div class="tubes" id="palTubes"></div>
-          <small id="palNote"></small>
-        </div>
-        <div class="field full" id="colorField">
-          <span class="lbl">Color</span>
-          <div class="seg" id="pigSeg"></div>
-          <div class="pickrow">
-            <button class="btn ghost" id="moreColors" type="button">More colors…</button>
-            <span class="curpick" id="pigCurrent" hidden><span class="dot" id="pigCurDot"></span><b id="pigCurName"></b></span>
-          </div>
-          <small id="pigNote"></small>
         </div>
         <div class="field">
-          <span class="lbl">Brand</span>
-          <div class="seg" id="brandSeg">
-            <button type="button" data-v="artisan" aria-pressed="true">W&amp;N Artisan</button>
-            <button type="button" data-v="cobra" aria-pressed="false">Cobra</button>
+          <span class="lbl">Contrast</span>
+          <div class="seg" id="contrastSeg">
+            <button type="button" data-v="soft" aria-pressed="false">Soft</button>
+            <button type="button" data-v="natural" aria-pressed="true">Natural</button>
+            <button type="button" data-v="punchy" aria-pressed="false">Punchy</button>
+            <button type="button" data-v="bold" aria-pressed="false">Bold</button>
           </div>
-          <small>Both are water-mixable oils, and they can be mixed together. Light Green is Cobra only.</small>
         </div>
         <div class="field">
-          <span class="lbl">Paint</span>
-          <div class="seg" id="medSeg">
-            <button type="button" data-v="oil" aria-pressed="true">Water-mixable oil</button>
-            <button type="button" data-v="acrylic" aria-pressed="false">Acrylic</button>
-          </div>
-          <small id="medNote"></small>
-        </div>
-        <div class="field">
-          <span class="lbl">Map shows</span>
-          <div class="seg" id="viewSeg">
-            <button type="button" data-v="paint" aria-pressed="true">Paint color</button>
-            <button type="button" data-v="gray" aria-pressed="false">Gray</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" aria-label="Punch">
-      <h2>Punch</h2>
-        <div class="controls">
-          <div class="field">
-            <span class="lbl">Contrast</span>
-            <div class="seg" id="contrastSeg">
-              <button type="button" data-v="soft" aria-pressed="false">Soft</button>
-              <button type="button" data-v="natural" aria-pressed="true">Natural</button>
-              <button type="button" data-v="punchy" aria-pressed="false">Punchy</button>
-              <button type="button" data-v="bold" aria-pressed="false">Bold</button>
-            </div>
-            <small>Punchy pushes darks darker and lights lighter, so tones separate more.</small>
-          </div>
-          <div class="field">
-            <span class="lbl">Key (overall brightness)</span>
-            <div class="seg" id="keySeg">
-              <button type="button" data-v="darker" aria-pressed="false">Darker</button>
-              <button type="button" data-v="natural" aria-pressed="true">Natural</button>
-              <button type="button" data-v="brighter" aria-pressed="false">Brighter</button>
-            </div>
-            <small>Brighter moves the whole picture up the scale for an airy, high-key look.</small>
+          <span class="lbl">Overall brightness</span>
+          <div class="seg" id="keySeg">
+            <button type="button" data-v="darker" aria-pressed="false">Darker</button>
+            <button type="button" data-v="natural" aria-pressed="true">Natural</button>
+            <button type="button" data-v="brighter" aria-pressed="false">Brighter</button>
           </div>
         </div>
         <div class="field">
           <span class="lbl">Brighten one area</span>
-          <div class="brushrow">
-            <button class="btn ghost" id="brushBtn" type="button" aria-pressed="false">Paint area on photo</button>
+          <div class="btnrow">
+            <button class="btn ghost" id="brushBtn" type="button" aria-pressed="false">Paint area on picture</button>
             <button class="btn ghost" id="clearBtn" type="button">Clear</button>
           </div>
-          <small id="brushHint">Turn this on, then rub over the grayscale photo (a child's face, the subject you want to glow). That area is lifted before the tones are worked out.</small>
-          <div class="controls">
+          <div class="two">
             <div class="field">
-              <div class="rangehead"><label for="lift">How much brighter</label><output id="liftOut">12</output></div>
+              <div class="rangehead"><label for="lift">How much</label><output id="liftOut">12</output></div>
               <input type="range" id="lift" min="0" max="20" value="12">
             </div>
             <div class="field">
@@ -307,43 +304,47 @@ textarea#fallback{width:100%;height:160px;font:12px var(--mono);background:var(-
             </div>
           </div>
         </div>
+      </div>
+    </details>
+
+    <section class="card">
+      <h2>Paints to set out</h2>
+      <ul class="paints" id="paints"></ul>
     </section>
+
+    <details class="card">
+      <summary><span>Working tips</span></summary>
+      <div class="inner"><ol class="tips" id="tips"></ol></div>
+    </details>
+
+    <p class="foot">Ratios are estimates from a paint-mixing model using typical pigment data. Brands vary, so mix the first one, dab it on a card next to your reference, and adjust. Parts are by volume, measured with the palette knife.</p>
+  </div>
+</main>
+
+<div class="savebar needs-pick" hidden>
+  <button class="btn" id="sheetBtn" type="button">Save painting sheet</button>
+</div>
+
+<div class="dlg" id="settings" hidden role="dialog" aria-modal="true" aria-labelledby="setTitle">
+  <div class="dlgbox">
+    <div class="dlghead"><h3 id="setTitle">Settings</h3><button class="btn ghost" id="setClose" type="button">Done</button></div>
+    <div class="field">
+      <span class="lbl">Brand</span>
+      <div class="seg" id="brandSeg">
+        <button type="button" data-v="artisan" aria-pressed="true">W&amp;N Artisan</button>
+        <button type="button" data-v="cobra" aria-pressed="false">Cobra</button>
+      </div>
+      <p class="hint">Both are water-mixable oils, and they can be mixed together.</p>
     </div>
-
-    <section class="panel" aria-label="Mixing sheet">
-      <div class="sheethead">
-        <h2>Mixing sheet</h2>
-        <h3 id="sheetTitle">Ultramarine Blue value study</h3>
-        <div class="meta" id="sheetMeta"></div>
-        <div class="copyrow sheetsave">
-          <button class="btn" id="sheetBtn" type="button">Save painting sheet</button>
-          <span class="hint" id="sheetMsg" role="status">One image with your photo, value map, mixes, settings and tips.</span>
-        </div>
+    <div class="field">
+      <span class="lbl">Paint</span>
+      <div class="seg" id="medSeg">
+        <button type="button" data-v="oil" aria-pressed="true">Water-mixable oil</button>
+        <button type="button" data-v="acrylic" aria-pressed="false">Acrylic</button>
       </div>
-
-      <div class="field">
-        <span class="lbl">Paints you need</span>
-        <ul class="paints" id="paints"></ul>
-      </div>
-
-      <div class="field">
-        <div class="legend"><span><i id="lgT"></i><span id="lgTt">top: target tone</span></span><span><i id="lgM"></i>bottom: predicted mix</span></div>
-        <div class="rows" id="rows"></div>
-      </div>
-
-      <div class="field">
-        <span class="lbl">Working tips</span>
-        <ol class="tips" id="tips"></ol>
-      </div>
-
-      <div class="copyrow">
-        <button class="btn ghost" id="copy" type="button">Copy mixing sheet as text</button>
-        <span class="hint" id="copyMsg" role="status"></span>
-      </div>
-      <textarea id="fallback" hidden readonly aria-label="Mixing sheet text"></textarea>
-
-      <p class="foot">Ratios are estimates from a paint-mixing model (Kubelka–Munk) using typical pigment data. Brands vary in tinting strength, so mix the first tone, dab it on a card next to the matching patch of your printed reference, and adjust. Parts are by volume, measured with the palette knife.</p>
-    </section>
+      <p class="hint" id="medNote"></p>
+    </div>
+    <p class="ver">Remembered on this device. Version 2026.11.01 · new layout</p>
   </div>
 </div>
 
@@ -361,11 +362,13 @@ textarea#fallback{width:100%;height:160px;font:12px var(--mono);background:var(-
     <span id="lbTitle" class="lbtitle">Value map</span>
     <div class="lbactions">
       <button class="btn" id="lbSave" type="button">Save image</button>
-      <button class="btn ghost lbclose" id="lbClose" type="button">Close</button>
+      <button class="btn ghost" id="lbCopy" type="button" hidden>Copy as text</button>
+      <button class="btn ghost" id="lbClose" type="button">Close</button>
     </div>
   </div>
   <div class="lbstage" id="lbStage"><canvas id="lbCanvas"></canvas></div>
   <div class="lbmsg" id="lbMsg" role="status"></div>
+  <textarea id="fallback" hidden readonly aria-label="Mixing sheet text"></textarea>
 </div>
 
 <script src="paints.js?v=20261031"></script>
@@ -383,7 +386,7 @@ const WHITE={name:'Titanium White',rgb:[0.90,0.90,0.885]};
 const HIGHLIGHT=[255,61,127];
 
 const $=id=>document.getElementById(id);
-const state={picked:false,palette:'mono',nColors:8,darks:'near',contrast:'natural',key:'natural',lift:12,brush:false,brushSize:28,brand:'artisan',n:5,mode:'fit',pig:'blue',med:'oil',view:'paint',sel:-1,label:'Example still life'};
+const state={picked:false,palette:'mono',nColors:8,darks:'near',contrast:'natural',key:'natural',lift:12,brush:false,brushSize:28,brand:'artisan',n:5,mode:'fit',pig:'blue',med:'oil',show:'values',sel:-1,label:'Example still life'};
 let W=0,H=0,Lpix=null,Lraw=null,Araw=null,Braw=null,mask=null,srcImg=null,assign=null,zones=[],srcRGB=null;
 
 // ---------- color maths ----------
@@ -549,8 +552,6 @@ function loadImage(img,label){
     const lab=labOf([LIN[d[i]],LIN[d[i+1]],LIN[d[i+2]]]);Araw[j]=lab[1];Braw[j]=lab[2];
   }
   state.label=label;state.sel=-1;
-  $('srcLabel').innerHTML=label==='Example still life'?'<span class="tag">Example image</span> · or drop a photo here':'';
-  if(label!=='Example still life')$('srcLabel').textContent=label;
   adjust();
 }
 
@@ -578,7 +579,7 @@ function renderHi(){
   const cv=document.createElement('canvas');cv.width=w;cv.height=h;
   const g=cv.getContext('2d');g.drawImage(srcImg,0,0,w,h);
   const im=g.getImageData(0,0,w,h),d=im.data;
-  const cols=zones.map(z=>state.view==='gray'?(v=>[v,v,v])(toSRGB(YfromL(z.L))):z.mix.map(toSRGB));
+  const cols=zones.map(z=>(state.show==='values'||!state.picked)?(v=>[v,v,v])(toSRGB(YfromL(z.L))):z.mix.map(toSRGB));
   const kx=W/w,ky=H/h,mono=isMono();
   for(let y=0,i=0;y<h;y++){
     const row=Math.min(H-1,Math.floor(y*ky))*W;
@@ -693,63 +694,74 @@ function computeMixes(){
 }
 
 // ---------- rendering ----------
+function drawMain(){
+  const cv=$('mainC');cv.width=W;cv.height=H;const g=cv.getContext('2d');
+  const show=state.picked?state.show:(state.show==='map'?'values':state.show);
+  let im;
+  if(show==='photo'){g.drawImage(srcImg,0,0,W,H);im=g.getImageData(0,0,W,H)}
+  else{
+    im=g.createImageData(W,H);
+    const zc=zones.map(z=>show==='values'?(v=>[v,v,v])(toSRGB(YfromL(z.L))):z.mix.map(toSRGB));
+    const d=im.data;
+    for(let i=0,j=0;j<assign.length;i+=4,j++){const z=assign[j],c=state.sel===z?HIGHLIGHT:zc[z];d[i]=c[0];d[i+1]=c[1];d[i+2]=c[2];d[i+3]=255}
+  }
+  if(state.brush){const d=im.data;for(let i=0,j=0;j<mask.length;i+=4,j++)if(mask[j]>0){const a=0.5*mask[j];d[i]+=(255-d[i])*a;d[i+1]+=(194-d[i+1])*a;d[i+2]+=(26-d[i+2])*a}}
+  g.putImageData(im,0,0);
+  const unit=isMono()?'Tone':'Color',n=zones.length,what=show==='photo'?'Photo':show==='values'?'Values · '+n+(isMono()?' tones':' colors'):'Paint map · '+n+(isMono()?' tones':' colors');
+  const src=state.label==='Example still life'?'<span class="tag">Example image</span> · ':'';
+  $('viewCap').innerHTML='';
+  $('viewCap').insertAdjacentHTML('beforeend',src);
+  $('viewCap').append((src?'':state.label+' · ')+(state.sel>=0&&show!=='photo'?unit+' '+(state.sel+1)+' highlighted':what));
+}
+function updateAdjSum(){
+  const bits=[isMono()?state.n+' tones':state.nColors+' colors'];
+  if(isMono()&&state.mode==='even')bits.push('even steps');
+  if(state.contrast!=='natural')bits.push(state.contrast+' contrast');
+  if(state.key!=='natural')bits.push(state.key);
+  if(mask&&mask.some(v=>v>0)&&state.lift>0)bits.push('area brightened');
+  $('adjSum').textContent=bits.join(' · ');
+}
+function buildRows(rec,top,warn,unit){
+  const rows=$('rows');rows.innerHTML='';
+  zones.forEach((z,i)=>{
+    const r=rec(z),w=warn(z),sel=state.sel===i;
+    const el=document.createElement('div');
+    el.className='row'+(sel?' sel':'');el.id='row'+i;el.tabIndex=0;el.setAttribute('role','button');el.setAttribute('aria-pressed',sel?'true':'false');
+    const edge=i===0?' · darkest':(i===zones.length-1?' · lightest':'');
+    el.innerHTML='<div class="sw"><div style="background:'+top(z)+'"></div><div style="background:'+hex(z.mix)+'"></div></div><div style="min-width:0"><div class="ratio"></div><div class="rmeta"></div></div>';
+    const body=el.lastChild;
+    body.querySelector('.ratio').textContent=r.main;
+    body.querySelector('.rmeta').textContent=unit+' '+(i+1)+' · value '+(z.L/10).toFixed(1)+edge+' · '+Math.round(z.area*100)+'% of picture';
+    if(w){const f=document.createElement('div');f.className='flag';f.textContent=w;body.appendChild(f)}
+    if(sel&&r.sub){const f=document.createElement('div');f.className='sub';f.textContent=r.sub;body.appendChild(f)}
+    el.onclick=()=>select(i);
+    el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}};
+    rows.appendChild(el);
+  });
+}
 function render(){
   const p=PIGMENTS.find(x=>x.id===state.pig);
-  // grayscale map
-  const gc=$('grayC'),pc=$('posterC');
-  [gc,pc].forEach(c=>{c.width=W;c.height=H});
-  const gctx=gc.getContext('2d'),pctx=pc.getContext('2d');
-  const gi=gctx.createImageData(W,H),pi=pctx.createImageData(W,H);
-  const gLUT=new Uint8ClampedArray(1001);
-  for(let i=0;i<=1000;i++){const y=YfromL(i/10);gLUT[i]=toSRGB(y)}
-  const zc=zones.map(z=>{
-    if(state.view==='gray'||!state.picked){const v=toSRGB(YfromL(z.L));return[v,v,v]}
-    return z.mix.map(toSRGB);
-  });
-  for(let i=0,j=0;j<Lpix.length;i+=4,j++){
-    const v=gLUT[Math.max(0,Math.min(1000,Math.round(Lpix[j]*10)))];
-    gi.data[i]=gi.data[i+1]=gi.data[i+2]=v;gi.data[i+3]=255;
-    if(state.brush&&mask[j]>0){const a=0.45*mask[j];gi.data[i]=v+(255-v)*a;gi.data[i+1]=v+(194-v)*a;gi.data[i+2]=v+(26-v)*a}
-    const z=assign[j];const col=(state.sel===z)?HIGHLIGHT:zc[z];
-    pi.data[i]=col[0];pi.data[i+1]=col[1];pi.data[i+2]=col[2];pi.data[i+3]=255;
-  }
-  gctx.putImageData(gi,0,0);pctx.putImageData(pi,0,0);
-  const unit=isMono()?'Tone':'Color';
-  $('posterCap').textContent=state.sel>=0?unit+' '+(state.sel+1)+' highlighted':(isMono()?'Value map · '+zones.length+' tones':'Color map · '+zones.length+' colors');
+  drawMain();updateAdjSum();
+  $('medNote').textContent=state.med==='acrylic'
+    ?'Acrylic dries a little darker, so wet mixes are set slightly lighter than the target.'
+    :'Water-mixable oils dry close to their wet color, so mixes match the target directly.';
   if(!isMono()){renderPaletteUI();return}
-  $('lgTt').textContent='top: target tone';
+  $('lgTt').textContent='Swatch: target value on top, your mix below. Tap a mix to see where it goes.';
 
-  // two strips: same-family darks on top, complement darks underneath
-  [['near','strip','nearLbl','Same family'],['comp','strip2','compLbl','Complement']].forEach(([k,id,lid,kind])=>{
-    const strip=$(id);strip.innerHTML='';
-    const b=byId(zones[0].v[k].partner);
-    const used=zones.filter(z=>z.v[k].deep>0).length;
-    $(lid).innerHTML='<b>'+kind+'</b> · '+(b?'darks with '+b.name:'no darker partner in this range')+(used?'':' · not needed for these tones')+(state.darks===k?'<span class="inuse">In use</span>':'');
-    $(id+'Wrap').classList.toggle('on',state.darks===k);
-    zones.forEach((z,i)=>{
-      const d=document.createElement('div');
-      d.style.background=hex(z.v[k].mix);
-      d.style.flexGrow=String(Math.max(0.35,z.area*zones.length));
-      d.style.color=z.L>55?'#111':'#f2f2f2';
-      d.textContent=i+1;d.title='Tone '+(i+1);
-      if(state.sel===i&&state.darks===k)d.style.boxShadow='inset 0 -4px 0 #ff3d7f';
-      d.onclick=e=>{e.stopPropagation();if(state.darks!==k){state.darks=k;state.sel=i;computeMixes()}else select(i)};
-      strip.appendChild(d);
-    });
-  });
+  // one tone scale; the darks switch chooses how the darkest tones are deepened
+  $('scaleLbl').textContent='Tone scale';
+  const needs=zones.some(z=>z.v.near.deep>0||z.v.comp.deep>0);
+  $('darkRow').hidden=!needs;
+  const bd=byId(p[state.darks]);
+  $('darkInfo').textContent=bd?'Darks deepened with '+bd.name:'No darker partner in this range';
+  $('darkSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===state.darks?'true':'false'));
+  fillStrip('strip',z=>hex(z.mix));
 
   // sheet
   $('sheetTitle').textContent=p.name+' value study';
   const vmin=(zones[0].L/10).toFixed(1),vmax=(zones[zones.length-1].L/10).toFixed(1);
-  $('sheetMeta').textContent=state.label+' · '+zones.length+' tones · values '+vmin+'–'+vmax+' on a 0–10 scale · '+(state.med==='oil'?PALETTES[state.brand].brand+' water-mixable oil':'acrylic')+
-    ' · darks: '+(state.darks==='comp'?'complement':'same family')+
-    (state.contrast!=='natural'?' · '+state.contrast+' contrast':'')+(state.key!=='natural'?' · '+state.key+' key':'')+
-    (mask&&mask.some(v=>v>0)&&state.lift>0?' · one area brightened':'');
+  $('sheetMeta').textContent=zones.length+' tones · values '+vmin+' to '+vmax+' · '+PALETTES[state.brand].brand+(state.med==='acrylic'?' acrylic':'');
   $('pigNote').textContent=paintNote(p);
-  $('medNote').textContent=state.med==='acrylic'
-    ?'Acrylic dries a little darker, so these wet mixes are set slightly lighter than the target.'
-    :'Water-mixable oils dry close to their wet color, so mixes match the target directly.';
-  $('lgT').style.background='#888';$('lgM').style.background=hex(mix(0.12,p));
 
   const b=byId(p[state.darks]);
   const deepCount=zones.filter(z=>z.deep>0).length;
@@ -764,21 +776,7 @@ function render(){
     :{chip:'transparent',name:'Acrylic retarder or slow-drying medium',desc:'Optional. Keeps your tone puddles workable longer on the palette.'});
   $('paints').innerHTML=paints.map(x=>'<li><span class="chip" style="background:'+x.chip+'"></span><div><b>'+x.name+'</b><p>'+x.desc+'</p></div></li>').join('');
 
-  const rows=$('rows');rows.innerHTML='';
-  zones.forEach((z,i)=>{
-    const r=ratioText(z,p);
-    const el=document.createElement('div');
-    el.className='row'+(state.sel===i?' sel':'');el.tabIndex=0;el.setAttribute('role','button');
-    el.setAttribute('aria-pressed',state.sel===i?'true':'false');
-    const label=i===0?'darkest':(i===zones.length-1?'lightest':'');
-    el.innerHTML='<div class="sw"><div style="background:'+grayHex(z.L)+'"></div><div style="background:'+hex(z.mix)+'"></div></div>'+
-      '<div style="min-width:0"><div class="rowtop"><strong>Tone '+(i+1)+'</strong><span>value '+(z.L/10).toFixed(1)+(label?' · '+label:'')+' · '+Math.round(z.area*100)+'% of image</span></div>'+
-      '<div class="ratio">'+r.main+'</div><div class="sub">'+r.sub+'</div>'+
-      (z.short?'<div class="flag">This is as dark as these two paints go. The real tone is a bit darker; compare against neighboring tones instead.</div>':'')+'</div>';
-    el.onclick=()=>select(i);
-    el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}};
-    rows.appendChild(el);
-  });
+  buildRows(z=>ratioText(z,p),z=>grayHex(z.L),z=>z.short?'As dark as these two paints go. The real tone is a bit darker, so judge it against its neighbors.':'','Tone');
 
   const tips=[
     'Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.',
@@ -802,7 +800,7 @@ function fillStrip(id,color,label){
     d.style.background=color(z);
     d.style.flexGrow='1';d.style.minWidth='0';d.style.fontSize=zones.length>9?'10.5px':'';
     d.style.color=z.L>55?'#111':'#f2f2f2';
-    d.textContent=label?label(z,i):i+1;d.title='Color '+(i+1);
+    d.textContent=label?label(z,i):i+1;d.title=(isMono()?'Tone ':'Color ')+(i+1);
     if(state.sel===i)d.style.boxShadow='inset 0 -4px 0 #ff3d7f';
     d.onclick=e=>{e.stopPropagation();select(i)};
     strip.appendChild(d);
@@ -835,39 +833,16 @@ function palTips(){
 }
 function renderPaletteUI(){
   const def=PALETTE_DEFS[state.palette],pal=PALETTES[state.brand],tubes=palTubes();
-  $('nearLbl').innerHTML='<b>Palette mixes</b> · tap a color to find it in the map';
-  $('compLbl').innerHTML='<b>Values</b> · the same colors in gray, for checking value';
-  $('stripWrap').classList.remove('on');$('strip2Wrap').classList.remove('on');
+  $('scaleLbl').textContent='Color scale';$('darkRow').hidden=true;
   fillStrip('strip',z=>hex(z.mix));
-  fillStrip('strip2',z=>grayHex(z.L),z=>(z.L/10).toFixed(1));
 
   $('sheetTitle').textContent=def.title+' study';
-  $('sheetMeta').textContent=state.label+' · '+zones.length+' colors · '+tubes.map(t=>t.name).join(', ')+' and white · '+(state.med==='oil'?pal.brand+' water-mixable oil':'acrylic')+
-    (state.contrast!=='natural'?' · '+state.contrast+' contrast':'')+(state.key!=='natural'?' · '+state.key+' key':'')+
-    (mask&&mask.some(v=>v>0)&&state.lift>0?' · one area brightened':'');
-  $('medNote').textContent=state.med==='acrylic'
-    ?'Acrylic dries a little darker, so these wet mixes are set slightly lighter than the target.'
-    :'Water-mixable oils dry close to their wet color, so mixes match the target directly.';
-  $('lgTt').textContent='top: photo color';
-  $('lgT').style.background=zones.length?hex(zones[Math.floor(zones.length/2)].target):'#888';
-  $('lgM').style.background=zones.length?hex(zones[Math.floor(zones.length/2)].mix):'#888';
+  $('sheetMeta').textContent=zones.length+' colors · '+pal.brand+(state.med==='acrylic'?' acrylic':'');
+  $('lgTt').textContent='Swatch: photo color on top, your mix below. Tap a mix to see where it goes.';
   renderPalTubes();
 
   $('paints').innerHTML=palPaintList().map(x=>'<li><span class="chip" style="background:'+x.chip+'"></span><div><b>'+x.name+'</b><p>'+x.desc+'</p></div></li>').join('');
-  const rows=$('rows');rows.innerHTML='';
-  zones.forEach((z,i)=>{
-    const r=recipeText(z),note=gamutNote(z);
-    const el=document.createElement('div');
-    el.className='row'+(state.sel===i?' sel':'');el.tabIndex=0;el.setAttribute('role','button');
-    el.setAttribute('aria-pressed',state.sel===i?'true':'false');
-    const label=i===0?'darkest':(i===zones.length-1?'lightest':'');
-    el.innerHTML='<div class="sw"><div style="background:'+hex(z.target)+'"></div><div style="background:'+hex(z.mix)+'"></div></div>'+
-      '<div style="min-width:0"><div class="rowtop"><strong>Color '+(i+1)+'</strong><span>value '+(z.L/10).toFixed(1)+(label?' · '+label:'')+' · '+Math.round(z.area*100)+'% of image</span></div>'+
-      '<div class="ratio">'+r.main+'</div><div class="sub">'+r.sub+'</div>'+(note?'<div class="flag">'+note+'</div>':'')+'</div>';
-    el.onclick=()=>select(i);
-    el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}};
-    rows.appendChild(el);
-  });
+  buildRows(recipeText,z=>hex(z.target),gamutNote,'Color');
   $('tips').innerHTML=palTips().map(t=>'<li>'+t+'</li>').join('');
 }
 function renderPalTubes(){
@@ -884,7 +859,7 @@ function sheetText(){
   const p=PIGMENTS.find(x=>x.id===state.pig),mono=isMono(),unit=mono?'Tone':'Color';
   const out=[];
   out.push((mono?p.name+' value study':PALETTE_DEFS[state.palette].title+' study').toUpperCase());
-  out.push($('sheetMeta').textContent,'');
+  out.push(state.label+' · '+$('sheetMeta').textContent+' · '+$('adjSum').textContent,'');
   out.push('PAINTS');
   document.querySelectorAll('#paints li').forEach(li=>out.push('- '+li.querySelector('b').textContent+': '+li.querySelector('p').textContent));
   out.push('',(mono?'TONES':'COLORS')+' (darkest to lightest)');
@@ -991,13 +966,13 @@ async function buildSheet(){
     ['Palette',def.name],['Paints',tubes.map(t=>t.name).join(', ')+', '+pal.white],
     ['Number of colors',String(n)],['Contrast',cap(state.contrast)],
     ['Key',cap(state.key)],['Brightened area',brightened?'Yes, lifted '+state.lift:'None'],
-    ['Map shows',state.view==='gray'?'Gray':'Paint color']
+    ['Map shows',state.show==='values'?'Values in gray':'Paint colors']
   ]:[
     ['Brand',pal.brand],['Paint',state.med==='oil'?'Water-mixable oil':'Acrylic'],
     ['Palette','Monochromatic'],['Color',p.name+' ('+p.code+')'],    ['Dark tones',(state.darks==='comp'?'Complement':'Same family')+(partner?' · '+partner.name:'')],
     ['Number of tones',String(n)],['Tones chosen',state.mode==='even'?'Even steps':'Fit the photo'],
     ['Contrast',cap(state.contrast)],['Key',cap(state.key)],
-    ['Brightened area',brightened?'Yes, lifted '+state.lift:'None'],['Value map shows',state.view==='gray'?'Gray':'Paint color']
+    ['Brightened area',brightened?'Yes, lifted '+state.lift:'None'],['Map shows',state.show==='values'?'Values in gray':'Paint colors']
   ];
   const colW=(CW-40)/2;
   for(let i=0;i<rows.length;i+=2){
@@ -1068,15 +1043,13 @@ function paintNote(p){
 buildPig();
 $('nTones').addEventListener('input',e=>{const v=+e.target.value;if(isMono())state.n=v;else state.nColors=v;$('nOut').textContent=v;analyze()});
 function applyPaletteMode(){
-  const mono=isMono();
-  $('colorField').hidden=!mono;$('palField').hidden=mono;$('modeField').hidden=!mono;
-  $('scaleLbl').textContent=mono?'Tone scale · tap a scale to use it for the map and mixing sheet':'Color scale';
-  $('photoH2').textContent=mono?'Photo & tones':'Photo & colors';
+  const mono=isMono(),picked=state.picked;
+  $('colorRow').hidden=!(picked&&mono);$('palRow').hidden=!(picked&&!mono);$('modeField').hidden=!mono;
   $('nLbl').textContent=mono?'Number of tones':'Number of colors';
   const r=$('nTones');r.max=mono?9:12;r.value=mono?state.n:state.nColors;$('nOut').textContent=r.value;
-  $('nHint').textContent=mono?'3–5 for a quick block-in, 7–9 for a finished grisaille.':'5–7 for a simple study, 10–12 for more color detail.';
   renderPalTubes();
 }
+function setShow(v){state.show=v;$('showSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===v?'true':'false'))}
 function seg(id,key,after){
   $(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
     state[key]=b.dataset.v;$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));after();});
@@ -1086,18 +1059,20 @@ let hiCanvas=null,lbMode='map';
 function showLightbox(canvas,title,mode){
   hiCanvas=canvas;lbMode=mode;
   const lc=$('lbCanvas');lc.width=canvas.width;lc.height=canvas.height;lc.getContext('2d').drawImage(canvas,0,0);
-  $('lightbox').classList.toggle('sheet',mode==='sheet');
+  $('lightbox').classList.toggle('sheet',mode==='sheet');$('lbCopy').hidden=mode!=='sheet';$('fallback').hidden=true;$('lbSave').hidden=mode==='photo';
   $('lbTitle').textContent=title;$('lbMsg').textContent='';
   $('lightbox').hidden=false;$('lbStage').scrollTop=0;$('lbClose').focus();
 }
 function openLightbox(){
   const p=byId(state.pig);
-  showLightbox(renderHi(),(isMono()?p.name+' · '+zones.length+' tones':PALETTE_DEFS[state.palette].title+' · '+zones.length+' colors')+(state.view==='gray'?' · gray':''),'map');
+  if(state.show==='photo'){const c=document.createElement('canvas');c.width=srcImg.width;c.height=srcImg.height;c.getContext('2d').drawImage(srcImg,0,0);showLightbox(c,'Reference photo','photo');return}
+  const values=state.show==='values'||!state.picked;
+  showLightbox(renderHi(),(!state.picked?'Values · '+zones.length+' tones':(isMono()?p.name+' · '+zones.length+' tones':PALETTE_DEFS[state.palette].title+' · '+zones.length+' colors'))+(values&&state.picked?' · values':''),values?'values':'map');
 }
 async function openSheet(){
   const b=$('sheetBtn');b.disabled=true;const t=b.textContent;b.textContent='Making sheet…';
   try{showLightbox(await buildSheet(),'Painting sheet · '+(isMono()?byId(state.pig).name:PALETTE_DEFS[state.palette].title),'sheet')}
-  catch(e){$('sheetMsg').textContent='Could not make the sheet. Try again.'}
+  catch(e){b.textContent='Could not make the sheet. Try again.';await new Promise(r=>setTimeout(r,2500))}
   finally{b.disabled=false;b.textContent=t}
 }
 function closeLightbox(){$('lightbox').hidden=true;(lbMode==='sheet'?$('sheetBtn'):$('enlarge')).focus()}
@@ -1146,7 +1121,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('lightbox').hidd
 $('lbSave').onclick=()=>{
   const p=byId(state.pig),slug=(isMono()?p.label:PALETTE_DEFS[state.palette].name).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   const day=new Date().toISOString().slice(0,10);
-  const name=lbMode==='sheet'?'painting-sheet-'+slug+'-'+day+'.png':(isMono()?'value-map-':'color-map-')+slug+'-'+zones.length+(isMono()?'-tones.png':'-colors.png');
+  const name=lbMode==='sheet'?'painting-sheet-'+slug+'-'+day+'.png':(lbMode==='values'?'values-':isMono()?'value-map-':'color-map-')+slug+'-'+zones.length+(isMono()?'-tones.png':'-colors.png');
   hiCanvas.toBlob(async blob=>{
     if(!blob){$('lbMsg').textContent='Could not create the image. Try again.';return}
     const file=new File([blob],name,{type:'image/png'});
@@ -1168,15 +1143,16 @@ $('lift').addEventListener('change',adjust);
 $('bsize').addEventListener('input',e=>{state.brushSize=+e.target.value;$('bsizeOut').textContent=state.brushSize});
 function setBrush(on){
   state.brush=on;$('brushBtn').setAttribute('aria-pressed',on);
-  $('brushBtn').textContent=on?'Done painting':'Paint area on photo';
-  $('grayC').classList.toggle('brushing',on);
-  $('grayCap').textContent=on?'Rub over the area to brighten':'Photo in grayscale';
+  $('brushBtn').textContent=on?'Painting…':'Paint area on picture';
+  $('mainC').classList.toggle('brushing',on);$('brushBar').hidden=!on;
+  if(on){$('mainC').scrollIntoView({block:'nearest',behavior:'smooth'})}
   render();
 }
 $('brushBtn').onclick=()=>setBrush(!state.brush);
+$('brushDone').onclick=()=>setBrush(false);
 $('clearBtn').onclick=()=>{mask.fill(0);adjust()};
 (function(){
-  const cv=$('grayC');let down=false;
+  const cv=$('mainC');let down=false;
   function stamp(e){
     const r=cv.getBoundingClientRect(),sc=W/r.width;
     const cx=(e.clientX-r.left)*sc,cy=(e.clientY-r.top)*sc,rad=state.brushSize*sc/2;
@@ -1196,27 +1172,49 @@ $('clearBtn').onclick=()=>{mask.fill(0);adjust()};
 })();
 seg('palSeg','palette',()=>{
   state.sel=-1;
-  if(!state.picked){state.picked=true;$('scaleField').hidden=false;$('palLbl').textContent='Palette';$('palHint').hidden=true}
+  if(!state.picked){
+    state.picked=true;$('palHint').hidden=true;$('showMap').hidden=false;setShow('map');
+    document.querySelectorAll('.needs-pick').forEach(e=>e.hidden=false);
+  }
   applyPaletteMode();analyze();
-});seg('modeSeg','mode',analyze);(function(){let prev=state.brand;seg('brandSeg','brand',()=>{buildPig(prev);prev=state.brand;computeMixes()})})();seg('pigSeg','pig',()=>{buildPig();computeMixes()});seg('medSeg','med',computeMixes);seg('viewSeg','view',render);
+});
+seg('modeSeg','mode',analyze);
+(function(){let prev=state.brand;seg('brandSeg','brand',()=>{buildPig(prev);prev=state.brand;savePrefs();computeMixes()})})();
+seg('pigSeg','pig',()=>{buildPig();computeMixes()});
+seg('medSeg','med',()=>{savePrefs();computeMixes()});
+seg('showSeg','show',render);
+seg('darkSeg','darks',computeMixes);
+
+// ---------- settings: brand and paint type, remembered on this device ----------
+function savePrefs(){try{localStorage.setItem('valuemix.prefs',JSON.stringify({brand:state.brand,med:state.med}))}catch(e){}}
+(function(){
+  try{const v=JSON.parse(localStorage.getItem('valuemix.prefs')||'null');
+    if(v&&PALETTES[v.brand])state.brand=v.brand;if(v&&(v.med==='oil'||v.med==='acrylic'))state.med=v.med}catch(e){}
+  for(const [id,val] of [['brandSeg',state.brand],['medSeg',state.med]])$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===val?'true':'false'));
+  buildPig();
+})();
+function openSettings(){$('settings').hidden=false;$('setClose').focus()}
+function closeSettings(){$('settings').hidden=true;$('setBtn').focus()}
+$('setBtn').onclick=openSettings;$('setClose').onclick=closeSettings;
+$('settings').addEventListener('click',e=>{if(e.target===$('settings'))closeSettings()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('settings').hidden)closeSettings()});
 
 function readFile(f){
-  if(!f||!f.type.startsWith('image/')){$('srcLabel').textContent='That file is not an image. Choose a JPG, PNG or HEIC photo.';return}
+  if(!f||!f.type.startsWith('image/')){$('viewCap').textContent='That file is not an image. Choose a JPG, PNG or HEIC photo.';return}
   const url=URL.createObjectURL(f);const img=new Image();
   img.onload=()=>{loadImage(img,f.name);URL.revokeObjectURL(url)};
-  img.onerror=()=>{$('srcLabel').textContent='This browser could not open that photo. Try saving it as JPG first.'};
+  img.onerror=()=>{$('viewCap').textContent='This browser could not open that photo. Try saving it as JPG first.'};
   img.src=url;
 }
 $('pick').onclick=()=>$('file').click();
 $('file').addEventListener('change',e=>readFile(e.target.files[0]));
-const drop=$('drop');
 ['dragover','dragenter'].forEach(t=>document.addEventListener(t,e=>e.preventDefault()));
 document.addEventListener('drop',e=>{e.preventDefault();readFile(e.dataTransfer.files[0])});
 
-$('copy').onclick=()=>{
+$('lbCopy').onclick=()=>{
   const t=sheetText();
-  const done=()=>{$('copyMsg').textContent='Copied. Paste it into Notes or a doc.'};
-  const fail=()=>{const ta=$('fallback');ta.value=t;ta.hidden=false;ta.focus();ta.select();$('copyMsg').textContent='Select all and copy the text below.'};
+  const done=()=>{$('lbMsg').textContent='Copied. Paste it into Notes or a doc.'};
+  const fail=()=>{const ta=$('fallback');ta.value=t;ta.hidden=false;ta.focus();ta.select();$('lbMsg').textContent='Select all and copy the text below.'};
   try{navigator.clipboard.writeText(t).then(done,fail)}catch(e){fail()}
 };
 
