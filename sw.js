@@ -1,6 +1,6 @@
 // Value Mix service worker: keeps the app working offline in the studio.
-// Bump VERSION whenever index.html changes so phones pick up the new version.
-const VERSION = 'value-mix-v10';
+// Bump VERSION when the list of cached files changes.
+const VERSION = 'value-mix-v11';
 const CORE = [
   './',
   './index.html',
@@ -12,7 +12,8 @@ const CORE = [
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(VERSION).then(cache => cache.addAll(CORE)));
+  // Bypass the browser's HTTP cache so a new install never saves a stale copy.
+  event.waitUntil(caches.open(VERSION).then(cache => cache.addAll(CORE.map(u => new Request(u, { cache: 'reload' })))));
   self.skipWaiting();
 });
 
@@ -46,16 +47,23 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // The app's own files: serve from cache straight away, refresh in the background.
+  // The app's own files: always try the network first so updates show up on the next launch.
+  // The cached copy is only used when there is no connection (or the request times out).
   if (url.origin === self.location.origin) {
     event.respondWith(
       caches.open(VERSION).then(async cache => {
-        const hit = await cache.match(req, { ignoreSearch: true });
-        const network = fetch(req).then(res => {
-          if (res.ok) cache.put(req, res.clone());
-          return res;
-        }).catch(() => hit || cache.match('./index.html'));
-        return hit || network;
+        try {
+          const res = await Promise.race([
+            fetch(req, { cache: 'no-cache' }),
+            new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 4000))
+          ]);
+          if (res.ok) { cache.put(req, res.clone()); return res; }
+          const hit = await cache.match(req, { ignoreSearch: true });
+          return hit || res;
+        } catch (e) {
+          return (await cache.match(req, { ignoreSearch: true })) ||
+                 (req.mode === 'navigate' ? cache.match('./index.html') : Response.error());
+        }
       })
     );
   }

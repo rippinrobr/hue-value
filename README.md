@@ -24,4 +24,4 @@ Ratios come from a Kubelka–Munk paint-mixing model with typical pigment data. 
 
 ## Updating
 
-Edit `index.html`, then change `VERSION` in `sw.js` (for example `value-mix-v11`) so installed copies pick up the change.
+Push changes to `main`. Installed copies check for the newest files every time they open, and fall back to the saved copy when offline. Change `VERSION` in `sw.js` only when the list of cached files changes.
