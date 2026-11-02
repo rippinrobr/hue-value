@@ -1,7 +1,7 @@
 {
-  "name": "Value Mix",
-  "short_name": "Value Mix",
-  "description": "Turn a reference photo into a value map and paint-mixing sheet for one-color studies.",
+  "name": "Hue & Value",
+  "short_name": "Hue & Value",
+  "description": "Turn a reference photo into value maps and mixing recipes for monochrome studies and limited palettes.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

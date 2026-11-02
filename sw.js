@@ -1,6 +1,6 @@
-// Value Mix service worker: keeps the app working offline in the studio.
+// Hue & Value service worker: keeps the app working offline in the studio.
 // Bump VERSION when the list of cached files changes.
-const VERSION = 'value-mix-v16';
+const VERSION = 'hue-value-v17';
 const CORE = [
   './',
   './index.html',

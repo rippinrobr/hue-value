@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Value Mix</title>
-<meta name="description" content="Turn a reference photo into a value map and paint-mixing sheet for one-color studies.">
+<title>Hue &amp; Value</title>
+<meta name="description" content="Turn a reference photo into value maps and mixing recipes for monochrome studies and limited palettes.">
 <meta name="theme-color" content="#2c3c96">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Value Mix">
+<meta name="apple-mobile-web-app-title" content="Hue &amp; Value">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -183,7 +183,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 <body>
 
 <header class="top">
-  <h1>Value Mix</h1>
+  <h1>Hue &amp; Value</h1>
   <button class="btn" id="pick" type="button">Choose photo</button>
   <input type="file" id="file" accept="image/*" hidden>
   <button class="iconbtn" id="setBtn" type="button" aria-label="Settings: brand and paint type">
@@ -338,7 +338,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
         <button type="button" data-v="artisan" aria-pressed="true">W&amp;N Artisan</button>
         <button type="button" data-v="cobra" aria-pressed="false">Cobra</button>
       </div>
-      <p class="hint">Value Mix opens with this brand every time. Both are water-mixable oils, and they can be mixed together.</p>
+      <p class="hint">Hue &amp; Value opens with this brand every time. Both are water-mixable oils, and they can be mixed together.</p>
     </div>
     <div class="field">
       <span class="lbl">Default paint</span>
@@ -348,7 +348,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
       </div>
       <p class="hint" id="medNote"></p>
     </div>
-    <p class="ver">Saved on this device. Version 2026.11.02.4 · names and codes together</p>
+    <p class="ver">Saved on this device. Version 2026.11.02.5 · Hue &amp; Value</p>
   </div>
 </div>
 
@@ -998,7 +998,7 @@ async function buildSheet(){
   });
   y+=24;
   g.fillStyle=C.line;g.fillRect(PAD,y,CW,2);y+=22;
-  font(400,18,F.b);y=wrap('Ratios are estimates from a paint-mixing model. Brands vary, so mix the first tone, test it on a card next to your reference, and adjust. Made with Value Mix.',PAD,y,CW,26,C.muted);
+  font(400,18,F.b);y=wrap('Ratios are estimates from a paint-mixing model. Brands vary, so mix the first tone, test it on a card next to your reference, and adjust. Made with Hue & Value.',PAD,y,CW,26,C.muted);
 
   const H=Math.ceil(y+PAD),out=document.createElement('canvas');out.width=SW;out.height=H;
   out.getContext('2d').drawImage(cv,0,0);

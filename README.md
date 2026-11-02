@@ -1,4 +1,4 @@
-# Value Mix
+# Hue & Value
 
 A small web app for planning value studies and limited-palette paintings in water-mixable oil or acrylic.
 
