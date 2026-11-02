@@ -1,6 +1,6 @@
 // Value Mix service worker: keeps the app working offline in the studio.
 // Bump VERSION when the list of cached files changes.
-const VERSION = 'value-mix-v12';
+const VERSION = 'value-mix-v13';
 const CORE = [
   './',
   './index.html',

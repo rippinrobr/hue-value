@@ -75,7 +75,12 @@ button{font:inherit}
 .chips button,.chips .curpick{flex:none;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 13px;font:500 14px/1.1 var(--body);cursor:pointer;white-space:nowrap}
 .chips button[aria-pressed="true"],.chips .curpick{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .chips .more{color:var(--accent);border-style:dashed}
-#pigSeg{display:contents}
+.colorpick{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;padding:10px 12px;cursor:pointer}
+.colorpick:hover{border-color:var(--accent)}
+.colorpick:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dot.big{width:22px;height:22px}
+.cpname{flex:1;min-width:0;font:600 15px/1.25 var(--body)}
+.cpchange{font:600 14px var(--body);color:var(--accent);flex:none}
 .block{display:flex;flex-direction:column;gap:8px}
 .label{font:600 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 .labelrow{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
@@ -218,11 +223,9 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 
     <div class="block needs-pick" id="colorRow" hidden>
       <span class="label">Color</span>
-      <div class="chips">
-        <div id="pigSeg" role="group" aria-label="Color"></div>
-        <span class="curpick" id="pigCurrent" hidden><span class="dot" id="pigCurDot"></span><span id="pigCurName"></span></span>
-        <button class="more" id="moreColors" type="button">More colors…</button>
-      </div>
+      <button class="colorpick" id="moreColors" type="button" aria-label="Change color">
+        <span class="dot big" id="pigCurDot"></span><span class="cpname" id="pigCurName"></span><span class="cpchange">Change</span>
+      </button>
       <p class="hint" id="pigNote"></p>
     </div>
 
@@ -329,22 +332,22 @@ input[type=range]{width:100%;accent-color:var(--accent)}
   <div class="dlgbox">
     <div class="dlghead"><h3 id="setTitle">Settings</h3><button class="btn ghost" id="setClose" type="button">Done</button></div>
     <div class="field">
-      <span class="lbl">Brand</span>
+      <span class="lbl">Default brand</span>
       <div class="seg" id="brandSeg">
         <button type="button" data-v="artisan" aria-pressed="true">W&amp;N Artisan</button>
         <button type="button" data-v="cobra" aria-pressed="false">Cobra</button>
       </div>
-      <p class="hint">Both are water-mixable oils, and they can be mixed together.</p>
+      <p class="hint">Value Mix opens with this brand every time. Both are water-mixable oils, and they can be mixed together.</p>
     </div>
     <div class="field">
-      <span class="lbl">Paint</span>
+      <span class="lbl">Default paint</span>
       <div class="seg" id="medSeg">
         <button type="button" data-v="oil" aria-pressed="true">Water-mixable oil</button>
         <button type="button" data-v="acrylic" aria-pressed="false">Acrylic</button>
       </div>
       <p class="hint" id="medNote"></p>
     </div>
-    <p class="ver">Remembered on this device. Version 2026.11.01 · new layout</p>
+    <p class="ver">Saved on this device. Version 2026.11.02 · full color list</p>
   </div>
 </div>
 
@@ -1030,10 +1033,8 @@ function buildPig(prevBrand){
   if(prevBrand&&prevBrand!==state.brand)state.pig=sameTube(state.pig,prevBrand,state.brand)||(state.pig==='lgreen'?'green':'blue');
   PIGMENTS=PALETTES[state.brand].paints;
   if(!byId(state.pig))state.pig='blue';
-  $('pigSeg').innerHTML=PIGMENTS.filter(p=>p.fav).map(p=>'<button type="button" data-v="'+p.id+'" aria-pressed="'+(p.id===state.pig)+'" title="'+p.name+'"><span class="dot" style="background:'+hex(mix(0.35,p))+'"></span>'+p.label+'</button>').join('');
   const cur=byId(state.pig);
-  $('pigCurrent').hidden=!!cur.fav;
-  if(!cur.fav){$('pigCurDot').style.background=hex(mix(0.35,cur));$('pigCurName').textContent=cur.name}
+  $('pigCurDot').style.background=hex(mix(0.35,cur));$('pigCurName').textContent=cur.name;
 }
 function paintNote(p){
   if(p.note)return p.note;
@@ -1086,9 +1087,8 @@ function renderPicker(){
   const list=PIGMENTS.filter(p=>!q||p.name.toLowerCase().includes(q)||p.code.toLowerCase().replace(/\s/g,'').includes(q.replace(/\s/g,'')));
   const box=$('pickList');box.innerHTML='';
   if(!list.length){box.innerHTML='<p class="pickempty">No '+PALETTES[state.brand].brand+' color matches that. Try part of the name or a pigment code.</p>';return}
-  const groups=[['fav','Your colors']].concat(FAMILIES);
-  for(const [fam,title] of groups){
-    const items=list.filter(p=>fam==='fav'?p.fav:(!p.fav&&p.family===fam));
+  for(const [fam,title] of FAMILIES){
+    const items=list.filter(p=>p.family===fam);
     if(!items.length)continue;
     const g=document.createElement('div');g.className='pickgroup';
     const h=document.createElement('h4');h.textContent=title;g.appendChild(h);
@@ -1109,7 +1109,7 @@ function openPicker(){
   $('pickSearch').value='';renderPicker();
   $('picker').hidden=false;$('pickList').scrollTop=0;
   const cur=$('pickList').querySelector('[aria-current="true"]');
-  if(cur&&!byId(state.pig).fav)cur.scrollIntoView({block:'center'});
+  if(cur)cur.scrollIntoView({block:'center'});
   if(matchMedia('(pointer:fine)').matches)$('pickSearch').focus({preventScroll:true});
 }
 function closePicker(){$('picker').hidden=true;$('moreColors').focus()}
@@ -1180,7 +1180,6 @@ seg('palSeg','palette',()=>{
 });
 seg('modeSeg','mode',analyze);
 (function(){let prev=state.brand;seg('brandSeg','brand',()=>{buildPig(prev);prev=state.brand;savePrefs();computeMixes()})})();
-seg('pigSeg','pig',()=>{buildPig();computeMixes()});
 seg('medSeg','med',()=>{savePrefs();computeMixes()});
 seg('showSeg','show',render);
 seg('darkSeg','darks',computeMixes);
