@@ -348,7 +348,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
       </div>
       <p class="hint" id="medNote"></p>
     </div>
-    <p class="ver">Saved on this device. Version 2026.11.02.2 · pigment search</p>
+    <p class="ver">Saved on this device. Version 2026.11.02.3 · search both brands</p>
   </div>
 </div>
 
@@ -1083,16 +1083,16 @@ $('lbClose').onclick=closeLightbox;
 $('sheetBtn').onclick=openSheet;
 
 // ---------- full color picker ----------
-// Pigment codes like PB29, PBk9, PBr7 or PR101; "PY 42" with a space also counts.
-const CODE_RE=/\bP(?:BK|BR|[A-Z])\s?\d+(?::\d+)?\b/gi;
+// Pigment codes like PB29, PBk9, PBr7 or PR101, separated by spaces, commas, plus signs or nothing at all.
+const CODE_RE=/P(?:BK|BR|[A-Z])\s?\d+(?::\d+)?/gi;
 const normCode=c=>c.toUpperCase().replace(/\s/g,'');
 const tubeCodes=t=>t._codes||(t._codes=[...new Set((t.code.match(CODE_RE)||[]).map(normCode))]);
-function pickItem(p,brand,meta){
+function pickItem(p,brand,meta,tag){
   const b=document.createElement('button');b.type='button';b.className='pickitem';
   if(p.id===state.pig&&brand===state.brand)b.setAttribute('aria-current','true');
   b.innerHTML='<span class="ps"><span style="background:'+hex(mix(1,p))+'"></span><span style="background:'+hex(mix(0.3,p))+'"></span></span><span><span class="pn"></span><br><span class="pm"></span></span>';
   b.querySelector('.pn').textContent=p.name;
-  if(brand!==state.brand){const t=document.createElement('span');t.className='brandtag';t.textContent=PALETTES[brand].brand;b.querySelector('.pn').after(t)}
+  if(tag||brand!==state.brand){const t=document.createElement('span');t.className='brandtag';t.textContent=PALETTES[brand].brand;b.querySelector('.pn').after(t)}
   b.querySelector('.pm').textContent=meta;
   b.onclick=()=>{
     state.pig=p.id;
@@ -1103,7 +1103,8 @@ function pickItem(p,brand,meta){
 }
 function renderPicker(){
   const raw=$('pickSearch').value.trim(),box=$('pickList');box.innerHTML='';
-  const want=[...new Set((raw.match(CODE_RE)||[]).map(normCode))];
+  const onlyCodes=raw.replace(CODE_RE,'').replace(/[\s,;+&/]|and/gi,'')==='';
+  const want=onlyCodes?[...new Set((raw.match(CODE_RE)||[]).map(normCode))]:[];
   if(want.length){
     // Pigment search across both brands, ranked by how closely the pigments match.
     const tiers=[[],[],[]];
@@ -1120,24 +1121,27 @@ function renderPicker(){
     let any=false;
     tiers.forEach((list,t)=>{
       if(!list.length)return;any=true;
-      list.sort((x,y)=>(y.hit-x.hit)||((x.brand!==state.brand)-(y.brand!==state.brand))||(x.extra-y.extra)||x.p.name.localeCompare(y.p.name));
+      list.sort((x,y)=>(y.hit-x.hit)||(x.extra-y.extra)||x.p.name.localeCompare(y.p.name)||x.brand.localeCompare(y.brand));
       const g=document.createElement('div');g.className='pickgroup';
       const h=document.createElement('h4');h.textContent=titles[t]+' · '+list.length;g.appendChild(h);
-      for(const r of list)g.appendChild(pickItem(r.p,r.brand,r.p.code+(t===2?' · shares '+r.hit+' of '+want.length:'')+' · value '+(r.p.pureL/10).toFixed(1)));
+      for(const r of list)g.appendChild(pickItem(r.p,r.brand,r.p.code+(t===2?' · shares '+r.hit+' of '+want.length:'')+' · value '+(r.p.pureL/10).toFixed(1),true));
       box.appendChild(g);
     });
     if(!any)intro.textContent='No paint in either brand contains '+want.join(' + ')+'. Check the codes, or try fewer of them.';
     return;
   }
-  const q=raw.toLowerCase();
-  const list=PIGMENTS.filter(p=>!q||p.name.toLowerCase().includes(q)||p.code.toLowerCase().replace(/\s/g,'').includes(q.replace(/\s/g,'')));
-  if(!list.length){box.innerHTML='<p class="pickempty">No '+PALETTES[state.brand].brand+' color matches that. Try part of the name, or pigment codes like PB29 PG7.</p>';return}
+  const q=raw.toLowerCase(),flat=v=>v.toLowerCase().replace(/[\s,]/g,'');
+  // With a search, look in both brands; with an empty box, browse the current brand.
+  const pool=q?Object.keys(PALETTES).flatMap(br=>PALETTES[br].paints.map(p=>({p,brand:br}))):PIGMENTS.map(p=>({p,brand:state.brand}));
+  const list=pool.filter(({p})=>!q||p.name.toLowerCase().includes(q)||flat(p.code).includes(flat(q)));
+  if(!list.length){box.innerHTML='<p class="pickempty">No color in either brand matches that. Try part of the name, or pigment codes like PB29 PG7.</p>';return}
+  if(q){const n=document.createElement('p');n.className='pickempty';n.textContent=list.length+' match'+(list.length===1?'':'es')+' in W&N Artisan and Cobra.';box.appendChild(n)}
   for(const [fam,title] of FAMILIES){
-    const items=list.filter(p=>p.family===fam);
+    const items=list.filter(({p})=>p.family===fam).sort((x,y)=>x.p.name.localeCompare(y.p.name)||x.brand.localeCompare(y.brand));
     if(!items.length)continue;
     const g=document.createElement('div');g.className='pickgroup';
     const h=document.createElement('h4');h.textContent=title;g.appendChild(h);
-    for(const p of items)g.appendChild(pickItem(p,state.brand,p.code+' · value '+(p.pureL/10).toFixed(1)+' at full strength'));
+    for(const {p,brand} of items)g.appendChild(pickItem(p,brand,p.code+' · value '+(p.pureL/10).toFixed(1)+' at full strength',!!q));
     box.appendChild(g);
   }
 }
