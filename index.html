@@ -348,7 +348,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
       </div>
       <p class="hint" id="medNote"></p>
     </div>
-    <p class="ver">Saved on this device. Version 2026.11.02.3 · search both brands</p>
+    <p class="ver">Saved on this device. Version 2026.11.02.4 · names and codes together</p>
   </div>
 </div>
 
@@ -1103,20 +1103,23 @@ function pickItem(p,brand,meta,tag){
 }
 function renderPicker(){
   const raw=$('pickSearch').value.trim(),box=$('pickList');box.innerHTML='';
-  const onlyCodes=raw.replace(CODE_RE,'').replace(/[\s,;+&/]|and/gi,'')==='';
-  const want=onlyCodes?[...new Set((raw.match(CODE_RE)||[]).map(normCode))]:[];
+  const want=[...new Set((raw.match(CODE_RE)||[]).map(normCode))];
+  // Words left over once the codes are taken out narrow the results by name, e.g. "phthalo PB15".
+  const words=raw.replace(CODE_RE,' ').toLowerCase().split(/[\s,;+&/]+/).filter(w=>w&&w!=='and');
+  const named=p=>words.every(w=>p.name.toLowerCase().includes(w));
   if(want.length){
     // Pigment search across both brands, ranked by how closely the pigments match.
     const tiers=[[],[],[]];
     for(const brand of Object.keys(PALETTES))for(const p of PALETTES[brand].paints){
       const have=tubeCodes(p),hit=want.filter(c=>have.includes(c)).length;
-      if(!hit)continue;
+      if(!hit||!named(p))continue;
       const tier=hit===want.length?(have.length===want.length?0:1):2;
       tiers[tier].push({p,brand,hit,extra:have.length-hit});
     }
     const titles=['Same pigments','Has all of these pigments, plus others','Shares some of these pigments'];
     const intro=document.createElement('p');intro.className='pickempty';
-    intro.textContent='Paints in both brands containing '+want.join(' + ')+'. Paints with the same pigments mix and tint very similarly.';
+    const nameBit=words.length?' with "'+words.join(' ')+'" in the name':'';
+    intro.textContent='Paints in both brands containing '+want.join(' + ')+nameBit+'. Paints with the same pigments mix and tint very similarly.';
     box.appendChild(intro);
     let any=false;
     tiers.forEach((list,t)=>{
@@ -1127,7 +1130,7 @@ function renderPicker(){
       for(const r of list)g.appendChild(pickItem(r.p,r.brand,r.p.code+(t===2?' · shares '+r.hit+' of '+want.length:'')+' · value '+(r.p.pureL/10).toFixed(1),true));
       box.appendChild(g);
     });
-    if(!any)intro.textContent='No paint in either brand contains '+want.join(' + ')+'. Check the codes, or try fewer of them.';
+    if(!any)intro.textContent='No paint in either brand contains '+want.join(' + ')+nameBit+'. Check the spelling and codes, or try fewer of them.';
     return;
   }
   const q=raw.toLowerCase(),flat=v=>v.toLowerCase().replace(/[\s,]/g,'');
