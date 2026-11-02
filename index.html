@@ -162,7 +162,8 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .pickitem .ps{display:grid;grid-template-columns:1fr 1fr;width:44px;height:30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
 .pickitem .pn{font-weight:600;font-size:15px}
 .pickitem .pm{font:12px var(--mono);color:var(--muted)}
-.pickempty{color:var(--muted);font-size:14px}
+.pickempty{color:var(--muted);font-size:14px;margin:0}
+.brandtag{display:inline-block;margin-left:8px;font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:3px;padding:2px 5px;vertical-align:2px}
 .lightbox{position:fixed;inset:0;z-index:50;background:#0e0f11;display:flex;flex-direction:column;
   padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 12px) max(16px,env(safe-area-inset-left,0px))}
 .lbbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:10px}
@@ -347,7 +348,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
       </div>
       <p class="hint" id="medNote"></p>
     </div>
-    <p class="ver">Saved on this device. Version 2026.11.02 · full color list</p>
+    <p class="ver">Saved on this device. Version 2026.11.02.2 · pigment search</p>
   </div>
 </div>
 
@@ -356,7 +357,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
     <h3 id="pickTitle">Choose a color</h3>
     <button class="btn ghost" id="pickClose" type="button">Close</button>
   </div>
-  <input type="search" id="pickSearch" placeholder="Search by name or pigment, e.g. sienna or PB29" aria-label="Search colors" autocomplete="off">
+  <input type="search" id="pickSearch" placeholder="Name, or pigment codes like PB29 PG7" aria-label="Search colors" autocomplete="off">
   <div class="picklist" id="pickList"></div>
 </div>
 
@@ -1082,25 +1083,61 @@ $('lbClose').onclick=closeLightbox;
 $('sheetBtn').onclick=openSheet;
 
 // ---------- full color picker ----------
+// Pigment codes like PB29, PBk9, PBr7 or PR101; "PY 42" with a space also counts.
+const CODE_RE=/\bP(?:BK|BR|[A-Z])\s?\d+(?::\d+)?\b/gi;
+const normCode=c=>c.toUpperCase().replace(/\s/g,'');
+const tubeCodes=t=>t._codes||(t._codes=[...new Set((t.code.match(CODE_RE)||[]).map(normCode))]);
+function pickItem(p,brand,meta){
+  const b=document.createElement('button');b.type='button';b.className='pickitem';
+  if(p.id===state.pig&&brand===state.brand)b.setAttribute('aria-current','true');
+  b.innerHTML='<span class="ps"><span style="background:'+hex(mix(1,p))+'"></span><span style="background:'+hex(mix(0.3,p))+'"></span></span><span><span class="pn"></span><br><span class="pm"></span></span>';
+  b.querySelector('.pn').textContent=p.name;
+  if(brand!==state.brand){const t=document.createElement('span');t.className='brandtag';t.textContent=PALETTES[brand].brand;b.querySelector('.pn').after(t)}
+  b.querySelector('.pm').textContent=meta;
+  b.onclick=()=>{
+    state.pig=p.id;
+    if(brand!==state.brand){state.brand=brand;$('brandSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===brand?'true':'false'))}
+    closePicker();buildPig();computeMixes();
+  };
+  return b;
+}
 function renderPicker(){
-  const q=$('pickSearch').value.trim().toLowerCase();
+  const raw=$('pickSearch').value.trim(),box=$('pickList');box.innerHTML='';
+  const want=[...new Set((raw.match(CODE_RE)||[]).map(normCode))];
+  if(want.length){
+    // Pigment search across both brands, ranked by how closely the pigments match.
+    const tiers=[[],[],[]];
+    for(const brand of Object.keys(PALETTES))for(const p of PALETTES[brand].paints){
+      const have=tubeCodes(p),hit=want.filter(c=>have.includes(c)).length;
+      if(!hit)continue;
+      const tier=hit===want.length?(have.length===want.length?0:1):2;
+      tiers[tier].push({p,brand,hit,extra:have.length-hit});
+    }
+    const titles=['Same pigments','Has all of these pigments, plus others','Shares some of these pigments'];
+    const intro=document.createElement('p');intro.className='pickempty';
+    intro.textContent='Paints in both brands containing '+want.join(' + ')+'. Paints with the same pigments mix and tint very similarly.';
+    box.appendChild(intro);
+    let any=false;
+    tiers.forEach((list,t)=>{
+      if(!list.length)return;any=true;
+      list.sort((x,y)=>(y.hit-x.hit)||((x.brand!==state.brand)-(y.brand!==state.brand))||(x.extra-y.extra)||x.p.name.localeCompare(y.p.name));
+      const g=document.createElement('div');g.className='pickgroup';
+      const h=document.createElement('h4');h.textContent=titles[t]+' · '+list.length;g.appendChild(h);
+      for(const r of list)g.appendChild(pickItem(r.p,r.brand,r.p.code+(t===2?' · shares '+r.hit+' of '+want.length:'')+' · value '+(r.p.pureL/10).toFixed(1)));
+      box.appendChild(g);
+    });
+    if(!any)intro.textContent='No paint in either brand contains '+want.join(' + ')+'. Check the codes, or try fewer of them.';
+    return;
+  }
+  const q=raw.toLowerCase();
   const list=PIGMENTS.filter(p=>!q||p.name.toLowerCase().includes(q)||p.code.toLowerCase().replace(/\s/g,'').includes(q.replace(/\s/g,'')));
-  const box=$('pickList');box.innerHTML='';
-  if(!list.length){box.innerHTML='<p class="pickempty">No '+PALETTES[state.brand].brand+' color matches that. Try part of the name or a pigment code.</p>';return}
+  if(!list.length){box.innerHTML='<p class="pickempty">No '+PALETTES[state.brand].brand+' color matches that. Try part of the name, or pigment codes like PB29 PG7.</p>';return}
   for(const [fam,title] of FAMILIES){
     const items=list.filter(p=>p.family===fam);
     if(!items.length)continue;
     const g=document.createElement('div');g.className='pickgroup';
     const h=document.createElement('h4');h.textContent=title;g.appendChild(h);
-    for(const p of items){
-      const b=document.createElement('button');b.type='button';b.className='pickitem';
-      if(p.id===state.pig)b.setAttribute('aria-current','true');
-      b.innerHTML='<span class="ps"><span style="background:'+hex(mix(1,p))+'"></span><span style="background:'+hex(mix(0.3,p))+'"></span></span><span><span class="pn"></span><br><span class="pm"></span></span>';
-      b.querySelector('.pn').textContent=p.name;
-      b.querySelector('.pm').textContent=p.code+' · value '+(p.pureL/10).toFixed(1)+' at full strength';
-      b.onclick=()=>{state.pig=p.id;closePicker();buildPig();computeMixes()};
-      g.appendChild(b);
-    }
+    for(const p of items)g.appendChild(pickItem(p,state.brand,p.code+' · value '+(p.pureL/10).toFixed(1)+' at full strength'));
     box.appendChild(g);
   }
 }
@@ -1185,14 +1222,19 @@ seg('showSeg','show',render);
 seg('darkSeg','darks',computeMixes);
 
 // ---------- settings: brand and paint type, remembered on this device ----------
-function savePrefs(){try{localStorage.setItem('valuemix.prefs',JSON.stringify({brand:state.brand,med:state.med}))}catch(e){}}
+function savePrefs(){state.defaultBrand=state.brand;try{localStorage.setItem('valuemix.prefs',JSON.stringify({brand:state.brand,med:state.med}))}catch(e){}}
 (function(){
   try{const v=JSON.parse(localStorage.getItem('valuemix.prefs')||'null');
     if(v&&PALETTES[v.brand])state.brand=v.brand;if(v&&(v.med==='oil'||v.med==='acrylic'))state.med=v.med}catch(e){}
   for(const [id,val] of [['brandSeg',state.brand],['medSeg',state.med]])$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===val?'true':'false'));
   buildPig();
 })();
-function openSettings(){$('settings').hidden=false;$('setClose').focus()}
+function openSettings(){
+  let def=state.defaultBrand||'artisan';
+  try{const v=JSON.parse(localStorage.getItem('valuemix.prefs')||'null');if(v&&PALETTES[v.brand])def=v.brand}catch(e){}
+  $('brandSeg').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===def?'true':'false'));
+  $('settings').hidden=false;$('setClose').focus();
+}
 function closeSettings(){$('settings').hidden=true;$('setBtn').focus()}
 $('setBtn').onclick=openSettings;$('setClose').onclick=closeSettings;
 $('settings').addEventListener('click',e=>{if(e.target===$('settings'))closeSettings()});
