@@ -34,7 +34,7 @@
 		inset: 0;
 		z-index: 10;
 		overflow-y: auto;
-		background: var(--ground);
+		background: var(--bg);
 	}
 
 	.body {

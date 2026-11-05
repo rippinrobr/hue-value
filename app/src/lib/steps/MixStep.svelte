@@ -147,7 +147,7 @@
 		gap: 12px;
 		padding: 10px 14px;
 		border: 0;
-		border-bottom: 1px solid var(--soft);
+		border-bottom: 1px solid var(--control);
 		background: none;
 		text-align: left;
 	}
@@ -157,7 +157,7 @@
 	}
 
 	.mix[aria-pressed='true'] {
-		background: var(--soft);
+		background: var(--control);
 	}
 
 	.swatch {
@@ -167,7 +167,7 @@
 		width: 48px;
 		height: 48px;
 		overflow: hidden;
-		border: 1px solid var(--line);
+		border: 1px solid var(--border);
 		border-radius: 14px;
 	}
 
@@ -187,12 +187,12 @@
 	}
 
 	.meta {
-		color: var(--muted);
+		color: var(--text-secondary);
 		font-size: 14px;
 	}
 
 	.warning {
-		color: var(--warn);
+		color: var(--danger);
 		font-size: 14px;
 	}
 

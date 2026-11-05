@@ -113,7 +113,7 @@
 
 	input[type='range'] {
 		width: 100%;
-		accent-color: var(--pine);
+		accent-color: var(--accent);
 	}
 
 	output {

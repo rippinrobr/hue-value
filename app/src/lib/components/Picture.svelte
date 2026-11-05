@@ -175,7 +175,7 @@
 		max-height: var(--height);
 		object-fit: contain;
 		border-radius: 18px;
-		background: var(--soft);
+		background: var(--control);
 	}
 
 	@media (min-width: 900px) {
@@ -214,8 +214,8 @@
 	}
 
 	.views button[aria-pressed='true'] {
-		background: var(--pine);
-		color: var(--on-pine);
+		background: var(--accent);
+		color: var(--on-accent);
 	}
 
 	.enlarge {

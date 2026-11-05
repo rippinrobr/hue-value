@@ -72,7 +72,7 @@
 	input {
 		height: 52px;
 		padding: 0 16px;
-		border: 2px solid var(--line);
+		border: 2px solid var(--border);
 		border-radius: 18px;
 		background: var(--surface);
 		font-size: 16px;
@@ -98,7 +98,7 @@
 		min-height: 62px;
 		padding: 8px 14px;
 		border: 0;
-		border-bottom: 1px solid var(--soft);
+		border-bottom: 1px solid var(--control);
 		background: none;
 		text-align: left;
 	}
@@ -133,7 +133,7 @@
 	}
 
 	.meta {
-		color: var(--muted);
+		color: var(--text-secondary);
 		font-size: 14px;
 	}
 </style>

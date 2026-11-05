@@ -47,7 +47,7 @@
 	}
 
 	button[aria-pressed='true'] {
-		background: var(--pine);
-		color: var(--on-pine);
+		background: var(--accent);
+		color: var(--on-accent);
 	}
 </style>

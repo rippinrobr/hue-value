@@ -128,7 +128,7 @@
 	}
 
 	.option.chosen {
-		border-color: var(--pine);
+		border-color: var(--accent);
 		padding-bottom: 14px;
 	}
 
@@ -176,7 +176,7 @@
 		padding: 10px;
 		border: 0;
 		border-radius: 14px;
-		background: var(--ground);
+		background: var(--bg);
 		text-align: left;
 	}
 
@@ -194,7 +194,7 @@
 	}
 
 	.change {
-		color: var(--pine);
+		color: var(--accent);
 		font-size: 15px;
 		font-weight: 700;
 	}

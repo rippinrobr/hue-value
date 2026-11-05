@@ -50,23 +50,23 @@
 		padding: 4px 0;
 		border: 0;
 		background: none;
-		color: var(--muted);
+		color: var(--text-secondary);
 		font-size: 13px;
 		font-weight: 700;
 		text-align: left;
 	}
 
 	button.done {
-		color: var(--ink);
+		color: var(--text);
 	}
 
 	.bar {
 		height: 6px;
 		border-radius: 3px;
-		background: var(--line);
+		background: var(--border);
 	}
 
 	.done .bar {
-		background: var(--pine);
+		background: var(--accent);
 	}
 </style>

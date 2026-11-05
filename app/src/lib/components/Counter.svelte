@@ -57,8 +57,8 @@
 		height: 44px;
 		border: 0;
 		border-radius: 22px;
-		background: var(--soft);
-		color: var(--on-soft);
+		background: var(--control);
+		color: var(--text);
 		font-size: 22px;
 		font-weight: 700;
 	}

@@ -77,12 +77,12 @@
 		height: 32px;
 		padding: 3px;
 		border-radius: 16px;
-		background: var(--muted);
+		background: var(--text-secondary);
 	}
 
 	.track.on {
 		justify-content: flex-end;
-		background: var(--pine);
+		background: var(--accent);
 	}
 
 	.thumb {

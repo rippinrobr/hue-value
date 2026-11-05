@@ -110,7 +110,7 @@
 
 	.intro p {
 		font-size: 17px;
-		color: var(--muted);
+		color: var(--text-secondary);
 	}
 
 	.add {

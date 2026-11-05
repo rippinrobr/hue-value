@@ -48,7 +48,7 @@
 		align-items: flex-start;
 		gap: 12px;
 		padding: 10px 14px;
-		border-bottom: 1px solid var(--soft);
+		border-bottom: 1px solid var(--control);
 	}
 
 	ul li:last-child {
@@ -59,12 +59,12 @@
 		flex: none;
 		width: 36px;
 		height: 36px;
-		border: 1px solid var(--line);
+		border: 1px solid var(--border);
 		border-radius: 18px;
 	}
 
 	.chip.empty {
-		border: 2px dashed var(--muted);
+		border: 2px dashed var(--text-secondary);
 	}
 
 	.words {
