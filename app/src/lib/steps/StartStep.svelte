@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { studio } from '#lib/studio.svelte.ts';
-	import { goToStep, openPanel } from '#lib/nav.ts';
+	import { resolve } from '$app/paths';
+	import { goToStep } from '#lib/nav.ts';
 	import { exampleCanvas } from '#lib/engine/index.ts';
 
 	let library = $state<HTMLInputElement>();
@@ -23,12 +24,7 @@
 <main class="screen start">
 	<div class="top">
 		<span class="brand">Hue &amp; Value</span>
-		<button
-			type="button"
-			class="settings"
-			aria-label="Settings"
-			onclick={() => openPanel('settings')}
-		>
+		<a class="settings" aria-label="Settings" href={resolve('/settings')}>
 			<svg
 				width="20"
 				height="20"
@@ -41,7 +37,7 @@
 				><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"
 				></circle><circle cx="8" cy="17" r="2"></circle></svg
 			>
-		</button>
+		</a>
 	</div>
 	<div class="intro">
 		<h1>What are you painting today?</h1>
@@ -91,9 +87,9 @@
 		place-items: center;
 		width: 44px;
 		height: 44px;
-		border: 0;
 		border-radius: 22px;
 		background: var(--surface);
+		color: var(--text);
 	}
 
 	.intro {

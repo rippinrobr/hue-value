@@ -6,8 +6,15 @@
 		title,
 		close = 'Close',
 		wide = false,
+		onclose = closePanel,
 		children
-	}: { title: string; close?: string; wide?: boolean; children: Snippet } = $props();
+	}: {
+		title: string;
+		close?: string;
+		wide?: boolean;
+		onclose?: () => void;
+		children: Snippet;
+	} = $props();
 
 	let closeButton = $state<HTMLButtonElement>();
 
@@ -20,7 +27,7 @@
 	<div class="body" class:wide>
 		<header>
 			<h1>{title}</h1>
-			<button bind:this={closeButton} type="button" class="button soft small" onclick={closePanel}>
+			<button bind:this={closeButton} type="button" class="button soft small" onclick={onclose}>
 				{close}
 			</button>
 		</header>

@@ -1,10 +1,30 @@
 <script lang="ts">
+	import { afterNavigate, goto } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import { studio } from '#lib/studio.svelte.ts';
 	import Overlay from '#lib/components/Overlay.svelte';
 	import Choice from '#lib/components/Choice.svelte';
+
+	let cameFromApp = $state(false);
+
+	afterNavigate(({ type }) => {
+		cameFromApp = type !== 'enter';
+	});
+
+	// Opened directly from a link there is nothing to go back to.
+	function close() {
+		if (cameFromApp) history.back();
+		else goto(resolve('/'));
+	}
 </script>
 
-<Overlay title="Settings" close="Done">
+<svelte:head>
+	<title>Settings · Hue &amp; Value</title>
+</svelte:head>
+
+<svelte:window onkeydown={(event) => event.key === 'Escape' && close()} />
+
+<Overlay title="Settings" close="Done" onclose={close}>
 	<Choice
 		label="Your paint"
 		options={[

@@ -56,7 +56,7 @@ await page.reload();
 await page.waitForSelector('text=What are you painting today?');
 say('reload returns to start');
 
-await page.getByRole('button', { name: 'Settings' }).click();
+await page.getByRole('link', { name: 'Settings' }).click();
 await page.getByRole('switch').click();
 await page.getByRole('button', { name: 'Cobra' }).click();
 await page.getByRole('button', { name: 'Acrylic' }).click();

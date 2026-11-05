@@ -9,14 +9,11 @@
 	import ColorPicker from '#lib/panels/ColorPicker.svelte';
 	import FineTune from '#lib/panels/FineTune.svelte';
 	import PaintsTips from '#lib/panels/PaintsTips.svelte';
-	import SettingsPanel from '#lib/panels/SettingsPanel.svelte';
 	import Lightbox from '#lib/panels/Lightbox.svelte';
 
 	// A reload loses the photo, so the study starts again from the first screen.
 	const step = $derived(studio.photo ? page.state.step : undefined);
-	const overlay = $derived(
-		studio.photo || page.state.overlay === 'settings' ? page.state.overlay : undefined
-	);
+	const overlay = $derived(studio.photo ? page.state.overlay : undefined);
 
 	async function drop(event: DragEvent) {
 		event.preventDefault();
@@ -59,8 +56,6 @@
 	<FineTune />
 {:else if overlay === 'paints'}
 	<PaintsTips />
-{:else if overlay === 'settings'}
-	<SettingsPanel />
 {:else if overlay === 'lightbox'}
 	<Lightbox />
 {/if}

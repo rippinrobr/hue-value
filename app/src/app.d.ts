@@ -7,7 +7,7 @@ declare global {
 		// interface PageData {}
 		interface PageState {
 			step?: 'palette' | 'values' | 'mix';
-			overlay?: 'picker' | 'tune' | 'paints' | 'settings' | 'lightbox';
+			overlay?: 'picker' | 'tune' | 'paints' | 'lightbox';
 		}
 		// interface Platform {}
 	}

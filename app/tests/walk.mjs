@@ -25,7 +25,7 @@ await page.waitForSelector('text=What are you painting today?');
 await shot('01-start');
 await overflow('start');
 
-await page.getByRole('button', { name: 'Settings' }).click();
+await page.getByRole('link', { name: 'Settings' }).click();
 await shot('02-settings');
 await page.getByRole('button', { name: 'Done' }).click();
 
