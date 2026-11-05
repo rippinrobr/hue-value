@@ -103,3 +103,19 @@ export const limitedDef = (palette: PaletteId) => {
 
 export const paletteTubes = (palette: PaletteId, brand: BrandId) =>
 	limitedDef(palette).tubes[brand].map((id) => requirePaint(brand, id));
+
+/** The same tube in the other brand, so switching brands keeps the color when it can. */
+export function matchingPaint(id: string, from: BrandId, to: BrandId) {
+	const tube = paintById(from, id);
+	if (!tube) return null;
+	const key = (name: string) =>
+		name
+			.toLowerCase()
+			.replace(/\s+\d+$/, '')
+			.replace(/\(.*\)/, '')
+			.replace(/grey/g, 'gray')
+			.replace(/\s+/g, ' ')
+			.trim();
+	const match = paintById(to, id) ?? BRANDS[to].paints.find((p) => key(p.name) === key(tube.name));
+	return match ? match.id : null;
+}

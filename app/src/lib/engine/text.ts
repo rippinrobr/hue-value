@@ -114,6 +114,39 @@ export const zoneRecipe = (z: Zone, settings: StudySettings) =>
 		? ratioText(z, requirePaint(settings.brand, settings.pig), settings)
 		: recipeText(z);
 
+export function paintNote(p: Paint) {
+	if (p.note) return p.note;
+	const v = (p.pureL / 10).toFixed(1);
+	return `Pigments ${p.code}. Straight from the tube it reaches about value ${v}${p.pureL > 45 ? ', so the darker tones lean on the partner paint.' : '.'}`;
+}
+
+/** The sentence under a mix when it can't reach its target. */
+export const mixWarning = (z: Zone, settings: StudySettings) =>
+	isMono(settings)
+		? z.short
+			? 'As dark as these two paints go. The real tone is a bit darker, so judge it against its neighbors.'
+			: ''
+		: gamutNote(z);
+
+export function saveName(
+	kind: 'sheet' | 'values' | 'map',
+	zones: Zone[],
+	settings: StudySettings,
+	date: Date
+) {
+	const mono = isMono(settings);
+	const word = mono
+		? requirePaint(settings.brand, settings.pig).label
+		: limitedDef(settings.palette).name;
+	const slug = word
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/^-|-$/g, '');
+	if (kind === 'sheet') return `painting-sheet-${slug}-${date.toISOString().slice(0, 10)}.png`;
+	const prefix = kind === 'values' ? 'values-' : mono ? 'value-map-' : 'color-map-';
+	return `${prefix}${slug}-${zones.length}${mono ? '-tones.png' : '-colors.png'}`;
+}
+
 const OPTIONAL_OIL = {
 	chip: 'transparent',
 	name: 'Water-mixable linseed oil or medium',

@@ -1,0 +1,226 @@
+:root {
+	--ground: #eef4ec;
+	--surface: #ffffff;
+	--ink: #1e2b26;
+	--muted: #4a5a52;
+	--line: #cfdccf;
+	--pine: #1f5c4d;
+	--on-pine: #ffffff;
+	--soft: #e0ece1;
+	--on-soft: #174437;
+	--warn: #9a4a12;
+	font-family:
+		'Figtree Variable',
+		system-ui,
+		-apple-system,
+		sans-serif;
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ground: #131a17;
+		--surface: #1f2925;
+		--ink: #e9f0ea;
+		--muted: #adbcb3;
+		--line: #38473f;
+		--pine: #86cdb6;
+		--on-pine: #0f221c;
+		--soft: #2b3a34;
+		--on-soft: #d3e8dc;
+		--warn: #f0a56b;
+		color-scheme: dark;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--ground);
+	color: var(--ink);
+	font-size: 16px;
+	line-height: 1.4;
+	-webkit-text-size-adjust: 100%;
+}
+
+button,
+input {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+	opacity: 0.6;
+}
+
+:focus-visible {
+	outline: 3px solid var(--pine);
+	outline-offset: 2px;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 1.1;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+a {
+	color: var(--pine);
+}
+
+.muted {
+	color: var(--muted);
+	font-size: 15px;
+}
+
+.label {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.screen {
+	width: 100%;
+	max-width: 480px;
+	min-height: 100dvh;
+	margin: 0 auto;
+	padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 0
+		max(20px, env(safe-area-inset-left));
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	min-height: 56px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 28px;
+	background: var(--pine);
+	color: var(--on-pine);
+	font-size: 17px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.button.soft {
+	background: var(--soft);
+	color: var(--on-soft);
+}
+
+.button.small {
+	min-height: 44px;
+	padding: 0 16px;
+	border-radius: 22px;
+	font-size: 15px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	border: 0;
+	background: none;
+	color: var(--pine);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.card {
+	border-radius: 22px;
+	background: var(--surface);
+}
+
+.row-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 48px;
+	padding: 8px 16px;
+	border: 0;
+	border-radius: 20px;
+	background: var(--surface);
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	gap: 10px;
+	margin-top: auto;
+	padding: 10px 0 max(16px, env(safe-area-inset-bottom));
+	background: var(--ground);
+}
+
+.actions .grow {
+	flex: 1;
+}
+
+.message {
+	padding: 10px 14px;
+	border-radius: 14px;
+	background: var(--surface);
+	color: var(--warn);
+	font-size: 15px;
+}
+
+/* One column on phones. On laptops the picture stays put beside the controls. */
+.columns {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+@media (min-width: 900px) {
+	.screen.wide {
+		max-width: 1040px;
+	}
+
+	.columns {
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+		gap: 24px;
+		align-items: start;
+	}
+
+	.columns > .sticky {
+		position: sticky;
+		top: 16px;
+	}
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	min-width: 0;
+}

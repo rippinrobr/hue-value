@@ -5,7 +5,10 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface PageState {}
+		interface PageState {
+			step?: 'palette' | 'values' | 'mix';
+			overlay?: 'picker' | 'tune' | 'paints' | 'settings' | 'lightbox';
+		}
 		// interface Platform {}
 	}
 }
