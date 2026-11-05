@@ -22,6 +22,8 @@ export interface Paint {
 	chroma: number;
 	near: string | null;
 	comp: string | null;
+	/** Pigment codes and parts, or null when the color was set by hand. */
+	recipe: [string, number][] | null;
 	fav?: number;
 	note?: string;
 }

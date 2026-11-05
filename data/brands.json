@@ -1,0 +1,16 @@
+{
+	"artisan": {
+		"brand": "Winsor & Newton",
+		"line": "Artisan",
+		"medium": "water-mixable oil",
+		"label": "Winsor & Newton Artisan",
+		"white": "Titanium White"
+	},
+	"cobra": {
+		"brand": "Royal Talens",
+		"line": "Cobra Artist",
+		"medium": "water-mixable oil",
+		"label": "Cobra",
+		"white": "Titanium White 105"
+	}
+}

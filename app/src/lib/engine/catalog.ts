@@ -1,12 +1,14 @@
-import data from '../../../../data/paints.json';
+// Bundled with the app, so every paint is there offline and with no API.
+import brands from '../../../../data/brands.json';
+import paints from '../../../../data/paints.json';
 import { WHITE } from './mixing';
 import type { BrandId, LimitedPaletteId, Paint, PaletteId, Pigment } from './types';
 
-const catalog = data as unknown as Record<BrandId, Paint[]>;
+const catalog = paints as unknown as Record<BrandId, Paint[]>;
 
 export const BRANDS: Record<BrandId, { brand: string; white: string; paints: Paint[] }> = {
-	artisan: { brand: 'Winsor & Newton Artisan', white: 'Titanium White', paints: catalog.artisan },
-	cobra: { brand: 'Cobra', white: 'Titanium White 105', paints: catalog.cobra }
+	artisan: { brand: brands.artisan.label, white: brands.artisan.white, paints: catalog.artisan },
+	cobra: { brand: brands.cobra.label, white: brands.cobra.white, paints: catalog.cobra }
 };
 
 export const FAMILIES = [
