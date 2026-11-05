@@ -104,6 +104,9 @@ export interface ImageChannels {
 	mask: Float32Array;
 }
 
+/** What the screens keep once the worker holds the channels. */
+export type PhotoMask = Pick<ImageChannels, 'width' | 'height' | 'mask'>;
+
 export interface Study {
 	zones: Zone[];
 	assign: Uint8Array;

@@ -2,7 +2,16 @@
 import { LIN, LfromY, YfromL, labOf, linOfLab, lumY } from './color';
 import { WHITE_TUBE, paintById, paletteTubes, requirePaint } from './catalog';
 import { mix, mix2, solve, solveDeep, solveRecipe } from './mixing';
-import type { Contrast, Darks, ImageChannels, Key, StudySettings, Study, Zone } from './types';
+import type {
+	Contrast,
+	Darks,
+	ImageChannels,
+	Key,
+	PhotoMask,
+	StudySettings,
+	Study,
+	Zone
+} from './types';
 
 export const MAX_ANALYSIS_SIZE = 520;
 
@@ -306,5 +315,5 @@ export function analyze(channels: ImageChannels, settings: StudySettings): Study
 	return study;
 }
 
-export const hasBrightenedArea = (channels: ImageChannels, settings: StudySettings) =>
+export const hasBrightenedArea = (channels: PhotoMask, settings: StudySettings) =>
 	channels.mask.some((v) => v > 0) && settings.lift > 0;

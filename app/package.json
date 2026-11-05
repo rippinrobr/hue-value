@@ -20,7 +20,8 @@
 		"test": "npm run test:unit -- --run",
 		"golden:capture": "node tests/golden/capture.mjs",
 		"data:paints": "node scripts/export-paints.mjs",
-		"golden:sheet": "node tests/golden/sheet.mjs"
+		"golden:sheet": "node tests/golden/sheet.mjs",
+		"test:worker": "node tests/worker/run.mjs"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

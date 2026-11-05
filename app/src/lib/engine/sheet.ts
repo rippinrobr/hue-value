@@ -4,13 +4,13 @@ import { adjustedLightness, hasBrightenedArea } from './analysis';
 import { BRANDS, limitedDef, paintById, paletteTubes, requirePaint } from './catalog';
 import { LIN, LfromY, YfromL, grayHex, hex, labOf, toSRGB } from './color';
 import { gamutNote, paintList, studyTitle, workingTips, zoneRecipe } from './text';
-import type { ImageChannels, Study, StudySettings } from './types';
+import type { PhotoMask, Study, StudySettings } from './types';
 
 export interface SheetInput {
 	source: CanvasImageSource;
 	sourceWidth: number;
 	sourceHeight: number;
-	channels: ImageChannels;
+	channels: PhotoMask;
 	study: Study;
 	settings: StudySettings;
 	date: Date;

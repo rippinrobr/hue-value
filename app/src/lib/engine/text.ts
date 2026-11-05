@@ -5,9 +5,9 @@ import { WHITE, mix } from './mixing';
 import { fmt, nice, parts } from './parts';
 import type {
 	Contrast,
-	ImageChannels,
 	Paint,
 	PaintListItem,
+	PhotoMask,
 	Recipe,
 	StudySettings,
 	Study,
@@ -281,7 +281,7 @@ export const toneWarning = (z: Zone, settings: StudySettings) =>
 	isMono(settings) ? (z.short ? 'darkest reachable with these paints' : '') : gamutNote(z);
 
 /** The plain-text version of the painting sheet. */
-export function sheetText(study: Study, channels: ImageChannels, settings: StudySettings) {
+export function sheetText(study: Study, channels: PhotoMask, settings: StudySettings) {
 	const { zones } = study;
 	const mono = isMono(settings);
 	const unit = mono ? 'Tone' : 'Color';
