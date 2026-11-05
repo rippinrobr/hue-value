@@ -1,0 +1,3303 @@
+{
+	"image": "color-field.png",
+	"cases": [
+		{
+			"name": "mono-default",
+			"settings": {
+				"palette": "mono"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.105,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#2c2e5e",
+					"text": {
+						"main": "9 parts French Ultramarine : 1 part Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.41861,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#5e5499",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts white",
+						"sub": "42% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.150611,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#897ebd",
+					"text": {
+						"main": "1 part French Ultramarine : 6 parts white",
+						"sub": "15% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.045404,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#b4aad7",
+					"text": {
+						"main": "1 part French Ultramarine : 20 parts white",
+						"sub": "5% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.00984,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#d7d2e9",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 9 parts French Ultramarine : 1 part Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 4.0 | 19% of image | 1 part French Ultramarine : 1.5 parts white (42% French Ultramarine by volume)\nTone 3 | value 5.6 | 27% of image | 1 part French Ultramarine : 6 parts white (15% French Ultramarine by volume)\nTone 4 | value 7.2 | 23% of image | 1 part French Ultramarine : 20 parts white (5% French Ultramarine by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-tones-3",
+			"settings": {
+				"palette": "mono",
+				"n": 3
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 28.496242,
+					"area": 0.234375,
+					"c": 0.785876,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#433a7a",
+					"text": {
+						"main": "4 parts French Ultramarine : 1 part white",
+						"sub": "79% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 54.904782,
+					"area": 0.38125,
+					"c": 0.161376,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#877bbb",
+					"text": {
+						"main": "1 part French Ultramarine : 5 parts white",
+						"sub": "16% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 79.082152,
+					"area": 0.384375,
+					"c": 0.022217,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#c7bfe1",
+					"text": {
+						"main": "1 part French Ultramarine : 45 parts white",
+						"sub": "2% French Ultramarine by volume"
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 3 tones · values 2.8 to 7.9 · Winsor & Newton Artisan · 3 tones\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.8 | 23% of image | 4 parts French Ultramarine : 1 part white (79% French Ultramarine by volume)\nTone 2 | value 5.5 | 38% of image | 1 part French Ultramarine : 5 parts white (16% French Ultramarine by volume)\nTone 3 | value 7.9 | 38% of image | 1 part French Ultramarine : 45 parts white (2% French Ultramarine by volume)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "0049965ad967dc6ad29c350544e9a105dcb350faf9f1446752f55703fc5b5f97"
+		},
+		{
+			"name": "mono-tones-9",
+			"settings": {
+				"palette": "mono",
+				"n": 9
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 17.924816,
+					"area": 0.08125,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.55,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#202a4d",
+					"text": {
+						"main": "1 part French Ultramarine : 1 part Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 33.327678,
+					"area": 0.1375,
+					"c": 0.600638,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#4f4588",
+					"text": {
+						"main": "1.5 parts French Ultramarine : 1 part white",
+						"sub": "60% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 44.90225,
+					"area": 0.096875,
+					"c": 0.303574,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#6c61a6",
+					"text": {
+						"main": "1 part French Ultramarine : 2.5 parts white",
+						"sub": "30% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 52.901463,
+					"area": 0.1375,
+					"c": 0.183899,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#8176b7",
+					"text": {
+						"main": "1 part French Ultramarine : 4 parts white",
+						"sub": "18% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 59.612168,
+					"area": 0.11875,
+					"c": 0.1174,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#9388c4",
+					"text": {
+						"main": "1 part French Ultramarine : 8 parts white",
+						"sub": "12% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 67.173844,
+					"area": 0.0875,
+					"c": 0.067202,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#a79dd0",
+					"text": {
+						"main": "1 part French Ultramarine : 14 parts white",
+						"sub": "7% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 73.948349,
+					"area": 0.1375,
+					"c": 0.037623,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#b9b0da",
+					"text": {
+						"main": "1 part French Ultramarine : 25 parts white",
+						"sub": "4% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 81.459543,
+					"area": 0.1125,
+					"c": 0.016722,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#cdc7e4",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				},
+				{
+					"L": 88.903731,
+					"area": 0.090625,
+					"c": 0.004959,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#e1dded",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 200 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 9 tones · values 1.8 to 8.9 · Winsor & Newton Artisan · 9 tones\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 1.8 | 8% of image | 1 part French Ultramarine : 1 part Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 3.3 | 14% of image | 1.5 parts French Ultramarine : 1 part white (60% French Ultramarine by volume)\nTone 3 | value 4.5 | 10% of image | 1 part French Ultramarine : 2.5 parts white (30% French Ultramarine by volume)\nTone 4 | value 5.3 | 14% of image | 1 part French Ultramarine : 4 parts white (18% French Ultramarine by volume)\nTone 5 | value 6.0 | 12% of image | 1 part French Ultramarine : 8 parts white (12% French Ultramarine by volume)\nTone 6 | value 6.7 | 9% of image | 1 part French Ultramarine : 14 parts white (7% French Ultramarine by volume)\nTone 7 | value 7.4 | 14% of image | 1 part French Ultramarine : 25 parts white (4% French Ultramarine by volume)\nTone 8 | value 8.1 | 11% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip.)\nTone 9 | value 8.9 | 9% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 200 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "80473059543516311bc31b7d86296dde301e49357d88efe541a05b20e774cb50"
+		},
+		{
+			"name": "mono-even-steps",
+			"settings": {
+				"palette": "mono",
+				"mode": "even"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 17.3,
+					"area": 0.08125,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#1f2a4c",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 33.9,
+					"area": 0.153125,
+					"c": 0.581385,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#50468a",
+					"text": {
+						"main": "1.5 parts French Ultramarine : 1 part white",
+						"sub": "58% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 50.5,
+					"area": 0.25625,
+					"c": 0.21443,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#7b6fb2",
+					"text": {
+						"main": "1 part French Ultramarine : 4 parts white",
+						"sub": "21% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 67.1,
+					"area": 0.259375,
+					"c": 0.067595,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#a79dd0",
+					"text": {
+						"main": "1 part French Ultramarine : 14 parts white",
+						"sub": "7% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 83.7,
+					"area": 0.25,
+					"c": 0.012367,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#d3cde7",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 80 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 1.7 to 8.4 · Winsor & Newton Artisan · 5 tones · even steps\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 1.7 | 8% of image | 1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 3.4 | 15% of image | 1.5 parts French Ultramarine : 1 part white (58% French Ultramarine by volume)\nTone 3 | value 5.0 | 26% of image | 1 part French Ultramarine : 4 parts white (21% French Ultramarine by volume)\nTone 4 | value 6.7 | 26% of image | 1 part French Ultramarine : 14 parts white (7% French Ultramarine by volume)\nTone 5 | value 8.4 | 25% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 80 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "5bf3e3f4f59f7d147215f9407d26ae7a93929920b733d9e94711f418380b61fd"
+		},
+		{
+			"name": "mono-contrast-soft",
+			"settings": {
+				"palette": "mono",
+				"contrast": "soft"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 25.544923,
+					"area": 0.11875,
+					"c": 0.919943,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#3c3471",
+					"text": {
+						"main": "11 parts French Ultramarine : 1 part white",
+						"sub": "92% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 41.685102,
+					"area": 0.1875,
+					"c": 0.368698,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#64599e",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts white",
+						"sub": "37% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 54.828041,
+					"area": 0.278125,
+					"c": 0.162193,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#867bbb",
+					"text": {
+						"main": "1 part French Ultramarine : 5 parts white",
+						"sub": "16% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 68.125645,
+					"area": 0.225,
+					"c": 0.062292,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#aaa0d2",
+					"text": {
+						"main": "1 part French Ultramarine : 15 parts white",
+						"sub": "6% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 80.553823,
+					"area": 0.190625,
+					"c": 0.018705,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#cbc4e3",
+					"text": {
+						"main": "1 part French Ultramarine : 50 parts white",
+						"sub": "2% French Ultramarine by volume"
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.6 to 8.1 · Winsor & Newton Artisan · 5 tones · soft contrast\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.6 | 12% of image | 11 parts French Ultramarine : 1 part white (92% French Ultramarine by volume)\nTone 2 | value 4.2 | 19% of image | 1 part French Ultramarine : 1.5 parts white (37% French Ultramarine by volume)\nTone 3 | value 5.5 | 28% of image | 1 part French Ultramarine : 5 parts white (16% French Ultramarine by volume)\nTone 4 | value 6.8 | 23% of image | 1 part French Ultramarine : 15 parts white (6% French Ultramarine by volume)\nTone 5 | value 8.1 | 19% of image | 1 part French Ultramarine : 50 parts white (2% French Ultramarine by volume)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "9a62eaa728f1c86d46148d688e9856bf26292ef6c3cdc44b1689185d1ae896a1"
+		},
+		{
+			"name": "mono-contrast-punchy",
+			"settings": {
+				"palette": "mono",
+				"contrast": "punchy"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 16.154253,
+					"area": 0.15,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#1f2a4c",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 37.445439,
+					"area": 0.1625,
+					"c": 0.473755,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#594f93",
+					"text": {
+						"main": "1 part French Ultramarine : 1 part white",
+						"sub": "47% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 58.747524,
+					"area": 0.259375,
+					"c": 0.124633,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#9185c2",
+					"text": {
+						"main": "1 part French Ultramarine : 7 parts white",
+						"sub": "12% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 78.305175,
+					"area": 0.2125,
+					"c": 0.024224,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#c5bde0",
+					"text": {
+						"main": "1 part French Ultramarine : 40 parts white",
+						"sub": "2% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 91.443787,
+					"area": 0.215625,
+					"c": 0.002557,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#e8e5ef",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 390 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 1.6 to 9.1 · Winsor & Newton Artisan · 5 tones · punchy contrast\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 1.6 | 15% of image | 1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 3.7 | 16% of image | 1 part French Ultramarine : 1 part white (47% French Ultramarine by volume)\nTone 3 | value 5.9 | 26% of image | 1 part French Ultramarine : 7 parts white (12% French Ultramarine by volume)\nTone 4 | value 7.8 | 21% of image | 1 part French Ultramarine : 40 parts white (2% French Ultramarine by volume)\nTone 5 | value 9.1 | 22% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 390 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n7. For extra color punch, keep the mixes with the least white (the middle tones) in your focal area. White makes a color paler as well as lighter, so the strongest color sits in the middle values.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "2e336902a7f107a3574aa1e4da358a61f60fb6723d5b7bed34ab98eefaae81b3"
+		},
+		{
+			"name": "mono-contrast-bold",
+			"settings": {
+				"palette": "mono",
+				"contrast": "bold"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 16.587728,
+					"area": 0.215625,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#1f2a4c",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 43.912477,
+					"area": 0.15,
+					"c": 0.322404,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#6a5ea3",
+					"text": {
+						"main": "1 part French Ultramarine : 2 parts white",
+						"sub": "32% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 63.320952,
+					"area": 0.20625,
+					"c": 0.090084,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#9d92ca",
+					"text": {
+						"main": "1 part French Ultramarine : 10 parts white",
+						"sub": "9% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 81.783702,
+					"area": 0.18125,
+					"c": 0.016044,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#cec8e5",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				},
+				{
+					"L": 93.981642,
+					"area": 0.246875,
+					"c": 0.000862,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#efedf1",
+					"text": {
+						"main": "Titanium White only",
+						"sub": "Lightest tone. Use white straight from the tube."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 1.7 to 9.4 · Winsor & Newton Artisan · 5 tones · bold contrast\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 1.7 | 22% of image | 1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 4.4 | 15% of image | 1 part French Ultramarine : 2 parts white (32% French Ultramarine by volume)\nTone 3 | value 6.3 | 21% of image | 1 part French Ultramarine : 10 parts white (9% French Ultramarine by volume)\nTone 4 | value 8.2 | 18% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip.)\nTone 5 | value 9.4 | 25% of image | Titanium White only (Lightest tone. Use white straight from the tube.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n7. For extra color punch, keep the mixes with the least white (the middle tones) in your focal area. White makes a color paler as well as lighter, so the strongest color sits in the middle values.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "e48064187ea9b81a06c506866fdba48c9ae2ff3c0d4c2becb6cdd145d289d7df"
+		},
+		{
+			"name": "mono-key-darker",
+			"settings": {
+				"palette": "mono",
+				"key": "darker"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 16.402659,
+					"area": 0.146875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#1f2a4c",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 33.511097,
+					"area": 0.175,
+					"c": 0.594408,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#4f4589",
+					"text": {
+						"main": "1.5 parts French Ultramarine : 1 part white",
+						"sub": "59% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 49.090914,
+					"area": 0.2625,
+					"c": 0.234337,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#776caf",
+					"text": {
+						"main": "1 part French Ultramarine : 3 parts white",
+						"sub": "23% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 66.458057,
+					"area": 0.225,
+					"c": 0.071078,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#a59bcf",
+					"text": {
+						"main": "1 part French Ultramarine : 13 parts white",
+						"sub": "7% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 81.900989,
+					"area": 0.190625,
+					"c": 0.015803,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#cfc8e5",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 1.6 to 8.2 · Winsor & Newton Artisan · 5 tones · darker\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 1.6 | 15% of image | 1 part French Ultramarine : 1.5 parts Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 3.4 | 18% of image | 1.5 parts French Ultramarine : 1 part white (59% French Ultramarine by volume)\nTone 3 | value 4.9 | 26% of image | 1 part French Ultramarine : 3 parts white (23% French Ultramarine by volume)\nTone 4 | value 6.6 | 23% of image | 1 part French Ultramarine : 13 parts white (7% French Ultramarine by volume)\nTone 5 | value 8.2 | 19% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 60 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "31d6d37485105ff77dcd7318de0b6730ffad204a42d290c253bd77df4349891e"
+		},
+		{
+			"name": "mono-key-brighter",
+			"settings": {
+				"palette": "mono",
+				"key": "brighter"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 29.490496,
+					"area": 0.11875,
+					"c": 0.744331,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#453c7d",
+					"text": {
+						"main": "3 parts French Ultramarine : 1 part white",
+						"sub": "74% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 48.432128,
+					"area": 0.1875,
+					"c": 0.244192,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#756aae",
+					"text": {
+						"main": "1 part French Ultramarine : 3 parts white",
+						"sub": "24% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 63.375945,
+					"area": 0.265625,
+					"c": 0.089721,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#9d92ca",
+					"text": {
+						"main": "1 part French Ultramarine : 10 parts white",
+						"sub": "9% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 76.947314,
+					"area": 0.23125,
+					"c": 0.027997,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#c1b9de",
+					"text": {
+						"main": "1 part French Ultramarine : 35 parts white",
+						"sub": "3% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 88.077206,
+					"area": 0.196875,
+					"c": 0.005903,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#dfdbec",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 170 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.9 to 8.8 · Winsor & Newton Artisan · 5 tones · brighter\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.9 | 12% of image | 3 parts French Ultramarine : 1 part white (74% French Ultramarine by volume)\nTone 2 | value 4.8 | 19% of image | 1 part French Ultramarine : 3 parts white (24% French Ultramarine by volume)\nTone 3 | value 6.3 | 27% of image | 1 part French Ultramarine : 10 parts white (9% French Ultramarine by volume)\nTone 4 | value 7.7 | 23% of image | 1 part French Ultramarine : 35 parts white (3% French Ultramarine by volume)\nTone 5 | value 8.8 | 20% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 170 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n7. For extra color punch, keep the mixes with the least white (the middle tones) in your focal area. White makes a color paler as well as lighter, so the strongest color sits in the middle values.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "f82e573984d7dd1a4c66e43f555b5d6ce709ddbdfaf90ab81e323788a7d7c29d"
+		},
+		{
+			"name": "mono-darks-complement",
+			"settings": {
+				"palette": "mono",
+				"darks": "comp"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.06,
+					"partner": "orange",
+					"short": false,
+					"mix": "#3b3254",
+					"text": {
+						"main": "16 parts French Ultramarine : 1 part Cadmium Orange Hue",
+						"sub": "No white. The orange is the complement: it darkens and slightly grays the ultramarine."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.41861,
+					"lim": null,
+					"deep": 0,
+					"partner": "orange",
+					"short": false,
+					"mix": "#5e5499",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts white",
+						"sub": "42% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.150611,
+					"lim": null,
+					"deep": 0,
+					"partner": "orange",
+					"short": false,
+					"mix": "#897ebd",
+					"text": {
+						"main": "1 part French Ultramarine : 6 parts white",
+						"sub": "15% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.045404,
+					"lim": null,
+					"deep": 0,
+					"partner": "orange",
+					"short": false,
+					"mix": "#b4aad7",
+					"text": {
+						"main": "1 part French Ultramarine : 20 parts white",
+						"sub": "5% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.00984,
+					"lim": null,
+					"deep": 0,
+					"partner": "orange",
+					"short": false,
+					"mix": "#d7d2e9",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Cadmium Orange Hue (orange, small amount): 1 dark tone is darker than French Ultramarine can reach. Orange is its complement, so it darkens and slightly grays it for quieter, richer shadows.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 16 parts French Ultramarine : 1 part Cadmium Orange Hue (No white. The orange is the complement: it darkens and slightly grays the ultramarine.)\nTone 2 | value 4.0 | 19% of image | 1 part French Ultramarine : 1.5 parts white (42% French Ultramarine by volume)\nTone 3 | value 5.6 | 27% of image | 1 part French Ultramarine : 6 parts white (15% French Ultramarine by volume)\nTone 4 | value 7.2 | 23% of image | 1 part French Ultramarine : 20 parts white (5% French Ultramarine by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the orange into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-acrylic",
+			"settings": {
+				"palette": "mono",
+				"med": "acrylic"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 0.987217,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#39316d",
+					"text": {
+						"main": "French Ultramarine only",
+						"sub": "Use the paint straight, no white."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.350029,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#665ba0",
+					"text": {
+						"main": "1 part French Ultramarine : 2 parts white",
+						"sub": "35% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.122927,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#9186c2",
+					"text": {
+						"main": "1 part French Ultramarine : 7 parts white",
+						"sub": "12% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.034428,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#bcb3dc",
+					"text": {
+						"main": "1 part French Ultramarine : 30 parts white",
+						"sub": "3% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.005741,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#dfdbec",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 170 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan acrylic · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Acrylic retarder or slow-drying medium: Optional. Keeps your tone puddles workable longer on the palette.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | French Ultramarine only (Use the paint straight, no white.)\nTone 2 | value 4.0 | 19% of image | 1 part French Ultramarine : 2 parts white (35% French Ultramarine by volume)\nTone 3 | value 5.6 | 27% of image | 1 part French Ultramarine : 7 parts white (12% French Ultramarine by volume)\nTone 4 | value 7.2 | 23% of image | 1 part French Ultramarine : 30 parts white (3% French Ultramarine by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 170 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Let a test dab dry for a minute before judging it. Acrylic darkens as it dries.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-red",
+			"settings": {
+				"palette": "mono",
+				"pig": "red"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "blue",
+					"short": false,
+					"mix": "#4e3742",
+					"text": {
+						"main": "1 part Cadmium Red Hue : 1.5 parts French Ultramarine",
+						"sub": "No white. The ultramarine darkens the red and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.045,
+					"partner": "blue",
+					"short": false,
+					"mix": "#9d3f35",
+					"text": {
+						"main": "20 parts Cadmium Red Hue : 1 part French Ultramarine",
+						"sub": "No white. The ultramarine darkens the red and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.305347,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#d06759",
+					"text": {
+						"main": "1 part Cadmium Red Hue : 2.5 parts white",
+						"sub": "31% Cadmium Red Hue by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.068345,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#e69f91",
+					"text": {
+						"main": "1 part Cadmium Red Hue : 14 parts white",
+						"sub": "7% Cadmium Red Hue by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.012814,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#f0cec5",
+					"text": {
+						"main": "White with a trace of Cadmium Red Hue",
+						"sub": "About 1 part Cadmium Red Hue : 80 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "CADMIUM RED HUE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan Cadmium Red Hue (PR170, PR188): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan French Ultramarine (ultramarine, small amount): 2 dark tones are darker than Cadmium Red Hue can reach. Ultramarine darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 1 part Cadmium Red Hue : 1.5 parts French Ultramarine (No white. The ultramarine darkens the red and keeps it in the same color family.)\nTone 2 | value 4.0 | 19% of image | 20 parts Cadmium Red Hue : 1 part French Ultramarine (No white. The ultramarine darkens the red and keeps it in the same color family.)\nTone 3 | value 5.6 | 27% of image | 1 part Cadmium Red Hue : 2.5 parts white (31% Cadmium Red Hue by volume)\nTone 4 | value 7.2 | 23% of image | 1 part Cadmium Red Hue : 14 parts white (7% Cadmium Red Hue by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of Cadmium Red Hue (About 1 part Cadmium Red Hue : 80 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the red into the white a little at a time. Cadmium Red Hue is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the ultramarine into the red with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-orange",
+			"settings": {
+				"palette": "mono",
+				"pig": "orange"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "red",
+					"short": true,
+					"mix": "#b4482c",
+					"text": {
+						"main": "1 part Cadmium Orange Hue : 1.5 parts Cadmium Red Hue",
+						"sub": "No white. The red darkens the orange and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "red",
+					"short": true,
+					"mix": "#b4482c",
+					"text": {
+						"main": "1 part Cadmium Orange Hue : 1.5 parts Cadmium Red Hue",
+						"sub": "No white. The red darkens the orange and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.58489,
+					"lim": null,
+					"deep": 0,
+					"partner": "red",
+					"short": false,
+					"mix": "#c57130",
+					"text": {
+						"main": "1.5 parts Cadmium Orange Hue : 1 part white",
+						"sub": "58% Cadmium Orange Hue by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.140699,
+					"lim": null,
+					"deep": 0,
+					"partner": "red",
+					"short": false,
+					"mix": "#dfa55c",
+					"text": {
+						"main": "1 part Cadmium Orange Hue : 6 parts white",
+						"sub": "14% Cadmium Orange Hue by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.025971,
+					"lim": null,
+					"deep": 0,
+					"partner": "red",
+					"short": false,
+					"mix": "#edd29a",
+					"text": {
+						"main": "1 part Cadmium Orange Hue : 40 parts white",
+						"sub": "3% Cadmium Orange Hue by volume"
+					}
+				}
+			],
+			"sheet": "CADMIUM ORANGE HUE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan Cadmium Orange Hue (PO43): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Cadmium Red Hue (red, small amount): 2 dark tones are darker than Cadmium Orange Hue can reach. Red darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 1 part Cadmium Orange Hue : 1.5 parts Cadmium Red Hue (No white. The red darkens the orange and keeps it in the same color family.) | darkest reachable with these paints\nTone 2 | value 4.0 | 19% of image | 1 part Cadmium Orange Hue : 1.5 parts Cadmium Red Hue (No white. The red darkens the orange and keeps it in the same color family.) | darkest reachable with these paints\nTone 3 | value 5.6 | 27% of image | 1.5 parts Cadmium Orange Hue : 1 part white (58% Cadmium Orange Hue by volume)\nTone 4 | value 7.2 | 23% of image | 1 part Cadmium Orange Hue : 6 parts white (14% Cadmium Orange Hue by volume)\nTone 5 | value 8.5 | 19% of image | 1 part Cadmium Orange Hue : 40 parts white (3% Cadmium Orange Hue by volume)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the orange into the white a little at a time. Cadmium Orange Hue is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the red into the orange with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-phthalo-blue",
+			"settings": {
+				"palette": "mono",
+				"pig": "pblue"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 0.540978,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#243255",
+					"text": {
+						"main": "1 part Phthalo Blue (Red Shade) : 1 part white",
+						"sub": "54% Phthalo Blue (Red Shade) by volume"
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.100148,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#485d89",
+					"text": {
+						"main": "1 part Phthalo Blue (Red Shade) : 9 parts white",
+						"sub": "10% Phthalo Blue (Red Shade) by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.030858,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#6f87b0",
+					"text": {
+						"main": "1 part Phthalo Blue (Red Shade) : 30 parts white",
+						"sub": "3% Phthalo Blue (Red Shade) by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.008804,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#9db2cf",
+					"text": {
+						"main": "White with a trace of Phthalo Blue (Red Shade)",
+						"sub": "About 1 part Phthalo Blue (Red Shade) : 110 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.001871,
+					"lim": null,
+					"deep": 0,
+					"partner": "blue",
+					"short": false,
+					"mix": "#cad6e5",
+					"text": {
+						"main": "Titanium White only",
+						"sub": "Lightest tone. Use white straight from the tube."
+					}
+				}
+			],
+			"sheet": "PHTHALO BLUE (RED SHADE) VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (PB15): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 1 part Phthalo Blue (Red Shade) : 1 part white (54% Phthalo Blue (Red Shade) by volume)\nTone 2 | value 4.0 | 19% of image | 1 part Phthalo Blue (Red Shade) : 9 parts white (10% Phthalo Blue (Red Shade) by volume)\nTone 3 | value 5.6 | 27% of image | 1 part Phthalo Blue (Red Shade) : 30 parts white (3% Phthalo Blue (Red Shade) by volume)\nTone 4 | value 7.2 | 23% of image | White with a trace of Phthalo Blue (Red Shade) (About 1 part Phthalo Blue (Red Shade) : 110 parts white. Pick up a pin-head of dark on the knife tip.)\nTone 5 | value 8.5 | 19% of image | Titanium White only (Lightest tone. Use white straight from the tube.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the phthalo blue into the white a little at a time. Phthalo Blue (Red Shade) is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the ultramarine into the phthalo blue with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-phthalo-green",
+			"settings": {
+				"palette": "mono",
+				"pig": "green"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.325,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#1d363f",
+					"text": {
+						"main": "2 parts Phthalo Green (Blue Shade) : 1 part Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the phthalo green and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.27662,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#31665b",
+					"text": {
+						"main": "1 part Phthalo Green (Blue Shade) : 2.5 parts white",
+						"sub": "28% Phthalo Green (Blue Shade) by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.07952,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#529185",
+					"text": {
+						"main": "1 part Phthalo Green (Blue Shade) : 12 parts white",
+						"sub": "8% Phthalo Green (Blue Shade) by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.021341,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#81bbb2",
+					"text": {
+						"main": "1 part Phthalo Green (Blue Shade) : 45 parts white",
+						"sub": "2% Phthalo Green (Blue Shade) by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.004257,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#b8dcd7",
+					"text": {
+						"main": "White with a trace of Phthalo Green (Blue Shade)",
+						"sub": "About 1 part Phthalo Green (Blue Shade) : 230 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "PHTHALO GREEN (BLUE SHADE) VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan Phthalo Green (Blue Shade) (PG7): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than Phthalo Green (Blue Shade) can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 2 parts Phthalo Green (Blue Shade) : 1 part Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the phthalo green and keeps it in the same color family.)\nTone 2 | value 4.0 | 19% of image | 1 part Phthalo Green (Blue Shade) : 2.5 parts white (28% Phthalo Green (Blue Shade) by volume)\nTone 3 | value 5.6 | 27% of image | 1 part Phthalo Green (Blue Shade) : 12 parts white (8% Phthalo Green (Blue Shade) by volume)\nTone 4 | value 7.2 | 23% of image | 1 part Phthalo Green (Blue Shade) : 45 parts white (2% Phthalo Green (Blue Shade) by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of Phthalo Green (Blue Shade) (About 1 part Phthalo Green (Blue Shade) : 230 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the phthalo green into the white a little at a time. Phthalo Green (Blue Shade) is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the phthalo green with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-burnt-umber",
+			"settings": {
+				"palette": "mono",
+				"pig": "burnt-umber"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.285,
+					"partner": "permanent-alizarin-crimson",
+					"short": false,
+					"mix": "#4f2825",
+					"text": {
+						"main": "2.5 parts Burnt Umber : 1 part Permanent Alizarin Crimson",
+						"sub": "No white. The Permanent Alizarin Crimson darkens the Burnt Umber and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.361818,
+					"lim": null,
+					"deep": 0,
+					"partner": "permanent-alizarin-crimson",
+					"short": false,
+					"mix": "#735843",
+					"text": {
+						"main": "1 part Burnt Umber : 2 parts white",
+						"sub": "36% Burnt Umber by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.123301,
+					"lim": null,
+					"deep": 0,
+					"partner": "permanent-alizarin-crimson",
+					"short": false,
+					"mix": "#9c816a",
+					"text": {
+						"main": "1 part Burnt Umber : 7 parts white",
+						"sub": "12% Burnt Umber by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.036556,
+					"lim": null,
+					"deep": 0,
+					"partner": "permanent-alizarin-crimson",
+					"short": false,
+					"mix": "#c2ad98",
+					"text": {
+						"main": "1 part Burnt Umber : 25 parts white",
+						"sub": "4% Burnt Umber by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.007898,
+					"lim": null,
+					"deep": 0,
+					"partner": "permanent-alizarin-crimson",
+					"short": false,
+					"mix": "#dfd3c6",
+					"text": {
+						"main": "White with a trace of Burnt Umber",
+						"sub": "About 1 part Burnt Umber : 130 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "BURNT UMBER VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones\n\nPAINTS\n- Winsor & Newton Artisan Burnt Umber (PBr7): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Permanent Alizarin Crimson (small amount): 1 dark tone is darker than Burnt Umber can reach. Permanent Alizarin Crimson darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 2.5 parts Burnt Umber : 1 part Permanent Alizarin Crimson (No white. The Permanent Alizarin Crimson darkens the Burnt Umber and keeps it in the same color family.)\nTone 2 | value 4.0 | 19% of image | 1 part Burnt Umber : 2 parts white (36% Burnt Umber by volume)\nTone 3 | value 5.6 | 27% of image | 1 part Burnt Umber : 7 parts white (12% Burnt Umber by volume)\nTone 4 | value 7.2 | 23% of image | 1 part Burnt Umber : 25 parts white (4% Burnt Umber by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of Burnt Umber (About 1 part Burnt Umber : 130 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the Burnt Umber into the white a little at a time. Burnt Umber is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the Permanent Alizarin Crimson into the Burnt Umber with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-cobra",
+			"settings": {
+				"palette": "mono",
+				"brand": "cobra"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.125,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#2b2f5c",
+					"text": {
+						"main": "7 parts Ultramarine 504 : 1 part Phthalo Blue 570",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 0.459832,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#5e5497",
+					"text": {
+						"main": "1 part Ultramarine 504 : 1 part white",
+						"sub": "46% Ultramarine 504 by volume"
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 0.171248,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#897ebb",
+					"text": {
+						"main": "1 part Ultramarine 504 : 5 parts white",
+						"sub": "17% Ultramarine 504 by volume"
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.052398,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#b4abd6",
+					"text": {
+						"main": "1 part Ultramarine 504 : 18 parts white",
+						"sub": "5% Ultramarine 504 by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.011421,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#d7d2e8",
+					"text": {
+						"main": "White with a trace of Ultramarine 504",
+						"sub": "About 1 part Ultramarine 504 : 90 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "ULTRAMARINE 504 VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Cobra · 5 tones\n\nPAINTS\n- Cobra Ultramarine 504 (PB29): Your main color. The light and middle tones are this plus white.\n- Cobra Titanium White 105: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Cobra Phthalo Blue 570 (phthalo blue, small amount): 1 dark tone is darker than Ultramarine 504 can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 7 parts Ultramarine 504 : 1 part Phthalo Blue 570 (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 4.0 | 19% of image | 1 part Ultramarine 504 : 1 part white (46% Ultramarine 504 by volume)\nTone 3 | value 5.6 | 27% of image | 1 part Ultramarine 504 : 5 parts white (17% Ultramarine 504 by volume)\nTone 4 | value 7.2 | 23% of image | 1 part Ultramarine 504 : 18 parts white (5% Ultramarine 504 by volume)\nTone 5 | value 8.5 | 19% of image | White with a trace of Ultramarine 504 (About 1 part Ultramarine 504 : 90 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. Ultramarine 504 is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-cobra-light-green",
+			"settings": {
+				"palette": "mono",
+				"brand": "cobra",
+				"pig": "lgreen"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 21.182444,
+					"area": 0.11875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.6,
+					"partner": "green",
+					"short": true,
+					"mix": "#224f3d",
+					"text": {
+						"main": "1 part Permanent Green Light 618 : 1.5 parts Phthalo Green 675",
+						"sub": "No white. The phthalo green darkens the light green and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.551111,
+					"area": 0.1875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.19,
+					"partner": "green",
+					"short": false,
+					"mix": "#33683e",
+					"text": {
+						"main": "4 parts Permanent Green Light 618 : 1 part Phthalo Green 675",
+						"sub": "No white. The phthalo green darkens the light green and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 55.947655,
+					"area": 0.271875,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0,
+					"partner": "green",
+					"short": false,
+					"mix": "#5d953f",
+					"text": {
+						"main": "Permanent Green Light 618 only",
+						"sub": "Use the paint straight, no white."
+					}
+				},
+				{
+					"L": 71.881219,
+					"area": 0.23125,
+					"c": 0.298561,
+					"lim": null,
+					"deep": 0,
+					"partner": "green",
+					"short": false,
+					"mix": "#8dbe6b",
+					"text": {
+						"main": "1 part Permanent Green Light 618 : 2.5 parts white",
+						"sub": "30% Permanent Green Light 618 by volume"
+					}
+				},
+				{
+					"L": 85.213944,
+					"area": 0.190625,
+					"c": 0.059963,
+					"lim": null,
+					"deep": 0,
+					"partner": "green",
+					"short": false,
+					"mix": "#c1dea6",
+					"text": {
+						"main": "1 part Permanent Green Light 618 : 16 parts white",
+						"sub": "6% Permanent Green Light 618 by volume"
+					}
+				}
+			],
+			"sheet": "PERMANENT GREEN LIGHT 618 VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Cobra · 5 tones\n\nPAINTS\n- Cobra Permanent Green Light 618 (PG7, PY154): Your main color. The light and middle tones are this plus white.\n- Cobra Titanium White 105: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Cobra Phthalo Green 675 (phthalo green, small amount): 2 dark tones are darker than Permanent Green Light 618 can reach. Phthalo Green darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 12% of image | 1 part Permanent Green Light 618 : 1.5 parts Phthalo Green 675 (No white. The phthalo green darkens the light green and keeps it in the same color family.) | darkest reachable with these paints\nTone 2 | value 4.0 | 19% of image | 4 parts Permanent Green Light 618 : 1 part Phthalo Green 675 (No white. The phthalo green darkens the light green and keeps it in the same color family.)\nTone 3 | value 5.6 | 27% of image | Permanent Green Light 618 only (Use the paint straight, no white.)\nTone 4 | value 7.2 | 23% of image | 1 part Permanent Green Light 618 : 2.5 parts white (30% Permanent Green Light 618 by volume)\nTone 5 | value 8.5 | 19% of image | 1 part Permanent Green Light 618 : 16 parts white (6% Permanent Green Light 618 by volume)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the light green into the white a little at a time. Permanent Green Light 618 is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo green into the light green with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3a9a91dfe45d3d721208866487f0e584ff5bcaef593ea8b0d82a7a819850bd5a"
+		},
+		{
+			"name": "mono-brighten-area",
+			"settings": {
+				"palette": "mono"
+			},
+			"brighten": {
+				"x": 0.4,
+				"y": 0.5,
+				"r": 0.2
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 20.889956,
+					"area": 0.112781,
+					"c": 1,
+					"lim": "dark",
+					"deep": 0.125,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#2a2e5c",
+					"text": {
+						"main": "7 parts French Ultramarine : 1 part Phthalo Blue (Red Shade)",
+						"sub": "No white. The phthalo blue darkens the ultramarine and keeps it in the same color family."
+					}
+				},
+				{
+					"L": 39.631213,
+					"area": 0.173945,
+					"c": 0.416631,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#5f5499",
+					"text": {
+						"main": "1 part French Ultramarine : 1.5 parts white",
+						"sub": "42% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 55.605538,
+					"area": 0.259211,
+					"c": 0.154074,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#887dbc",
+					"text": {
+						"main": "1 part French Ultramarine : 5 parts white",
+						"sub": "15% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 71.223282,
+					"area": 0.235641,
+					"c": 0.048095,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#b2a8d6",
+					"text": {
+						"main": "1 part French Ultramarine : 20 parts white",
+						"sub": "5% French Ultramarine by volume"
+					}
+				},
+				{
+					"L": 85.371058,
+					"area": 0.218422,
+					"c": 0.009596,
+					"lim": null,
+					"deep": 0,
+					"partner": "pblue",
+					"short": false,
+					"mix": "#d8d2e9",
+					"text": {
+						"main": "White with a trace of French Ultramarine",
+						"sub": "About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip."
+					}
+				}
+			],
+			"sheet": "FRENCH ULTRAMARINE VALUE STUDY\ncase · 5 tones · values 2.1 to 8.5 · Winsor & Newton Artisan · 5 tones · area brightened\n\nPAINTS\n- Winsor & Newton Artisan French Ultramarine (PB29): Your main color. The light and middle tones are this plus white.\n- Winsor & Newton Artisan Titanium White: Opaque, strong white. The light tones are mostly white, so have plenty.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (phthalo blue, small amount): 1 dark tone is darker than French Ultramarine can reach. Phthalo Blue darkens it while keeping the painting in one color family.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nTONES (darkest to lightest)\nTone 1 | value 2.1 | 11% of image | 7 parts French Ultramarine : 1 part Phthalo Blue (Red Shade) (No white. The phthalo blue darkens the ultramarine and keeps it in the same color family.)\nTone 2 | value 4.0 | 17% of image | 1 part French Ultramarine : 1.5 parts white (42% French Ultramarine by volume)\nTone 3 | value 5.6 | 26% of image | 1 part French Ultramarine : 5 parts white (15% French Ultramarine by volume)\nTone 4 | value 7.1 | 24% of image | 1 part French Ultramarine : 20 parts white (5% French Ultramarine by volume)\nTone 5 | value 8.5 | 22% of image | White with a trace of French Ultramarine (About 1 part French Ultramarine : 100 parts white. Pick up a pin-head of dark on the knife tip.)\n\nTIPS\n1. Mix every tone before you start painting, in separate puddles, lightest to darkest. Make more of the tones with the largest share of the image.\n2. For the light tones, add the ultramarine into the white a little at a time. French Ultramarine is far stronger than white, so going the other way wastes paint.\n3. For the darkest tones, add the phthalo blue into the ultramarine with the knife tip, a little at a time. Too much shifts the hue.\n4. Check each puddle by dabbing it on a scrap card and holding it against the same area of a grayscale print of your photo. Squint to compare.\n5. Keep the oil content low in early layers (fat over lean), especially if you will paint color over this study later.\n6. Paint in tone order: block in the darkest shapes first, then work up to the lights.\n7. For extra color punch, keep the mixes with the least white (the middle tones) in your focal area. White makes a color paler as well as lighter, so the strongest color sits in the middle values.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "08f0c340fd1e776236d6f075b64926bbfdb2243b53a3de412b2fb8ae9eb16c53"
+		},
+		{
+			"name": "zorn-artisan",
+			"settings": {
+				"palette": "zorn",
+				"brand": "artisan"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0,
+						0.289474,
+						0.710526
+					],
+					"err": 40.578061,
+					"mix": "#575659",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 29%, White 71% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0,
+						0.268293,
+						0.731707
+					],
+					"err": 85.314682,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0,
+						0.75,
+						0,
+						0.25
+					],
+					"err": 10.156011,
+					"mix": "#bc4539",
+					"text": {
+						"main": "3 parts Cadmium Red Light : 1 part white",
+						"sub": "Cadmium Red Light 75%, White 25% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.283946,
+						0.013289,
+						0.702766
+					],
+					"err": 43.616828,
+					"mix": "#b76557",
+					"text": {
+						"main": "1 part Cadmium Red Light : 2.5 parts white + a touch of Ivory Black",
+						"sub": "Cadmium Red Light 28%, Ivory Black 1%, White 70% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.065174,
+						0,
+						0.057055,
+						0.87777
+					],
+					"err": 1.639713,
+					"mix": "#929086",
+					"text": {
+						"main": "1 part Yellow Ochre : 1 part Ivory Black : 15 parts white",
+						"sub": "Yellow Ochre 7%, Ivory Black 6%, White 88% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.557522,
+						0,
+						0,
+						0.442478
+					],
+					"err": 17.267118,
+					"mix": "#c5a856",
+					"text": {
+						"main": "1.5 parts Yellow Ochre : 1 part white",
+						"sub": "Yellow Ochre 56%, White 44% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.333333,
+						0,
+						0,
+						0.666667
+					],
+					"err": 59.52363,
+					"mix": "#d3bc6e",
+					"text": {
+						"main": "1 part Yellow Ochre : 2 parts white",
+						"sub": "Yellow Ochre 33%, White 67% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0.035446,
+						0,
+						0.011457,
+						0.953097
+					],
+					"err": 35.810223,
+					"mix": "#c4c1af",
+					"text": {
+						"main": "Titanium White + a touch of Yellow Ochre and Ivory Black",
+						"sub": "Yellow Ochre 4%, Ivory Black 1%, White 95% by volume"
+					}
+				}
+			],
+			"sheet": "ZORN PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan · 8 colors\n\nPAINTS\n- Winsor & Newton Artisan Yellow Ochre (PY42): The palette's yellow. With black it makes muted olive greens. Used in 4 of 8 mixes.\n- Winsor & Newton Artisan Cadmium Red Light (PR108): The palette's red. Warms skin, lips and shadows. Used in 2 of 8 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): Stands in for blue. With white it reads as a cool blue-gray next to the warm paints. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 29%, White 71% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.7 | 11% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 3 parts Cadmium Red Light : 1 part white (Cadmium Red Light 75%, White 25% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Cadmium Red Light : 2.5 parts white + a touch of Ivory Black (Cadmium Red Light 28%, Ivory Black 1%, White 70% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 5.9 | 20% of image | 1 part Yellow Ochre : 1 part Ivory Black : 15 parts white (Yellow Ochre 7%, Ivory Black 6%, White 88% by volume)\nColor 6 | value 7.0 | 12% of image | 1.5 parts Yellow Ochre : 1 part white (Yellow Ochre 56%, White 44% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | 1 part Yellow Ochre : 2 parts white (Yellow Ochre 33%, White 67% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Yellow Ochre and Ivory Black (Yellow Ochre 4%, Ivory Black 1%, White 95% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Zorn has no real blue. Ivory Black with white looks blue-gray next to the warm ochre and red, so let it do the job of blue in skies, eyes and shadows.\n4. For skin, start from Yellow Ochre, Cadmium Red Light and white, then cool the shadow side with a little of the black-and-white gray.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "zorn-cobra",
+			"settings": {
+				"palette": "zorn",
+				"brand": "cobra"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0,
+						0.289474,
+						0.710526
+					],
+					"err": 40.578061,
+					"mix": "#575659",
+					"text": {
+						"main": "1 part Ivory Black 701 : 2.5 parts white",
+						"sub": "Ivory Black 701 29%, White 71% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0,
+						0.268293,
+						0.731707
+					],
+					"err": 85.314682,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black 701 : 2.5 parts white",
+						"sub": "Ivory Black 701 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0,
+						0.859375,
+						0,
+						0.140625
+					],
+					"err": 9.568329,
+					"mix": "#bc472f",
+					"text": {
+						"main": "6 parts Cadmium Red Light 303 : 1 part white",
+						"sub": "Cadmium Red Light 303 86%, White 14% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.394405,
+						0.018878,
+						0.586718
+					],
+					"err": 50.786142,
+					"mix": "#ae6045",
+					"text": {
+						"main": "1 part Cadmium Red Light 303 : 1.5 parts white + a touch of Ivory Black 701",
+						"sub": "Cadmium Red Light 303 39%, Ivory Black 701 2%, White 59% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.054382,
+						0.009588,
+						0.057129,
+						0.878901
+					],
+					"err": 0.266211,
+					"mix": "#928d82",
+					"text": {
+						"main": "1 part Ivory Black 701 : 1 part Yellow Ochre 227 : 16 parts white + a touch of Cadmium Red Light 303",
+						"sub": "Ivory Black 701 6%, Yellow Ochre 227 5%, Cadmium Red Light 303 under 1%, White 88% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.557522,
+						0,
+						0,
+						0.442478
+					],
+					"err": 17.267118,
+					"mix": "#c5a856",
+					"text": {
+						"main": "1.5 parts Yellow Ochre 227 : 1 part white",
+						"sub": "Yellow Ochre 227 56%, White 44% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.333333,
+						0,
+						0,
+						0.666667
+					],
+					"err": 59.52363,
+					"mix": "#d3bc6e",
+					"text": {
+						"main": "1 part Yellow Ochre 227 : 2 parts white",
+						"sub": "Yellow Ochre 227 33%, White 67% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0.035446,
+						0,
+						0.011457,
+						0.953097
+					],
+					"err": 35.810223,
+					"mix": "#c4c1af",
+					"text": {
+						"main": "Titanium White + a touch of Yellow Ochre 227 and Ivory Black 701",
+						"sub": "Yellow Ochre 227 4%, Ivory Black 701 1%, White 95% by volume"
+					}
+				}
+			],
+			"sheet": "ZORN PALETTE STUDY\ncase · 8 colors · Cobra · 8 colors\n\nPAINTS\n- Cobra Yellow Ochre 227 (PY42): The palette's yellow. With black it makes muted olive greens. Used in 4 of 8 mixes.\n- Cobra Cadmium Red Light 303 (PR108): The palette's red. Warms skin, lips and shadows. Used in 3 of 8 mixes.\n- Cobra Ivory Black 701 (PBk9): Stands in for blue. With white it reads as a cool blue-gray next to the warm paints. Used in 5 of 8 mixes.\n- Cobra Titanium White 105: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black 701 : 2.5 parts white (Ivory Black 701 29%, White 71% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.7 | 11% of image | 1 part Ivory Black 701 : 2.5 parts white (Ivory Black 701 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 6 parts Cadmium Red Light 303 : 1 part white (Cadmium Red Light 303 86%, White 14% by volume)\nColor 4 | value 5.3 | 10% of image | 1 part Cadmium Red Light 303 : 1.5 parts white + a touch of Ivory Black 701 (Cadmium Red Light 303 39%, Ivory Black 701 2%, White 59% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 5.9 | 20% of image | 1 part Ivory Black 701 : 1 part Yellow Ochre 227 : 16 parts white + a touch of Cadmium Red Light 303 (Ivory Black 701 6%, Yellow Ochre 227 5%, Cadmium Red Light 303 under 1%, White 88% by volume)\nColor 6 | value 7.0 | 12% of image | 1.5 parts Yellow Ochre 227 : 1 part white (Yellow Ochre 227 56%, White 44% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | 1 part Yellow Ochre 227 : 2 parts white (Yellow Ochre 227 33%, White 67% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Yellow Ochre 227 and Ivory Black 701 (Yellow Ochre 227 4%, Ivory Black 701 1%, White 95% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Zorn has no real blue. Ivory Black 701 with white looks blue-gray next to the warm ochre and red, so let it do the job of blue in skies, eyes and shadows.\n4. For skin, start from Yellow Ochre 227, Cadmium Red Light 303 and white, then cool the shadow side with a little of the black-and-white gray.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "primary-artisan",
+			"settings": {
+				"palette": "primary",
+				"brand": "artisan"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0.127647,
+						0.060862,
+						0.811491
+					],
+					"err": 9.339949,
+					"mix": "#565086",
+					"text": {
+						"main": "2 parts Permanent Rose : 1 part Phthalo Blue (Red Shade) : 13 parts white",
+						"sub": "Permanent Rose 13%, Phthalo Blue (Red Shade) 6%, White 81% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0.24644,
+						0.014239,
+						0.739321
+					],
+					"err": 46.632771,
+					"mix": "#834a88",
+					"text": {
+						"main": "1 part Permanent Rose : 3 parts white + a touch of Phthalo Blue (Red Shade)",
+						"sub": "Permanent Rose 25%, Phthalo Blue (Red Shade) 1%, White 74% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0.804878,
+						0.195122,
+						0,
+						0
+					],
+					"err": 13.910361,
+					"mix": "#b84e35",
+					"text": {
+						"main": "4 parts Cadmium Yellow Light : 1 part Permanent Rose",
+						"sub": "Cadmium Yellow Light 80%, Permanent Rose 20% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.180328,
+						0,
+						0.819672
+					],
+					"err": 3.278546,
+					"mix": "#c15799",
+					"text": {
+						"main": "1 part Permanent Rose : 5 parts white",
+						"sub": "Permanent Rose 18%, White 82% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.089331,
+						0.02271,
+						0.010887,
+						0.877071
+					],
+					"err": 0.813681,
+					"mix": "#948e82",
+					"text": {
+						"main": "1 part Cadmium Yellow Light : 10 parts white + a touch of Permanent Rose and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 9%, Permanent Rose 2%, Phthalo Blue (Red Shade) 1%, White 88% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.901143,
+						0.005507,
+						0.002888,
+						0.090462
+					],
+					"err": 0.722014,
+					"mix": "#b8ad34",
+					"text": {
+						"main": "10 parts Cadmium Yellow Light : 1 part white + a touch of Permanent Rose and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 90%, Permanent Rose under 1%, Phthalo Blue (Red Shade) under 1%, White 9% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.569754,
+						0,
+						0.004689,
+						0.425557
+					],
+					"err": 39.395028,
+					"mix": "#adb942",
+					"text": {
+						"main": "1.5 parts Cadmium Yellow Light : 1 part white + a touch of Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 57%, Phthalo Blue (Red Shade) under 1%, White 43% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0.034882,
+						0,
+						0.005872,
+						0.959246
+					],
+					"err": 28.012942,
+					"mix": "#abbda5",
+					"text": {
+						"main": "Titanium White + a touch of Cadmium Yellow Light and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 3%, Phthalo Blue (Red Shade) under 1%, White 96% by volume"
+					}
+				}
+			],
+			"sheet": "PRIMARY PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan · 8 colors\n\nPAINTS\n- Winsor & Newton Artisan Cadmium Yellow Light (PY35): Primary yellow. With the blue it makes greens; with the red, oranges. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Permanent Rose (PV19): Primary red, leaning magenta. With the blue it makes violets. Used in 6 of 8 mixes.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (PB15): Primary blue, leaning cyan. Very strong, so add it in small amounts. Used in 6 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 7 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 2 parts Permanent Rose : 1 part Phthalo Blue (Red Shade) : 13 parts white (Permanent Rose 13%, Phthalo Blue (Red Shade) 6%, White 81% by volume)\nColor 2 | value 3.7 | 11% of image | 1 part Permanent Rose : 3 parts white + a touch of Phthalo Blue (Red Shade) (Permanent Rose 25%, Phthalo Blue (Red Shade) 1%, White 74% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 4 parts Cadmium Yellow Light : 1 part Permanent Rose (Cadmium Yellow Light 80%, Permanent Rose 20% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Permanent Rose : 5 parts white (Permanent Rose 18%, White 82% by volume)\nColor 5 | value 5.9 | 20% of image | 1 part Cadmium Yellow Light : 10 parts white + a touch of Permanent Rose and Phthalo Blue (Red Shade) (Cadmium Yellow Light 9%, Permanent Rose 2%, Phthalo Blue (Red Shade) 1%, White 88% by volume)\nColor 6 | value 7.0 | 12% of image | 10 parts Cadmium Yellow Light : 1 part white + a touch of Permanent Rose and Phthalo Blue (Red Shade) (Cadmium Yellow Light 90%, Permanent Rose under 1%, Phthalo Blue (Red Shade) under 1%, White 9% by volume)\nColor 7 | value 7.5 | 10% of image | 1.5 parts Cadmium Yellow Light : 1 part white + a touch of Phthalo Blue (Red Shade) (Cadmium Yellow Light 57%, Phthalo Blue (Red Shade) under 1%, White 43% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Cadmium Yellow Light and Phthalo Blue (Red Shade) (Cadmium Yellow Light 3%, Phthalo Blue (Red Shade) under 1%, White 96% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Primaries make the brightest mixes of these palettes. Browns and grays come from mixing all three, so add the third color a little at a time to dull a mix.\n4. Phthalo Blue (Red Shade) is the strongest paint here. Add it in specks.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "primary-cobra",
+			"settings": {
+				"palette": "primary",
+				"brand": "cobra"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0.133363,
+						0.148181,
+						0.718455
+					],
+					"err": 8.656757,
+					"mix": "#575188",
+					"text": {
+						"main": "1 part Primary Cyan 572 : 1 part Primary Magenta 369 : 5 parts white",
+						"sub": "Primary Cyan 572 15%, Primary Magenta 369 13%, White 72% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0.27367,
+						0.034554,
+						0.691776
+					],
+					"err": 45.118703,
+					"mix": "#86498a",
+					"text": {
+						"main": "8 parts Primary Magenta 369 : 1 part Primary Cyan 572 : 20 parts white",
+						"sub": "Primary Magenta 369 27%, Primary Cyan 572 3%, White 69% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0.818182,
+						0.181818,
+						0,
+						0
+					],
+					"err": 14.094813,
+					"mix": "#bb503b",
+					"text": {
+						"main": "5 parts Primary Yellow 275 : 1 part Primary Magenta 369",
+						"sub": "Primary Yellow 275 82%, Primary Magenta 369 18% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.2,
+						0,
+						0.8
+					],
+					"err": 3.212176,
+					"mix": "#c2579c",
+					"text": {
+						"main": "1 part Primary Magenta 369 : 4 parts white",
+						"sub": "Primary Magenta 369 20%, White 80% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.118237,
+						0.023446,
+						0.028296,
+						0.830022
+					],
+					"err": 0.740951,
+					"mix": "#948e83",
+					"text": {
+						"main": "1 part Primary Yellow 275 : 7 parts white + a touch of Primary Cyan 572 and Primary Magenta 369",
+						"sub": "Primary Yellow 275 12%, Primary Cyan 572 3%, Primary Magenta 369 2%, White 83% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.936342,
+						0.006548,
+						0.006548,
+						0.050562
+					],
+					"err": 0.700904,
+					"mix": "#b8ae38",
+					"text": {
+						"main": "19 parts Primary Yellow 275 : 1 part white + a touch of Primary Magenta 369 and Primary Cyan 572",
+						"sub": "Primary Yellow 275 94%, Primary Magenta 369 under 1%, Primary Cyan 572 under 1%, White 5% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.748691,
+						0,
+						0.011344,
+						0.239965
+					],
+					"err": 38.313089,
+					"mix": "#acba40",
+					"text": {
+						"main": "3 parts Primary Yellow 275 : 1 part white + a touch of Primary Cyan 572",
+						"sub": "Primary Yellow 275 75%, Primary Cyan 572 1%, White 24% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0.047347,
+						0,
+						0.015175,
+						0.937477
+					],
+					"err": 27.969857,
+					"mix": "#abbda5",
+					"text": {
+						"main": "1 part Primary Yellow 275 : 20 parts white + a touch of Primary Cyan 572",
+						"sub": "Primary Yellow 275 5%, Primary Cyan 572 2%, White 94% by volume"
+					}
+				}
+			],
+			"sheet": "PRIMARY PALETTE STUDY\ncase · 8 colors · Cobra · 8 colors\n\nPAINTS\n- Cobra Primary Yellow 275 (PY184, PY154): Primary yellow. With the blue it makes greens; with the red, oranges. Used in 5 of 8 mixes.\n- Cobra Primary Magenta 369 (PV19): Primary red, leaning magenta. With the blue it makes violets. Used in 6 of 8 mixes.\n- Cobra Primary Cyan 572 (PB15, PW7): Primary blue, leaning cyan. Very strong, so add it in small amounts. Used in 6 of 8 mixes.\n- Cobra Titanium White 105: Lightens every mix. Used in 7 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Primary Cyan 572 : 1 part Primary Magenta 369 : 5 parts white (Primary Cyan 572 15%, Primary Magenta 369 13%, White 72% by volume)\nColor 2 | value 3.7 | 11% of image | 8 parts Primary Magenta 369 : 1 part Primary Cyan 572 : 20 parts white (Primary Magenta 369 27%, Primary Cyan 572 3%, White 69% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 5 parts Primary Yellow 275 : 1 part Primary Magenta 369 (Primary Yellow 275 82%, Primary Magenta 369 18% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Primary Magenta 369 : 4 parts white (Primary Magenta 369 20%, White 80% by volume)\nColor 5 | value 5.9 | 20% of image | 1 part Primary Yellow 275 : 7 parts white + a touch of Primary Cyan 572 and Primary Magenta 369 (Primary Yellow 275 12%, Primary Cyan 572 3%, Primary Magenta 369 2%, White 83% by volume)\nColor 6 | value 7.0 | 12% of image | 19 parts Primary Yellow 275 : 1 part white + a touch of Primary Magenta 369 and Primary Cyan 572 (Primary Yellow 275 94%, Primary Magenta 369 under 1%, Primary Cyan 572 under 1%, White 5% by volume)\nColor 7 | value 7.5 | 10% of image | 3 parts Primary Yellow 275 : 1 part white + a touch of Primary Cyan 572 (Primary Yellow 275 75%, Primary Cyan 572 1%, White 24% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | 1 part Primary Yellow 275 : 20 parts white + a touch of Primary Cyan 572 (Primary Yellow 275 5%, Primary Cyan 572 2%, White 94% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Primaries make the brightest mixes of these palettes. Browns and grays come from mixing all three, so add the third color a little at a time to dull a mix.\n4. Primary Cyan 572 is the strongest paint here. Add it in specks.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "warmcool-artisan",
+			"settings": {
+				"palette": "warmcool",
+				"brand": "artisan"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0.289474,
+						0.710526
+					],
+					"err": 40.578061,
+					"mix": "#575659",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 29%, White 71% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0.268293,
+						0.731707
+					],
+					"err": 85.314682,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0.5,
+						0,
+						0.5
+					],
+					"err": 39.200074,
+					"mix": "#945f42",
+					"text": {
+						"main": "1 part Burnt Sienna : 1 part white",
+						"sub": "Burnt Sienna 50%, White 50% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.1,
+						0.9
+					],
+					"err": 53.967828,
+					"mix": "#7f7e80",
+					"text": {
+						"main": "1 part Ivory Black : 9 parts white",
+						"sub": "Ivory Black 10%, White 90% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.047247,
+						0.047653,
+						0.9051
+					],
+					"err": 1.636697,
+					"mix": "#978d83",
+					"text": {
+						"main": "1 part Ivory Black : 1 part Burnt Sienna : 19 parts white",
+						"sub": "Ivory Black 5%, Burnt Sienna 5%, White 91% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.115044,
+						0,
+						0.884956
+					],
+					"err": 42.490041,
+					"mix": "#c69d7c",
+					"text": {
+						"main": "1 part Burnt Sienna : 8 parts white",
+						"sub": "Burnt Sienna 12%, White 88% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.052632,
+						0,
+						0.947368
+					],
+					"err": 78.055497,
+					"mix": "#d7b79a",
+					"text": {
+						"main": "1 part Burnt Sienna : 18 parts white",
+						"sub": "Burnt Sienna 5%, White 95% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0,
+						0.014239,
+						0.985761
+					],
+					"err": 37.755917,
+					"mix": "#c0bfc0",
+					"text": {
+						"main": "Titanium White + a touch of Ivory Black",
+						"sub": "Ivory Black 1%, White 99% by volume"
+					}
+				}
+			],
+			"sheet": "WARM & COOL PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan · 8 colors\n\nPAINTS\n- Winsor & Newton Artisan Burnt Sienna (PR101): The warm string. Makes the red-oranges and, mixed with the grays, the skin tones. Used in 4 of 8 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): The cool string. With white it makes the cool grays. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 29%, White 71% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.7 | 11% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 1 part Burnt Sienna : 1 part white (Burnt Sienna 50%, White 50% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Ivory Black : 9 parts white (Ivory Black 10%, White 90% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 5.9 | 20% of image | 1 part Ivory Black : 1 part Burnt Sienna : 19 parts white (Ivory Black 5%, Burnt Sienna 5%, White 91% by volume)\nColor 6 | value 7.0 | 12% of image | 1 part Burnt Sienna : 8 parts white (Burnt Sienna 12%, White 88% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | 1 part Burnt Sienna : 18 parts white (Burnt Sienna 5%, White 95% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Ivory Black (Ivory Black 1%, White 99% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Mix two strings first, at values 1, 3, 5, 7 and 9: cool grays from Ivory Black and white, and warm red-oranges from Burnt Sienna and white.\n4. For basic skin tones, mix 2 parts of a red-orange with 1 part of the gray at the same value.\n5. Blend toward the red-oranges for warmer cheeks and lips, and toward the grays for hair and cooler notes. Use the grays for blue eyes and backgrounds.\n6. Keep the oil content low in early layers (fat over lean).\n7. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "warmcool-cobra",
+			"settings": {
+				"palette": "warmcool",
+				"brand": "cobra"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0.289474,
+						0.710526
+					],
+					"err": 40.578061,
+					"mix": "#575659",
+					"text": {
+						"main": "1 part Ivory Black 701 : 2.5 parts white",
+						"sub": "Ivory Black 701 29%, White 71% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0.268293,
+						0.731707
+					],
+					"err": 85.314682,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black 701 : 2.5 parts white",
+						"sub": "Ivory Black 701 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0.333333,
+						0,
+						0.666667
+					],
+					"err": 39.056629,
+					"mix": "#945f41",
+					"text": {
+						"main": "1 part Transparent Oxide Red 378 : 2 parts white",
+						"sub": "Transparent Oxide Red 378 33%, White 67% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.1,
+						0.9
+					],
+					"err": 53.967828,
+					"mix": "#7f7e80",
+					"text": {
+						"main": "1 part Ivory Black 701 : 9 parts white",
+						"sub": "Ivory Black 701 10%, White 90% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.026811,
+						0.048676,
+						0.924513
+					],
+					"err": 1.544225,
+					"mix": "#968d83",
+					"text": {
+						"main": "1 part Ivory Black 701 : 19 parts white + a touch of Transparent Oxide Red 378",
+						"sub": "Ivory Black 701 5%, Transparent Oxide Red 378 3%, White 92% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.069767,
+						0,
+						0.930233
+					],
+					"err": 42.324439,
+					"mix": "#c69c7b",
+					"text": {
+						"main": "1 part Transparent Oxide Red 378 : 13 parts white",
+						"sub": "Transparent Oxide Red 378 7%, White 93% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.029768,
+						0,
+						0.970232
+					],
+					"err": 77.958168,
+					"mix": "#d8b89b",
+					"text": {
+						"main": "Titanium White + a touch of Transparent Oxide Red 378",
+						"sub": "Transparent Oxide Red 378 3%, White 97% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0,
+						0.014239,
+						0.985761
+					],
+					"err": 37.755917,
+					"mix": "#c0bfc0",
+					"text": {
+						"main": "Titanium White + a touch of Ivory Black 701",
+						"sub": "Ivory Black 701 1%, White 99% by volume"
+					}
+				}
+			],
+			"sheet": "WARM & COOL PALETTE STUDY\ncase · 8 colors · Cobra · 8 colors\n\nPAINTS\n- Cobra Transparent Oxide Red 378 (PR101): The warm string. Makes the red-oranges and, mixed with the grays, the skin tones. Used in 4 of 8 mixes.\n- Cobra Ivory Black 701 (PBk9): The cool string. With white it makes the cool grays. Used in 5 of 8 mixes.\n- Cobra Titanium White 105: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black 701 : 2.5 parts white (Ivory Black 701 29%, White 71% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.7 | 11% of image | 1 part Ivory Black 701 : 2.5 parts white (Ivory Black 701 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 1 part Transparent Oxide Red 378 : 2 parts white (Transparent Oxide Red 378 33%, White 67% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Ivory Black 701 : 9 parts white (Ivory Black 701 10%, White 90% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 5.9 | 20% of image | 1 part Ivory Black 701 : 19 parts white + a touch of Transparent Oxide Red 378 (Ivory Black 701 5%, Transparent Oxide Red 378 3%, White 92% by volume)\nColor 6 | value 7.0 | 12% of image | 1 part Transparent Oxide Red 378 : 13 parts white (Transparent Oxide Red 378 7%, White 93% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | Titanium White + a touch of Transparent Oxide Red 378 (Transparent Oxide Red 378 3%, White 97% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Ivory Black 701 (Ivory Black 701 1%, White 99% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Mix two strings first, at values 1, 3, 5, 7 and 9: cool grays from Ivory Black 701 and white, and warm red-oranges from Transparent Oxide Red 378 and white.\n4. For basic skin tones, mix 2 parts of a red-orange with 1 part of the gray at the same value.\n5. Blend toward the red-oranges for warmer cheeks and lips, and toward the grays for hair and cooler notes. Use the grays for blue eyes and backgrounds.\n6. Keep the oil content low in early layers (fat over lean).\n7. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "zorn-colors-3",
+			"settings": {
+				"palette": "zorn",
+				"nColors": 3
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 40.852805,
+					"area": 0.278125,
+					"a": 42.885522,
+					"b": -45.147655,
+					"w": [
+						0,
+						0,
+						0.215686,
+						0.784314
+					],
+					"err": 60.716076,
+					"mix": "#626163",
+					"text": {
+						"main": "1 part Ivory Black : 4 parts white",
+						"sub": "Ivory Black 22%, White 78% by volume"
+					}
+				},
+				{
+					"L": 56.338994,
+					"area": 0.34375,
+					"a": 25.965538,
+					"b": 20.447652,
+					"w": [
+						0,
+						0.181452,
+						0.012097,
+						0.806452
+					],
+					"err": 0.694384,
+					"mix": "#bd7567",
+					"text": {
+						"main": "1 part Cadmium Red Light : 4 parts white + a touch of Ivory Black",
+						"sub": "Cadmium Red Light 18%, Ivory Black 1%, White 81% by volume"
+					}
+				},
+				{
+					"L": 72.144771,
+					"area": 0.378125,
+					"a": -36.418793,
+					"b": 31.14288,
+					"w": [
+						0.229892,
+						0,
+						0.010133,
+						0.759975
+					],
+					"err": 31.709653,
+					"mix": "#beb37a",
+					"text": {
+						"main": "1 part Yellow Ochre : 3 parts white + a touch of Ivory Black",
+						"sub": "Yellow Ochre 23%, Ivory Black 1%, White 76% by volume"
+					}
+				}
+			],
+			"sheet": "ZORN PALETTE STUDY\ncase · 3 colors · Winsor & Newton Artisan · 3 colors\n\nPAINTS\n- Winsor & Newton Artisan Yellow Ochre (PY42): The palette's yellow. With black it makes muted olive greens. Used in 1 of 3 mixes.\n- Winsor & Newton Artisan Cadmium Red Light (PR108): The palette's red. Warms skin, lips and shadows. Used in 1 of 3 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): Stands in for blue. With white it reads as a cool blue-gray next to the warm paints. Used in 3 of 3 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 3 of 3 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 4.1 | 28% of image | 1 part Ivory Black : 4 parts white (Ivory Black 22%, White 78% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 5.6 | 34% of image | 1 part Cadmium Red Light : 4 parts white + a touch of Ivory Black (Cadmium Red Light 18%, Ivory Black 1%, White 81% by volume)\nColor 3 | value 7.2 | 38% of image | 1 part Yellow Ochre : 3 parts white + a touch of Ivory Black (Yellow Ochre 23%, Ivory Black 1%, White 76% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Zorn has no real blue. Ivory Black with white looks blue-gray next to the warm ochre and red, so let it do the job of blue in skies, eyes and shadows.\n4. For skin, start from Yellow Ochre, Cadmium Red Light and white, then cool the shadow side with a little of the black-and-white gray.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "79894fd97a3f4f912f4d48bde9cb29acc4cf176bb6b707703b9c9ff7fc6191c5"
+		},
+		{
+			"name": "zorn-colors-12",
+			"settings": {
+				"palette": "zorn",
+				"nColors": 12
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 29.604381,
+					"area": 0.05,
+					"a": 32.26151,
+					"b": 4.404527,
+					"w": [
+						0,
+						0.891892,
+						0.108108,
+						0
+					],
+					"err": 15.566356,
+					"mix": "#723a31",
+					"text": {
+						"main": "8 parts Cadmium Red Light : 1 part Ivory Black",
+						"sub": "Cadmium Red Light 89%, Ivory Black 11% by volume"
+					}
+				},
+				{
+					"L": 34.46777,
+					"area": 0.065625,
+					"a": -16.305849,
+					"b": 26.579858,
+					"w": [
+						0.891892,
+						0,
+						0.108108,
+						0
+					],
+					"err": 15.382254,
+					"mix": "#615a37",
+					"text": {
+						"main": "8 parts Yellow Ochre : 1 part Ivory Black",
+						"sub": "Yellow Ochre 89%, Ivory Black 11% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0,
+						0.268293,
+						0.731707
+					],
+					"err": 85.314682,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 38.637101,
+					"area": 0.09375,
+					"a": 15.071395,
+					"b": -40.798192,
+					"w": [
+						0,
+						0,
+						0.25,
+						0.75
+					],
+					"err": 42.041581,
+					"mix": "#5d5b5e",
+					"text": {
+						"main": "1 part Ivory Black : 3 parts white",
+						"sub": "Ivory Black 25%, White 75% by volume"
+					}
+				},
+				{
+					"L": 48.545007,
+					"area": 0.08125,
+					"a": 62.979859,
+					"b": 39.21983,
+					"w": [
+						0,
+						0.767442,
+						0,
+						0.232558
+					],
+					"err": 17.50863,
+					"mix": "#bb4438",
+					"text": {
+						"main": "3 parts Cadmium Red Light : 1 part white",
+						"sub": "Cadmium Red Light 77%, White 23% by volume"
+					}
+				},
+				{
+					"L": 51.926992,
+					"area": 0.075,
+					"a": 58.778956,
+					"b": -17.972522,
+					"w": [
+						0,
+						0.328358,
+						0,
+						0.671642
+					],
+					"err": 50.400518,
+					"mix": "#d06353",
+					"text": {
+						"main": "1 part Cadmium Red Light : 2 parts white",
+						"sub": "Cadmium Red Light 33%, White 67% by volume"
+					}
+				},
+				{
+					"L": 67.805836,
+					"area": 0.053125,
+					"a": 17.128503,
+					"b": 57.719601,
+					"w": [
+						0.620006,
+						0.018783,
+						0,
+						0.361211
+					],
+					"err": 17.960011,
+					"mix": "#c0964e",
+					"text": {
+						"main": "1.5 parts Yellow Ochre : 1 part white + a touch of Cadmium Red Light",
+						"sub": "Yellow Ochre 62%, Cadmium Red Light 2%, White 36% by volume"
+					}
+				},
+				{
+					"L": 72.480171,
+					"area": 0.134375,
+					"a": 8.426174,
+					"b": 6.903159,
+					"w": [
+						0,
+						0.026851,
+						0.010502,
+						0.962648
+					],
+					"err": 1.229701,
+					"mix": "#c6ada4",
+					"text": {
+						"main": "Titanium White + a touch of Cadmium Red Light and Ivory Black",
+						"sub": "Cadmium Red Light 3%, Ivory Black 1%, White 96% by volume"
+					}
+				},
+				{
+					"L": 73.211996,
+					"area": 0.096875,
+					"a": -21.64897,
+					"b": -16.021438,
+					"w": [
+						0,
+						0,
+						0.021005,
+						0.978995
+					],
+					"err": 27.038753,
+					"mix": "#b5b4b6",
+					"text": {
+						"main": "Titanium White + a touch of Ivory Black",
+						"sub": "Ivory Black 2%, White 98% by volume"
+					}
+				},
+				{
+					"L": 75.172944,
+					"area": 0.08125,
+					"a": -62.780612,
+					"b": 60.117962,
+					"w": [
+						0.310345,
+						0,
+						0,
+						0.689655
+					],
+					"err": 63.064774,
+					"mix": "#d4be71",
+					"text": {
+						"main": "1 part Yellow Ochre : 2 parts white",
+						"sub": "Yellow Ochre 31%, White 69% by volume"
+					}
+				},
+				{
+					"L": 75.381668,
+					"area": 0.071875,
+					"a": -23.549424,
+					"b": 66.189847,
+					"w": [
+						0.416667,
+						0,
+						0,
+						0.583333
+					],
+					"err": 31.318973,
+					"mix": "#cdb463",
+					"text": {
+						"main": "1 part Yellow Ochre : 1.5 parts white",
+						"sub": "Yellow Ochre 42%, White 58% by volume"
+					}
+				},
+				{
+					"L": 77.453174,
+					"area": 0.0875,
+					"a": -44.45675,
+					"b": 14.386101,
+					"w": [
+						0.088043,
+						0,
+						0.008955,
+						0.903002
+					],
+					"err": 40.609291,
+					"mix": "#c7c19c",
+					"text": {
+						"main": "1 part Yellow Ochre : 10 parts white + a touch of Ivory Black",
+						"sub": "Yellow Ochre 9%, Ivory Black under 1%, White 90% by volume"
+					}
+				}
+			],
+			"sheet": "ZORN PALETTE STUDY\ncase · 12 colors · Winsor & Newton Artisan · 12 colors\n\nPAINTS\n- Winsor & Newton Artisan Yellow Ochre (PY42): The palette's yellow. With black it makes muted olive greens. Used in 5 of 12 mixes.\n- Winsor & Newton Artisan Cadmium Red Light (PR108): The palette's red. Warms skin, lips and shadows. Used in 5 of 12 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): Stands in for blue. With white it reads as a cool blue-gray next to the warm paints. Used in 7 of 12 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 10 of 12 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.0 | 5% of image | 8 parts Cadmium Red Light : 1 part Ivory Black (Cadmium Red Light 89%, Ivory Black 11% by volume) | This is the closest this palette gets. The hue is a little off from the photo.\nColor 2 | value 3.4 | 7% of image | 8 parts Yellow Ochre : 1 part Ivory Black (Yellow Ochre 89%, Ivory Black 11% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 3.7 | 11% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 3.9 | 9% of image | 1 part Ivory Black : 3 parts white (Ivory Black 25%, White 75% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 4.9 | 8% of image | 3 parts Cadmium Red Light : 1 part white (Cadmium Red Light 77%, White 23% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 6 | value 5.2 | 8% of image | 1 part Cadmium Red Light : 2 parts white (Cadmium Red Light 33%, White 67% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 6.8 | 5% of image | 1.5 parts Yellow Ochre : 1 part white + a touch of Cadmium Red Light (Yellow Ochre 62%, Cadmium Red Light 2%, White 36% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.2 | 13% of image | Titanium White + a touch of Cadmium Red Light and Ivory Black (Cadmium Red Light 3%, Ivory Black 1%, White 96% by volume)\nColor 9 | value 7.3 | 10% of image | Titanium White + a touch of Ivory Black (Ivory Black 2%, White 98% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 10 | value 7.5 | 8% of image | 1 part Yellow Ochre : 2 parts white (Yellow Ochre 31%, White 69% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 11 | value 7.5 | 7% of image | 1 part Yellow Ochre : 1.5 parts white (Yellow Ochre 42%, White 58% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 12 | value 7.7 | 9% of image | 1 part Yellow Ochre : 10 parts white + a touch of Ivory Black (Yellow Ochre 9%, Ivory Black under 1%, White 90% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Zorn has no real blue. Ivory Black with white looks blue-gray next to the warm ochre and red, so let it do the job of blue in skies, eyes and shadows.\n4. For skin, start from Yellow Ochre, Cadmium Red Light and white, then cool the shadow side with a little of the black-and-white gray.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "51a953dd721fe1b3abd0dd06f5c820a66a2bf32dfac8a03b34a2346741fdeeb9"
+		},
+		{
+			"name": "primary-punchy",
+			"settings": {
+				"palette": "primary",
+				"contrast": "punchy"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 23.130757,
+					"area": 0.109375,
+					"a": 1.577623,
+					"b": -2.484742,
+					"w": [
+						0.59322,
+						0.254237,
+						0.152542,
+						0
+					],
+					"err": 0.371993,
+					"mix": "#39373b",
+					"text": {
+						"main": "4 parts Cadmium Yellow Light : 1.5 parts Permanent Rose : 1 part Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 59%, Permanent Rose 25%, Phthalo Blue (Red Shade) 15% by volume"
+					}
+				},
+				{
+					"L": 27.953492,
+					"area": 0.125,
+					"a": 43.649786,
+					"b": -63.473854,
+					"w": [
+						0,
+						0.326264,
+						0.039478,
+						0.634258
+					],
+					"err": 40.911571,
+					"mix": "#623f78",
+					"text": {
+						"main": "8 parts Permanent Rose : 1 part Phthalo Blue (Red Shade) : 16 parts white",
+						"sub": "Permanent Rose 33%, Phthalo Blue (Red Shade) 4%, White 63% by volume"
+					}
+				},
+				{
+					"L": 49.061963,
+					"area": 0.115625,
+					"a": 55.71663,
+					"b": 38.13347,
+					"w": [
+						0.803295,
+						0.196705,
+						0,
+						0
+					],
+					"err": 14.678922,
+					"mix": "#b84d35",
+					"text": {
+						"main": "4 parts Cadmium Yellow Light : 1 part Permanent Rose",
+						"sub": "Cadmium Yellow Light 80%, Permanent Rose 20% by volume"
+					}
+				},
+				{
+					"L": 52.09397,
+					"area": 0.096875,
+					"a": 62.795491,
+					"b": -28.089642,
+					"w": [
+						0,
+						0.180328,
+						0,
+						0.819672
+					],
+					"err": 17.712268,
+					"mix": "#c15799",
+					"text": {
+						"main": "1 part Permanent Rose : 5 parts white",
+						"sub": "Permanent Rose 18%, White 82% by volume"
+					}
+				},
+				{
+					"L": 74.222948,
+					"area": 0.134375,
+					"a": -9.286857,
+					"b": 56.362702,
+					"w": [
+						0.473863,
+						0.005318,
+						0.001883,
+						0.518936
+					],
+					"err": 0.406827,
+					"mix": "#c5b949",
+					"text": {
+						"main": "1 part Cadmium Yellow Light : 1 part white + a touch of Permanent Rose and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 47%, Permanent Rose under 1%, Phthalo Blue (Red Shade) under 1%, White 52% by volume"
+					}
+				},
+				{
+					"L": 74.547824,
+					"area": 0.165625,
+					"a": 9.440021,
+					"b": -4.669658,
+					"w": [
+						0.011148,
+						0.010735,
+						0.002166,
+						0.975951
+					],
+					"err": 0.338551,
+					"mix": "#c5b2bf",
+					"text": {
+						"main": "Titanium White + a touch of Cadmium Yellow Light, Permanent Rose and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 1%, Permanent Rose 1%, Phthalo Blue (Red Shade) under 1%, White 98% by volume"
+					}
+				},
+				{
+					"L": 80.938917,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.206349,
+						0,
+						0,
+						0.793651
+					],
+					"err": 48.415537,
+					"mix": "#f0e768",
+					"text": {
+						"main": "1 part Cadmium Yellow Light : 4 parts white",
+						"sub": "Cadmium Yellow Light 21%, White 79% by volume"
+					}
+				},
+				{
+					"L": 84.466698,
+					"area": 0.15625,
+					"a": -36.196163,
+					"b": 1.177666,
+					"w": [
+						0.020287,
+						0,
+						0.002919,
+						0.976794
+					],
+					"err": 28.866946,
+					"mix": "#bfcdb7",
+					"text": {
+						"main": "Titanium White + a touch of Cadmium Yellow Light and Phthalo Blue (Red Shade)",
+						"sub": "Cadmium Yellow Light 2%, Phthalo Blue (Red Shade) under 1%, White 98% by volume"
+					}
+				}
+			],
+			"sheet": "PRIMARY PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan · 8 colors · punchy contrast\n\nPAINTS\n- Winsor & Newton Artisan Cadmium Yellow Light (PY35): Primary yellow. With the blue it makes greens; with the red, oranges. Used in 6 of 8 mixes.\n- Winsor & Newton Artisan Permanent Rose (PV19): Primary red, leaning magenta. With the blue it makes violets. Used in 6 of 8 mixes.\n- Winsor & Newton Artisan Phthalo Blue (Red Shade) (PB15): Primary blue, leaning cyan. Very strong, so add it in small amounts. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 6 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 2.3 | 11% of image | 4 parts Cadmium Yellow Light : 1.5 parts Permanent Rose : 1 part Phthalo Blue (Red Shade) (Cadmium Yellow Light 59%, Permanent Rose 25%, Phthalo Blue (Red Shade) 15% by volume)\nColor 2 | value 2.8 | 13% of image | 8 parts Permanent Rose : 1 part Phthalo Blue (Red Shade) : 16 parts white (Permanent Rose 33%, Phthalo Blue (Red Shade) 4%, White 63% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.9 | 12% of image | 4 parts Cadmium Yellow Light : 1 part Permanent Rose (Cadmium Yellow Light 80%, Permanent Rose 20% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.2 | 10% of image | 1 part Permanent Rose : 5 parts white (Permanent Rose 18%, White 82% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 7.4 | 13% of image | 1 part Cadmium Yellow Light : 1 part white + a touch of Permanent Rose and Phthalo Blue (Red Shade) (Cadmium Yellow Light 47%, Permanent Rose under 1%, Phthalo Blue (Red Shade) under 1%, White 52% by volume)\nColor 6 | value 7.5 | 17% of image | Titanium White + a touch of Cadmium Yellow Light, Permanent Rose and Phthalo Blue (Red Shade) (Cadmium Yellow Light 1%, Permanent Rose 1%, Phthalo Blue (Red Shade) under 1%, White 98% by volume)\nColor 7 | value 8.1 | 10% of image | 1 part Cadmium Yellow Light : 4 parts white (Cadmium Yellow Light 21%, White 79% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 8.4 | 16% of image | Titanium White + a touch of Cadmium Yellow Light and Phthalo Blue (Red Shade) (Cadmium Yellow Light 2%, Phthalo Blue (Red Shade) under 1%, White 98% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Primaries make the brightest mixes of these palettes. Browns and grays come from mixing all three, so add the third color a little at a time to dull a mix.\n4. Phthalo Blue (Red Shade) is the strongest paint here. Add it in specks.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "a4c6617d1c909c26f6a6f979f9a18d7f4265d095d1009e27e7e966d0695b85ab"
+		},
+		{
+			"name": "warmcool-acrylic",
+			"settings": {
+				"palette": "warmcool",
+				"med": "acrylic"
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 36.820781,
+					"area": 0.103125,
+					"a": 16.261873,
+					"b": -38.760248,
+					"w": [
+						0,
+						0.230769,
+						0.769231
+					],
+					"err": 40.551973,
+					"mix": "#5f5e61",
+					"text": {
+						"main": "1 part Ivory Black : 3 parts white",
+						"sub": "Ivory Black 23%, White 77% by volume"
+					}
+				},
+				{
+					"L": 37.194278,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0.230769,
+						0.769231
+					],
+					"err": 85.288778,
+					"mix": "#5f5e61",
+					"text": {
+						"main": "1 part Ivory Black : 3 parts white",
+						"sub": "Ivory Black 23%, White 77% by volume"
+					}
+				},
+				{
+					"L": 47.86503,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0.44,
+						0,
+						0.56
+					],
+					"err": 39.624196,
+					"mix": "#9a6547",
+					"text": {
+						"main": "1 part Burnt Sienna : 1.5 parts white",
+						"sub": "Burnt Sienna 44%, White 56% by volume"
+					}
+				},
+				{
+					"L": 52.848361,
+					"area": 0.1,
+					"a": 53.166416,
+					"b": -14.952467,
+					"w": [
+						0,
+						0.083333,
+						0.916667
+					],
+					"err": 53.993729,
+					"mix": "#868487",
+					"text": {
+						"main": "1 part Ivory Black : 11 parts white",
+						"sub": "Ivory Black 8%, White 92% by volume"
+					}
+				},
+				{
+					"L": 58.922351,
+					"area": 0.203125,
+					"a": 0.02748,
+					"b": 6.451436,
+					"w": [
+						0.037003,
+						0.041469,
+						0.921528
+					],
+					"err": 1.444207,
+					"mix": "#9c948a",
+					"text": {
+						"main": "1 part Ivory Black : 1 part Burnt Sienna : 25 parts white",
+						"sub": "Ivory Black 4%, Burnt Sienna 4%, White 92% by volume"
+					}
+				},
+				{
+					"L": 69.889258,
+					"area": 0.11875,
+					"a": -10.257966,
+					"b": 59.604381,
+					"w": [
+						0.1,
+						0,
+						0.9
+					],
+					"err": 42.871912,
+					"mix": "#caa282",
+					"text": {
+						"main": "1 part Burnt Sienna : 9 parts white",
+						"sub": "Burnt Sienna 10%, White 90% by volume"
+					}
+				},
+				{
+					"L": 74.653902,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.043478,
+						0,
+						0.956522
+					],
+					"err": 77.957647,
+					"mix": "#dabca1",
+					"text": {
+						"main": "1 part Burnt Sienna : 20 parts white",
+						"sub": "Burnt Sienna 4%, White 96% by volume"
+					}
+				},
+				{
+					"L": 77.217378,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0,
+						0.009901,
+						0.990099
+					],
+					"err": 37.660767,
+					"mix": "#c9c8c9",
+					"text": {
+						"main": "Titanium White + a touch of Ivory Black",
+						"sub": "Ivory Black under 1%, White 99% by volume"
+					}
+				}
+			],
+			"sheet": "WARM & COOL PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan acrylic · 8 colors\n\nPAINTS\n- Winsor & Newton Artisan Burnt Sienna (PR101): The warm string. Makes the red-oranges and, mixed with the grays, the skin tones. Used in 4 of 8 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): The cool string. With white it makes the cool grays. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Acrylic retarder or slow-drying medium: Optional. Keeps your color puddles workable longer on the palette.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black : 3 parts white (Ivory Black 23%, White 77% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.7 | 11% of image | 1 part Ivory Black : 3 parts white (Ivory Black 23%, White 77% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.8 | 12% of image | 1 part Burnt Sienna : 1.5 parts white (Burnt Sienna 44%, White 56% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.3 | 10% of image | 1 part Ivory Black : 11 parts white (Ivory Black 8%, White 92% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 5.9 | 20% of image | 1 part Ivory Black : 1 part Burnt Sienna : 25 parts white (Ivory Black 4%, Burnt Sienna 4%, White 92% by volume)\nColor 6 | value 7.0 | 12% of image | 1 part Burnt Sienna : 9 parts white (Burnt Sienna 10%, White 90% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | 1 part Burnt Sienna : 20 parts white (Burnt Sienna 4%, White 96% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.7 | 15% of image | Titanium White + a touch of Ivory Black (Ivory Black under 1%, White 99% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Mix two strings first, at values 1, 3, 5, 7 and 9: cool grays from Ivory Black and white, and warm red-oranges from Burnt Sienna and white.\n4. For basic skin tones, mix 2 parts of a red-orange with 1 part of the gray at the same value.\n5. Blend toward the red-oranges for warmer cheeks and lips, and toward the grays for hair and cooler notes. Use the grays for blue eyes and backgrounds.\n6. Let a test dab dry for a minute before judging it. Acrylic darkens as it dries.\n7. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "3458e8d8db88ae8186a8c262ebb2df76881b4e8127b565dc19f21d51c44de993"
+		},
+		{
+			"name": "zorn-brighten-area",
+			"settings": {
+				"palette": "zorn"
+			},
+			"brighten": {
+				"x": 0.4,
+				"y": 0.5,
+				"r": 0.2
+			},
+			"width": 320,
+			"height": 400,
+			"zones": [
+				{
+					"L": 37.193282,
+					"area": 0.1,
+					"a": 15.648021,
+					"b": -38.675222,
+					"w": [
+						0,
+						0,
+						0.27027,
+						0.72973
+					],
+					"err": 40.271891,
+					"mix": "#5a595b",
+					"text": {
+						"main": "1 part Ivory Black : 2.5 parts white",
+						"sub": "Ivory Black 27%, White 73% by volume"
+					}
+				},
+				{
+					"L": 38.279069,
+					"area": 0.109375,
+					"a": 57.960055,
+					"b": -64.666817,
+					"w": [
+						0,
+						0,
+						0.25,
+						0.75
+					],
+					"err": 85.304209,
+					"mix": "#5d5b5e",
+					"text": {
+						"main": "1 part Ivory Black : 3 parts white",
+						"sub": "Ivory Black 25%, White 75% by volume"
+					}
+				},
+				{
+					"L": 49.471187,
+					"area": 0.115625,
+					"a": 55.154362,
+					"b": 38.402474,
+					"w": [
+						0,
+						0.666667,
+						0,
+						0.333333
+					],
+					"err": 10.780897,
+					"mix": "#bf493c",
+					"text": {
+						"main": "2 parts Cadmium Red Light : 1 part white",
+						"sub": "Cadmium Red Light 67%, White 33% by volume"
+					}
+				},
+				{
+					"L": 53.899032,
+					"area": 0.103125,
+					"a": 52.643347,
+					"b": -15.756364,
+					"w": [
+						0,
+						0.264848,
+						0.012841,
+						0.722311
+					],
+					"err": 44.082816,
+					"mix": "#b86859",
+					"text": {
+						"main": "1 part Cadmium Red Light : 2.5 parts white + a touch of Ivory Black",
+						"sub": "Cadmium Red Light 26%, Ivory Black 1%, White 72% by volume"
+					}
+				},
+				{
+					"L": 59.87255,
+					"area": 0.200172,
+					"a": 0.27692,
+					"b": 6.079591,
+					"w": [
+						0.065789,
+						0,
+						0.057018,
+						0.877193
+					],
+					"err": 1.44932,
+					"mix": "#929085",
+					"text": {
+						"main": "1 part Yellow Ochre : 1 part Ivory Black : 15 parts white",
+						"sub": "Yellow Ochre 7%, Ivory Black 6%, White 88% by volume"
+					}
+				},
+				{
+					"L": 70.898108,
+					"area": 0.121703,
+					"a": -10.418658,
+					"b": 58.92622,
+					"w": [
+						0.52381,
+						0,
+						0,
+						0.47619
+					],
+					"err": 16.833361,
+					"mix": "#c7ab59",
+					"text": {
+						"main": "1 part Yellow Ochre : 1 part white",
+						"sub": "Yellow Ochre 52%, White 48% by volume"
+					}
+				},
+				{
+					"L": 75.046795,
+					"area": 0.096875,
+					"a": -59.168233,
+					"b": 59.682643,
+					"w": [
+						0.331104,
+						0,
+						0,
+						0.668896
+					],
+					"err": 59.498168,
+					"mix": "#d3bc6e",
+					"text": {
+						"main": "1 part Yellow Ochre : 2 parts white",
+						"sub": "Yellow Ochre 33%, White 67% by volume"
+					}
+				},
+				{
+					"L": 78.531937,
+					"area": 0.153125,
+					"a": -37.116368,
+					"b": 1.325129,
+					"w": [
+						0.035423,
+						0,
+						0.010409,
+						0.954167
+					],
+					"err": 35.787965,
+					"mix": "#c6c3b0",
+					"text": {
+						"main": "Titanium White + a touch of Yellow Ochre and Ivory Black",
+						"sub": "Yellow Ochre 4%, Ivory Black 1%, White 95% by volume"
+					}
+				}
+			],
+			"sheet": "ZORN PALETTE STUDY\ncase · 8 colors · Winsor & Newton Artisan · 8 colors · area brightened\n\nPAINTS\n- Winsor & Newton Artisan Yellow Ochre (PY42): The palette's yellow. With black it makes muted olive greens. Used in 4 of 8 mixes.\n- Winsor & Newton Artisan Cadmium Red Light (PR108): The palette's red. Warms skin, lips and shadows. Used in 2 of 8 mixes.\n- Winsor & Newton Artisan Ivory Black (PBk9): Stands in for blue. With white it reads as a cool blue-gray next to the warm paints. Used in 5 of 8 mixes.\n- Winsor & Newton Artisan Titanium White: Lightens every mix. Used in 8 of 8 mixes, so have plenty.\n- Water-mixable linseed oil or medium: Optional. A drop loosens stiff mixes. Clean brushes with water.\n\nCOLORS (darkest to lightest)\nColor 1 | value 3.7 | 10% of image | 1 part Ivory Black : 2.5 parts white (Ivory Black 27%, White 73% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 2 | value 3.8 | 11% of image | 1 part Ivory Black : 3 parts white (Ivory Black 25%, White 75% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 3 | value 4.9 | 12% of image | 2 parts Cadmium Red Light : 1 part white (Cadmium Red Light 67%, White 33% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 4 | value 5.4 | 10% of image | 1 part Cadmium Red Light : 2.5 parts white + a touch of Ivory Black (Cadmium Red Light 26%, Ivory Black 1%, White 72% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 5 | value 6.0 | 20% of image | 1 part Yellow Ochre : 1 part Ivory Black : 15 parts white (Yellow Ochre 7%, Ivory Black 6%, White 88% by volume)\nColor 6 | value 7.1 | 12% of image | 1 part Yellow Ochre : 1 part white (Yellow Ochre 52%, White 48% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 7 | value 7.5 | 10% of image | 1 part Yellow Ochre : 2 parts white (Yellow Ochre 33%, White 67% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\nColor 8 | value 7.9 | 15% of image | Titanium White + a touch of Yellow Ochre and Ivory Black (Yellow Ochre 4%, Ivory Black 1%, White 95% by volume) | This palette cannot mix a color this vivid. This is the closest it gets.\n\nTIPS\n1. Mix every color before you start, in separate puddles. Make more of the colors with the largest share of the picture.\n2. Match value first, then hue. Dab each mix on a card next to the same area of your photo and squint. A mix with the right value but slightly off hue still reads correctly.\n3. Zorn has no real blue. Ivory Black with white looks blue-gray next to the warm ochre and red, so let it do the job of blue in skies, eyes and shadows.\n4. For skin, start from Yellow Ochre, Cadmium Red Light and white, then cool the shadow side with a little of the black-and-white gray.\n5. Keep the oil content low in early layers (fat over lean).\n6. Paint from dark to light: block in the darkest shapes first, then work up to the lights.\n\nRatios are model estimates by volume. Test each mix on a card against your reference.",
+			"assignHash": "db6bcb9b4626606e57477c30b61205f965f0d18b044786b3cd03b5fd51519d21"
+		}
+	]
+}

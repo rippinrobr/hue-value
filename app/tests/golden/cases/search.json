@@ -1,0 +1,2858 @@
+[
+	{
+		"query": "",
+		"brand": "artisan",
+		"intro": "",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Cerulean Blue",
+						"brand": "",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue Hue",
+						"brand": "",
+						"meta": "PB36, PW4 · value 5.9 at full strength"
+					},
+					{
+						"name": "Cobalt Blue",
+						"brand": "",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "",
+						"meta": "PB29, PB60 · value 2.4 at full strength"
+					},
+					{
+						"name": "French Ultramarine",
+						"brand": "",
+						"meta": "PB29 · value 2.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Prussian Blue",
+						"brand": "",
+						"meta": "PB27 · value 1.5 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Olive Green",
+						"brand": "",
+						"meta": "PBk6, PY110 · value 3.2 at full strength"
+					},
+					{
+						"name": "Permanent Sap Green",
+						"brand": "",
+						"meta": "PB15, PY110 · value 2.6 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "",
+						"meta": "PG7 · value 2.6 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Yellow Shade)",
+						"brand": "",
+						"meta": "PG36 · value 3.4 at full strength"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "",
+						"meta": "PG7, PY42, PY43 · value 2.8 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Yellows",
+				"items": [
+					{
+						"name": "Cadmium Yellow Deep Hue",
+						"brand": "",
+						"meta": "PO43, PY65 · value 6.2 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Hue",
+						"brand": "",
+						"meta": "PY65 · value 8.0 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Light",
+						"brand": "",
+						"meta": "PY35 · value 8.3 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Pale Hue",
+						"brand": "",
+						"meta": "PY3, PY65 · value 8.3 at full strength"
+					},
+					{
+						"name": "Lemon Yellow",
+						"brand": "",
+						"meta": "PY3 · value 8.9 at full strength"
+					},
+					{
+						"name": "Naples Yellow Hue",
+						"brand": "",
+						"meta": "PR101, PW6, PY42 · value 7.1 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Oranges",
+				"items": [
+					{
+						"name": "Cadmium Orange Hue",
+						"brand": "",
+						"meta": "PO43 · value 4.9 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Reds",
+				"items": [
+					{
+						"name": "Cadmium Red Dark",
+						"brand": "",
+						"meta": "PR108 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cadmium Red Deep Hue",
+						"brand": "",
+						"meta": "PO36, PR170 · value 3.4 at full strength"
+					},
+					{
+						"name": "Cadmium Red Hue",
+						"brand": "",
+						"meta": "PR170, PR188 · value 4.3 at full strength"
+					},
+					{
+						"name": "Cadmium Red Light",
+						"brand": "",
+						"meta": "PR108 · value 4.3 at full strength"
+					},
+					{
+						"name": "Permanent Alizarin Crimson",
+						"brand": "",
+						"meta": "PR179, PV19 · value 2.0 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Pinks and magentas",
+				"items": [
+					{
+						"name": "Magenta",
+						"brand": "",
+						"meta": "PR122 · value 4.0 at full strength"
+					},
+					{
+						"name": "Permanent Rose",
+						"brand": "",
+						"meta": "PV19 · value 3.3 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Violets",
+				"items": [
+					{
+						"name": "Dioxazine Purple",
+						"brand": "",
+						"meta": "PV23 · value 1.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Earths",
+				"items": [
+					{
+						"name": "Burnt Sienna",
+						"brand": "",
+						"meta": "PR101 · value 3.2 at full strength"
+					},
+					{
+						"name": "Burnt Umber",
+						"brand": "",
+						"meta": "PBr7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Indian Red",
+						"brand": "",
+						"meta": "PR101 · value 2.5 at full strength"
+					},
+					{
+						"name": "Raw Sienna",
+						"brand": "",
+						"meta": "PBr7, PY42 · value 4.9 at full strength"
+					},
+					{
+						"name": "Raw Umber",
+						"brand": "",
+						"meta": "PBr7 · value 2.6 at full strength"
+					},
+					{
+						"name": "Yellow Ochre",
+						"brand": "",
+						"meta": "PY42 · value 5.8 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Grays and blacks",
+				"items": [
+					{
+						"name": "Ivory Black",
+						"brand": "",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Lamp Black",
+						"brand": "",
+						"meta": "PBk6 · value 1.8 at full strength"
+					},
+					{
+						"name": "Payne's Gray",
+						"brand": "",
+						"meta": "PB29, PBk6 · value 2.0 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "blue",
+		"brand": "artisan",
+		"intro": "21 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · value 3.0 at full strength"
+					},
+					{
+						"name": "Cerulean Blue",
+						"brand": "artisan",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue 534",
+						"brand": "cobra",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue Hue",
+						"brand": "artisan",
+						"meta": "PB36, PW4 · value 5.9 at full strength"
+					},
+					{
+						"name": "Cobalt Blue",
+						"brand": "artisan",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3 at full strength"
+					},
+					{
+						"name": "Cobalt Blue 511",
+						"brand": "cobra",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · value 2.4 at full strength"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1 at full strength"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · value 3.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0 at full strength"
+					},
+					{
+						"name": "Prussian Blue",
+						"brand": "artisan",
+						"meta": "PB27 · value 1.5 at full strength"
+					},
+					{
+						"name": "Prussian Blue 508",
+						"brand": "cobra",
+						"meta": "PB27 · value 1.5 at full strength"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · value 2.3 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · value 5.2 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · value 2.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Violets",
+				"items": [
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · value 2.2 at full strength"
+					},
+					{
+						"name": "Permanent Blue Violet 568",
+						"brand": "cobra",
+						"meta": "PV23, PR122 · value 1.7 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "phthalo",
+		"brand": "artisan",
+		"intro": "7 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · value 2.6 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Yellow Shade)",
+						"brand": "artisan",
+						"meta": "PG36 · value 3.4 at full strength"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · value 2.6 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PB29",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PB29. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · value 2.4"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · value 2.5"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 12",
+				"items": [
+					{
+						"name": "Burnt Carmine 323",
+						"brand": "cobra",
+						"meta": "PR264, PB29 · value 2.2"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · value 2.4"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · value 3.4"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1"
+					},
+					{
+						"name": "Payne's Gray",
+						"brand": "artisan",
+						"meta": "PB29, PBk6 · value 2.0"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · value 2.9"
+					},
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · value 2.2"
+					},
+					{
+						"name": "Cold Grey 717",
+						"brand": "cobra",
+						"meta": "PBk11, PB29, PW6 · value 4.3"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · value 1.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "pb15 pg7",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PB15 + PG7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 1",
+				"items": [
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 2",
+				"items": [
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · value 3.0"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · value 2.3"
+					}
+				]
+			},
+			{
+				"title": "Shares some of these pigments · 22",
+				"items": [
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · shares 1 of 2 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · shares 1 of 2 · value 1.7"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Chartreuse 233",
+						"brand": "cobra",
+						"meta": "PY184, PG7 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Permanent Sap Green",
+						"brand": "artisan",
+						"meta": "PB15, PY110 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Primary Cyan 572",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Sap Green 623",
+						"brand": "cobra",
+						"meta": "PG7, PY110 · shares 1 of 2 · value 3.5"
+					},
+					{
+						"name": "Viridian 616",
+						"brand": "cobra",
+						"meta": "PG7, PBk11 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Asphaltum 414",
+						"brand": "cobra",
+						"meta": "PY110, PR264, PG7 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 2 · value 3.7"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Olive Green 620",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Olive Green Yellow 639",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 3.3"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PB29,PG7",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PB29 + PG7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Shares some of these pigments · 31",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Burnt Carmine 323",
+						"brand": "cobra",
+						"meta": "PR264, PB29 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Chartreuse 233",
+						"brand": "cobra",
+						"meta": "PY184, PG7 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · shares 1 of 2 · value 3.4"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · shares 1 of 2 · value 2.1"
+					},
+					{
+						"name": "Payne's Gray",
+						"brand": "artisan",
+						"meta": "PB29, PBk6 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Sap Green 623",
+						"brand": "cobra",
+						"meta": "PG7, PY110 · shares 1 of 2 · value 3.5"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · shares 1 of 2 · value 2.9"
+					},
+					{
+						"name": "Viridian 616",
+						"brand": "cobra",
+						"meta": "PG7, PBk11 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Asphaltum 414",
+						"brand": "cobra",
+						"meta": "PY110, PR264, PG7 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Cold Grey 717",
+						"brand": "cobra",
+						"meta": "PBk11, PB29, PW6 · shares 1 of 2 · value 4.3"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 2 · value 3.7"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · shares 1 of 2 · value 3.1"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Olive Green 620",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Olive Green Yellow 639",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 3.3"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PR101+PY42",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PR101 + PY42. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Has all of these pigments, plus others · 1",
+				"items": [
+					{
+						"name": "Naples Yellow Hue",
+						"brand": "artisan",
+						"meta": "PR101, PW6, PY42 · value 7.1"
+					}
+				]
+			},
+			{
+				"title": "Shares some of these pigments · 18",
+				"items": [
+					{
+						"name": "Burnt Sienna",
+						"brand": "artisan",
+						"meta": "PR101 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Burnt Sienna 411",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Gold Ochre 231",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Indian Red",
+						"brand": "artisan",
+						"meta": "PR101 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Light Oxide Red 339",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 3.8"
+					},
+					{
+						"name": "Transparent Oxide Red 378",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Transparent Oxide Yellow 265",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.4"
+					},
+					{
+						"name": "Yellow Ochre",
+						"brand": "artisan",
+						"meta": "PY42 · shares 1 of 2 · value 5.8"
+					},
+					{
+						"name": "Yellow Ochre 227",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.8"
+					},
+					{
+						"name": "Burnt Umber 409",
+						"brand": "cobra",
+						"meta": "PR101, PBk11 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Raw Sienna",
+						"brand": "artisan",
+						"meta": "PBr7, PY42 · shares 1 of 2 · value 4.9"
+					},
+					{
+						"name": "Raw Sienna 234",
+						"brand": "cobra",
+						"meta": "PY42, PBk11 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Raw Umber 408",
+						"brand": "cobra",
+						"meta": "PY42, PBk11 · shares 1 of 2 · value 2.8"
+					},
+					{
+						"name": "Vandyke Brown 403",
+						"brand": "cobra",
+						"meta": "PR101, PBk11 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Permanent Madder Brown 324",
+						"brand": "cobra",
+						"meta": "PR264, PR101, PV19 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					},
+					{
+						"name": "Warm Grey 718",
+						"brand": "cobra",
+						"meta": "PR101, PBk11, PW6 · shares 1 of 2 · value 4.4"
+					},
+					{
+						"name": "Potter's Pink 356",
+						"brand": "cobra",
+						"meta": "PR101, PV19, PW6, PBk11 · shares 1 of 2 · value 4.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "phthalo PB15",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PB15 with \"phthalo\" in the name. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 2",
+				"items": [
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "P Bk 9",
+		"brand": "artisan",
+		"intro": "5 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Grays and blacks",
+				"items": [
+					{
+						"name": "Ivory Black",
+						"brand": "artisan",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Ivory Black 701",
+						"brand": "cobra",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1 at full strength"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · value 1.9 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PBk9",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PBK9. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Ivory Black",
+						"brand": "artisan",
+						"meta": "PBk9 · value 2.1"
+					},
+					{
+						"name": "Ivory Black 701",
+						"brand": "cobra",
+						"meta": "PBk9 · value 2.1"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 3",
+				"items": [
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · value 1.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "pbr7",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PBR7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Burnt Umber",
+						"brand": "artisan",
+						"meta": "PBr7 · value 2.4"
+					},
+					{
+						"name": "Raw Umber",
+						"brand": "artisan",
+						"meta": "PBr7 · value 2.6"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 1",
+				"items": [
+					{
+						"name": "Raw Sienna",
+						"brand": "artisan",
+						"meta": "PBr7, PY42 · value 4.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "ultramarine and PB29",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PB29 with \"ultramarine\" in the name. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · value 2.4"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · value 2.5"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 3",
+				"items": [
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · value 2.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PV19 PB15 PY154",
+		"brand": "artisan",
+		"intro": "Paints in both brands containing PV19 + PB15 + PY154. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Shares some of these pigments · 29",
+				"items": [
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · shares 2 of 3 · value 1.9"
+					},
+					{
+						"name": "Permanent Rose",
+						"brand": "artisan",
+						"meta": "PV19 · shares 1 of 3 · value 3.3"
+					},
+					{
+						"name": "Permanent Violet Medium 537",
+						"brand": "cobra",
+						"meta": "PV19 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Permanent Yellow Light 283",
+						"brand": "cobra",
+						"meta": "PY154 · shares 1 of 3 · value 8.4"
+					},
+					{
+						"name": "Permanent Yellow Medium 284",
+						"brand": "cobra",
+						"meta": "PY154 · shares 1 of 3 · value 8.3"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · shares 1 of 3 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · shares 1 of 3 · value 1.7"
+					},
+					{
+						"name": "Primary Magenta 369",
+						"brand": "cobra",
+						"meta": "PV19 · shares 1 of 3 · value 3.4"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 3 · value 2.4"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Permanent Alizarin Crimson",
+						"brand": "artisan",
+						"meta": "PR179, PV19 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 5.6"
+					},
+					{
+						"name": "Permanent Orange 266",
+						"brand": "cobra",
+						"meta": "PY154, PO43 · shares 1 of 3 · value 5.3"
+					},
+					{
+						"name": "Permanent Sap Green",
+						"brand": "artisan",
+						"meta": "PB15, PY110 · shares 1 of 3 · value 2.6"
+					},
+					{
+						"name": "Permanent Yellow Deep 285",
+						"brand": "cobra",
+						"meta": "PY154, PO43 · shares 1 of 3 · value 6.3"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Primary Cyan 572",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Primary Yellow 275",
+						"brand": "cobra",
+						"meta": "PY184, PY154 · shares 1 of 3 · value 8.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 4.7"
+					},
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · shares 1 of 3 · value 3.0"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 3 · value 3.7"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 3 · value 1.9"
+					},
+					{
+						"name": "Naples Yellow Deep 223",
+						"brand": "cobra",
+						"meta": "PW7, PY154, PBr24 · shares 1 of 3 · value 8.3"
+					},
+					{
+						"name": "Naples Yellow Light 222",
+						"brand": "cobra",
+						"meta": "PW7, PY154, PBr24 · shares 1 of 3 · value 8.6"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 3 · value 5.2"
+					},
+					{
+						"name": "Permanent Madder Brown 324",
+						"brand": "cobra",
+						"meta": "PR264, PR101, PV19 · shares 1 of 3 · value 2.6"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Potter's Pink 356",
+						"brand": "cobra",
+						"meta": "PR101, PV19, PW6, PBk11 · shares 1 of 3 · value 4.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "zzzz",
+		"brand": "artisan",
+		"intro": "No color in either brand matches that. Try part of the name, or pigment codes like PB29 PG7.",
+		"groups": []
+	},
+	{
+		"query": "PZ999",
+		"brand": "artisan",
+		"intro": "No paint in either brand contains PZ999. Check the spelling and codes, or try fewer of them.",
+		"groups": []
+	},
+	{
+		"query": "",
+		"brand": "cobra",
+		"intro": "",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "",
+						"meta": "PB15, PG7, PW6 · value 3.0 at full strength"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "",
+						"meta": "PB15, PW7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue 534",
+						"brand": "",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "",
+						"meta": "PB29, PB15 · value 2.3 at full strength"
+					},
+					{
+						"name": "Cobalt Blue 511",
+						"brand": "",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "",
+						"meta": "PW7, PB29, PBk9 · value 3.1 at full strength"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "",
+						"meta": "PB29, PB15, PBk11 · value 1.9 at full strength"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "",
+						"meta": "PW7, PB29 · value 3.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "",
+						"meta": "PB15, PG7 · value 2.0 at full strength"
+					},
+					{
+						"name": "Primary Cyan 572",
+						"brand": "",
+						"meta": "PB15, PW7 · value 2.0 at full strength"
+					},
+					{
+						"name": "Prussian Blue 508",
+						"brand": "",
+						"meta": "PB27 · value 1.5 at full strength"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "",
+						"meta": "PW7, PB15, PG7 · value 2.3 at full strength"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "",
+						"meta": "PB29 · value 2.5 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Chartreuse 233",
+						"brand": "",
+						"meta": "PY184, PG7 · value 5.6 at full strength"
+					},
+					{
+						"name": "Chromium Oxide Green 668",
+						"brand": "",
+						"meta": "PG17 · value 4.6 at full strength"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "",
+						"meta": "PW7, PG7, PY154 · value 3.7 at full strength"
+					},
+					{
+						"name": "Olive Green 620",
+						"brand": "",
+						"meta": "PG7, PY110, PR264 · value 2.7 at full strength"
+					},
+					{
+						"name": "Olive Green Yellow 639",
+						"brand": "",
+						"meta": "PG7, PY110, PR264 · value 3.3 at full strength"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "",
+						"meta": "PY154, PG7, PW6 · value 5.2 at full strength"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "",
+						"meta": "PG7, PY154 · value 3.0 at full strength"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "",
+						"meta": "PG7, PY154 · value 5.6 at full strength"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "",
+						"meta": "PG7 · value 2.6 at full strength"
+					},
+					{
+						"name": "Sap Green 623",
+						"brand": "",
+						"meta": "PG7, PY110 · value 3.5 at full strength"
+					},
+					{
+						"name": "Transparent Yellow Green 281",
+						"brand": "",
+						"meta": "PY129 · value 4.7 at full strength"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "",
+						"meta": "PB29, PY129 · value 3.2 at full strength"
+					},
+					{
+						"name": "Viridian 616",
+						"brand": "",
+						"meta": "PG7, PBk11 · value 2.5 at full strength"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "",
+						"meta": "PG7, PY154 · value 4.7 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Yellows",
+				"items": [
+					{
+						"name": "Aureoline 242",
+						"brand": "",
+						"meta": "PY150 · value 7.0 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Deep 210",
+						"brand": "",
+						"meta": "PY35, PO20 · value 6.9 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Lemon 207",
+						"brand": "",
+						"meta": "PY35 · value 8.4 at full strength"
+					},
+					{
+						"name": "Cadmium Yellow Medium 271",
+						"brand": "",
+						"meta": "PY35 · value 8.3 at full strength"
+					},
+					{
+						"name": "Indian Yellow 244",
+						"brand": "",
+						"meta": "PY110 · value 6.0 at full strength"
+					},
+					{
+						"name": "Naples Yellow Deep 223",
+						"brand": "",
+						"meta": "PW7, PY154, PBr24 · value 8.3 at full strength"
+					},
+					{
+						"name": "Naples Yellow Light 222",
+						"brand": "",
+						"meta": "PW7, PY154, PBr24 · value 8.6 at full strength"
+					},
+					{
+						"name": "Naples Yellow Red 224",
+						"brand": "",
+						"meta": "PW7, PO43, PBr24 · value 6.6 at full strength"
+					},
+					{
+						"name": "Permanent Lemon Yellow 254",
+						"brand": "",
+						"meta": "PY184 · value 8.9 at full strength"
+					},
+					{
+						"name": "Permanent Yellow Deep 285",
+						"brand": "",
+						"meta": "PY154, PO43 · value 6.3 at full strength"
+					},
+					{
+						"name": "Permanent Yellow Light 283",
+						"brand": "",
+						"meta": "PY154 · value 8.4 at full strength"
+					},
+					{
+						"name": "Permanent Yellow Medium 284",
+						"brand": "",
+						"meta": "PY154 · value 8.3 at full strength"
+					},
+					{
+						"name": "Primary Yellow 275",
+						"brand": "",
+						"meta": "PY184, PY154 · value 8.5 at full strength"
+					},
+					{
+						"name": "Transparent Yellow Medium 272",
+						"brand": "",
+						"meta": "PY128 · value 7.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Oranges",
+				"items": [
+					{
+						"name": "Cadmium Orange 211",
+						"brand": "",
+						"meta": "PO20 · value 6.0 at full strength"
+					},
+					{
+						"name": "Permanent Orange 266",
+						"brand": "",
+						"meta": "PY154, PO43 · value 5.3 at full strength"
+					},
+					{
+						"name": "Pyrrole Orange 278",
+						"brand": "",
+						"meta": "PO71, PR264 · value 4.2 at full strength"
+					},
+					{
+						"name": "Royal Orange 298",
+						"brand": "",
+						"meta": "PO64 · value 5.4 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Reds",
+				"items": [
+					{
+						"name": "Burnt Carmine 323",
+						"brand": "",
+						"meta": "PR264, PB29 · value 2.2 at full strength"
+					},
+					{
+						"name": "Cadmium Red Deep 306",
+						"brand": "",
+						"meta": "PR108 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cadmium Red Light 303",
+						"brand": "",
+						"meta": "PR108 · value 4.5 at full strength"
+					},
+					{
+						"name": "Cadmium Red Medium 314",
+						"brand": "",
+						"meta": "PR108 · value 4.3 at full strength"
+					},
+					{
+						"name": "Carmine 318",
+						"brand": "",
+						"meta": "PR176 · value 3.4 at full strength"
+					},
+					{
+						"name": "Madder Lake 389",
+						"brand": "",
+						"meta": "PR264 · value 2.4 at full strength"
+					},
+					{
+						"name": "Permanent Red Light 370",
+						"brand": "",
+						"meta": "PR255, PO73 · value 4.8 at full strength"
+					},
+					{
+						"name": "Pyrrole Red 315",
+						"brand": "",
+						"meta": "PR254 · value 4.2 at full strength"
+					},
+					{
+						"name": "Pyrrole Red Deep 345",
+						"brand": "",
+						"meta": "PR254, PR264 · value 3.2 at full strength"
+					},
+					{
+						"name": "Pyrrole Red Light 340",
+						"brand": "",
+						"meta": "PR254, PO43 · value 4.3 at full strength"
+					},
+					{
+						"name": "Transparent Red Medium 317",
+						"brand": "",
+						"meta": "PR207 · value 3.0 at full strength"
+					},
+					{
+						"name": "Vermilion 311",
+						"brand": "",
+						"meta": "PO43 · value 4.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Pinks and magentas",
+				"items": [
+					{
+						"name": "Permanent Red Violet Light 577",
+						"brand": "",
+						"meta": "PR202, PW7 · value 4.0 at full strength"
+					},
+					{
+						"name": "Persian Rose 330",
+						"brand": "",
+						"meta": "PW7, PR202 · value 4.3 at full strength"
+					},
+					{
+						"name": "Potter's Pink 356",
+						"brand": "",
+						"meta": "PR101, PV19, PW6, PBk11 · value 4.8 at full strength"
+					},
+					{
+						"name": "Primary Magenta 369",
+						"brand": "",
+						"meta": "PV19 · value 3.4 at full strength"
+					},
+					{
+						"name": "Quinacridone Red 364",
+						"brand": "",
+						"meta": "PR209 · value 3.4 at full strength"
+					},
+					{
+						"name": "Rose 357",
+						"brand": "",
+						"meta": "PW6, PR209 · value 4.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Violets",
+				"items": [
+					{
+						"name": "Blue Violet 548",
+						"brand": "",
+						"meta": "PW7, PB29, PV23 · value 2.2 at full strength"
+					},
+					{
+						"name": "Permanent Blue Violet 568",
+						"brand": "",
+						"meta": "PV23, PR122 · value 1.7 at full strength"
+					},
+					{
+						"name": "Permanent Red Violet 567",
+						"brand": "",
+						"meta": "PV23, PR122 · value 2.5 at full strength"
+					},
+					{
+						"name": "Permanent Violet Medium 537",
+						"brand": "",
+						"meta": "PV19 · value 2.3 at full strength"
+					},
+					{
+						"name": "Quinacridone Purple Bluish 593",
+						"brand": "",
+						"meta": "PV55 · value 2.9 at full strength"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "",
+						"meta": "PV15, PB29 · value 2.9 at full strength"
+					},
+					{
+						"name": "Violet 536",
+						"brand": "",
+						"meta": "PW7, PR122, PV23 · value 2.3 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Earths",
+				"items": [
+					{
+						"name": "Asphaltum 414",
+						"brand": "",
+						"meta": "PY110, PR264, PG7 · value 1.9 at full strength"
+					},
+					{
+						"name": "Burnt Sienna 411",
+						"brand": "",
+						"meta": "PR101 · value 3.2 at full strength"
+					},
+					{
+						"name": "Burnt Umber 409",
+						"brand": "",
+						"meta": "PR101, PBk11 · value 2.4 at full strength"
+					},
+					{
+						"name": "Gold Ochre 231",
+						"brand": "",
+						"meta": "PY42 · value 5.2 at full strength"
+					},
+					{
+						"name": "Light Oxide Red 339",
+						"brand": "",
+						"meta": "PR101 · value 3.8 at full strength"
+					},
+					{
+						"name": "Permanent Madder Brown 324",
+						"brand": "",
+						"meta": "PR264, PR101, PV19 · value 2.6 at full strength"
+					},
+					{
+						"name": "Raw Sienna 234",
+						"brand": "",
+						"meta": "PY42, PBk11 · value 4.7 at full strength"
+					},
+					{
+						"name": "Raw Umber 408",
+						"brand": "",
+						"meta": "PY42, PBk11 · value 2.8 at full strength"
+					},
+					{
+						"name": "Red Earth 436",
+						"brand": "",
+						"meta": "PR290 · value 2.8 at full strength"
+					},
+					{
+						"name": "Transparent Oxide Red 378",
+						"brand": "",
+						"meta": "PR101 · value 2.7 at full strength"
+					},
+					{
+						"name": "Transparent Oxide Yellow 265",
+						"brand": "",
+						"meta": "PY42 · value 5.4 at full strength"
+					},
+					{
+						"name": "Transparent Red Ochre 419",
+						"brand": "",
+						"meta": "PBr25 · value 2.8 at full strength"
+					},
+					{
+						"name": "Vandyke Brown 403",
+						"brand": "",
+						"meta": "PR101, PBk11 · value 2.2 at full strength"
+					},
+					{
+						"name": "Yellow Ochre 227",
+						"brand": "",
+						"meta": "PY42 · value 5.8 at full strength"
+					},
+					{
+						"name": "Yellow Ochre Light 228",
+						"brand": "",
+						"meta": "PBr24 · value 7.4 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Grays and blacks",
+				"items": [
+					{
+						"name": "Cold Grey 717",
+						"brand": "",
+						"meta": "PBk11, PB29, PW6 · value 4.3 at full strength"
+					},
+					{
+						"name": "Ivory Black 701",
+						"brand": "",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "",
+						"meta": "PBk9, PB29 · value 2.1 at full strength"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "",
+						"meta": "PBk9, PB15, PV19 · value 1.9 at full strength"
+					},
+					{
+						"name": "Perylene Green Black 721",
+						"brand": "",
+						"meta": "PBk31 · value 2.1 at full strength"
+					},
+					{
+						"name": "Warm Grey 718",
+						"brand": "",
+						"meta": "PR101, PBk11, PW6 · value 4.4 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "blue",
+		"brand": "cobra",
+		"intro": "21 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · value 3.0 at full strength"
+					},
+					{
+						"name": "Cerulean Blue",
+						"brand": "artisan",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue 534",
+						"brand": "cobra",
+						"meta": "PB35 · value 5.4 at full strength"
+					},
+					{
+						"name": "Cerulean Blue Hue",
+						"brand": "artisan",
+						"meta": "PB36, PW4 · value 5.9 at full strength"
+					},
+					{
+						"name": "Cobalt Blue",
+						"brand": "artisan",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3 at full strength"
+					},
+					{
+						"name": "Cobalt Blue 511",
+						"brand": "cobra",
+						"meta": "PB28 · value 3.6 at full strength"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · value 2.4 at full strength"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1 at full strength"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · value 3.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0 at full strength"
+					},
+					{
+						"name": "Prussian Blue",
+						"brand": "artisan",
+						"meta": "PB27 · value 1.5 at full strength"
+					},
+					{
+						"name": "Prussian Blue 508",
+						"brand": "cobra",
+						"meta": "PB27 · value 1.5 at full strength"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · value 2.3 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · value 5.2 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · value 2.6 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Violets",
+				"items": [
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · value 2.2 at full strength"
+					},
+					{
+						"name": "Permanent Blue Violet 568",
+						"brand": "cobra",
+						"meta": "PV23, PR122 · value 1.7 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "phthalo",
+		"brand": "cobra",
+		"intro": "7 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4 at full strength"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7 at full strength"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Greens",
+				"items": [
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · value 2.6 at full strength"
+					},
+					{
+						"name": "Phthalo Green (Yellow Shade)",
+						"brand": "artisan",
+						"meta": "PG36 · value 3.4 at full strength"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · value 2.6 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PB29",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PB29. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · value 2.4"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · value 2.5"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 12",
+				"items": [
+					{
+						"name": "Burnt Carmine 323",
+						"brand": "cobra",
+						"meta": "PR264, PB29 · value 2.2"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · value 2.4"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · value 3.4"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1"
+					},
+					{
+						"name": "Payne's Gray",
+						"brand": "artisan",
+						"meta": "PB29, PBk6 · value 2.0"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · value 2.9"
+					},
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · value 2.2"
+					},
+					{
+						"name": "Cold Grey 717",
+						"brand": "cobra",
+						"meta": "PBk11, PB29, PW6 · value 4.3"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · value 1.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "pb15 pg7",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PB15 + PG7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 1",
+				"items": [
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 2",
+				"items": [
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · value 3.0"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · value 2.3"
+					}
+				]
+			},
+			{
+				"title": "Shares some of these pigments · 22",
+				"items": [
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · shares 1 of 2 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · shares 1 of 2 · value 1.7"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Chartreuse 233",
+						"brand": "cobra",
+						"meta": "PY184, PG7 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Permanent Sap Green",
+						"brand": "artisan",
+						"meta": "PB15, PY110 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Primary Cyan 572",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Sap Green 623",
+						"brand": "cobra",
+						"meta": "PG7, PY110 · shares 1 of 2 · value 3.5"
+					},
+					{
+						"name": "Viridian 616",
+						"brand": "cobra",
+						"meta": "PG7, PBk11 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Asphaltum 414",
+						"brand": "cobra",
+						"meta": "PY110, PR264, PG7 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 2 · value 3.7"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Olive Green 620",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Olive Green Yellow 639",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 3.3"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PB29,PG7",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PB29 + PG7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Shares some of these pigments · 31",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Phthalo Green (Blue Shade)",
+						"brand": "artisan",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Phthalo Green 675",
+						"brand": "cobra",
+						"meta": "PG7 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Burnt Carmine 323",
+						"brand": "cobra",
+						"meta": "PR264, PB29 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Chartreuse 233",
+						"brand": "cobra",
+						"meta": "PY184, PG7 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Cobalt Blue Hue",
+						"brand": "artisan",
+						"meta": "PB29, PB60 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "King's Blue 517",
+						"brand": "cobra",
+						"meta": "PW7, PB29 · shares 1 of 2 · value 3.4"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · shares 1 of 2 · value 2.1"
+					},
+					{
+						"name": "Payne's Gray",
+						"brand": "artisan",
+						"meta": "PB29, PBk6 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 5.6"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · shares 1 of 2 · value 2.0"
+					},
+					{
+						"name": "Sap Green 623",
+						"brand": "cobra",
+						"meta": "PG7, PY110 · shares 1 of 2 · value 3.5"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · shares 1 of 2 · value 2.9"
+					},
+					{
+						"name": "Viridian 616",
+						"brand": "cobra",
+						"meta": "PG7, PBk11 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Asphaltum 414",
+						"brand": "cobra",
+						"meta": "PY110, PR264, PG7 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Blue Violet 548",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PV23 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · shares 1 of 2 · value 3.0"
+					},
+					{
+						"name": "Cold Grey 717",
+						"brand": "cobra",
+						"meta": "PBk11, PB29, PW6 · shares 1 of 2 · value 4.3"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 2 · value 3.7"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · shares 1 of 2 · value 3.1"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 2 · value 1.9"
+					},
+					{
+						"name": "Olive Green 620",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Olive Green Yellow 639",
+						"brand": "cobra",
+						"meta": "PG7, PY110, PR264 · shares 1 of 2 · value 3.3"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · shares 1 of 2 · value 2.3"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PR101+PY42",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PR101 + PY42. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Has all of these pigments, plus others · 1",
+				"items": [
+					{
+						"name": "Naples Yellow Hue",
+						"brand": "artisan",
+						"meta": "PR101, PW6, PY42 · value 7.1"
+					}
+				]
+			},
+			{
+				"title": "Shares some of these pigments · 18",
+				"items": [
+					{
+						"name": "Burnt Sienna",
+						"brand": "artisan",
+						"meta": "PR101 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Burnt Sienna 411",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 3.2"
+					},
+					{
+						"name": "Gold Ochre 231",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.2"
+					},
+					{
+						"name": "Indian Red",
+						"brand": "artisan",
+						"meta": "PR101 · shares 1 of 2 · value 2.5"
+					},
+					{
+						"name": "Light Oxide Red 339",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 3.8"
+					},
+					{
+						"name": "Transparent Oxide Red 378",
+						"brand": "cobra",
+						"meta": "PR101 · shares 1 of 2 · value 2.7"
+					},
+					{
+						"name": "Transparent Oxide Yellow 265",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.4"
+					},
+					{
+						"name": "Yellow Ochre",
+						"brand": "artisan",
+						"meta": "PY42 · shares 1 of 2 · value 5.8"
+					},
+					{
+						"name": "Yellow Ochre 227",
+						"brand": "cobra",
+						"meta": "PY42 · shares 1 of 2 · value 5.8"
+					},
+					{
+						"name": "Burnt Umber 409",
+						"brand": "cobra",
+						"meta": "PR101, PBk11 · shares 1 of 2 · value 2.4"
+					},
+					{
+						"name": "Raw Sienna",
+						"brand": "artisan",
+						"meta": "PBr7, PY42 · shares 1 of 2 · value 4.9"
+					},
+					{
+						"name": "Raw Sienna 234",
+						"brand": "cobra",
+						"meta": "PY42, PBk11 · shares 1 of 2 · value 4.7"
+					},
+					{
+						"name": "Raw Umber 408",
+						"brand": "cobra",
+						"meta": "PY42, PBk11 · shares 1 of 2 · value 2.8"
+					},
+					{
+						"name": "Vandyke Brown 403",
+						"brand": "cobra",
+						"meta": "PR101, PBk11 · shares 1 of 2 · value 2.2"
+					},
+					{
+						"name": "Permanent Madder Brown 324",
+						"brand": "cobra",
+						"meta": "PR264, PR101, PV19 · shares 1 of 2 · value 2.6"
+					},
+					{
+						"name": "Viridian Hue",
+						"brand": "artisan",
+						"meta": "PG7, PY42, PY43 · shares 1 of 2 · value 2.8"
+					},
+					{
+						"name": "Warm Grey 718",
+						"brand": "cobra",
+						"meta": "PR101, PBk11, PW6 · shares 1 of 2 · value 4.4"
+					},
+					{
+						"name": "Potter's Pink 356",
+						"brand": "cobra",
+						"meta": "PR101, PV19, PW6, PBk11 · shares 1 of 2 · value 4.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "phthalo PB15",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PB15 with \"phthalo\" in the name. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · value 1.7"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 2",
+				"items": [
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · value 2.4"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · value 2.0"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "P Bk 9",
+		"brand": "cobra",
+		"intro": "5 matches in W&N Artisan and Cobra.",
+		"groups": [
+			{
+				"title": "Blues",
+				"items": [
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1 at full strength"
+					}
+				]
+			},
+			{
+				"title": "Grays and blacks",
+				"items": [
+					{
+						"name": "Ivory Black",
+						"brand": "artisan",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Ivory Black 701",
+						"brand": "cobra",
+						"meta": "PBk9 · value 2.1 at full strength"
+					},
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1 at full strength"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · value 1.9 at full strength"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PBk9",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PBK9. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Ivory Black",
+						"brand": "artisan",
+						"meta": "PBk9 · value 2.1"
+					},
+					{
+						"name": "Ivory Black 701",
+						"brand": "cobra",
+						"meta": "PBk9 · value 2.1"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 3",
+				"items": [
+					{
+						"name": "Lamp Black 702",
+						"brand": "cobra",
+						"meta": "PBk9, PB29 · value 2.1"
+					},
+					{
+						"name": "Greyish Blue 562",
+						"brand": "cobra",
+						"meta": "PW7, PB29, PBk9 · value 3.1"
+					},
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · value 1.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "pbr7",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PBR7. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "Burnt Umber",
+						"brand": "artisan",
+						"meta": "PBr7 · value 2.4"
+					},
+					{
+						"name": "Raw Umber",
+						"brand": "artisan",
+						"meta": "PBr7 · value 2.6"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 1",
+				"items": [
+					{
+						"name": "Raw Sienna",
+						"brand": "artisan",
+						"meta": "PBr7, PY42 · value 4.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "ultramarine and PB29",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PB29 with \"ultramarine\" in the name. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Same pigments · 2",
+				"items": [
+					{
+						"name": "French Ultramarine",
+						"brand": "artisan",
+						"meta": "PB29 · value 2.4"
+					},
+					{
+						"name": "Ultramarine 504",
+						"brand": "cobra",
+						"meta": "PB29 · value 2.5"
+					}
+				]
+			},
+			{
+				"title": "Has all of these pigments, plus others · 3",
+				"items": [
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · value 2.3"
+					},
+					{
+						"name": "Ultramarine Green 683",
+						"brand": "cobra",
+						"meta": "PB29, PY129 · value 3.2"
+					},
+					{
+						"name": "Ultramarine Violet 507",
+						"brand": "cobra",
+						"meta": "PV15, PB29 · value 2.9"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "PV19 PB15 PY154",
+		"brand": "cobra",
+		"intro": "Paints in both brands containing PV19 + PB15 + PY154. Paints with the same pigments mix and tint very similarly.",
+		"groups": [
+			{
+				"title": "Shares some of these pigments · 29",
+				"items": [
+					{
+						"name": "Payne's Grey 708",
+						"brand": "cobra",
+						"meta": "PBk9, PB15, PV19 · shares 2 of 3 · value 1.9"
+					},
+					{
+						"name": "Permanent Rose",
+						"brand": "artisan",
+						"meta": "PV19 · shares 1 of 3 · value 3.3"
+					},
+					{
+						"name": "Permanent Violet Medium 537",
+						"brand": "cobra",
+						"meta": "PV19 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Permanent Yellow Light 283",
+						"brand": "cobra",
+						"meta": "PY154 · shares 1 of 3 · value 8.4"
+					},
+					{
+						"name": "Permanent Yellow Medium 284",
+						"brand": "cobra",
+						"meta": "PY154 · shares 1 of 3 · value 8.3"
+					},
+					{
+						"name": "Phthalo Blue (Red Shade)",
+						"brand": "artisan",
+						"meta": "PB15 · shares 1 of 3 · value 1.7"
+					},
+					{
+						"name": "Phthalo Blue 570",
+						"brand": "cobra",
+						"meta": "PB15 · shares 1 of 3 · value 1.7"
+					},
+					{
+						"name": "Primary Magenta 369",
+						"brand": "cobra",
+						"meta": "PV19 · shares 1 of 3 · value 3.4"
+					},
+					{
+						"name": "Cerulean Blue (Phthalo) 535",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 3 · value 2.4"
+					},
+					{
+						"name": "Cobalt Blue (Ultramarine) 512",
+						"brand": "cobra",
+						"meta": "PB29, PB15 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Permanent Alizarin Crimson",
+						"brand": "artisan",
+						"meta": "PR179, PV19 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Permanent Green Deep 619",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 3.0"
+					},
+					{
+						"name": "Permanent Green Light 618",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 5.6"
+					},
+					{
+						"name": "Permanent Orange 266",
+						"brand": "cobra",
+						"meta": "PY154, PO43 · shares 1 of 3 · value 5.3"
+					},
+					{
+						"name": "Permanent Sap Green",
+						"brand": "artisan",
+						"meta": "PB15, PY110 · shares 1 of 3 · value 2.6"
+					},
+					{
+						"name": "Permanent Yellow Deep 285",
+						"brand": "cobra",
+						"meta": "PY154, PO43 · shares 1 of 3 · value 6.3"
+					},
+					{
+						"name": "Phthalo Turquoise Blue 565",
+						"brand": "cobra",
+						"meta": "PB15, PG7 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Primary Cyan 572",
+						"brand": "cobra",
+						"meta": "PB15, PW7 · shares 1 of 3 · value 2.0"
+					},
+					{
+						"name": "Primary Yellow 275",
+						"brand": "cobra",
+						"meta": "PY184, PY154 · shares 1 of 3 · value 8.5"
+					},
+					{
+						"name": "Yellowish Green 617",
+						"brand": "cobra",
+						"meta": "PG7, PY154 · shares 1 of 3 · value 4.7"
+					},
+					{
+						"name": "Caribbean Blue 542",
+						"brand": "cobra",
+						"meta": "PB15, PG7, PW6 · shares 1 of 3 · value 3.0"
+					},
+					{
+						"name": "Emerald Green 615",
+						"brand": "cobra",
+						"meta": "PW7, PG7, PY154 · shares 1 of 3 · value 3.7"
+					},
+					{
+						"name": "Indigo 533",
+						"brand": "cobra",
+						"meta": "PB29, PB15, PBk11 · shares 1 of 3 · value 1.9"
+					},
+					{
+						"name": "Naples Yellow Deep 223",
+						"brand": "cobra",
+						"meta": "PW7, PY154, PBr24 · shares 1 of 3 · value 8.3"
+					},
+					{
+						"name": "Naples Yellow Light 222",
+						"brand": "cobra",
+						"meta": "PW7, PY154, PBr24 · shares 1 of 3 · value 8.6"
+					},
+					{
+						"name": "Pastel Green Blue 611",
+						"brand": "cobra",
+						"meta": "PY154, PG7, PW6 · shares 1 of 3 · value 5.2"
+					},
+					{
+						"name": "Permanent Madder Brown 324",
+						"brand": "cobra",
+						"meta": "PR264, PR101, PV19 · shares 1 of 3 · value 2.6"
+					},
+					{
+						"name": "Turquoise Blue 522",
+						"brand": "cobra",
+						"meta": "PW7, PB15, PG7 · shares 1 of 3 · value 2.3"
+					},
+					{
+						"name": "Potter's Pink 356",
+						"brand": "cobra",
+						"meta": "PR101, PV19, PW6, PBk11 · shares 1 of 3 · value 4.8"
+					}
+				]
+			}
+		]
+	},
+	{
+		"query": "zzzz",
+		"brand": "cobra",
+		"intro": "No color in either brand matches that. Try part of the name, or pigment codes like PB29 PG7.",
+		"groups": []
+	},
+	{
+		"query": "PZ999",
+		"brand": "cobra",
+		"intro": "No paint in either brand contains PZ999. Check the spelling and codes, or try fewer of them.",
+		"groups": []
+	}
+]
