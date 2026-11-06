@@ -112,6 +112,15 @@ export type PhotoMask = Pick<ImageChannels, 'width' | 'height' | 'mask'>;
 export interface Study {
 	zones: Zone[];
 	assign: Uint8Array;
+	/** The same groups drawn over a sharper copy of the photo, for the screen only.
+	 * Recipes and the painting sheet always come from `assign`. */
+	sharp?: SharpMap;
+}
+
+export interface SharpMap {
+	width: number;
+	height: number;
+	assign: Uint8Array;
 }
 
 export interface Recipe {

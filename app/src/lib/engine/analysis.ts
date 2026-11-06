@@ -8,12 +8,16 @@ import type {
 	ImageChannels,
 	Key,
 	PhotoMask,
+	SharpMap,
 	StudySettings,
 	Study,
 	Zone
 } from './types';
 
 export const MAX_ANALYSIS_SIZE = 520;
+
+/** The longest side of the sharper copy the screen draws from. */
+export const MAX_SHARP_SIZE = 1600;
 
 /** The reduced size the photo is analyzed at. */
 export function analysisSize(width: number, height: number) {
@@ -317,3 +321,71 @@ export function analyze(channels: ImageChannels, settings: StudySettings): Study
 
 export const hasBrightenedArea = (channels: PhotoMask, settings: StudySettings) =>
 	channels.mask.some((v) => v > 0) && settings.lift > 0;
+
+/**
+ * Puts each pixel of a sharper copy of the photo into the nearest of the study's groups, so
+ * the picture on screen stays crisp however large it is drawn. The groups themselves, and so
+ * the recipes, come from the analysis-size photo and don't change.
+ */
+export function sharpMap(
+	sharp: ImageChannels,
+	mask: PhotoMask,
+	zones: Zone[],
+	settings: StudySettings
+): SharpMap {
+	const { width: W, height: H, Lraw, Araw, Braw } = sharp;
+	const mono = settings.palette === 'mono';
+	const k = zones.length;
+	const assign = new Uint8Array(W * H);
+	// Lightness, adjusted, for pixels outside the brushed area: a table in tenths.
+	const adjusted = new Float32Array(1001);
+	for (let i = 0; i <= 1000; i++) adjusted[i] = adjustedLightness(i / 10, 0, settings);
+	const tone = new Uint8Array(1001);
+	if (mono) {
+		for (let i = 0; i <= 1000; i++) tone[i] = nearestTone(adjusted[i], zones);
+	}
+	const zL = zones.map((z) => z.L);
+	const za = zones.map((z) => z.a ?? 0);
+	const zb = zones.map((z) => z.b ?? 0);
+	const sx = mask.width / W;
+	const sy = mask.height / H;
+	for (let y = 0, i = 0; y < H; y++) {
+		const row = Math.min(mask.height - 1, Math.floor(y * sy)) * mask.width;
+		for (let x = 0; x < W; x++, i++) {
+			const m = mask.mask[row + Math.min(mask.width - 1, Math.floor(x * sx))];
+			const t = Math.max(0, Math.min(1000, Math.round(Lraw[i] * 10)));
+			if (mono) {
+				assign[i] = m > 0 ? nearestTone(adjustedLightness(Lraw[i], m, settings), zones) : tone[t];
+				continue;
+			}
+			const L = m > 0 ? adjustedLightness(Lraw[i], m, settings) : adjusted[t];
+			let best = 0;
+			let bestD = Infinity;
+			for (let j = 0; j < k; j++) {
+				const dl = L - zL[j];
+				const da = Araw[i] - za[j];
+				const db = Braw[i] - zb[j];
+				const d = dl * dl + da * da + db * db;
+				if (d < bestD) {
+					bestD = d;
+					best = j;
+				}
+			}
+			assign[i] = best;
+		}
+	}
+	return { width: W, height: H, assign };
+}
+
+function nearestTone(L: number, zones: Zone[]) {
+	let best = 0;
+	let bestD = Infinity;
+	for (let j = 0; j < zones.length; j++) {
+		const d = Math.abs(L - zones[j].L);
+		if (d < bestD) {
+			bestD = d;
+			best = j;
+		}
+	}
+	return best;
+}

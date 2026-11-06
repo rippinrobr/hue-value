@@ -30,36 +30,57 @@
 	const brushActive = $derived(brush && studio.brushing);
 
 	function draw() {
-		const { study, photo, size, settings, selected, mask } = studio;
+		const { study, photo, size, display, settings, selected, mask } = studio;
 		if (!canvas || !study || !photo) return;
-		canvas.width = size.width;
-		canvas.height = size.height;
+		// Drawn at the sharp size, so a large picture stays crisp.
+		const W = display.width || size.width;
+		const H = display.height || size.height;
+		canvas.width = W;
+		canvas.height = H;
 		const g = canvas.getContext('2d') as CanvasRenderingContext2D;
-		let image: ImageData;
 		if (settings.show === 'photo') {
-			g.drawImage(photo.image, 0, 0, size.width, size.height);
-			image = g.getImageData(0, 0, size.width, size.height);
+			g.drawImage(photo.image, 0, 0, W, H);
 		} else {
-			image = g.createImageData(size.width, size.height);
 			const colors = study.zones.map((z) => {
 				if (settings.show === 'map') return z.mix.map(toSRGB);
 				const v = toSRGB(YfromL(z.L));
 				return [v, v, v];
 			});
-			fillMap(image, study.assign, colors, selected);
-		}
-		if (brushActive) {
-			const d = image.data;
-			for (let i = 0, j = 0; j < mask.length; i += 4, j++) {
-				if (mask[j] > 0) {
-					const a = 0.5 * mask[j];
-					d[i] += (255 - d[i]) * a;
-					d[i + 1] += (194 - d[i + 1]) * a;
-					d[i + 2] += (26 - d[i + 2]) * a;
-				}
+			const sharp = study.sharp;
+			if (sharp && sharp.width === W && sharp.height === H) {
+				const image = g.createImageData(W, H);
+				fillMap(image, sharp.assign, colors, selected);
+				g.putImageData(image, 0, 0);
+			} else {
+				// Until the sharp map arrives, scale up the analysis map with hard edges.
+				const small = new OffscreenCanvas(size.width, size.height);
+				const sg = small.getContext('2d') as OffscreenCanvasRenderingContext2D;
+				const image = sg.createImageData(size.width, size.height);
+				fillMap(image, study.assign, colors, selected);
+				sg.putImageData(image, 0, 0);
+				g.imageSmoothingEnabled = false;
+				g.drawImage(small, 0, 0, W, H);
 			}
 		}
-		g.putImageData(image, 0, 0);
+		if (brushActive && mask.some((v) => v > 0)) {
+			const image = g.getImageData(0, 0, W, H);
+			const d = image.data;
+			const sx = size.width / W;
+			const sy = size.height / H;
+			for (let y = 0, i = 0; y < H; y++) {
+				const row = Math.min(size.height - 1, Math.floor(y * sy)) * size.width;
+				for (let x = 0; x < W; x++, i += 4) {
+					const m = mask[row + Math.min(size.width - 1, Math.floor(x * sx))];
+					if (m > 0) {
+						const a = 0.5 * m;
+						d[i] += (255 - d[i]) * a;
+						d[i + 1] += (194 - d[i + 1]) * a;
+						d[i + 2] += (26 - d[i + 2]) * a;
+					}
+				}
+			}
+			g.putImageData(image, 0, 0);
+		}
 	}
 
 	$effect(() => {
@@ -92,9 +113,10 @@
 			}
 		}
 		const g = canvas.getContext('2d') as CanvasRenderingContext2D;
+		const k = canvas.width / W;
 		g.fillStyle = 'rgba(255,194,26,.25)';
 		g.beginPath();
-		g.arc(cx, cy, rad, 0, Math.PI * 2);
+		g.arc(cx * k, cy * k, rad * k, 0, Math.PI * 2);
 		g.fill();
 	}
 

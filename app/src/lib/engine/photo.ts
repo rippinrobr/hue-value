@@ -1,8 +1,28 @@
 // Reads a photo's pixels at the reduced size used for analysis. Browser only.
-import { analysisSize } from './analysis';
+import { MAX_SHARP_SIZE, analysisSize } from './analysis';
 
 export function photoPixels(source: CanvasImageSource, sourceWidth: number, sourceHeight: number) {
 	const { width, height } = analysisSize(sourceWidth, sourceHeight);
+	const canvas = document.createElement('canvas');
+	canvas.width = width;
+	canvas.height = height;
+	const g = canvas.getContext('2d') as CanvasRenderingContext2D;
+	g.drawImage(source, 0, 0, width, height);
+	const pixels = g.getImageData(0, 0, width, height).data as Uint8ClampedArray<ArrayBuffer>;
+	return { pixels, width, height };
+}
+
+/** A sharper copy of the photo, for drawing the groups on screen. */
+export function sharpSize(sourceWidth: number, sourceHeight: number) {
+	const scale = Math.min(1, MAX_SHARP_SIZE / Math.max(sourceWidth, sourceHeight));
+	return {
+		width: Math.max(1, Math.round(sourceWidth * scale)),
+		height: Math.max(1, Math.round(sourceHeight * scale))
+	};
+}
+
+export function sharpPixels(source: CanvasImageSource, sourceWidth: number, sourceHeight: number) {
+	const { width, height } = sharpSize(sourceWidth, sourceHeight);
 	const canvas = document.createElement('canvas');
 	canvas.width = width;
 	canvas.height = height;

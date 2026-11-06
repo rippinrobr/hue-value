@@ -81,6 +81,12 @@ export class AnalysisClient {
 		await this.#send({ type: 'load', pixels, width, height }, [pixels.buffer]);
 	}
 
+	/** Hands over a sharper copy of the photo, which later studies also map for the screen. */
+	async loadSharp(pixels: Uint8ClampedArray<ArrayBuffer>, width: number, height: number) {
+		this.#generation++;
+		await this.#send({ type: 'sharp', pixels, width, height }, [pixels.buffer]);
+	}
+
 	/** Replaces the brighten-area mask. */
 	async setMask(mask: Float32Array) {
 		this.#generation++;

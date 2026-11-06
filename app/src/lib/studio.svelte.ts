@@ -8,6 +8,8 @@ import {
 	matchingPaint,
 	paintById,
 	photoPixels,
+	sharpPixels,
+	sharpSize,
 	type AnalysisClient,
 	type BrandId,
 	type Medium,
@@ -46,6 +48,8 @@ class Studio {
 	thumbnail = $state('');
 	mask = $state.raw(new Float32Array(0));
 	size = $state({ width: 0, height: 0 });
+	/** The size the picture is drawn at on screen: sharper than the analysis. */
+	display = $state({ width: 0, height: 0 });
 	selected = $state(-1);
 	brushing = $state(false);
 	brushSize = $state(28);
@@ -110,12 +114,19 @@ class Studio {
 		const reduced = photoPixels(image, width, height);
 		this.photo = { image, width, height };
 		this.size = { width: reduced.width, height: reduced.height };
+		this.display = sharpSize(width, height);
 		this.mask = new Float32Array(reduced.width * reduced.height);
 		this.settings.label = label;
 		this.selected = -1;
 		this.thumbnail = thumbnailOf(image, width, height);
 		await this.#client.load(reduced.pixels, reduced.width, reduced.height);
 		await this.refresh();
+		// The first results come from the small copy, then the screen sharpens.
+		if (this.display.width > this.size.width) {
+			const sharp = sharpPixels(image, width, height);
+			await this.#client.loadSharp(sharp.pixels, sharp.width, sharp.height);
+			await this.refresh();
+		}
 	}
 
 	/** Resolves true once the photo has opened. */
