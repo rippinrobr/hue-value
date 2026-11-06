@@ -1,14 +1,11 @@
 <script lang="ts">
 	import '@fontsource-variable/figtree';
 	import '../app.css';
-	import favicon from '#lib/assets/favicon.svg';
+	import UpdatePrompt from '#lib/components/UpdatePrompt.svelte';
 	import type { LayoutProps } from './$types';
 
 	let { children }: LayoutProps = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
-
 {@render children()}
+<UpdatePrompt />
