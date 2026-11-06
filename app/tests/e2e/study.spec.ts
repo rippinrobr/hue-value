@@ -202,3 +202,35 @@ for (const [name, size, colorScheme] of [
 		await context.close();
 	});
 }
+
+test('on a wide window the fine-tune controls sit beside the picture', async ({
+	browser,
+	baseURL
+}) => {
+	const context = await browser.newContext({ viewport: { width: 1280, height: 800 }, baseURL });
+	const page = await context.newPage();
+	await openExample(page);
+	await expect(page.getByRole('button', { name: 'Brightness, brushing and more' })).toBeHidden();
+	await page.getByRole('button', { name: 'Darker' }).click();
+	await page.getByRole('button', { name: 'Paint on picture' }).click();
+	const box = await page.getByLabel('Your photo or its value map').boundingBox();
+	if (!box) throw new Error('No picture');
+	await page.mouse.move(box.x + box.width * 0.4, box.y + box.height * 0.5);
+	await page.mouse.down();
+	await page.mouse.move(box.x + box.width * 0.6, box.y + box.height * 0.6, { steps: 6 });
+	await page.mouse.up();
+	const clear = page.getByRole('button', { name: 'Clear brightened area' });
+	await clear.click();
+	await expect(clear).toBeHidden();
+	await context.close();
+});
+
+test('Settings opens from a study and comes back to the same step', async ({ page }) => {
+	await openExample(page);
+	await toMixes(page);
+	await page.getByRole('link', { name: 'Settings' }).click();
+	await page.getByRole('heading', { name: 'Settings' }).waitFor();
+	await page.getByRole('button', { name: 'Done' }).click();
+	await page.getByRole('heading', { name: 'Your mixes' }).waitFor();
+	await expect(shownRecipes(page)).toHaveText(recipes('app-sample', 'mono-default'));
+});

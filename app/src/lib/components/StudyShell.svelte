@@ -4,6 +4,7 @@
 	import { goToStep, openPanel, startOver, type Step } from '#lib/nav.ts';
 	import { makeSheet } from '#lib/sheet-view.svelte.ts';
 	import Picture from '#lib/components/Picture.svelte';
+	import { resolve } from '$app/paths';
 
 	let { step, children }: { step: Step; children: Snippet } = $props();
 
@@ -43,7 +44,7 @@
 
 <div class="study" style:--stage={stage[step]} style:--ratio={ratio}>
 	<div class="stage">
-		<Picture fill />
+		<Picture fill brush={step === 'values'} />
 		<button type="button" class="on-picture new" aria-label="New photo" onclick={startOver}>
 			<svg
 				width="20"
@@ -58,6 +59,20 @@
 				><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><path d="M12 10.5v5M9.5 13h5"></path></svg
 			>
 		</button>
+		<a class="on-picture settings" aria-label="Settings" href={resolve('/settings')}>
+			<svg
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				aria-hidden="true"
+				><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"
+				></circle><circle cx="8" cy="17" r="2"></circle></svg
+			>
+		</a>
 		<button type="button" class="on-picture save" disabled={making} onclick={save}>
 			{making ? 'Making…' : 'Save sheet'}
 		</button>
@@ -120,6 +135,12 @@
 	.new {
 		left: 12px;
 		width: 44px;
+	}
+
+	.settings {
+		left: 64px;
+		width: 44px;
+		color: var(--text);
 	}
 
 	.save {
@@ -233,6 +254,10 @@
 
 		.new {
 			left: max(16px, env(safe-area-inset-left));
+		}
+
+		.settings {
+			left: calc(max(16px, env(safe-area-inset-left)) + 52px);
 		}
 
 		.save {
