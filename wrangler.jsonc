@@ -9,6 +9,8 @@
 		// Every address without a file gets the app, which draws the right screen.
 		"not_found_handling": "single-page-application"
 	},
-	// Gives each branch and version its own test address.
-	"preview_urls": true
+	// Gives each branch and version its own test address. `wrangler preview` needs the
+	// previews block, even though it can stay empty.
+	"preview_urls": true,
+	"previews": {}
 }
