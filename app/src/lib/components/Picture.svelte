@@ -7,8 +7,16 @@
 		height = '46dvh',
 		toggle = true,
 		enlarge = true,
-		brush = false
-	}: { height?: string; toggle?: boolean; enlarge?: boolean; brush?: boolean } = $props();
+		brush = false,
+		fill = false
+	}: {
+		height?: string;
+		toggle?: boolean;
+		enlarge?: boolean;
+		brush?: boolean;
+		/** Fill the frame it sits in, as the study screens do. */
+		fill?: boolean;
+	} = $props();
 
 	let canvas = $state<HTMLCanvasElement>();
 	let strokes = $state(0);
@@ -110,7 +118,7 @@
 	}
 </script>
 
-<div class="picture">
+<div class="picture" class:fill>
 	<canvas
 		bind:this={canvas}
 		class:brushing={brushActive}
@@ -121,51 +129,53 @@
 		onpointerup={pointerup}
 		onpointercancel={pointerup}
 	></canvas>
-	{#if toggle || enlarge}
-		<div class="tools">
-			{#if toggle}
-				<div class="views" role="group" aria-label="Show">
-					{#each views as view (view.id)}
-						<button
-							type="button"
-							aria-pressed={studio.settings.show === view.id}
-							onclick={() => (studio.settings.show = view.id)}
-						>
-							{view.label}
-						</button>
-					{/each}
-				</div>
-			{/if}
-			{#if enlarge}
+	{#if toggle}
+		<div class="views" role="group" aria-label="Show">
+			{#each views as view (view.id)}
 				<button
 					type="button"
-					class="enlarge"
-					aria-label="Enlarge the picture"
-					onclick={() => openPanel('lightbox')}
+					aria-pressed={studio.settings.show === view.id}
+					onclick={() => (studio.settings.show = view.id)}
 				>
-					<svg
-						width="18"
-						height="18"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg
-					>
+					{view.label}
 				</button>
-			{/if}
+			{/each}
 		</div>
+	{/if}
+	{#if enlarge}
+		<button
+			type="button"
+			class="enlarge"
+			aria-label="Enlarge the picture"
+			onclick={() => openPanel('lightbox')}
+		>
+			<svg
+				width="18"
+				height="18"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg
+			>
+		</button>
 	{/if}
 </div>
 
 <style>
+	/* The controls sit on the picture, so it keeps all the room it is given. */
 	.picture {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
+		position: relative;
 		min-width: 0;
+	}
+
+	/* Filling a frame, the controls sit in that frame's corners instead. */
+	.picture.fill {
+		position: static;
+		width: 100%;
+		height: 100%;
 	}
 
 	canvas {
@@ -174,14 +184,15 @@
 		height: auto;
 		max-height: var(--height);
 		object-fit: contain;
-		border-radius: 18px;
-		background: var(--control);
+		border-radius: 16px;
+		background: var(--surface);
 	}
 
-	@media (min-width: 900px) {
-		canvas {
-			max-height: 62dvh;
-		}
+	.fill canvas {
+		height: 100%;
+		max-height: none;
+		border-radius: 0;
+		background: none;
 	}
 
 	canvas.brushing {
@@ -189,25 +200,22 @@
 		touch-action: none;
 	}
 
-	.tools {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 8px;
-	}
-
 	.views {
+		position: absolute;
+		left: 12px;
+		bottom: 12px;
 		display: flex;
-		padding: 3px;
-		border-radius: 24px;
-		background: var(--surface);
+		padding: 4px;
+		border-radius: 16px;
+		background: var(--bg);
+		box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
 	}
 
 	.views button {
-		min-height: 44px;
+		min-height: 40px;
 		padding: 0 14px;
 		border: 0;
-		border-radius: 20px;
+		border-radius: 12px;
 		background: transparent;
 		font-size: 15px;
 		font-weight: 700;
@@ -219,13 +227,16 @@
 	}
 
 	.enlarge {
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
 		display: grid;
 		place-items: center;
-		flex: none;
-		width: 44px;
-		height: 44px;
+		width: 48px;
+		height: 48px;
 		border: 0;
-		border-radius: 22px;
-		background: var(--surface);
+		border-radius: 14px;
+		background: var(--bg);
+		box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
 	}
 </style>

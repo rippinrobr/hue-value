@@ -21,7 +21,7 @@ export function recipes(image: string, name: string) {
 
 export async function start(page: Page) {
 	await page.goto('/');
-	await page.getByRole('heading', { name: 'What are you painting today?' }).waitFor();
+	await page.getByRole('heading', { name: 'See it in values. Mix it with confidence.' }).waitFor();
 }
 
 export async function openExample(page: Page) {

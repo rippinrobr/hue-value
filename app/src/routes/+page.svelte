@@ -6,6 +6,7 @@
 	import PaletteStep from '#lib/steps/PaletteStep.svelte';
 	import ValuesStep from '#lib/steps/ValuesStep.svelte';
 	import MixStep from '#lib/steps/MixStep.svelte';
+	import StudyShell from '#lib/components/StudyShell.svelte';
 	import ColorPicker from '#lib/panels/ColorPicker.svelte';
 	import FineTune from '#lib/panels/FineTune.svelte';
 	import PaintsTips from '#lib/panels/PaintsTips.svelte';
@@ -39,12 +40,17 @@
 
 <!-- The screen behind a panel can't be reached until the panel closes. -->
 <div inert={!!overlay}>
-	{#if step === 'palette'}
-		<PaletteStep />
-	{:else if step === 'values'}
-		<ValuesStep />
-	{:else if step === 'mix'}
-		<MixStep />
+	{#if step}
+		<!-- The picture stays on screen through all three steps. -->
+		<StudyShell {step}>
+			{#if step === 'palette'}
+				<PaletteStep />
+			{:else if step === 'values'}
+				<ValuesStep />
+			{:else}
+				<MixStep />
+			{/if}
+		</StudyShell>
 	{:else}
 		<StartStep />
 	{/if}

@@ -38,8 +38,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 6px 8px 6px 16px;
-		border-radius: 20px;
+		padding: 0;
+		background: none;
 	}
 
 	.name {
@@ -56,8 +56,8 @@
 		width: 44px;
 		height: 44px;
 		border: 0;
-		border-radius: 22px;
-		background: var(--control);
+		border-radius: 14px;
+		background: var(--surface);
 		color: var(--text);
 		font-size: 22px;
 		font-weight: 700;

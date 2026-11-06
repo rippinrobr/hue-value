@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '@fontsource-variable/figtree';
+	import '@fontsource-variable/manrope';
 	import '../app.css';
 	import UpdatePrompt from '#lib/components/UpdatePrompt.svelte';
 	import type { LayoutProps } from './$types';

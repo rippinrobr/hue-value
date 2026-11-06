@@ -11,10 +11,7 @@
 		zoneRecipe
 	} from '#lib/engine/index.ts';
 	import { studio } from '#lib/studio.svelte.ts';
-	import { goToStep, openPanel, startOver } from '#lib/nav.ts';
-	import { makeSheet } from '#lib/sheet-view.svelte.ts';
-	import Stepper from '#lib/components/Stepper.svelte';
-	import Picture from '#lib/components/Picture.svelte';
+	import { openPanel, startOver } from '#lib/nav.ts';
 	import Choice from '#lib/components/Choice.svelte';
 
 	// Results and their settings always stay a matching pair.
@@ -33,110 +30,116 @@
 		studio.studiedMono && zones.some((z) => (z.v?.near.deep ?? 0) > 0 || (z.v?.comp.deep ?? 0) > 0)
 	);
 	const partner = $derived(paintById(settings.brand, paint[settings.darks]));
-	let making = $state(false);
-	let failed = $state(false);
+	// The tone shown large: the one picked, or the darkest until one is.
+	const current = $derived(studio.selected ?? 0);
+	const shown = $derived(zones[current]);
+	const shownRecipe = $derived(shown ? zoneRecipe(shown, settings) : undefined);
+	const top = (zone: (typeof zones)[number]) =>
+		studio.studiedMono ? grayHex(zone.L) : targetSwatch(zone, settings);
 
 	const position = (i: number) =>
 		i === 0 ? ' · darkest' : i === zones.length - 1 ? ' · lightest' : '';
-
-	async function save() {
-		making = true;
-		failed = false;
-		try {
-			await makeSheet();
-			openPanel('lightbox');
-		} catch {
-			failed = true;
-		}
-		making = false;
-	}
 </script>
 
-<main class="screen wide">
-	<Stepper current="mix" />
-	<div>
-		<h1>Your mixes</h1>
-		<p class="muted">{usedPaints}</p>
-	</div>
-	{#if studio.message}<p class="message" role="alert">{studio.message}</p>{/if}
-	<div class="columns">
-		<div class="sticky"><Picture height="28dvh" /></div>
-		<div class="stack">
-			{#if needsDarks}
-				<Choice
-					label="Mix the darks with"
-					options={[
-						{ id: 'near', label: 'Same family' },
-						{ id: 'comp', label: 'Complement' }
-					]}
-					value={studio.settings.darks}
-					onchange={(darks) => studio.change({ darks })}
-				/>
-				<p class="muted">
-					{partner ? `Darks deepened with ${partner.name}` : 'No darker partner in this range'}
-				</p>
-			{/if}
-			<div class="card list">
-				{#each zones as zone, i (i)}
-					{@const recipe = zoneRecipe(zone, settings)}
-					{@const warning = mixWarning(zone, settings)}
-					<button
-						type="button"
-						class="mix"
-						aria-pressed={studio.selected === i}
-						onclick={() => studio.select(i)}
-					>
-						<span class="swatch">
-							<span
-								style:background={studio.studiedMono
-									? grayHex(zone.L)
-									: targetSwatch(zone, settings)}
-							></span>
-							<span style:background={hex(zone.mix)}></span>
-						</span>
-						<span class="words">
-							<span class="recipe">{recipe.main}</span>
-							<span class="meta">
-								{unit}
-								{i + 1} · value {(zone.L / 10).toFixed(1)}{position(i)} · {Math.round(
-									zone.area * 100
-								)}% of picture
-							</span>
-							{#if warning}<span class="warning">{warning}</span>{/if}
-							{#if studio.selected === i && recipe.sub}<span class="meta">{recipe.sub}</span>{/if}
-						</span>
-					</button>
-				{/each}
-			</div>
-			<p class="muted">
-				Swatch: {studio.studiedMono ? 'target value' : 'photo color'} on top, your mix below. Tap a mix
-				to see where it goes.
-			</p>
-			<div class="pair">
-				<button type="button" class="row-button center" onclick={() => openPanel('paints')}>
-					Paints to set out
-				</button>
-				<button type="button" class="row-button center" onclick={() => openPanel('paints')}>
-					Working tips
-				</button>
-			</div>
-			<p class="muted">
-				Ratios are estimates from a paint-mixing model. Brands vary, so test the first mix on a card
-				next to your reference. Parts are by volume.
-			</p>
+<div class="step-head">
+	<h1>Your mixes</h1>
+	<p class="muted">{usedPaints}</p>
+</div>
+
+<div class="tones" role="group" aria-label="{unit}s, darkest to lightest">
+	{#each zones as zone, i (i)}
+		<button
+			type="button"
+			aria-label="{unit} {i + 1}"
+			aria-pressed={studio.selected === i}
+			style:background={hex(zone.mix)}
+			style:color={zone.L > 55 ? '#111' : '#f2f2f2'}
+			onclick={() => studio.select(i)}
+		>
+			{i + 1}
+		</button>
+	{/each}
+</div>
+
+{#if shown && shownRecipe}
+	<section class="current" aria-live="polite">
+		<span class="swatch big">
+			<span style:background={top(shown)}></span>
+			<span style:background={hex(shown.mix)}></span>
+		</span>
+		<div class="words">
+			<span class="muted">
+				{unit}
+				{current + 1}{position(current)} · value {(shown.L / 10).toFixed(1)}
+			</span>
+			<p class="big-recipe">{shownRecipe.main}</p>
+			{#if shownRecipe.sub}<p class="muted">{shownRecipe.sub}</p>{/if}
+			{#if studio.selected === null}<p class="muted">
+					Tap a {unit.toLowerCase()} to see where it goes.
+				</p>{/if}
 		</div>
-	</div>
-	<div class="actions column">
-		{#if failed}<p class="message" role="alert">Could not make the sheet. Try again.</p>{/if}
-		<div class="buttons">
-			<button type="button" class="button soft" onclick={() => goToStep('values')}>Back</button>
-			<button type="button" class="button grow" disabled={making} onclick={save}>
-				{making ? 'Making sheet…' : 'Save painting sheet'}
-			</button>
-		</div>
-		<button type="button" class="link" onclick={startOver}>Start a new study</button>
-	</div>
-</main>
+	</section>
+{/if}
+
+<div class="pair">
+	<button type="button" class="row-button center" onclick={() => openPanel('paints')}>
+		Paints to set out
+	</button>
+	<button type="button" class="row-button center" onclick={() => openPanel('paints')}>
+		Working tips
+	</button>
+</div>
+
+{#if needsDarks}
+	<Choice
+		label="Mix the darks with"
+		options={[
+			{ id: 'near', label: 'Same family' },
+			{ id: 'comp', label: 'Complement' }
+		]}
+		value={studio.settings.darks}
+		onchange={(darks) => studio.change({ darks })}
+	/>
+	<p class="muted">
+		{partner ? `Darks deepened with ${partner.name}` : 'No darker partner in this range'}
+	</p>
+{/if}
+
+<h2>All mixes</h2>
+<div class="card list">
+	{#each zones as zone, i (i)}
+		{@const recipe = zoneRecipe(zone, settings)}
+		{@const warning = mixWarning(zone, settings)}
+		<button
+			type="button"
+			class="mix"
+			aria-pressed={studio.selected === i}
+			onclick={() => studio.select(i)}
+		>
+			<span class="swatch">
+				<span style:background={top(zone)}></span>
+				<span style:background={hex(zone.mix)}></span>
+			</span>
+			<span class="words">
+				<span class="recipe">{recipe.main}</span>
+				<span class="meta">
+					{unit}
+					{i + 1} · value {(zone.L / 10).toFixed(1)}{position(i)} · {Math.round(zone.area * 100)}%
+					of picture
+				</span>
+				{#if warning}<span class="warning">{warning}</span>{/if}
+			</span>
+		</button>
+	{/each}
+</div>
+<p class="muted">
+	Swatch: {studio.studiedMono ? 'target value' : 'photo color'} on top, your mix below. Ratios are estimates
+	from a paint-mixing model. Brands vary, so test the first mix on a card next to your reference. Parts
+	are by volume.
+</p>
+<div class="end">
+	<button type="button" class="link" onclick={startOver}>Start a new study</button>
+</div>
 
 <style>
 	.list {
@@ -151,7 +154,7 @@
 		gap: 12px;
 		padding: 10px 14px;
 		border: 0;
-		border-bottom: 1px solid var(--control);
+		border-bottom: 1px solid var(--line);
 		background: none;
 		text-align: left;
 	}
@@ -161,7 +164,7 @@
 	}
 
 	.mix[aria-pressed='true'] {
-		background: var(--control);
+		background: #312e3b;
 	}
 
 	.swatch {
@@ -212,13 +215,46 @@
 		font-size: 15px;
 	}
 
-	.column {
-		flex-direction: column;
-		gap: 4px;
+	.tones {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 8px;
 	}
 
-	.buttons {
+	.tones button {
+		height: 60px;
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		font-size: 15px;
+		font-weight: 800;
+	}
+
+	.tones button[aria-pressed='true'] {
+		border: 3px solid var(--accent);
+	}
+
+	.current {
 		display: flex;
-		gap: 10px;
+		align-items: flex-start;
+		gap: 14px;
+		padding: 14px;
+		border-radius: 16px;
+		background: var(--surface);
+	}
+
+	.swatch.big {
+		width: 64px;
+		height: 64px;
+	}
+
+	.big-recipe {
+		font-size: 25px;
+		line-height: 1.15;
+		font-weight: 800;
+		letter-spacing: -0.01em;
+	}
+
+	.end {
+		padding-bottom: 16px;
 	}
 </style>

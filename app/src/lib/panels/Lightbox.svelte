@@ -46,7 +46,7 @@
 	{#if message}<p class="muted" role="status">{message}</p>{/if}
 	{#if fallback}<textarea readonly aria-label="Painting sheet text" value={fallback}
 		></textarea>{/if}
-	<canvas bind:this={shown} aria-label={view?.title}></canvas>
+	<canvas bind:this={shown} class:fit={view?.kind !== 'sheet'} aria-label={view?.title}></canvas>
 </Overlay>
 
 <style>
@@ -61,6 +61,12 @@
 		width: 100%;
 		height: auto;
 		border-radius: 14px;
+	}
+
+	/* A picture shows whole; a painting sheet scrolls. */
+	canvas.fit {
+		max-height: calc(100dvh - 140px);
+		object-fit: contain;
 	}
 
 	textarea {

@@ -40,10 +40,14 @@
 		min-height: 44px;
 		padding: 0 4px;
 		border: 0;
-		border-radius: 16px;
+		border-radius: 12px;
 		background: var(--surface);
 		font-size: 14px;
 		font-weight: 700;
+	}
+
+	button:not([aria-pressed='true']):hover {
+		box-shadow: inset 0 0 0 1px var(--border);
 	}
 
 	button[aria-pressed='true'] {

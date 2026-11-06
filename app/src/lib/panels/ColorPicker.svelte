@@ -98,7 +98,7 @@
 		min-height: 62px;
 		padding: 8px 14px;
 		border: 0;
-		border-bottom: 1px solid var(--control);
+		border-bottom: 1px solid var(--line);
 		background: none;
 		text-align: left;
 	}

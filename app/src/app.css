@@ -1,35 +1,23 @@
 :root {
-	/* The Isonade theme, shared with the health dashboard. */
-	--bg: #f4f6f6;
-	--surface: #ffffff;
-	--control: #e8eced;
-	--border: #cdd3d5;
-	--text: #0b0b0b;
-	--text-secondary: #4e5a5e;
-	--accent: #006d75;
-	--on-accent: #ffffff;
-	--danger: #b42318;
+	/* Night Easel: a dark studio, so the picture is the brightest thing on screen. */
+	--bg: #17161c;
+	--surface: #24222c;
+	--control: #24222c;
+	--bar: #201e27;
+	--border: #5a5668;
+	--line: #34313d;
+	--text: #f3f0ea;
+	--text-secondary: #b7b2c2;
+	--accent: #f2b632;
+	--accent-hover: #ffd166;
+	--on-accent: #241b03;
+	--danger: #ff9b8a;
 	font-family:
-		'Figtree Variable',
+		'Manrope Variable',
 		system-ui,
 		-apple-system,
 		sans-serif;
-	color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #0a0a0a;
-		--surface: #141414;
-		--control: #1a1f20;
-		--border: #2c3233;
-		--text: #f2f4f4;
-		--text-secondary: #a2aaad;
-		--accent: #e57200;
-		--on-accent: #000000;
-		--danger: #ff8a7d;
-		color-scheme: dark;
-	}
+	color-scheme: dark;
 }
 
 * {
@@ -57,7 +45,7 @@ button {
 
 button:disabled {
 	cursor: default;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 :focus-visible {
@@ -87,6 +75,10 @@ a {
 	color: var(--accent);
 }
 
+a:hover {
+	color: var(--accent-hover);
+}
+
 .muted {
 	color: var(--text-secondary);
 	font-size: 15px;
@@ -99,7 +91,7 @@ a {
 
 .screen {
 	width: 100%;
-	max-width: 480px;
+	max-width: 560px;
 	min-height: 100dvh;
 	margin: 0 auto;
 	padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 0
@@ -117,23 +109,27 @@ a {
 	min-height: 56px;
 	padding: 0 20px;
 	border: 0;
-	border-radius: 28px;
+	border-radius: 16px;
 	background: var(--accent);
 	color: var(--on-accent);
 	font-size: 17px;
-	font-weight: 700;
+	font-weight: 800;
 	text-decoration: none;
 }
 
+.button:not(.soft):not(:disabled):hover {
+	background: var(--accent-hover);
+}
+
 .button.soft {
-	background: var(--control);
+	background: var(--surface);
 	color: var(--text);
 }
 
 .button.small {
 	min-height: 44px;
 	padding: 0 16px;
-	border-radius: 22px;
+	border-radius: 14px;
 	font-size: 15px;
 }
 
@@ -149,8 +145,12 @@ a {
 	font-weight: 700;
 }
 
+.link:hover {
+	color: var(--accent-hover);
+}
+
 .card {
-	border-radius: 22px;
+	border-radius: 16px;
 	background: var(--surface);
 }
 
@@ -159,10 +159,10 @@ a {
 	align-items: center;
 	justify-content: space-between;
 	gap: 12px;
-	min-height: 48px;
+	min-height: 52px;
 	padding: 8px 16px;
 	border: 0;
-	border-radius: 20px;
+	border-radius: 14px;
 	background: var(--surface);
 	font-size: 16px;
 	font-weight: 700;
@@ -192,34 +192,32 @@ a {
 	font-size: 15px;
 }
 
-/* One column on phones. On laptops the picture stays put beside the controls. */
-.columns {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-}
-
-@media (min-width: 900px) {
-	.screen.wide {
-		max-width: 1040px;
-	}
-
-	.columns {
-		display: grid;
-		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-		gap: 24px;
-		align-items: start;
-	}
-
-	.columns > .sticky {
-		position: sticky;
-		top: 16px;
-	}
-}
-
 .stack {
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
 	min-width: 0;
+}
+
+/* Inside a study step: the heading, and the button that moves on, kept in reach. */
+.step-head {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.step-head h1 {
+	font-size: 24px;
+}
+
+.step-actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-top: auto;
+	padding: 12px 0 16px;
+	background: linear-gradient(transparent, var(--panel, var(--bg)) 14px);
 }

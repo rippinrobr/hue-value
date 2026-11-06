@@ -48,7 +48,7 @@
 		align-items: flex-start;
 		gap: 12px;
 		padding: 10px 14px;
-		border-bottom: 1px solid var(--control);
+		border-bottom: 1px solid var(--line);
 	}
 
 	ul li:last-child {

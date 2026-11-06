@@ -89,7 +89,7 @@ test('a file that is not an image is refused', async ({ page }) => {
 
 test('brushing brightens an area, and it can be cleared', async ({ page }) => {
 	await openExample(page);
-	await page.getByRole('button', { name: 'Contrast, brightness and more' }).click();
+	await page.getByRole('button', { name: 'Brightness, brushing and more' }).click();
 	await page.getByRole('button', { name: 'Paint on picture' }).click();
 	const box = await page.getByLabel('Your photo or its value map').last().boundingBox();
 	if (!box) throw new Error('No picture');
@@ -136,7 +136,7 @@ test('Settings stick, and Remember my palette skips the step', async ({ page }) 
 test('the painting sheet saves as an image', async ({ page }) => {
 	await openExample(page);
 	await toMixes(page);
-	await page.getByRole('button', { name: 'Save painting sheet' }).click();
+	await page.getByRole('button', { name: 'Save sheet' }).click();
 	await page.getByRole('heading', { name: /^Painting sheet/ }).waitFor();
 	const download = page.waitForEvent('download');
 	await page.getByRole('button', { name: 'Save image' }).click();
@@ -181,7 +181,7 @@ test('back and forward move between steps and panels', async ({ page }) => {
 test('a reload starts again, because photos are never stored', async ({ page }) => {
 	await openExample(page);
 	await page.reload();
-	await page.getByRole('heading', { name: 'What are you painting today?' }).waitFor();
+	await page.getByRole('heading', { name: 'See it in values. Mix it with confidence.' }).waitFor();
 });
 
 for (const [name, size, colorScheme] of [

@@ -24,9 +24,9 @@
 <style>
 	.strip {
 		display: flex;
-		min-height: 48px;
+		min-height: 44px;
 		overflow: hidden;
-		border-radius: 14px;
+		border-radius: 12px;
 	}
 
 	button {
@@ -39,6 +39,8 @@
 	}
 
 	button[aria-pressed='true'] {
-		box-shadow: inset 0 -5px 0 #ff3d7f;
+		box-shadow:
+			inset 0 0 0 3px var(--accent),
+			inset 0 0 0 5px var(--bg);
 	}
 </style>

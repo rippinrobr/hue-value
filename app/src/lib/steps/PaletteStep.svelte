@@ -4,6 +4,7 @@
 		LIMITED_PALETTES,
 		hex,
 		mix,
+		paintById,
 		paintNote,
 		paletteTubes,
 		requirePaint,
@@ -11,157 +12,148 @@
 		type PaletteId
 	} from '#lib/engine/index.ts';
 	import { studio } from '#lib/studio.svelte.ts';
-	import { goToStep, openPanel, startOver } from '#lib/nav.ts';
-	import Stepper from '#lib/components/Stepper.svelte';
+	import { goToStep, openPanel } from '#lib/nav.ts';
+	import Choice from '#lib/components/Choice.svelte';
 
-	const LIMITED: { id: LimitedPaletteId; blurb: string }[] = [
-		{ id: 'zorn', blurb: 'Ochre, red and black. Warm and harmonious.' },
-		{ id: 'primary', blurb: 'Yellow, red and blue. The widest range.' },
-		{ id: 'warmcool', blurb: 'Two strings that combine into skin tones.' }
+	const OPTIONS: { id: PaletteId; name: string; blurb: string }[] = [
+		{ id: 'mono', name: 'One color', blurb: 'One paint plus white' },
+		{ id: 'zorn', name: LIMITED_PALETTES.zorn.name, blurb: 'Ochre, red, black' },
+		{ id: 'primary', name: LIMITED_PALETTES.primary.name, blurb: 'Yellow, red, blue' },
+		{ id: 'warmcool', name: LIMITED_PALETTES.warmcool.name, blurb: 'Two strings for skin' }
 	];
 
-	const paint = $derived(requirePaint(studio.settings.brand, studio.settings.pig));
 	const brand = $derived(studio.settings.brand);
+	const paint = $derived(requirePaint(brand, studio.settings.pig));
+	const partner = $derived(paintById(brand, paint[studio.settings.darks]));
 	const selected = $derived(studio.settings.palette);
-	const swatches = (id: PaletteId) => paletteTubes(id, brand).map((t) => hex(mix(0.35, t)));
+	const limited = $derived(selected === 'mono' ? undefined : LIMITED_PALETTES[selected]);
+	const swatches = (id: PaletteId) =>
+		id === 'mono' ? [hex(mix(0.35, paint))] : paletteTubes(id, brand).map((t) => hex(mix(0.35, t)));
 	const note = (id: LimitedPaletteId) => LIMITED_PALETTES[id].note?.[brand];
 </script>
 
-<main class="screen">
-	<Stepper current="palette" />
-	<div class="head">
-		{#if studio.thumbnail}<img src={studio.thumbnail} alt="Reference" />{/if}
-		<h1>Which paints will you use?</h1>
-	</div>
+<div class="step-head">
+	<h1>Which paints will you use?</h1>
+	<p class="muted">Pick a palette. You can come back and change it.</p>
+</div>
 
-	<div class="option card" class:chosen={selected === 'mono'}>
+<div class="grid">
+	{#each OPTIONS as option (option.id)}
 		<button
 			type="button"
-			class="pick"
-			aria-pressed={selected === 'mono'}
-			onclick={() => studio.choosePalette('mono')}
+			class="option"
+			aria-pressed={selected === option.id}
+			onclick={() => studio.choosePalette(option.id)}
 		>
-			<span class="name">One color</span>
-			<span class="muted">A monochrome study: one paint plus white.</span>
+			<span class="name">{option.name}</span>
+			<span class="blurb">{option.blurb}</span>
+			<span class="dots" aria-hidden="true">
+				{#each swatches(option.id) as color, i (i)}
+					<span style:background={color}></span>
+				{/each}
+			</span>
 		</button>
-		{#if selected === 'mono'}
-			<button type="button" class="paint" onclick={() => openPanel('picker')}>
-				<span class="dot" style:background={hex(mix(0.35, paint))}></span>
-				<span class="paint-name">{paint.name}</span>
-				<span class="change">Change</span>
-			</button>
-			<p class="muted detail">{paintNote(paint)}</p>
-		{/if}
-	</div>
-
-	{#each LIMITED as option (option.id)}
-		{@const palette = LIMITED_PALETTES[option.id]}
-		<div class="option card" class:chosen={selected === option.id}>
-			<button
-				type="button"
-				class="pick"
-				aria-pressed={selected === option.id}
-				onclick={() => studio.choosePalette(option.id)}
-			>
-				<span class="title-row">
-					<span class="name">{palette.name}</span>
-					<span class="dots">
-						{#each swatches(option.id) as color (color)}
-							<span class="mini" style:background={color}></span>
-						{/each}
-					</span>
-				</span>
-				<span class="muted">{option.blurb}</span>
-			</button>
-			{#if selected === option.id}
-				<p class="muted detail">
-					{palette.about}
-					{note(option.id) ?? ''}
-					{#if palette.link}
-						<a href={palette.link} target="_blank" rel="noopener external">Read her guide.</a>
-					{/if}
-				</p>
-				<p class="muted detail">
-					Uses {paletteTubes(option.id, brand)
-						.map((t) => t.name)
-						.join(', ')} and {BRANDS[brand].white}.
-				</p>
-			{/if}
-		</div>
 	{/each}
+</div>
 
-	<div class="actions">
-		<button type="button" class="button soft" onclick={startOver}>Back</button>
-		<button
-			type="button"
-			class="button grow"
-			onclick={() => {
-				studio.savePrefs();
-				goToStep('values');
-			}}
-		>
-			See my values
-		</button>
+{#if selected === 'mono'}
+	<button type="button" class="paint" onclick={() => openPanel('picker')}>
+		<span class="dot" style:background={hex(mix(0.35, paint))}></span>
+		<span class="words">
+			<span class="paint-name">{paint.name}</span>
+			<span class="muted small">{BRANDS[brand].brand} · {paint.code}</span>
+		</span>
+		<span class="change">Change</span>
+	</button>
+	<p class="muted small">{paintNote(paint)}</p>
+	<Choice
+		label="Mix the darks with"
+		options={[
+			{ id: 'near', label: 'Same family' },
+			{ id: 'comp', label: 'Complement' }
+		]}
+		value={studio.settings.darks}
+		onchange={(darks) => studio.change({ darks })}
+	/>
+	<p class="muted small">
+		{partner ? `Darks deepened with ${partner.name}` : 'No darker partner in this range'}
+	</p>
+{:else if limited}
+	<div class="about">
+		<p class="muted small">
+			{limited.about}
+			{note(selected as LimitedPaletteId) ?? ''}
+			{#if limited.link}
+				<a href={limited.link} target="_blank" rel="noopener external">Read her guide.</a>
+			{/if}
+		</p>
+		<p class="muted small">
+			Uses {paletteTubes(selected, brand)
+				.map((t) => t.name)
+				.join(', ')} and {BRANDS[brand].white}.
+		</p>
 	</div>
-</main>
+{/if}
+
+<div class="step-actions">
+	<button
+		type="button"
+		class="button"
+		onclick={() => {
+			studio.savePrefs();
+			goToStep('values');
+		}}
+	>
+		See my values
+	</button>
+</div>
 
 <style>
-	.head {
-		display: flex;
-		align-items: center;
-		gap: 14px;
-	}
-
-	.head img {
-		width: 64px;
-		height: 76px;
-		object-fit: cover;
-		border-radius: 14px;
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
 	}
 
 	.option {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
-		padding-bottom: 2px;
+		align-items: flex-start;
+		gap: 2px;
+		min-height: 96px;
+		padding: 12px;
 		border: 2px solid transparent;
-	}
-
-	.option.chosen {
-		border-color: var(--accent);
-		padding-bottom: 14px;
-	}
-
-	.pick {
-		display: flex;
-		flex-direction: column;
-		gap: 4px;
-		width: 100%;
-		min-height: 44px;
-		padding: 12px 14px 10px;
-		border: 0;
-		border-radius: 20px;
-		background: none;
+		border-radius: 16px;
+		background: var(--surface);
 		text-align: left;
 	}
 
-	.title-row {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+	.option:hover {
+		border-color: var(--border);
+	}
+
+	.option[aria-pressed='true'] {
+		border-color: var(--accent);
 	}
 
 	.name {
-		font-size: 18px;
+		font-size: 17px;
 		font-weight: 800;
+	}
+
+	.blurb {
+		color: var(--text-secondary);
+		font-size: 14px;
 	}
 
 	.dots {
 		display: flex;
 		gap: 4px;
+		margin-top: auto;
+		padding-top: 8px;
 	}
 
-	.mini {
+	.dots span {
 		width: 16px;
 		height: 16px;
 		border-radius: 8px;
@@ -170,37 +162,46 @@
 	.paint {
 		display: flex;
 		align-items: center;
-		gap: 10px;
-		margin: 0 14px;
-		min-height: 48px;
-		padding: 10px;
+		gap: 12px;
+		min-height: 60px;
+		padding: 10px 14px;
 		border: 0;
-		border-radius: 14px;
-		background: var(--bg);
+		border-radius: 16px;
+		background: var(--surface);
 		text-align: left;
 	}
 
 	.dot {
 		flex: none;
-		width: 28px;
-		height: 28px;
-		border-radius: 14px;
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+	}
+
+	.words {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-width: 0;
 	}
 
 	.paint-name {
-		flex: 1;
-		font-size: 15px;
-		font-weight: 700;
+		font-weight: 800;
 	}
 
 	.change {
 		color: var(--accent);
 		font-size: 15px;
-		font-weight: 700;
+		font-weight: 800;
 	}
 
-	.detail {
-		padding: 0 14px;
+	.small {
 		font-size: 14px;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
 	}
 </style>
