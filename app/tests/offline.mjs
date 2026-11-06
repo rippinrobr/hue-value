@@ -59,7 +59,7 @@ async function nestedAddresses(page, when) {
 	const { context, page } = await open();
 	await nestedAddresses(page, 'on a first visit');
 	await page.goto(origin);
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	const manifest = await (await page.request.get(`${origin}/manifest.webmanifest`)).json();
 	check(
 		manifest.display === 'standalone' && manifest.start_url === '/',
@@ -91,14 +91,14 @@ async function nestedAddresses(page, when) {
 	// Offline
 	await context.setOffline(true);
 	await page.reload();
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	check(true, 'opens offline');
 	await nestedAddresses(page, 'offline');
 	await page.goto(`${origin}/settings`);
 	await page.waitForSelector('text=Remember my palette');
 	check(true, 'a direct address opens offline');
 	await page.goto(origin);
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	await page
 		.locator('input[type=file]')
 		.first()
@@ -112,7 +112,7 @@ async function nestedAddresses(page, when) {
 		(await page.locator('.recipe').count()) === 5,
 		'a photo gets its mixes offline, through the worker'
 	);
-	await page.getByRole('button', { name: 'Save painting sheet' }).click();
+	await page.getByRole('button', { name: 'Save sheet' }).click();
 	await page.waitForSelector('text=Painting sheet ·', { timeout: 20000 });
 	const fonts = await page.evaluate(() =>
 		[...document.fonts].filter((f) => f.status === 'loaded').map((f) => f.family)
@@ -126,7 +126,7 @@ async function nestedAddresses(page, when) {
 
 	// Updates
 	await page.goto(origin);
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	await ready(page);
 	site.swExtra = '\n// a new release\n';
 	await page.reload();
@@ -140,11 +140,34 @@ async function nestedAddresses(page, when) {
 		page.waitForEvent('load'),
 		page.getByRole('button', { name: 'Update' }).click()
 	]);
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	await page.waitForTimeout(1000);
 	check(
 		await page.locator('text=A new version is ready').isHidden(),
 		'Update reloads into the new version'
+	);
+	site.swExtra = '';
+	await context.close();
+}
+
+// Update from a page that loaded before the service worker took over, as after a hard refresh
+{
+	const { context, page } = await open();
+	await page.goto(origin);
+	await page.waitForSelector('text=See it in values.');
+	await page.evaluate(() => navigator.serviceWorker.ready);
+	site.swExtra = '\n// another release\n';
+	await page.evaluate(async () => (await navigator.serviceWorker.getRegistration())?.update());
+	await page.waitForSelector('text=A new version is ready', { timeout: 15000 });
+	await Promise.all([
+		page.waitForEvent('load'),
+		page.getByRole('button', { name: 'Update' }).click()
+	]);
+	await page.waitForSelector('text=See it in values.');
+	await page.waitForTimeout(1000);
+	check(
+		await page.locator('text=A new version is ready').isHidden(),
+		'Update also reloads a page that loaded before the service worker'
 	);
 	site.swExtra = '';
 	await context.close();
@@ -166,14 +189,14 @@ async function nestedAddresses(page, when) {
 	);
 	site.root = path.join(app, 'dist');
 	await page.reload();
-	await page.waitForSelector('text=What are you painting today?', { timeout: 15000 });
+	await page.waitForSelector('text=See it in values.', { timeout: 15000 });
 	check(true, 'the new app loads over the old install');
 	await page.waitForSelector('text=A new version is ready', { timeout: 15000 });
 	await Promise.all([
 		page.waitForEvent('load'),
 		page.getByRole('button', { name: 'Update' }).click()
 	]);
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	await page.waitForTimeout(1000);
 	await page.getByRole('link', { name: 'Settings' }).click();
 	await page.waitForSelector('text=Remember my palette');
@@ -183,7 +206,7 @@ async function nestedAddresses(page, when) {
 	await page.waitForFunction(() => navigator.serviceWorker.controller);
 	await context.setOffline(true);
 	await page.reload();
-	await page.waitForSelector('text=What are you painting today?');
+	await page.waitForSelector('text=See it in values.');
 	check(true, 'the upgraded install works offline');
 	check(!page.problems.length, `no page errors in the upgrade ${page.problems}`);
 	await context.close();

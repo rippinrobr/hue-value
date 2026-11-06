@@ -53,7 +53,10 @@ export default defineConfig({
 					globStrict: false,
 					// The app's text is all Latin, so these alphabets are never needed.
 					globIgnores: ['**/*-{cyrillic,greek,vietnamese,devanagari,cyrillic-ext,greek-ext}-*'],
-					cleanupOutdatedCaches: true
+					cleanupOutdatedCaches: true,
+					// Once Update starts the new version, it takes over every open page, even one that
+					// loaded without a service worker, so that page reloads instead of waiting.
+					clientsClaim: true
 				}
 			}
 		)
