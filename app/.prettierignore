@@ -10,3 +10,5 @@ bun.lockb
 dist
 tests/golden/cases
 tests/golden/still-life.svg
+test-results
+playwright-report

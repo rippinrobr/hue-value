@@ -1,27 +1,46 @@
 # Hue & Value
 
-A small web app for planning value studies and limited-palette paintings in water-mixable oil or acrylic.
+A web app for planning value studies and limited-palette paintings in water-mixable oil or acrylic. It runs at [huevalue.com](https://huevalue.com), installs to a phone's home screen, and works offline. Photos never leave the device.
 
-Load a reference photo and it will:
+Add a reference photo, choose your paints, check the values, then get a mixing recipe for every tone:
 
-- group the photo into 3–9 values and show them as a value map
-- or, with a limited palette (Zorn, primary colors, or Anna Wakitsch's warm & cool palette), group the photo into 3–12 colors and give a recipe for each from that palette's paints and white
-- give a mixing ratio for each tone: your chosen color plus Titanium White, with a darker partner paint for the deepest tones
-- compare two ways of mixing the darks: a same-family color (top scale) or the complement (bottom scale)
-- let you add punch: contrast, overall brightness, and a brush to brighten one area
-- show the value map full screen and save it as a PNG
-- save a painting sheet: one tall image with the reference photo, value map, tone scale, paints, mixing recipes, settings and working tips, to keep in Photos for the studio
+- group a photo into 3–9 values, or 3–12 colors with a limited palette (Zorn, primary colors, or Anna Wakitsch's warm & cool)
+- mix one paint with Titanium White, with a same-family or complementary partner for the deepest tones
+- adjust contrast and brightness, and brush to brighten one area
+- save a painting sheet with the photo, value map, tone scale, paints, recipes and working tips
 
-Paints cover the full **Winsor & Newton Artisan** and **Cobra Artist** water-mixable oil ranges (whites and metallics aside). Six favorites sit up front: Ultramarine, Phthalo Blue, Phthalo Green, Light Green (Cobra), Orange and Red. Tap **More colors…** to search the rest by name or pigment. Each tube is modeled from the pigments on the maker's chart (`paints.js`), and the app picks a same-family partner and a complement from the same brand for the dark tones.
+Paints cover the full **Winsor & Newton Artisan** and **Cobra Artist** water-mixable oil ranges (whites and metallics aside). Ratios come from a Kubelka–Munk paint-mixing model with typical pigment data, so treat them as a starting point and test each mix on a card against your reference.
 
-Ratios come from a Kubelka–Munk paint-mixing model with typical pigment data. Treat them as a starting point and test each mix on a card against your reference.
+## Layout
 
-## Install on your phone
+| Folder | What's there |
+| --- | --- |
+| `app/` | The Svelte 5, TypeScript and Vite app |
+| `app/src/lib/engine/` | The color engine: mixing, grouping, recipes, pigment search, painting sheet |
+| `data/` | Catalog data: paints, pigments and brands |
+| `legacy/` | The previous single-file app, kept as the reference for the golden tests |
+| `wrangler.jsonc` | The Cloudflare Worker that serves `app/dist` |
 
-1. Open the GitHub Pages address in Safari (iPhone/iPad) or Chrome (Android).
-2. iPhone: tap **Share → Add to Home Screen**. Android: tap **⋮ → Install app**.
-3. It opens full screen and works offline after the first visit. Photos never leave the device.
+## Working on it
 
-## Updating
+Node 24 is pinned in `app/.nvmrc`.
 
-Push changes to `main`. Installed copies check for the newest files every time they open, and fall back to the saved copy when offline. Change `VERSION` in `sw.js` only when the list of cached files changes.
+```
+cd app
+nvm use
+npm install
+npm run dev
+```
+
+| Command | What it checks |
+| --- | --- |
+| `npm test` | Unit tests, and the engine against 90 recorded studies and 30 searches |
+| `npm run test:e2e` | The app in a browser, after a build |
+| `npm run test:offline` | Install, offline use, updates and the upgrade from the old app, after a build |
+| `npm run golden:sheet` | The painting sheet against the old app, pixel by pixel |
+| `npm run test:worker` | Large photos through the real Web Worker against the old app |
+| `npm run test:all` | All of the above, plus types, lint and a build |
+
+## Deploying
+
+Merging to `main` deploys through Cloudflare, which runs the build in `wrangler.jsonc`. Installed copies offer the update the next time they open.

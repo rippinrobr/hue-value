@@ -39,6 +39,9 @@ const PALETTES: PaletteId[] = ['mono', 'zorn', 'primary', 'warmcool'];
 class Studio {
 	settings = $state<StudySettings>({ ...DEFAULT_SETTINGS, show: 'map' });
 	study = $state.raw<Study | null>(null);
+	/** The settings `study` was computed with. Screens that show results read these, because
+	 * `settings` changes first and the new results arrive a moment later. */
+	studied = $state.raw<StudySettings>({ ...DEFAULT_SETTINGS });
 	photo = $state.raw<{ image: CanvasImageSource; width: number; height: number } | null>(null);
 	thumbnail = $state('');
 	mask = $state.raw(new Float32Array(0));
@@ -69,6 +72,10 @@ class Studio {
 
 	get mono() {
 		return this.settings.palette === 'mono';
+	}
+
+	get studiedMono() {
+		return this.studied.palette === 'mono';
 	}
 
 	get brightened() {
@@ -144,9 +151,11 @@ class Studio {
 	async refresh() {
 		if (!this.#client || !this.photo) return;
 		try {
-			const study = await this.#client.analyze($state.snapshot(this.settings));
+			const settings = $state.snapshot(this.settings);
+			const study = await this.#client.analyze(settings);
 			if (!study) return;
 			this.study = study;
+			this.studied = settings;
 			if (this.selected >= study.zones.length) this.selected = -1;
 		} catch {
 			this.message = 'Something went wrong reading this photo. Try choosing it again.';

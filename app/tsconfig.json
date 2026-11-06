@@ -7,6 +7,8 @@
 	"include": [
 		"src",
 		"tests/worker/main.ts",
+		"tests/e2e",
+		"playwright.config.ts",
 		"vite.config.ts",
 		"prettier.config.js",
 		"eslint.config.js"

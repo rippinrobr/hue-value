@@ -23,7 +23,9 @@
 		"golden:sheet": "node tests/golden/sheet.mjs",
 		"test:worker": "node tests/worker/run.mjs",
 		"icons": "node scripts/make-icons.mjs",
-		"test:offline": "node tests/offline.mjs"
+		"test:offline": "node tests/offline.mjs",
+		"test:e2e": "playwright test",
+		"test:all": "npm run check && npm run lint && npm test && npm run build && npm run golden:sheet && npm run test:worker && npm run test:offline && npm run test:e2e"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
@@ -49,7 +51,8 @@
 		"vite": "^8.3.0",
 		"vite-plugin-pwa": "^2.0.0",
 		"vitest": "^4.1.8",
-		"workbox-window": "^7.4.1"
+		"workbox-window": "^7.4.1",
+		"wrangler": "^4.158.0"
 	},
 	"dependencies": {
 		"@fontsource-variable/figtree": "^5.3.0",

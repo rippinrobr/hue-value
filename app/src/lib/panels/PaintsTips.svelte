@@ -3,8 +3,8 @@
 	import { studio } from '#lib/studio.svelte.ts';
 	import Overlay from '#lib/components/Overlay.svelte';
 
-	const paints = $derived(paintList(studio.study?.zones ?? [], studio.settings));
-	const tips = $derived(workingTips(studio.settings, studio.painted));
+	const paints = $derived(paintList(studio.study?.zones ?? [], studio.studied));
+	const tips = $derived(workingTips(studio.studied, studio.painted));
 </script>
 
 <Overlay title="Before you paint" close="Back to my mixes">

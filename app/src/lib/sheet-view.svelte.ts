@@ -21,7 +21,7 @@ class SheetView {
 export const sheetView = new SheetView();
 
 function input() {
-	const { photo, study, settings } = studio;
+	const { photo, study, studied, settings } = studio;
 	if (!photo || !study) throw new Error('No study');
 	return {
 		source: photo.image,
@@ -29,7 +29,7 @@ function input() {
 		sourceHeight: photo.height,
 		channels: studio.maskInfo,
 		study,
-		settings: $state.snapshot(settings)
+		settings: { ...studied, show: settings.show }
 	};
 }
 
@@ -40,22 +40,22 @@ export async function makeSheet() {
 }
 
 const subject = () => {
-	const { settings } = studio;
-	return studio.mono
-		? requirePaint(settings.brand, settings.pig).name
-		: limitedDef(settings.palette).title;
+	const { studied } = studio;
+	return studio.studiedMono
+		? requirePaint(studied.brand, studied.pig).name
+		: limitedDef(studied.palette).title;
 };
 
 /** The canvas, title, and file name for whatever the enlarged view should show. */
 export function currentView() {
-	const { photo, study, settings } = studio;
+	const { photo, study, studied, settings } = studio;
 	if (!photo || !study) return null;
 	if (sheetView.active && sheetView.sheet) {
 		return {
 			kind: 'sheet' as ViewKind,
 			canvas: sheetView.sheet,
 			title: `Painting sheet · ${subject()}`,
-			fileName: saveName('sheet', study.zones, settings, now())
+			fileName: saveName('sheet', study.zones, studied, now())
 		};
 	}
 	if (settings.show === 'photo') {
@@ -65,18 +65,18 @@ export function currentView() {
 		(canvas.getContext('2d') as CanvasRenderingContext2D).drawImage(photo.image, 0, 0);
 		return { kind: 'photo' as ViewKind, canvas, title: 'Reference photo', fileName: '' };
 	}
-	const count = `${study.zones.length} ${studio.mono ? 'tones' : 'colors'}`;
+	const count = `${study.zones.length} ${studio.studiedMono ? 'tones' : 'colors'}`;
 	const values = settings.show === 'values';
 	const kind: ViewKind = values ? 'values' : 'map';
 	return {
 		kind,
 		canvas: renderFullMap(input()),
 		title: `${subject()} · ${count}${values ? ' · values' : ''}`,
-		fileName: saveName(values ? 'values' : 'map', study.zones, settings, now())
+		fileName: saveName(values ? 'values' : 'map', study.zones, studied, now())
 	};
 }
 
 export const currentSheetText = () => {
-	const { study, settings } = studio;
-	return study ? sheetText(study, studio.maskInfo, settings) : '';
+	const { study, studied } = studio;
+	return study ? sheetText(study, studio.maskInfo, studied) : '';
 };

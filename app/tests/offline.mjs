@@ -1,52 +1,19 @@
 // Tests install, offline use, updates and the upgrade from today's app, against a server
 // that behaves like the Cloudflare Worker. Run from app/ after a build: npm run test:offline
 import { chromium } from '@playwright/test';
-import { createServer } from 'node:http';
-import { readFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { serve } from './worker-like-server.mjs';
 
 const app = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const site = { root: path.join(app, 'dist'), swExtra: '' };
-const legacyRoot = path.resolve(app, '..');
+const repo = path.resolve(app, '..');
+const legacyRoot = existsSync(path.join(repo, 'legacy/index.html'))
+	? path.join(repo, 'legacy')
+	: repo;
 
-const TYPES = {
-	'.html': 'text/html',
-	'.js': 'text/javascript',
-	'.css': 'text/css',
-	'.json': 'application/json',
-	'.png': 'image/png',
-	'.svg': 'image/svg+xml',
-	'.woff2': 'font/woff2',
-	'.webmanifest': 'application/manifest+json'
-};
-
-const server = createServer(async (request, response) => {
-	const pathname = decodeURIComponent(new URL(request.url, 'http://x').pathname);
-	// Like Workers static assets: /index.html redirects, and unknown paths get the app.
-	if (pathname === '/index.html') {
-		response.writeHead(307, { location: '/' }).end();
-		return;
-	}
-	const send = async (file, status = 200) => {
-		let body = await readFile(file);
-		if (file.endsWith('sw.js') && site.swExtra)
-			body = Buffer.concat([body, Buffer.from(site.swExtra)]);
-		response.writeHead(status, {
-			'content-type': TYPES[path.extname(file)] ?? 'application/octet-stream',
-			'cache-control': 'public, max-age=0, must-revalidate'
-		});
-		response.end(body);
-	};
-	try {
-		await send(path.join(site.root, pathname === '/' ? 'index.html' : pathname));
-	} catch {
-		if (path.extname(pathname)) response.writeHead(404).end();
-		else await send(path.join(site.root, 'index.html'));
-	}
-});
-await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-const origin = `http://127.0.0.1:${server.address().port}`;
+const { server, origin } = await serve(site);
 
 // Stops a stuck run rather than waiting forever.
 setTimeout(() => {

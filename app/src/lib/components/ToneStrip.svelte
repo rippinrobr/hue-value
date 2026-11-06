@@ -3,7 +3,7 @@
 	import { studio } from '#lib/studio.svelte.ts';
 
 	const zones = $derived(studio.study?.zones ?? []);
-	const unit = $derived(studio.mono ? 'Tone' : 'Color');
+	const unit = $derived(studio.studiedMono ? 'Tone' : 'Color');
 </script>
 
 <div class="strip" role="group" aria-label="{unit} scale, darkest to lightest">

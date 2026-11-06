@@ -17,19 +17,20 @@
 	import Picture from '#lib/components/Picture.svelte';
 	import Choice from '#lib/components/Choice.svelte';
 
-	const settings = $derived(studio.settings);
+	// Results and their settings always stay a matching pair.
+	const settings = $derived(studio.studied);
 	const zones = $derived(studio.study?.zones ?? []);
-	const unit = $derived(studio.mono ? 'Tone' : 'Color');
+	const unit = $derived(studio.studiedMono ? 'Tone' : 'Color');
 	const paint = $derived(requirePaint(settings.brand, settings.pig));
 	const usedPaints = $derived(
-		studio.mono
+		studio.studiedMono
 			? `${paint.name} and ${BRANDS[settings.brand].white}`
 			: `${paletteTubes(settings.palette, settings.brand)
 					.map((t) => t.name)
 					.join(', ')} and ${BRANDS[settings.brand].white}`
 	);
 	const needsDarks = $derived(
-		studio.mono && zones.some((z) => (z.v?.near.deep ?? 0) > 0 || (z.v?.comp.deep ?? 0) > 0)
+		studio.studiedMono && zones.some((z) => (z.v?.near.deep ?? 0) > 0 || (z.v?.comp.deep ?? 0) > 0)
 	);
 	const partner = $derived(paintById(settings.brand, paint[settings.darks]));
 	let making = $state(false);
@@ -68,7 +69,7 @@
 						{ id: 'near', label: 'Same family' },
 						{ id: 'comp', label: 'Complement' }
 					]}
-					value={settings.darks}
+					value={studio.settings.darks}
 					onchange={(darks) => studio.change({ darks })}
 				/>
 				<p class="muted">
@@ -86,7 +87,10 @@
 						onclick={() => studio.select(i)}
 					>
 						<span class="swatch">
-							<span style:background={studio.mono ? grayHex(zone.L) : targetSwatch(zone, settings)}
+							<span
+								style:background={studio.studiedMono
+									? grayHex(zone.L)
+									: targetSwatch(zone, settings)}
 							></span>
 							<span style:background={hex(zone.mix)}></span>
 						</span>
@@ -105,8 +109,8 @@
 				{/each}
 			</div>
 			<p class="muted">
-				Swatch: {studio.mono ? 'target value' : 'photo color'} on top, your mix below. Tap a mix to see
-				where it goes.
+				Swatch: {studio.studiedMono ? 'target value' : 'photo color'} on top, your mix below. Tap a mix
+				to see where it goes.
 			</p>
 			<div class="pair">
 				<button type="button" class="row-button center" onclick={() => openPanel('paints')}>
