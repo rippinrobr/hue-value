@@ -234,3 +234,18 @@ test('Settings opens from a study and comes back to the same step', async ({ pag
 	await page.getByRole('heading', { name: 'Your mixes' }).waitFor();
 	await expect(shownRecipes(page)).toHaveText(recipes('app-sample', 'mono-default'));
 });
+
+test('a tapped tone stays lit through another palette and tone count', async ({ page }) => {
+	await openExample(page);
+	await toMixes(page);
+	const lit = page.locator('.tones [aria-pressed="true"]');
+	await page.getByRole('button', { name: 'Tone 2', exact: true }).click();
+	await expect(lit).toHaveCount(1);
+	await page.getByRole('button', { name: 'Palette', exact: true }).click();
+	await page.getByRole('button', { name: /^Zorn/ }).click();
+	await page.getByRole('button', { name: 'Mix', exact: true }).click();
+	await expect(lit).toHaveCount(1);
+	await page.getByRole('navigation').getByRole('button', { name: 'Values' }).click();
+	await page.getByRole('button', { name: 'More colors' }).click();
+	await expect(page.locator('[aria-label^="Color scale"] [aria-pressed="true"]')).toHaveCount(1);
+});

@@ -165,9 +165,9 @@ class Studio {
 			const settings = $state.snapshot(this.settings);
 			const study = await this.#client.analyze(settings);
 			if (!study) return;
+			this.selected = this.#follow(study);
 			this.study = study;
 			this.studied = settings;
-			if (this.selected >= study.zones.length) this.selected = -1;
 		} catch {
 			this.message = 'Something went wrong reading this photo. Try choosing it again.';
 		}
@@ -179,7 +179,6 @@ class Studio {
 	}
 
 	choosePalette(palette: PaletteId) {
-		this.selected = -1;
 		this.savePrefsLater();
 		return this.change({ palette });
 	}
@@ -231,6 +230,23 @@ class Studio {
 	async clearMask() {
 		this.mask.fill(0);
 		await this.commitMask();
+	}
+
+	/** Keeps a tapped tone lit when the groups change, such as for another palette or tone
+	 * count, by moving it to the new group nearest in value. */
+	#follow(next: Study) {
+		const was = this.study?.zones[this.selected];
+		if (this.selected < 0 || !was || this.study === next) return this.selected;
+		let best = -1;
+		let bestD = Infinity;
+		next.zones.forEach((zone, i) => {
+			const d = Math.abs(zone.L - was.L);
+			if (d < bestD) {
+				bestD = d;
+				best = i;
+			}
+		});
+		return best;
 	}
 
 	select(i: number) {
