@@ -1,0 +1,31 @@
+# Checks the API on every pull request and on main: formatting, go vet and the tests.
+name: API
+
+on:
+  pull_request:
+    paths: ['api/**', 'data/**', 'openapi.yaml', 'app/tests/golden/cases/search.json', '.github/workflows/api.yml']
+  push:
+    branches: [main]
+    paths: ['api/**', 'data/**', 'openapi.yaml', 'app/tests/golden/cases/search.json', '.github/workflows/api.yml']
+
+concurrency:
+  group: api-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: api/go.mod
+          cache-dependency-path: api/go.sum
+      - name: Formatting
+        run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
+      - run: go vet ./...
+      - run: go test -race ./...
