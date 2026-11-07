@@ -1,0 +1,3449 @@
+{
+	"artisan": [
+		{
+			"name": "Lemon Yellow",
+			"family": "yellow",
+			"code": "PY3",
+			"id": "lemon-yellow",
+			"rgb": [
+				0.78,
+				0.7999999999999999,
+				0.040000000000000924
+			],
+			"s": 0.6,
+			"label": "Lemon Yellow",
+			"pureL": 88.963869198222,
+			"hue": 105.35408607886677,
+			"chroma": 64.43354062369247,
+			"near": "olive-green",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY3",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Pale Hue",
+			"family": "yellow",
+			"code": "PY3, PY65",
+			"id": "cadmium-yellow-pale-hue",
+			"rgb": [
+				0.7904333923489966,
+				0.6273680843684042,
+				0.025997814706428812
+			],
+			"s": 0.6499999999999999,
+			"label": "Cadmium Yellow Pale Hue",
+			"pureL": 82.83980977079709,
+			"hue": 101.1035323165184,
+			"chroma": 68.39973256720356,
+			"near": "olive-green",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY3",
+					1
+				],
+				[
+					"PY65",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Light",
+			"family": "yellow",
+			"code": "PY35",
+			"id": "cadmium-yellow-light",
+			"rgb": [
+				0.7999999999999999,
+				0.62,
+				0.029999999999997584
+			],
+			"s": 0.8,
+			"label": "Cadmium Yellow Light",
+			"pureL": 82.68261587881783,
+			"hue": 100.33565443192998,
+			"chroma": 67.70932956760925,
+			"near": "olive-green",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY35",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Hue",
+			"family": "yellow",
+			"code": "PY65",
+			"id": "cadmium-yellow-hue",
+			"rgb": [
+				0.7999999999999999,
+				0.5500000000000002,
+				0.019999999999999574
+			],
+			"s": 0.7,
+			"label": "Cadmium Yellow Hue",
+			"pureL": 79.89097780085096,
+			"hue": 98.47994901224695,
+			"chroma": 70.5313917784337,
+			"near": "raw-umber",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PY65",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Deep Hue",
+			"family": "yellow",
+			"code": "PO43, PY65",
+			"id": "cadmium-yellow-deep-hue",
+			"rgb": [
+				0.6239360676417116,
+				0.23030980234354148,
+				0.019307940994185202
+			],
+			"s": 0.7749999999999999,
+			"label": "Cadmium Yellow Deep Hue",
+			"pureL": 61.54711984247804,
+			"hue": 83.53353258718568,
+			"chroma": 58.83943938414629,
+			"near": "raw-umber",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PY65",
+					3
+				],
+				[
+					"PO43",
+					1
+				]
+			]
+		},
+		{
+			"name": "Naples Yellow Hue",
+			"family": "yellow",
+			"code": "PR101, PW6, PY42",
+			"id": "naples-yellow-hue",
+			"rgb": [
+				0.6004009976185352,
+				0.3995175282501304,
+				0.13487288933144415
+			],
+			"s": 0.8222222222222222,
+			"label": "Naples Yellow Hue",
+			"pureL": 71.08536170889882,
+			"hue": 91.29180964778624,
+			"chroma": 28.709165630301662,
+			"near": "raw-umber",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PW6",
+					4
+				],
+				[
+					"PY42",
+					2
+				],
+				[
+					"PR101L",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Yellow Ochre",
+			"family": "earth",
+			"code": "PY42",
+			"id": "yellow-ochre",
+			"rgb": [
+				0.40000000000000013,
+				0.23999999999999977,
+				0.040000000000000924
+			],
+			"s": 0.5,
+			"label": "Yellow Ochre",
+			"pureL": 57.996782188786014,
+			"hue": 93.62092913305293,
+			"chroma": 41.59427338508828,
+			"near": "raw-umber",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PY42",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Orange Hue",
+			"family": "orange",
+			"code": "PO43",
+			"id": "orange",
+			"fav": 1,
+			"rgb": [
+				0.47,
+				0.11,
+				0.018
+			],
+			"s": 1,
+			"near": "red",
+			"comp": "blue",
+			"note": "A transparent orange that reaches a middle value.",
+			"label": "Orange",
+			"pureL": 49.48319990750896,
+			"hue": 66.4313603489635,
+			"chroma": 53.02371072420611,
+			"recipe": null
+		},
+		{
+			"name": "Cadmium Red Light",
+			"family": "red",
+			"code": "PR108",
+			"id": "cadmium-red-light",
+			"rgb": [
+				0.45000000000000007,
+				0.04499999999999993,
+				0.029999999999997584
+			],
+			"s": 0.9,
+			"label": "Cadmium Red Light",
+			"pureL": 42.76625876681022,
+			"hue": 34.981108056383334,
+			"chroma": 50.403483730635465,
+			"near": "permanent-alizarin-crimson",
+			"comp": "green",
+			"recipe": [
+				[
+					"PR108",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Red Hue",
+			"family": "red",
+			"code": "PR170, PR188",
+			"id": "red",
+			"fav": 1,
+			"rgb": [
+				0.45,
+				0.05,
+				0.035
+			],
+			"s": 1,
+			"near": "blue",
+			"comp": "green",
+			"note": "Bright, warm red.",
+			"label": "Red",
+			"pureL": 43.35351726633882,
+			"hue": 34.12014480353031,
+			"chroma": 48.588076480934404,
+			"recipe": null
+		},
+		{
+			"name": "Cadmium Red Dark",
+			"family": "red",
+			"code": "PR108",
+			"id": "cadmium-red-dark",
+			"rgb": [
+				0.3090537522460217,
+				0.02849223668452794,
+				0.027142302809924246
+			],
+			"s": 0.9500000000000002,
+			"label": "Cadmium Red Dark",
+			"pureL": 35.604574545719245,
+			"hue": 27.581166735546788,
+			"chroma": 48.401354439819,
+			"near": "permanent-alizarin-crimson",
+			"comp": "green",
+			"recipe": [
+				[
+					"PR108",
+					2
+				],
+				[
+					"PR264",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Cadmium Red Deep Hue",
+			"family": "red",
+			"code": "PO36, PR170",
+			"id": "cadmium-red-deep-hue",
+			"rgb": [
+				0.25409072428087276,
+				0.032012244630335474,
+				0.023776653866374176
+			],
+			"s": 0.9941176470588236,
+			"label": "Cadmium Red Deep Hue",
+			"pureL": 33.69624164126935,
+			"hue": 33.00942070024985,
+			"chroma": 43.920196532347724,
+			"near": "permanent-alizarin-crimson",
+			"comp": "green",
+			"recipe": [
+				[
+					"PR170",
+					2
+				],
+				[
+					"PO36",
+					1
+				],
+				[
+					"PR179",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Permanent Alizarin Crimson",
+			"family": "red",
+			"code": "PR179, PV19",
+			"id": "permanent-alizarin-crimson",
+			"rgb": [
+				0.09969789438749288,
+				0.011723970621893898,
+				0.016184790572808083
+			],
+			"s": 1.1333333333333333,
+			"label": "Permanent Alizarin Crimson",
+			"pureL": 20.34151747672111,
+			"hue": 18.745913792733177,
+			"chroma": 36.63553606150458,
+			"near": null,
+			"comp": "green",
+			"recipe": [
+				[
+					"PR179",
+					2
+				],
+				[
+					"PV19",
+					1
+				]
+			]
+		},
+		{
+			"name": "Permanent Rose",
+			"family": "pink",
+			"code": "PV19",
+			"id": "permanent-rose",
+			"rgb": [
+				0.25,
+				0.019999999999999574,
+				0.09999999999999964
+			],
+			"s": 1,
+			"label": "Permanent Rose",
+			"pureL": 32.84811331136057,
+			"hue": 345.15335686359055,
+			"chroma": 52.642078258470114,
+			"near": "dioxazine-purple",
+			"comp": "viridian-hue",
+			"recipe": [
+				[
+					"PV19",
+					1
+				]
+			]
+		},
+		{
+			"name": "Magenta",
+			"family": "pink",
+			"code": "PR122",
+			"id": "magenta",
+			"rgb": [
+				0.3500000000000001,
+				0.029999999999997584,
+				0.20000000000000018
+			],
+			"s": 1,
+			"label": "Magenta",
+			"pureL": 39.63196087994803,
+			"hue": 336.72938428883486,
+			"chroma": 59.33559426287439,
+			"near": "dioxazine-purple",
+			"comp": "phthalo-green-yellow-shade",
+			"recipe": [
+				[
+					"PR122",
+					1
+				]
+			]
+		},
+		{
+			"name": "Dioxazine Purple",
+			"family": "violet",
+			"code": "PV23",
+			"id": "dioxazine-purple",
+			"rgb": [
+				0.029999999999997584,
+				0.015000000000000568,
+				0.0600000000000005
+			],
+			"s": 1.6,
+			"label": "Dioxazine Purple",
+			"pureL": 16.224491881608095,
+			"hue": 309.5804876136947,
+			"chroma": 31.62775220947419,
+			"near": null,
+			"comp": "permanent-sap-green",
+			"recipe": [
+				[
+					"PV23",
+					1
+				]
+			]
+		},
+		{
+			"name": "French Ultramarine",
+			"family": "blue",
+			"code": "PB29",
+			"id": "blue",
+			"fav": 1,
+			"rgb": [
+				0.04,
+				0.03,
+				0.15
+			],
+			"s": 0.6,
+			"near": "pblue",
+			"comp": "orange",
+			"note": "Warm, violet-leaning blue.",
+			"label": "Ultramarine",
+			"pureL": 23.93091153831449,
+			"hue": 300.5971049293792,
+			"chroma": 41.320028105431945,
+			"recipe": null
+		},
+		{
+			"name": "Cobalt Blue",
+			"family": "blue",
+			"code": "PB28",
+			"id": "cobalt-blue",
+			"rgb": [
+				0.029999999999997584,
+				0.08000000000000007,
+				0.3500000000000001
+			],
+			"s": 0.4,
+			"label": "Cobalt Blue",
+			"pureL": 35.764649203710334,
+			"hue": 273.8902682209339,
+			"chroma": 35.187130641845236,
+			"near": "prussian-blue",
+			"comp": "olive-green",
+			"recipe": [
+				[
+					"PB28",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cobalt Blue Hue",
+			"family": "blue",
+			"code": "PB29, PB60",
+			"id": "cobalt-blue-hue",
+			"rgb": [
+				0.03751421809125688,
+				0.032653154003629226,
+				0.13926013754138422
+			],
+			"s": 0.7875,
+			"label": "Cobalt Blue Hue",
+			"pureL": 24.123691869684492,
+			"hue": 297.98610682082904,
+			"chroma": 37.8423731518401,
+			"near": "paynes-gray",
+			"comp": "permanent-sap-green",
+			"recipe": [
+				[
+					"PB29",
+					2
+				],
+				[
+					"PB60",
+					0.6
+				],
+				[
+					"PW6",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Phthalo Blue (Red Shade)",
+			"family": "blue",
+			"code": "PB15",
+			"id": "pblue",
+			"fav": 1,
+			"rgb": [
+				0.012,
+				0.022,
+				0.065
+			],
+			"s": 1.8,
+			"near": "blue",
+			"comp": "orange",
+			"note": "Cool, intense blue and very strong. Its tints are the brightest, cleanest blues in the set. Add it to white a speck at a time.",
+			"label": "Phthalo Blue",
+			"pureL": 16.978622464789517,
+			"hue": 283.2954972090411,
+			"chroma": 25.62165349396342,
+			"recipe": null
+		},
+		{
+			"name": "Prussian Blue",
+			"family": "blue",
+			"code": "PB27",
+			"id": "prussian-blue",
+			"rgb": [
+				0.012000000000000455,
+				0.019999999999999574,
+				0.040000000000000924
+			],
+			"s": 1.6,
+			"label": "Prussian Blue",
+			"pureL": 15.351898000702601,
+			"hue": 274.53855691383865,
+			"chroma": 15.73103694088921,
+			"near": null,
+			"comp": "olive-green",
+			"recipe": [
+				[
+					"PB27",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cerulean Blue",
+			"family": "blue",
+			"code": "PB35",
+			"id": "cerulean-blue",
+			"rgb": [
+				0.0600000000000005,
+				0.25,
+				0.40000000000000013
+			],
+			"s": 0.4,
+			"label": "Cerulean Blue",
+			"pureL": 54.07323428425467,
+			"hue": 225.921578408783,
+			"chroma": 20.978930465584195,
+			"near": "prussian-blue",
+			"comp": "indian-red",
+			"recipe": [
+				[
+					"PB35",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cerulean Blue Hue",
+			"family": "blue",
+			"code": "PB36, PW4",
+			"id": "cerulean-blue-hue",
+			"rgb": [
+				0.057777829828376426,
+				0.31326456304633665,
+				0.41781114642799044
+			],
+			"s": 0.5,
+			"label": "Cerulean Blue Hue",
+			"pureL": 58.64861296965991,
+			"hue": 213.38733244137754,
+			"chroma": 23.6539065389473,
+			"near": "green",
+			"comp": "permanent-alizarin-crimson",
+			"recipe": [
+				[
+					"PB36",
+					2
+				],
+				[
+					"PW4",
+					1
+				]
+			]
+		},
+		{
+			"name": "Phthalo Green (Blue Shade)",
+			"family": "green",
+			"code": "PG7",
+			"id": "green",
+			"fav": 1,
+			"rgb": [
+				0.012,
+				0.06,
+				0.045
+			],
+			"s": 1.6,
+			"near": "pblue",
+			"comp": "red",
+			"note": "Extremely strong. Tiny amounts tint a lot of white, so add it a speck at a time.",
+			"label": "Phthalo Green",
+			"pureL": 26.364677426323084,
+			"hue": 176.89984622173085,
+			"chroma": 20.769397778544363,
+			"recipe": null
+		},
+		{
+			"name": "Phthalo Green (Yellow Shade)",
+			"family": "green",
+			"code": "PG36",
+			"id": "phthalo-green-yellow-shade",
+			"rgb": [
+				0.019999999999999574,
+				0.09999999999999964,
+				0.05000000000000071
+			],
+			"s": 1.4,
+			"label": "Phthalo Green",
+			"pureL": 33.8538460328902,
+			"hue": 159.58370348403378,
+			"chroma": 29.507263342055907,
+			"near": "viridian-hue",
+			"comp": "permanent-rose",
+			"recipe": [
+				[
+					"PG36",
+					1
+				]
+			]
+		},
+		{
+			"name": "Viridian Hue",
+			"family": "green",
+			"code": "PG7, PY42, PY43",
+			"id": "viridian-hue",
+			"rgb": [
+				0.013535805364071507,
+				0.06567103795029094,
+				0.044785814865743845
+			],
+			"s": 1.2142857142857144,
+			"label": "Viridian Hue",
+			"pureL": 27.594601181391965,
+			"hue": 171.98876846598137,
+			"chroma": 22.77492503487213,
+			"near": null,
+			"comp": "permanent-rose",
+			"recipe": [
+				[
+					"PG7",
+					2
+				],
+				[
+					"PY42",
+					0.5
+				],
+				[
+					"PY43",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Permanent Sap Green",
+			"family": "green",
+			"code": "PB15, PY110",
+			"id": "permanent-sap-green",
+			"rgb": [
+				0.03446890565549943,
+				0.055495885871964745,
+				0.01635796505360787
+			],
+			"s": 0.8666666666666666,
+			"label": "Permanent Sap Green",
+			"pureL": 26.215607556466722,
+			"hue": 124.5542740784602,
+			"chroma": 27.630655871995515,
+			"near": null,
+			"comp": "dioxazine-purple",
+			"recipe": [
+				[
+					"PY110",
+					3
+				],
+				[
+					"PB15",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Olive Green",
+			"family": "green",
+			"code": "PBk6, PY110",
+			"id": "olive-green",
+			"rgb": [
+				0.08323574149623347,
+				0.07371384100928147,
+				0.014054420602789719
+			],
+			"s": 0.8142857142857142,
+			"label": "Olive Green",
+			"pureL": 32.13043653899726,
+			"hue": 101.58698051887319,
+			"chroma": 35.090114178856524,
+			"near": "raw-umber",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY110",
+					3
+				],
+				[
+					"PBk6",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Raw Sienna",
+			"family": "earth",
+			"code": "PBr7, PY42",
+			"id": "raw-sienna",
+			"rgb": [
+				0.28445055785964857,
+				0.15312443722939628,
+				0.03272662290818218
+			],
+			"s": 0.5,
+			"label": "Raw Sienna",
+			"pureL": 48.55498773336065,
+			"hue": 88.6495133260139,
+			"chroma": 37.321842919425514,
+			"near": "raw-umber",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PBr7S",
+					2
+				],
+				[
+					"PY42",
+					1
+				]
+			]
+		},
+		{
+			"name": "Burnt Sienna",
+			"family": "earth",
+			"code": "PR101",
+			"id": "burnt-sienna",
+			"rgb": [
+				0.16000000000000014,
+				0.05000000000000071,
+				0.021999999999998465
+			],
+			"s": 0.6,
+			"label": "Burnt Sienna",
+			"pureL": 32.11552130440018,
+			"hue": 57.78789084329452,
+			"chroma": 30.45012436173601,
+			"near": "indian-red",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PR101",
+					1
+				]
+			]
+		},
+		{
+			"name": "Indian Red",
+			"family": "earth",
+			"code": "PR101",
+			"id": "indian-red",
+			"rgb": [
+				0.0879538371691968,
+				0.03431024271498195,
+				0.015962351107177142
+			],
+			"s": 0.7370370370370369,
+			"label": "Indian Red",
+			"pureL": 25.072726847458938,
+			"hue": 59.86614639737121,
+			"chroma": 25.255614679905634,
+			"near": "permanent-alizarin-crimson",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PR101T",
+					1
+				],
+				[
+					"PBk11",
+					0.08
+				]
+			]
+		},
+		{
+			"name": "Raw Umber",
+			"family": "earth",
+			"code": "PBr7",
+			"id": "raw-umber",
+			"rgb": [
+				0.05799999999999983,
+				0.045999999999999375,
+				0.0259999999999998
+			],
+			"s": 0.75,
+			"label": "Raw Umber",
+			"pureL": 25.894185649033,
+			"hue": 90.08866183515681,
+			"chroma": 13.809537110587641,
+			"near": null,
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PBr7R",
+					1
+				]
+			]
+		},
+		{
+			"name": "Burnt Umber",
+			"family": "earth",
+			"code": "PBr7",
+			"id": "burnt-umber",
+			"rgb": [
+				0.0699999999999994,
+				0.03599999999999959,
+				0.019999999999999574
+			],
+			"s": 0.85,
+			"label": "Burnt Umber",
+			"pureL": 24.34532059405629,
+			"hue": 63.812728590228744,
+			"chroma": 18.279779539334406,
+			"near": "permanent-alizarin-crimson",
+			"comp": "prussian-blue",
+			"recipe": [
+				[
+					"PBr7B",
+					1
+				]
+			]
+		},
+		{
+			"name": "Payne's Gray",
+			"family": "gray",
+			"code": "PB29, PBk6",
+			"id": "paynes-gray",
+			"rgb": [
+				0.030788114221770968,
+				0.027637688268949745,
+				0.04241178963118841
+			],
+			"s": 0.9,
+			"label": "Payne's Gray",
+			"pureL": 19.79149200159489,
+			"hue": 300.66887361101277,
+			"chroma": 10.239169038193172,
+			"near": "prussian-blue",
+			"comp": "permanent-sap-green",
+			"recipe": [
+				[
+					"PB29",
+					1
+				],
+				[
+					"PBk6",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Ivory Black",
+			"family": "gray",
+			"code": "PBk9",
+			"id": "ivory-black",
+			"rgb": [
+				0.03200000000000003,
+				0.030999999999998806,
+				0.032999999999999474
+			],
+			"s": 1,
+			"label": "Ivory Black",
+			"pureL": 20.579364648590833,
+			"hue": 309.4580033254954,
+			"chroma": 1.5103630198585125,
+			"near": null,
+			"comp": null,
+			"recipe": [
+				[
+					"PBk9",
+					1
+				]
+			]
+		},
+		{
+			"name": "Lamp Black",
+			"family": "gray",
+			"code": "PBk6",
+			"id": "lamp-black",
+			"rgb": [
+				0.0259999999999998,
+				0.0259999999999998,
+				0.02699999999999747
+			],
+			"s": 1.5,
+			"label": "Lamp Black",
+			"pureL": 18.39673460621553,
+			"hue": 290.328126267596,
+			"chroma": 0.7904680572786863,
+			"near": null,
+			"comp": null,
+			"recipe": [
+				[
+					"PBk6",
+					1
+				]
+			]
+		}
+	],
+	"cobra": [
+		{
+			"name": "Permanent Lemon Yellow 254",
+			"family": "yellow",
+			"code": "PY184",
+			"id": "permanent-lemon-yellow-254",
+			"rgb": [
+				0.82,
+				0.7999999999999999,
+				0.05000000000000071
+			],
+			"s": 0.6,
+			"label": "Permanent Lemon Yellow",
+			"pureL": 89.39777198343157,
+			"hue": 105.0138470062875,
+			"chroma": 60.372276765034094,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY184",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Lemon 207",
+			"family": "yellow",
+			"code": "PY35",
+			"id": "cadmium-yellow-lemon-207",
+			"rgb": [
+				0.7951384508310819,
+				0.6483732177391592,
+				0.03183625686460978
+			],
+			"s": 0.7428571428571429,
+			"label": "Cadmium Yellow Lemon",
+			"pureL": 83.70798188358752,
+			"hue": 101.40073234272933,
+			"chroma": 66.96614818773958,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY35",
+					1
+				],
+				[
+					"PY3",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Primary Yellow 275",
+			"family": "yellow",
+			"code": "PY184, PY154",
+			"id": "primary-yellow-275",
+			"rgb": [
+				0.8082231096981214,
+				0.6919484102106495,
+				0.036203792991107875
+			],
+			"s": 0.7,
+			"label": "Primary Yellow",
+			"pureL": 85.46977860316203,
+			"hue": 102.4594052721477,
+			"chroma": 65.47708147510242,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY184",
+					1
+				],
+				[
+					"PY154",
+					1
+				]
+			]
+		},
+		{
+			"name": "Permanent Yellow Light 283",
+			"family": "yellow",
+			"code": "PY154",
+			"id": "permanent-yellow-light-283",
+			"rgb": [
+				0.7961174828146409,
+				0.6605114118835352,
+				0.03144346143673715
+			],
+			"s": 0.7538461538461538,
+			"label": "Permanent Yellow Light",
+			"pureL": 84.16958367835987,
+			"hue": 101.66175819291624,
+			"chroma": 67.60922941278659,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY154",
+					1
+				],
+				[
+					"PY3",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Permanent Yellow Medium 284",
+			"family": "yellow",
+			"code": "PY154",
+			"id": "permanent-yellow-medium-284",
+			"rgb": [
+				0.7999999999999999,
+				0.6400000000000001,
+				0.029999999999997584
+			],
+			"s": 0.8,
+			"label": "Permanent Yellow Medium",
+			"pureL": 83.44101102561662,
+			"hue": 100.9003993230503,
+			"chroma": 68.26544970738605,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY154",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Medium 271",
+			"family": "yellow",
+			"code": "PY35",
+			"id": "cadmium-yellow-medium-271",
+			"rgb": [
+				0.7999999999999999,
+				0.62,
+				0.029999999999997584
+			],
+			"s": 0.8,
+			"label": "Cadmium Yellow Medium",
+			"pureL": 82.68261587881783,
+			"hue": 100.33565443192998,
+			"chroma": 67.70932956760925,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY35",
+					1
+				]
+			]
+		},
+		{
+			"name": "Transparent Yellow Medium 272",
+			"family": "yellow",
+			"code": "PY128",
+			"id": "transparent-yellow-medium-272",
+			"rgb": [
+				0.6200000000000001,
+				0.52,
+				0.019999999999999574
+			],
+			"s": 0.6,
+			"label": "Transparent Yellow Medium",
+			"pureL": 76.38489596511229,
+			"hue": 101.6579347159506,
+			"chroma": 68.26858966730614,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY128",
+					1
+				]
+			]
+		},
+		{
+			"name": "Aureoline 242",
+			"family": "yellow",
+			"code": "PY150",
+			"id": "aureoline-242",
+			"rgb": [
+				0.5500000000000002,
+				0.40000000000000013,
+				0.019999999999999574
+			],
+			"s": 0.6,
+			"label": "Aureoline",
+			"pureL": 69.78559493876361,
+			"hue": 99.11927165932627,
+			"chroma": 63.86880354980354,
+			"near": "raw-umber-408",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY150",
+					1
+				]
+			]
+		},
+		{
+			"name": "Indian Yellow 244",
+			"family": "yellow",
+			"code": "PY110",
+			"id": "indian-yellow-244",
+			"rgb": [
+				0.4747824963366353,
+				0.25298297221459043,
+				0.013636221612934207
+			],
+			"s": 0.6666666666666666,
+			"label": "Indian Yellow",
+			"pureL": 60.14595198922042,
+			"hue": 92.43185931345943,
+			"chroma": 62.186177540506456,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY110",
+					1
+				],
+				[
+					"PY150",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Permanent Yellow Deep 285",
+			"family": "yellow",
+			"code": "PY154, PO43",
+			"id": "permanent-yellow-deep-285",
+			"rgb": [
+				0.6341416821349828,
+				0.2492785197074039,
+				0.025081093105132624
+			],
+			"s": 0.8500000000000001,
+			"label": "Permanent Yellow Deep",
+			"pureL": 62.920232766797184,
+			"hue": 83.78385296660491,
+			"chroma": 56.36971458729427,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY154",
+					3
+				],
+				[
+					"PO43",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Yellow Deep 210",
+			"family": "yellow",
+			"code": "PY35, PO20",
+			"id": "cadmium-yellow-deep-210",
+			"rgb": [
+				0.7126687803200703,
+				0.3374235199983897,
+				0.022057586481484037
+			],
+			"s": 0.8333333333333334,
+			"label": "Cadmium Yellow Deep",
+			"pureL": 69.07104315787102,
+			"hue": 89.65543326968407,
+			"chroma": 62.59967917203169,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY35",
+					2
+				],
+				[
+					"PO20",
+					1
+				]
+			]
+		},
+		{
+			"name": "Naples Yellow Light 222",
+			"family": "yellow",
+			"code": "PW7, PY154, PBr24",
+			"id": "naples-yellow-light-222",
+			"rgb": [
+				0.797438363741231,
+				0.6956202580357158,
+				0.10249439654234394
+			],
+			"s": 0.4127450980392157,
+			"label": "Naples Yellow Light",
+			"pureL": 85.72782548977888,
+			"hue": 104.55800974025982,
+			"chroma": 38.856653558027986,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PW7",
+					4
+				],
+				[
+					"PY154",
+					0.6
+				],
+				[
+					"PBr24",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Naples Yellow Deep 223",
+			"family": "yellow",
+			"code": "PW7, PY154, PBr24",
+			"id": "naples-yellow-deep-223",
+			"rgb": [
+				0.7609310049373492,
+				0.6327865690689436,
+				0.07892184000074742
+			],
+			"s": 0.44583333333333336,
+			"label": "Naples Yellow Deep",
+			"pureL": 82.91560277802512,
+			"hue": 103.19471662415089,
+			"chroma": 43.748562862881805,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PW7",
+					3
+				],
+				[
+					"PY154",
+					0.8
+				],
+				[
+					"PBr24",
+					1
+				]
+			]
+		},
+		{
+			"name": "Naples Yellow Red 224",
+			"family": "yellow",
+			"code": "PW7, PO43, PBr24",
+			"id": "naples-yellow-red-224",
+			"rgb": [
+				0.64629272074421,
+				0.2947185526940117,
+				0.0677786238520941
+			],
+			"s": 0.4318181818181817,
+			"label": "Naples Yellow Red",
+			"pureL": 65.98761881505855,
+			"hue": 86.02728061268277,
+			"chroma": 34.89133799317332,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PW7",
+					3
+				],
+				[
+					"PO43",
+					0.4
+				],
+				[
+					"PBr24",
+					1
+				]
+			]
+		},
+		{
+			"name": "Chartreuse 233",
+			"family": "green",
+			"code": "PY184, PG7",
+			"id": "chartreuse-233",
+			"rgb": [
+				0.09105446468529799,
+				0.2953904028183072,
+				0.049390111362882294
+			],
+			"s": 0.6428571428571428,
+			"label": "Chartreuse",
+			"pureL": 55.5010589145119,
+			"hue": 132.72892439299017,
+			"chroma": 47.26623126970243,
+			"near": "sap-green-623",
+			"comp": "permanent-blue-violet-568",
+			"recipe": [
+				[
+					"PY184",
+					3
+				],
+				[
+					"PG7",
+					0.15
+				]
+			]
+		},
+		{
+			"name": "Transparent Yellow Green 281",
+			"family": "green",
+			"code": "PY129",
+			"id": "transparent-yellow-green-281",
+			"rgb": [
+				0.15000000000000036,
+				0.18000000000000016,
+				0.019999999999999574
+			],
+			"s": 0.7,
+			"label": "Transparent Yellow Green",
+			"pureL": 47.244903355567914,
+			"hue": 109.49489961119144,
+			"chroma": 48.665497176737546,
+			"near": "raw-umber-408",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY129",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Orange 211",
+			"family": "orange",
+			"code": "PO20",
+			"id": "orange",
+			"fav": 1,
+			"rgb": [
+				0.62,
+				0.2,
+				0.015
+			],
+			"s": 0.9,
+			"near": "red",
+			"comp": "blue",
+			"note": "A light, opaque orange.",
+			"label": "Orange",
+			"pureL": 59.519699419917075,
+			"hue": 79.84908530862458,
+			"chroma": 61.32229366089258,
+			"recipe": null
+		},
+		{
+			"name": "Permanent Orange 266",
+			"family": "orange",
+			"code": "PY154, PO43",
+			"id": "permanent-orange-266",
+			"rgb": [
+				0.5207023195300238,
+				0.1416487804984361,
+				0.020322123684458404
+			],
+			"s": 0.9333333333333332,
+			"label": "Permanent Orange",
+			"pureL": 53.32781685582708,
+			"hue": 71.76860286682233,
+			"chroma": 53.37056444607276,
+			"near": "vandyke-brown-403",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PO43",
+					2
+				],
+				[
+					"PY154",
+					1
+				]
+			]
+		},
+		{
+			"name": "Royal Orange 298",
+			"family": "orange",
+			"code": "PO64",
+			"id": "royal-orange-298",
+			"rgb": [
+				0.5500000000000002,
+				0.13999999999999968,
+				0.019999999999999574
+			],
+			"s": 0.9,
+			"label": "Royal Orange",
+			"pureL": 53.867702350152996,
+			"hue": 70.74709001355524,
+			"chroma": 54.19051414603022,
+			"near": "vandyke-brown-403",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PO64",
+					1
+				]
+			]
+		},
+		{
+			"name": "Pyrrole Orange 278",
+			"family": "orange",
+			"code": "PO71, PR264",
+			"id": "pyrrole-orange-278",
+			"rgb": [
+				0.38555509998704807,
+				0.05628859584962953,
+				0.019999999999999574
+			],
+			"s": 1.0125,
+			"label": "Pyrrole Orange",
+			"pureL": 41.79365568624185,
+			"hue": 48.37900875926414,
+			"chroma": 50.034450724593775,
+			"near": "red-earth-436",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PO71",
+					3
+				],
+				[
+					"PR264",
+					0.2
+				]
+			]
+		},
+		{
+			"name": "Vermilion 311",
+			"family": "red",
+			"code": "PO43",
+			"id": "vermilion-311",
+			"rgb": [
+				0.4620792445831039,
+				0.0766030763246075,
+				0.02028754525717602
+			],
+			"s": 1.023076923076923,
+			"label": "Vermilion",
+			"pureL": 46.24304312350497,
+			"hue": 54.62531104437414,
+			"chroma": 52.003194387691735,
+			"near": "transparent-oxide-red-378",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PO43",
+					1
+				],
+				[
+					"PR254",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Permanent Red Light 370",
+			"family": "red",
+			"code": "PR255, PO73",
+			"id": "permanent-red-light-370",
+			"rgb": [
+				0.5233599073198028,
+				0.08233487021405672,
+				0.023999423681882348
+			],
+			"s": 1,
+			"label": "Permanent Red Light",
+			"pureL": 48.496670153442196,
+			"hue": 53.10759703049365,
+			"chroma": 52.01836520917769,
+			"near": "transparent-oxide-red-378",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR255",
+					1
+				],
+				[
+					"PO73",
+					1
+				]
+			]
+		},
+		{
+			"name": "Pyrrole Red Light 340",
+			"family": "red",
+			"code": "PR254, PO43",
+			"id": "pyrrole-red-light-340",
+			"rgb": [
+				0.44884928544100133,
+				0.04989924133223944,
+				0.02618035670560559
+			],
+			"s": 1.0666666666666667,
+			"label": "Pyrrole Red Light",
+			"pureL": 43.21235913108095,
+			"hue": 39.75395093553442,
+			"chroma": 51.83922593480391,
+			"near": "red-earth-436",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR254",
+					2
+				],
+				[
+					"PO43",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Red Light 303",
+			"family": "red",
+			"code": "PR108",
+			"id": "cadmium-red-light-303",
+			"rgb": [
+				0.4777659814212172,
+				0.05472282719320809,
+				0.02437371390334775
+			],
+			"s": 0.8999999999999999,
+			"label": "Cadmium Red Light",
+			"pureL": 44.58518002774409,
+			"hue": 43.23906086999597,
+			"chroma": 51.94436227715816,
+			"near": "red-earth-436",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR108",
+					1
+				],
+				[
+					"PO20",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Pyrrole Red 315",
+			"family": "red",
+			"code": "PR254",
+			"id": "red",
+			"fav": 1,
+			"rgb": [
+				0.44,
+				0.04,
+				0.033
+			],
+			"s": 1.1,
+			"near": "blue",
+			"comp": "green",
+			"note": "Clean, punchy red with strong tinting.",
+			"label": "Red",
+			"pureL": 41.92792861379507,
+			"hue": 30.585871897189634,
+			"chroma": 51.76746792467338,
+			"recipe": null
+		},
+		{
+			"name": "Cadmium Red Medium 314",
+			"family": "red",
+			"code": "PR108",
+			"id": "cadmium-red-medium-314",
+			"rgb": [
+				0.45000000000000007,
+				0.04499999999999993,
+				0.029999999999997584
+			],
+			"s": 0.9,
+			"label": "Cadmium Red Medium",
+			"pureL": 42.76625876681022,
+			"hue": 34.981108056383334,
+			"chroma": 50.403483730635465,
+			"near": "red-earth-436",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR108",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cadmium Red Deep 306",
+			"family": "red",
+			"code": "PR108",
+			"id": "cadmium-red-deep-306",
+			"rgb": [
+				0.3090537522460217,
+				0.02849223668452794,
+				0.027142302809924246
+			],
+			"s": 0.9500000000000002,
+			"label": "Cadmium Red Deep",
+			"pureL": 35.604574545719245,
+			"hue": 27.581166735546788,
+			"chroma": 48.401354439819,
+			"near": "madder-lake-389",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR108",
+					2
+				],
+				[
+					"PR264",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Pyrrole Red Deep 345",
+			"family": "red",
+			"code": "PR254, PR264",
+			"id": "pyrrole-red-deep-345",
+			"rgb": [
+				0.2560753126640005,
+				0.021931545708966382,
+				0.02684097355802706
+			],
+			"s": 1.1333333333333335,
+			"label": "Pyrrole Red Deep",
+			"pureL": 32.272455975221185,
+			"hue": 22.937532240958376,
+			"chroma": 47.82678004571839,
+			"near": "madder-lake-389",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR254",
+					2
+				],
+				[
+					"PR264",
+					1
+				]
+			]
+		},
+		{
+			"name": "Transparent Red Medium 317",
+			"family": "red",
+			"code": "PR207",
+			"id": "transparent-red-medium-317",
+			"rgb": [
+				0.21999999999999975,
+				0.019999999999999574,
+				0.040000000000000924
+			],
+			"s": 0.9,
+			"label": "Transparent Red Medium",
+			"pureL": 30.391298368239973,
+			"hue": 8.610295290291333,
+			"chroma": 44.52419648129358,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR207",
+					1
+				]
+			]
+		},
+		{
+			"name": "Carmine 318",
+			"family": "red",
+			"code": "PR176",
+			"id": "carmine-318",
+			"rgb": [
+				0.30000000000000004,
+				0.019999999999999574,
+				0.05000000000000071
+			],
+			"s": 0.9,
+			"label": "Carmine",
+			"pureL": 34.33321940653223,
+			"hue": 6.154851517971508,
+			"chroma": 50.383063928626186,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR176",
+					1
+				]
+			]
+		},
+		{
+			"name": "Madder Lake 389",
+			"family": "red",
+			"code": "PR264",
+			"id": "madder-lake-389",
+			"rgb": [
+				0.15000000000000036,
+				0.012000000000000455,
+				0.019999999999999574
+			],
+			"s": 1.2,
+			"label": "Madder Lake",
+			"pureL": 24.295138043787922,
+			"hue": 17.63495284458952,
+			"chroma": 43.93820660571845,
+			"near": null,
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR264",
+					1
+				]
+			]
+		},
+		{
+			"name": "Burnt Carmine 323",
+			"family": "red",
+			"code": "PR264, PB29",
+			"id": "burnt-carmine-323",
+			"rgb": [
+				0.1100893125591833,
+				0.013018642643899625,
+				0.02254169265011896
+			],
+			"s": 1.0615384615384613,
+			"label": "Burnt Carmine",
+			"pureL": 21.705602412499488,
+			"hue": 11.539462928833132,
+			"chroma": 36.92050715427472,
+			"near": null,
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR264",
+					2
+				],
+				[
+					"PB29",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Quinacridone Red 364",
+			"family": "pink",
+			"code": "PR209",
+			"id": "quinacridone-red-364",
+			"rgb": [
+				0.30000000000000004,
+				0.019999999999999574,
+				0.05000000000000071
+			],
+			"s": 1,
+			"label": "Quinacridone Red",
+			"pureL": 34.33321940653223,
+			"hue": 6.725000129270995,
+			"chroma": 50.54078546573814,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR209",
+					1
+				]
+			]
+		},
+		{
+			"name": "Rose 357",
+			"family": "pink",
+			"code": "PW6, PR209",
+			"id": "rose-357",
+			"rgb": [
+				0.48346963788857855,
+				0.055684279684832916,
+				0.12658151764211256
+			],
+			"s": 1,
+			"label": "Rose",
+			"pureL": 45.87299033788495,
+			"hue": 358.65996593742034,
+			"chroma": 45.01695486534266,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PW6",
+					2
+				],
+				[
+					"PR209",
+					1
+				]
+			]
+		},
+		{
+			"name": "Persian Rose 330",
+			"family": "pink",
+			"code": "PW7, PR202",
+			"id": "persian-rose-330",
+			"rgb": [
+				0.3871428516335187,
+				0.04899701397788192,
+				0.1776408038814119
+			],
+			"s": 0.5666666666666667,
+			"label": "Persian Rose",
+			"pureL": 42.789586772061575,
+			"hue": 341.4280388768237,
+			"chroma": 45.205153881782365,
+			"near": "permanent-violet-medium-537",
+			"comp": "permanent-green-deep-619",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PR202",
+					1
+				]
+			]
+		},
+		{
+			"name": "Potter's Pink 356",
+			"family": "pink",
+			"code": "PR101, PV19, PW6, PBk11",
+			"id": "potters-pink-356",
+			"rgb": [
+				0.3821750946191671,
+				0.10737668323978955,
+				0.1354321850147624
+			],
+			"s": 0.9201365187713311,
+			"label": "Potter's Pink",
+			"pureL": 47.984736410977874,
+			"hue": 8.617296285592772,
+			"chroma": 25.426106972532846,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PW6",
+					2
+				],
+				[
+					"PR101L",
+					0.6
+				],
+				[
+					"PV19",
+					0.3
+				],
+				[
+					"PBk11",
+					0.03
+				]
+			]
+		},
+		{
+			"name": "Primary Magenta 369",
+			"family": "pink",
+			"code": "PV19",
+			"id": "primary-magenta-369",
+			"rgb": [
+				0.2717150794507961,
+				0.022104895583897388,
+				0.1165026278501129
+			],
+			"s": 1,
+			"label": "Primary Magenta",
+			"pureL": 34.393431902279026,
+			"hue": 343.3295995573934,
+			"chroma": 53.93454859397802,
+			"near": "permanent-violet-medium-537",
+			"comp": "permanent-green-deep-619",
+			"recipe": [
+				[
+					"PV19",
+					1
+				],
+				[
+					"PR122",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Permanent Red Violet Light 577",
+			"family": "pink",
+			"code": "PR202, PW7",
+			"id": "permanent-red-violet-light-577",
+			"rgb": [
+				0.3487982318146807,
+				0.03968518176593605,
+				0.15068351216804388
+			],
+			"s": 0.675,
+			"label": "Permanent Red Violet Light",
+			"pureL": 40.15007223317208,
+			"hue": 342.9711457977411,
+			"chroma": 47.79110401897535,
+			"near": "primary-magenta-369",
+			"comp": "permanent-green-deep-619",
+			"recipe": [
+				[
+					"PR202",
+					1
+				],
+				[
+					"PW7",
+					1
+				]
+			]
+		},
+		{
+			"name": "Permanent Red Violet 567",
+			"family": "violet",
+			"code": "PV23, PR122",
+			"id": "permanent-red-violet-567",
+			"rgb": [
+				0.08519336055392301,
+				0.023332036403019174,
+				0.11941845777762783
+			],
+			"s": 1.1199999999999999,
+			"label": "Permanent Red Violet",
+			"pureL": 24.771676988674315,
+			"hue": 319.73953073225266,
+			"chroma": 43.9963145124665,
+			"near": "permanent-blue-violet-568",
+			"comp": "sap-green-623",
+			"recipe": [
+				[
+					"PR122",
+					2
+				],
+				[
+					"PV23",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Permanent Violet Medium 537",
+			"family": "violet",
+			"code": "PV19",
+			"id": "permanent-violet-medium-537",
+			"rgb": [
+				0.08913736093175739,
+				0.01850457588830068,
+				0.08605548965667342
+			],
+			"s": 1.1,
+			"label": "Permanent Violet Medium",
+			"pureL": 23.134692016621138,
+			"hue": 327.65239941447834,
+			"chroma": 41.72804822968415,
+			"near": "permanent-blue-violet-568",
+			"comp": "permanent-green-deep-619",
+			"recipe": [
+				[
+					"PV19",
+					1
+				],
+				[
+					"PV23",
+					0.2
+				]
+			]
+		},
+		{
+			"name": "Quinacridone Purple Bluish 593",
+			"family": "violet",
+			"code": "PV55",
+			"id": "quinacridone-purple-bluish-593",
+			"rgb": [
+				0.1200000000000001,
+				0.029999999999997584,
+				0.15000000000000036
+			],
+			"s": 1,
+			"label": "Quinacridone Purple Bluish",
+			"pureL": 28.84998059230371,
+			"hue": 322.1642610224295,
+			"chroma": 45.57576791966361,
+			"near": "permanent-red-violet-567",
+			"comp": "sap-green-623",
+			"recipe": [
+				[
+					"PV55",
+					1
+				]
+			]
+		},
+		{
+			"name": "Violet 536",
+			"family": "violet",
+			"code": "PW7, PR122, PV23",
+			"id": "violet-536",
+			"rgb": [
+				0.0645344321488226,
+				0.023563907969837317,
+				0.10634770825266138
+			],
+			"s": 0.8884615384615384,
+			"label": "Violet",
+			"pureL": 23.084671332395935,
+			"hue": 315.60209092000497,
+			"chroma": 39.97734391154507,
+			"near": "permanent-blue-violet-568",
+			"comp": "sap-green-623",
+			"recipe": [
+				[
+					"PW7",
+					1
+				],
+				[
+					"PR122",
+					1
+				],
+				[
+					"PV23",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Permanent Blue Violet 568",
+			"family": "violet",
+			"code": "PV23, PR122",
+			"id": "permanent-blue-violet-568",
+			"rgb": [
+				0.03335636129613029,
+				0.015882155051265556,
+				0.06501565788847152
+			],
+			"s": 1.5,
+			"label": "Permanent Blue Violet",
+			"pureL": 17.057850619007567,
+			"hue": 310.4647311552898,
+			"chroma": 32.94021205805797,
+			"near": null,
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PV23",
+					2
+				],
+				[
+					"PR122",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Ultramarine Violet 507",
+			"family": "violet",
+			"code": "PV15, PB29",
+			"id": "ultramarine-violet-507",
+			"rgb": [
+				0.06394452490144076,
+				0.04362661020525671,
+				0.19948057554322407
+			],
+			"s": 0.5333333333333333,
+			"label": "Ultramarine Violet",
+			"pureL": 29.20943629096886,
+			"hue": 302.57141783873857,
+			"chroma": 38.680981379591444,
+			"near": "permanent-blue-violet-568",
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PV15",
+					2
+				],
+				[
+					"PB29",
+					1
+				]
+			]
+		},
+		{
+			"name": "Blue Violet 548",
+			"family": "violet",
+			"code": "PW7, PB29, PV23",
+			"id": "blue-violet-548",
+			"rgb": [
+				0.04097621074752489,
+				0.024991869883297824,
+				0.10672212685358407
+			],
+			"s": 0.6714285714285714,
+			"label": "Blue Violet",
+			"pureL": 21.686428488737455,
+			"hue": 305.1850519678408,
+			"chroma": 37.309335112021365,
+			"near": "permanent-blue-violet-568",
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PW7",
+					1
+				],
+				[
+					"PB29",
+					2
+				],
+				[
+					"PV23",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Ultramarine 504",
+			"family": "blue",
+			"code": "PB29",
+			"id": "blue",
+			"fav": 1,
+			"rgb": [
+				0.042,
+				0.032,
+				0.15
+			],
+			"s": 0.55,
+			"near": "pblue",
+			"comp": "orange",
+			"note": "Warm, violet-leaning blue.",
+			"label": "Ultramarine",
+			"pureL": 24.527461222671903,
+			"hue": 300.3401936407321,
+			"chroma": 39.385828811790255,
+			"recipe": null
+		},
+		{
+			"name": "Cobalt Blue (Ultramarine) 512",
+			"family": "blue",
+			"code": "PB29, PB15",
+			"id": "cobalt-blue-ultramarine-512",
+			"rgb": [
+				0.030691038147285354,
+				0.03227573130310013,
+				0.1315613817733512
+			],
+			"s": 0.7324324324324324,
+			"label": "Cobalt Blue",
+			"pureL": 23.374079449067985,
+			"hue": 294.27784068749634,
+			"chroma": 36.405811473091944,
+			"near": "pblue",
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PB29",
+					3
+				],
+				[
+					"PB15",
+					0.3
+				],
+				[
+					"PW6",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Cobalt Blue 511",
+			"family": "blue",
+			"code": "PB28",
+			"id": "cobalt-blue-511",
+			"rgb": [
+				0.029999999999997584,
+				0.08000000000000007,
+				0.3500000000000001
+			],
+			"s": 0.4,
+			"label": "Cobalt Blue",
+			"pureL": 35.764649203710334,
+			"hue": 273.8902682209339,
+			"chroma": 35.187130641845236,
+			"near": "prussian-blue-508",
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PB28",
+					1
+				]
+			]
+		},
+		{
+			"name": "King's Blue 517",
+			"family": "blue",
+			"code": "PW7, PB29",
+			"id": "kings-blue-517",
+			"rgb": [
+				0.07957638827675773,
+				0.06087620215718381,
+				0.25084770120468614
+			],
+			"s": 0.4333333333333333,
+			"label": "King's Blue",
+			"pureL": 33.68281491737199,
+			"hue": 300.239756947038,
+			"chroma": 34.003720445939365,
+			"near": "blue",
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PB29",
+					1
+				]
+			]
+		},
+		{
+			"name": "Greyish Blue 562",
+			"family": "blue",
+			"code": "PW7, PB29, PBk9",
+			"id": "greyish-blue-562",
+			"rgb": [
+				0.06894161920529118,
+				0.055349730782410234,
+				0.1472771692242909
+			],
+			"s": 0.46031746031746024,
+			"label": "Greyish Blue",
+			"pureL": 30.61086768188568,
+			"hue": 300.7223668119873,
+			"chroma": 24.254953255941906,
+			"near": "blue",
+			"comp": "olive-green-620",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PB29",
+					1
+				],
+				[
+					"PBk9",
+					0.15
+				]
+			]
+		},
+		{
+			"name": "Phthalo Blue 570",
+			"family": "blue",
+			"code": "PB15",
+			"id": "pblue",
+			"fav": 1,
+			"rgb": [
+				0.012,
+				0.022,
+				0.065
+			],
+			"s": 1.7,
+			"near": "blue",
+			"comp": "orange",
+			"note": "Cool, intense blue and very strong. Its tints are the brightest, cleanest blues in the set. Add it to white a speck at a time.",
+			"label": "Phthalo Blue",
+			"pureL": 16.978622464789517,
+			"hue": 283.20840830256236,
+			"chroma": 25.73690869854899,
+			"recipe": null
+		},
+		{
+			"name": "Primary Cyan 572",
+			"family": "blue",
+			"code": "PB15, PW7",
+			"id": "primary-cyan-572",
+			"rgb": [
+				0.015590584361703463,
+				0.028413127524874682,
+				0.0819645800359412
+			],
+			"s": 0.8899999999999999,
+			"label": "Primary Cyan",
+			"pureL": 19.864172498346043,
+			"hue": 280.8978267026531,
+			"chroma": 27.26572206033819,
+			"near": "prussian-blue-508",
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PB15",
+					1
+				],
+				[
+					"PW7",
+					1.5
+				]
+			]
+		},
+		{
+			"name": "Prussian Blue 508",
+			"family": "blue",
+			"code": "PB27",
+			"id": "prussian-blue-508",
+			"rgb": [
+				0.012000000000000455,
+				0.019999999999999574,
+				0.040000000000000924
+			],
+			"s": 1.6,
+			"label": "Prussian Blue",
+			"pureL": 15.351898000702601,
+			"hue": 274.53855691383865,
+			"chroma": 15.73103694088921,
+			"near": null,
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PB27",
+					1
+				]
+			]
+		},
+		{
+			"name": "Indigo 533",
+			"family": "blue",
+			"code": "PB29, PB15, PBk11",
+			"id": "indigo-533",
+			"rgb": [
+				0.019367791932833,
+				0.026068946900554835,
+				0.055215909683099085
+			],
+			"s": 1.025,
+			"label": "Indigo",
+			"pureL": 18.69169394086164,
+			"hue": 282.0378242396501,
+			"chroma": 18.2934349630909,
+			"near": null,
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PB29",
+					1
+				],
+				[
+					"PB15",
+					0.5
+				],
+				[
+					"PBk11",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Cerulean Blue 534",
+			"family": "blue",
+			"code": "PB35",
+			"id": "cerulean-blue-534",
+			"rgb": [
+				0.0600000000000005,
+				0.25,
+				0.40000000000000013
+			],
+			"s": 0.4,
+			"label": "Cerulean Blue",
+			"pureL": 54.07323428425467,
+			"hue": 225.921578408783,
+			"chroma": 20.978930465584195,
+			"near": "phthalo-turquoise-blue-565",
+			"comp": "red-earth-436",
+			"recipe": [
+				[
+					"PB35",
+					1
+				]
+			]
+		},
+		{
+			"name": "Cerulean Blue (Phthalo) 535",
+			"family": "blue",
+			"code": "PB15, PW7",
+			"id": "cerulean-blue-phthalo-535",
+			"rgb": [
+				0.021460349574059734,
+				0.03873937466697441,
+				0.10776107177883354
+			],
+			"s": 0.6199999999999999,
+			"label": "Cerulean Blue",
+			"pureL": 23.68770734954815,
+			"hue": 278.16784623689824,
+			"chroma": 26.8846918653446,
+			"near": "prussian-blue-508",
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PB15",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Caribbean Blue 542",
+			"family": "blue",
+			"code": "PB15, PG7, PW6",
+			"id": "caribbean-blue-542",
+			"rgb": [
+				0.029392337250470746,
+				0.06601792159824704,
+				0.12324655421631325
+			],
+			"s": 1.1785714285714286,
+			"label": "Caribbean Blue",
+			"pureL": 30.001026393861636,
+			"hue": 259.57770894578437,
+			"chroma": 19.508820526985776,
+			"near": "phthalo-turquoise-blue-565",
+			"comp": "transparent-red-ochre-419",
+			"recipe": [
+				[
+					"PW6",
+					2
+				],
+				[
+					"PB15",
+					0.5
+				],
+				[
+					"PG7",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Turquoise Blue 522",
+			"family": "blue",
+			"code": "PW7, PB15, PG7",
+			"id": "turquoise-blue-522",
+			"rgb": [
+				0.016233317411916914,
+				0.04175522975464041,
+				0.07074909758067616
+			],
+			"s": 0.81875,
+			"label": "Turquoise Blue",
+			"pureL": 23.142961404740788,
+			"hue": 250.23613228081427,
+			"chroma": 17.226342135909345,
+			"near": "prussian-blue-508",
+			"comp": "transparent-red-ochre-419",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PB15",
+					0.6
+				],
+				[
+					"PG7",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Phthalo Turquoise Blue 565",
+			"family": "blue",
+			"code": "PB15, PG7",
+			"id": "phthalo-turquoise-blue-565",
+			"rgb": [
+				0.012000000000000455,
+				0.03128053837402156,
+				0.05378778763592962
+			],
+			"s": 1.6,
+			"label": "Phthalo Turquoise Blue",
+			"pureL": 19.559440395965446,
+			"hue": 254.13684062671808,
+			"chroma": 15.725445702810951,
+			"near": "prussian-blue-508",
+			"comp": "transparent-red-ochre-419",
+			"recipe": [
+				[
+					"PB15",
+					1
+				],
+				[
+					"PG7",
+					1
+				]
+			]
+		},
+		{
+			"name": "Phthalo Green 675",
+			"family": "green",
+			"code": "PG7",
+			"id": "green",
+			"fav": 1,
+			"rgb": [
+				0.012,
+				0.06,
+				0.045
+			],
+			"s": 1.5,
+			"near": "pblue",
+			"comp": "red",
+			"note": "Extremely strong. Tiny amounts tint a lot of white, so add it a speck at a time.",
+			"label": "Phthalo Green",
+			"pureL": 26.364677426323084,
+			"hue": 176.98059152964117,
+			"chroma": 20.90920654402001,
+			"recipe": null
+		},
+		{
+			"name": "Viridian 616",
+			"family": "green",
+			"code": "PG7, PBk11",
+			"id": "viridian-616",
+			"rgb": [
+				0.012558017263408772,
+				0.05585607279284588,
+				0.043391921403053146
+			],
+			"s": 1.4727272727272727,
+			"label": "Viridian",
+			"pureL": 25.488223153449063,
+			"hue": 178.41530207296626,
+			"chroma": 19.424971570696954,
+			"near": "perylene-green-black-721",
+			"comp": "burnt-carmine-323",
+			"recipe": [
+				[
+					"PG7",
+					2
+				],
+				[
+					"PBk11",
+					0.2
+				]
+			]
+		},
+		{
+			"name": "Emerald Green 615",
+			"family": "green",
+			"code": "PW7, PG7, PY154",
+			"id": "emerald-green-615",
+			"rgb": [
+				0.02688907927097617,
+				0.1203931125861919,
+				0.05567806658523189
+			],
+			"s": 0.65,
+			"label": "Emerald Green",
+			"pureL": 37.085535441994864,
+			"hue": 157.7300174014074,
+			"chroma": 30.64628347664114,
+			"near": "permanent-green-deep-619",
+			"comp": "permanent-violet-medium-537",
+			"recipe": [
+				[
+					"PW7",
+					2
+				],
+				[
+					"PG7",
+					0.6
+				],
+				[
+					"PY154",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Pastel Green Blue 611",
+			"family": "green",
+			"code": "PY154, PG7, PW6",
+			"id": "pastel-green-blue-611",
+			"rgb": [
+				0.06824181479990532,
+				0.24527198469273936,
+				0.14294512992999397
+			],
+			"s": 1.037837837837838,
+			"label": "Pastel Green Blue",
+			"pureL": 51.86516834283373,
+			"hue": 163.6180803570702,
+			"chroma": 26.743910155474797,
+			"near": "permanent-green-deep-619",
+			"comp": "primary-magenta-369",
+			"recipe": [
+				[
+					"PW6",
+					3
+				],
+				[
+					"PG7",
+					0.4
+				],
+				[
+					"PY154",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Permanent Green Light 618",
+			"family": "green",
+			"code": "PG7, PY154",
+			"id": "lgreen",
+			"fav": 1,
+			"rgb": [
+				0.11,
+				0.3,
+				0.05
+			],
+			"s": 0.9,
+			"near": "green",
+			"comp": "red",
+			"note": "Brighter, yellower green.",
+			"label": "Light Green",
+			"pureL": 56.24324839954515,
+			"hue": 129.85781345173052,
+			"chroma": 48.13159901056582,
+			"recipe": null
+		},
+		{
+			"name": "Yellowish Green 617",
+			"family": "green",
+			"code": "PG7, PY154",
+			"id": "yellowish-green-617",
+			"rgb": [
+				0.05478165808905189,
+				0.20394041783587058,
+				0.03214197068293423
+			],
+			"s": 0.8823529411764708,
+			"label": "Yellowish Green",
+			"pureL": 46.95157571185658,
+			"hue": 134.4714495835271,
+			"chroma": 50.194798823286455,
+			"near": "sap-green-623",
+			"comp": "permanent-blue-violet-568",
+			"recipe": [
+				[
+					"PY154",
+					3
+				],
+				[
+					"PG7",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Permanent Green Deep 619",
+			"family": "green",
+			"code": "PG7, PY154",
+			"id": "permanent-green-deep-619",
+			"rgb": [
+				0.016127513228433088,
+				0.07788670028550726,
+				0.03978057508879651
+			],
+			"s": 1.22,
+			"label": "Permanent Green Deep",
+			"pureL": 29.912884157998107,
+			"hue": 159.85943540484936,
+			"chroma": 27.79024584112737,
+			"near": "viridian-616",
+			"comp": "permanent-violet-medium-537",
+			"recipe": [
+				[
+					"PG7",
+					1.5
+				],
+				[
+					"PY154",
+					1
+				]
+			]
+		},
+		{
+			"name": "Sap Green 623",
+			"family": "green",
+			"code": "PG7, PY110",
+			"id": "sap-green-623",
+			"rgb": [
+				0.029230594548554478,
+				0.10707957372633992,
+				0.01682697843441261
+			],
+			"s": 0.8846153846153845,
+			"label": "Sap Green",
+			"pureL": 34.804970759805514,
+			"hue": 134.38832906090408,
+			"chroma": 46.553915602080416,
+			"near": "olive-green-620",
+			"comp": "permanent-blue-violet-568",
+			"recipe": [
+				[
+					"PY110",
+					2
+				],
+				[
+					"PG7",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Olive Green 620",
+			"family": "green",
+			"code": "PG7, PY110, PR264",
+			"id": "olive-green-620",
+			"rgb": [
+				0.04129387335622248,
+				0.055309702527946314,
+				0.01586061191207122
+			],
+			"s": 0.8679245283018867,
+			"label": "Olive Green",
+			"pureL": 26.586593043550828,
+			"hue": 117.95842068104105,
+			"chroma": 27.193164565989147,
+			"near": "asphaltum-414",
+			"comp": "cobalt-blue-ultramarine-512",
+			"recipe": [
+				[
+					"PY110",
+					2
+				],
+				[
+					"PG7",
+					0.4
+				],
+				[
+					"PR264",
+					0.25
+				]
+			]
+		},
+		{
+			"name": "Olive Green Yellow 639",
+			"family": "green",
+			"code": "PG7, PY110, PR264",
+			"id": "olive-green-yellow-639",
+			"rgb": [
+				0.06179916388074069,
+				0.08450464387629975,
+				0.014071393553528821
+			],
+			"s": 0.791304347826087,
+			"label": "Olive Green Yellow",
+			"pureL": 32.83026549548996,
+			"hue": 114.71535331024683,
+			"chroma": 38.509399032212166,
+			"near": "olive-green-620",
+			"comp": "cobalt-blue-ultramarine-512",
+			"recipe": [
+				[
+					"PY110",
+					3
+				],
+				[
+					"PG7",
+					0.3
+				],
+				[
+					"PR264",
+					0.15
+				]
+			]
+		},
+		{
+			"name": "Chromium Oxide Green 668",
+			"family": "green",
+			"code": "PG17",
+			"id": "chromium-oxide-green-668",
+			"rgb": [
+				0.09999999999999964,
+				0.18000000000000016,
+				0.0699999999999994
+			],
+			"s": 0.5,
+			"label": "Chromium Oxide Green",
+			"pureL": 46.318249563720386,
+			"hue": 132.19264864141667,
+			"chroma": 24.495366440806674,
+			"near": "sap-green-623",
+			"comp": "permanent-blue-violet-568",
+			"recipe": [
+				[
+					"PG17",
+					1
+				]
+			]
+		},
+		{
+			"name": "Ultramarine Green 683",
+			"family": "green",
+			"code": "PB29, PY129",
+			"id": "ultramarine-green-683",
+			"rgb": [
+				0.08195571951600122,
+				0.07167320392543264,
+				0.027003675179393838
+			],
+			"s": 0.6666666666666666,
+			"label": "Ultramarine Green",
+			"pureL": 31.950835935462614,
+			"hue": 100.80134066859489,
+			"chroma": 22.87396264000259,
+			"near": "asphaltum-414",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY129",
+					2
+				],
+				[
+					"PB29",
+					1
+				]
+			]
+		},
+		{
+			"name": "Gold Ochre 231",
+			"family": "earth",
+			"code": "PY42",
+			"id": "gold-ochre-231",
+			"rgb": [
+				0.3611878129348327,
+				0.1739004142514884,
+				0.03806392113707524
+			],
+			"s": 0.5130434782608696,
+			"label": "Gold Ochre",
+			"pureL": 52.27646983108207,
+			"hue": 85.73197418541605,
+			"chroma": 37.69245199067247,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY42",
+					1
+				],
+				[
+					"PR101L",
+					0.15
+				]
+			]
+		},
+		{
+			"name": "Yellow Ochre 227",
+			"family": "earth",
+			"code": "PY42",
+			"id": "yellow-ochre-227",
+			"rgb": [
+				0.40000000000000013,
+				0.23999999999999977,
+				0.040000000000000924
+			],
+			"s": 0.5,
+			"label": "Yellow Ochre",
+			"pureL": 57.996782188786014,
+			"hue": 93.62092913305293,
+			"chroma": 41.59427338508828,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY42",
+					1
+				]
+			]
+		},
+		{
+			"name": "Yellow Ochre Light 228",
+			"family": "earth",
+			"code": "PBr24",
+			"id": "yellow-ochre-light-228",
+			"rgb": [
+				0.62,
+				0.45000000000000007,
+				0.1200000000000001
+			],
+			"s": 0.45,
+			"label": "Yellow Ochre Light",
+			"pureL": 73.69556375996036,
+			"hue": 97.89098135353908,
+			"chroma": 28.924231003348385,
+			"near": "raw-umber-408",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PBr24",
+					1
+				]
+			]
+		},
+		{
+			"name": "Transparent Oxide Yellow 265",
+			"family": "earth",
+			"code": "PY42",
+			"id": "transparent-oxide-yellow-265",
+			"rgb": [
+				0.34938759190100566,
+				0.20021308963000806,
+				0.037142098093699616
+			],
+			"s": 0.5,
+			"label": "Transparent Oxide Yellow",
+			"pureL": 54.0433258647611,
+			"hue": 91.69232351022265,
+			"chroma": 39.749147756522774,
+			"near": "asphaltum-414",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY42",
+					1
+				],
+				[
+					"PBr7S",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Raw Sienna 234",
+			"family": "earth",
+			"code": "PY42, PBk11",
+			"id": "raw-sienna-234",
+			"rgb": [
+				0.21120017315320938,
+				0.16155178561681316,
+				0.03912377443855064
+			],
+			"s": 0.5203883495145631,
+			"label": "Raw Sienna",
+			"pureL": 47.40031871573732,
+			"hue": 98.26525598058282,
+			"chroma": 33.276479566039676,
+			"near": "raw-umber-408",
+			"comp": "prussian-blue-508",
+			"recipe": [
+				[
+					"PY42",
+					2
+				],
+				[
+					"PBk11",
+					0.06
+				]
+			]
+		},
+		{
+			"name": "Light Oxide Red 339",
+			"family": "earth",
+			"code": "PR101",
+			"id": "light-oxide-red-339",
+			"rgb": [
+				0.23999999999999977,
+				0.0699999999999994,
+				0.030000000000001137
+			],
+			"s": 0.6,
+			"label": "Light Oxide Red",
+			"pureL": 38.42021888280439,
+			"hue": 58.170538571663315,
+			"chroma": 32.156423076413766,
+			"near": "transparent-oxide-red-378",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR101L",
+					1
+				]
+			]
+		},
+		{
+			"name": "Burnt Sienna 411",
+			"family": "earth",
+			"code": "PR101",
+			"id": "burnt-sienna-411",
+			"rgb": [
+				0.16000000000000014,
+				0.05000000000000071,
+				0.021999999999998465
+			],
+			"s": 0.6,
+			"label": "Burnt Sienna",
+			"pureL": 32.11552130440018,
+			"hue": 57.78789084329452,
+			"chroma": 30.45012436173601,
+			"near": "transparent-oxide-red-378",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR101",
+					1
+				]
+			]
+		},
+		{
+			"name": "Transparent Oxide Red 378",
+			"family": "earth",
+			"code": "PR101",
+			"id": "transparent-oxide-red-378",
+			"rgb": [
+				0.1200000000000001,
+				0.03500000000000014,
+				0.015000000000000568
+			],
+			"s": 0.7,
+			"label": "Transparent Oxide Red",
+			"pureL": 27.193356351451783,
+			"hue": 54.972700812078585,
+			"chroma": 31.548815800561915,
+			"near": "vandyke-brown-403",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR101T",
+					1
+				]
+			]
+		},
+		{
+			"name": "Transparent Red Ochre 419",
+			"family": "earth",
+			"code": "PBr25",
+			"id": "transparent-red-ochre-419",
+			"rgb": [
+				0.1113299811223003,
+				0.04230693995027224,
+				0.016425208820145087
+			],
+			"s": 0.7333333333333334,
+			"label": "Transparent Red Ochre",
+			"pureL": 28.14432665352699,
+			"hue": 64.14059846774381,
+			"chroma": 28.90521366106047,
+			"near": "vandyke-brown-403",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PBr25",
+					1
+				],
+				[
+					"PR101",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Red Earth 436",
+			"family": "earth",
+			"code": "PR290",
+			"id": "red-earth-436",
+			"rgb": [
+				0.12874460101146257,
+				0.03367144765001662,
+				0.020508459016053138
+			],
+			"s": 0.7333333333333334,
+			"label": "Red Earth",
+			"pureL": 27.55471950919165,
+			"hue": 43.25940238524589,
+			"chroma": 29.446878430429923,
+			"near": "vandyke-brown-403",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR290",
+					1
+				],
+				[
+					"PR101",
+					0.5
+				]
+			]
+		},
+		{
+			"name": "Permanent Madder Brown 324",
+			"family": "earth",
+			"code": "PR264, PR101, PV19",
+			"id": "permanent-madder-brown-324",
+			"rgb": [
+				0.16202776425992393,
+				0.01653339179879154,
+				0.02325811008231682
+			],
+			"s": 0.9130434782608695,
+			"label": "Permanent Madder Brown",
+			"pureL": 26.142853584100877,
+			"hue": 18.203024622451665,
+			"chroma": 41.826568524150375,
+			"near": "burnt-carmine-323",
+			"comp": "viridian-616",
+			"recipe": [
+				[
+					"PR101",
+					1
+				],
+				[
+					"PR264",
+					1
+				],
+				[
+					"PV19",
+					0.3
+				]
+			]
+		},
+		{
+			"name": "Raw Umber 408",
+			"family": "earth",
+			"code": "PY42, PBk11",
+			"id": "raw-umber-408",
+			"rgb": [
+				0.05971053510810975,
+				0.05691812367538951,
+				0.0347161149660149
+			],
+			"s": 0.6814814814814814,
+			"label": "Raw Umber",
+			"pureL": 28.35589975423668,
+			"hue": 104.37614251135653,
+			"chroma": 11.844382799187477,
+			"near": "asphaltum-414",
+			"comp": "pblue",
+			"recipe": [
+				[
+					"PY42",
+					1
+				],
+				[
+					"PBk11",
+					0.35
+				]
+			]
+		},
+		{
+			"name": "Burnt Umber 409",
+			"family": "earth",
+			"code": "PR101, PBk11",
+			"id": "burnt-umber-409",
+			"rgb": [
+				0.05730288449164611,
+				0.03922686374540518,
+				0.024713301650784558
+			],
+			"s": 0.7555555555555555,
+			"label": "Burnt Umber",
+			"pureL": 24.328931093562424,
+			"hue": 74.9850738815424,
+			"chroma": 12.66159198505966,
+			"near": "asphaltum-414",
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR101",
+					1
+				],
+				[
+					"PBk11",
+					0.35
+				]
+			]
+		},
+		{
+			"name": "Vandyke Brown 403",
+			"family": "earth",
+			"code": "PR101, PBk11",
+			"id": "vandyke-brown-403",
+			"rgb": [
+				0.04753706020606785,
+				0.03227252702784433,
+				0.020093325247660943
+			],
+			"s": 0.8875,
+			"label": "Vandyke Brown",
+			"pureL": 21.813253742845383,
+			"hue": 74.29878141053024,
+			"chroma": 12.432379415906418,
+			"near": null,
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PR101T",
+					1
+				],
+				[
+					"PBk11",
+					0.6
+				]
+			]
+		},
+		{
+			"name": "Asphaltum 414",
+			"family": "earth",
+			"code": "PY110, PR264, PG7",
+			"id": "asphaltum-414",
+			"rgb": [
+				0.03561742825515779,
+				0.027548656489841505,
+				0.018759535484949907
+			],
+			"s": 1.01,
+			"label": "Asphaltum",
+			"pureL": 19.486452927999323,
+			"hue": 80.3674328770403,
+			"chroma": 9.117822992889737,
+			"near": null,
+			"comp": "phthalo-turquoise-blue-565",
+			"recipe": [
+				[
+					"PY110",
+					1
+				],
+				[
+					"PR264",
+					0.6
+				],
+				[
+					"PG7",
+					0.4
+				]
+			]
+		},
+		{
+			"name": "Perylene Green Black 721",
+			"family": "gray",
+			"code": "PBk31",
+			"id": "perylene-green-black-721",
+			"rgb": [
+				0.02499999999999858,
+				0.03500000000000014,
+				0.027999999999998693
+			],
+			"s": 1.2,
+			"label": "Perylene Green Black",
+			"pureL": 20.96856796485733,
+			"hue": 154.39180681546338,
+			"chroma": 7.155256903175164,
+			"near": null,
+			"comp": null,
+			"recipe": [
+				[
+					"PBk31",
+					1
+				]
+			]
+		},
+		{
+			"name": "Payne's Grey 708",
+			"family": "gray",
+			"code": "PBk9, PB15, PV19",
+			"id": "paynes-grey-708",
+			"rgb": [
+				0.021704497091111108,
+				0.026637451988698047,
+				0.0411142837594749
+			],
+			"s": 1.15,
+			"label": "Payne's Grey",
+			"pureL": 18.6420106092744,
+			"hue": 276.8813204358921,
+			"chroma": 10.280169746390438,
+			"near": null,
+			"comp": "ultramarine-green-683",
+			"recipe": [
+				[
+					"PBk9",
+					1
+				],
+				[
+					"PB15",
+					0.3
+				],
+				[
+					"PV19",
+					0.1
+				]
+			]
+		},
+		{
+			"name": "Cold Grey 717",
+			"family": "gray",
+			"code": "PBk11, PB29, PW6",
+			"id": "cold-grey-717",
+			"rgb": [
+				0.13255593191032977,
+				0.12572996958698024,
+				0.15043422604234769
+			],
+			"s": 0.992,
+			"label": "Cold Grey",
+			"pureL": 42.60685330710476,
+			"hue": 301.9357101395723,
+			"chroma": 4.915324012034556,
+			"near": "paynes-grey-708",
+			"comp": null,
+			"recipe": [
+				[
+					"PW6",
+					2
+				],
+				[
+					"PBk11",
+					0.3
+				],
+				[
+					"PB29",
+					0.2
+				]
+			]
+		},
+		{
+			"name": "Warm Grey 718",
+			"family": "gray",
+			"code": "PR101, PBk11, PW6",
+			"id": "warm-grey-718",
+			"rgb": [
+				0.1509633051396002,
+				0.13702258378728205,
+				0.11693773897630955
+			],
+			"s": 0.992,
+			"label": "Warm Grey",
+			"pureL": 44.022277545365625,
+			"hue": 86.15484830812522,
+			"chroma": 4.61623732956525,
+			"near": "paynes-grey-708",
+			"comp": null,
+			"recipe": [
+				[
+					"PW6",
+					2
+				],
+				[
+					"PBk11",
+					0.3
+				],
+				[
+					"PR101",
+					0.2
+				]
+			]
+		},
+		{
+			"name": "Ivory Black 701",
+			"family": "gray",
+			"code": "PBk9",
+			"id": "ivory-black-701",
+			"rgb": [
+				0.03200000000000003,
+				0.030999999999998806,
+				0.032999999999999474
+			],
+			"s": 1,
+			"label": "Ivory Black",
+			"pureL": 20.579364648590833,
+			"hue": 309.4580033254954,
+			"chroma": 1.5103630198585125,
+			"near": null,
+			"comp": null,
+			"recipe": [
+				[
+					"PBk9",
+					1
+				]
+			]
+		},
+		{
+			"name": "Lamp Black 702",
+			"family": "gray",
+			"code": "PBk9, PB29",
+			"id": "lamp-black-702",
+			"rgb": [
+				0.03270056249056985,
+				0.03088967668059439,
+				0.035996988712913236
+			],
+			"s": 0.9333333333333335,
+			"label": "Lamp Black",
+			"pureL": 20.690400823110167,
+			"hue": 304.65455416379814,
+			"chroma": 3.6636715653109784,
+			"near": null,
+			"comp": null,
+			"recipe": [
+				[
+					"PBk9",
+					1
+				],
+				[
+					"PB29",
+					0.2
+				]
+			]
+		}
+	]
+}

@@ -1,0 +1,264 @@
+<script lang="ts">
+	import { YfromL, fillMap, toSRGB } from '#lib/engine/index.ts';
+	import { studio } from '#lib/studio.svelte.ts';
+	import { openPanel } from '#lib/nav.ts';
+
+	let {
+		height = '46dvh',
+		toggle = true,
+		enlarge = true,
+		brush = false,
+		fill = false
+	}: {
+		height?: string;
+		toggle?: boolean;
+		enlarge?: boolean;
+		brush?: boolean;
+		/** Fill the frame it sits in, as the study screens do. */
+		fill?: boolean;
+	} = $props();
+
+	let canvas = $state<HTMLCanvasElement>();
+	let strokes = $state(0);
+	let down = false;
+
+	const views = [
+		{ id: 'photo', label: 'Photo' },
+		{ id: 'values', label: 'Values' },
+		{ id: 'map', label: 'Paint' }
+	] as const;
+	const brushActive = $derived(brush && studio.brushing);
+
+	function draw() {
+		const { study, photo, size, display, settings, selected, mask } = studio;
+		if (!canvas || !study || !photo) return;
+		// Drawn at the sharp size, so a large picture stays crisp.
+		const W = display.width || size.width;
+		const H = display.height || size.height;
+		canvas.width = W;
+		canvas.height = H;
+		const g = canvas.getContext('2d') as CanvasRenderingContext2D;
+		if (settings.show === 'photo') {
+			g.drawImage(photo.image, 0, 0, W, H);
+		} else {
+			const colors = study.zones.map((z) => {
+				if (settings.show === 'map') return z.mix.map(toSRGB);
+				const v = toSRGB(YfromL(z.L));
+				return [v, v, v];
+			});
+			const sharp = study.sharp;
+			if (sharp && sharp.width === W && sharp.height === H) {
+				const image = g.createImageData(W, H);
+				fillMap(image, sharp.assign, colors, selected);
+				g.putImageData(image, 0, 0);
+			} else {
+				// Until the sharp map arrives, scale up the analysis map with hard edges.
+				const small = new OffscreenCanvas(size.width, size.height);
+				const sg = small.getContext('2d') as OffscreenCanvasRenderingContext2D;
+				const image = sg.createImageData(size.width, size.height);
+				fillMap(image, study.assign, colors, selected);
+				sg.putImageData(image, 0, 0);
+				g.imageSmoothingEnabled = false;
+				g.drawImage(small, 0, 0, W, H);
+			}
+		}
+		if (brushActive && mask.some((v) => v > 0)) {
+			const image = g.getImageData(0, 0, W, H);
+			const d = image.data;
+			const sx = size.width / W;
+			const sy = size.height / H;
+			for (let y = 0, i = 0; y < H; y++) {
+				const row = Math.min(size.height - 1, Math.floor(y * sy)) * size.width;
+				for (let x = 0; x < W; x++, i += 4) {
+					const m = mask[row + Math.min(size.width - 1, Math.floor(x * sx))];
+					if (m > 0) {
+						const a = 0.5 * m;
+						d[i] += (255 - d[i]) * a;
+						d[i + 1] += (194 - d[i + 1]) * a;
+						d[i + 2] += (26 - d[i + 2]) * a;
+					}
+				}
+			}
+			g.putImageData(image, 0, 0);
+		}
+	}
+
+	$effect(() => {
+		void strokes;
+		draw();
+	});
+
+	function stamp(event: PointerEvent) {
+		if (!canvas) return;
+		const box = canvas.getBoundingClientRect();
+		const { width: W, height: H } = studio.size;
+		// The picture is letterboxed to fit its frame, so measure the drawn area.
+		const scale = Math.min(box.width / W, box.height / H);
+		const left = box.left + (box.width - W * scale) / 2;
+		const top = box.top + (box.height - H * scale) / 2;
+		const cx = (event.clientX - left) / scale;
+		const cy = (event.clientY - top) / scale;
+		const rad = studio.brushSize / scale / 2;
+		const x0 = Math.max(0, Math.floor(cx - rad));
+		const x1 = Math.min(W - 1, Math.ceil(cx + rad));
+		const y0 = Math.max(0, Math.floor(cy - rad));
+		const y1 = Math.min(H - 1, Math.ceil(cy + rad));
+		for (let y = y0; y <= y1; y++) {
+			for (let x = x0; x <= x1; x++) {
+				const d = Math.hypot(x - cx, y - cy) / rad;
+				if (d >= 1) continue;
+				const m = 1 - d * d;
+				const k = y * W + x;
+				if (m > studio.mask[k]) studio.mask[k] = m;
+			}
+		}
+		const g = canvas.getContext('2d') as CanvasRenderingContext2D;
+		const k = canvas.width / W;
+		g.fillStyle = 'rgba(255,194,26,.25)';
+		g.beginPath();
+		g.arc(cx * k, cy * k, rad * k, 0, Math.PI * 2);
+		g.fill();
+	}
+
+	function pointerdown(event: PointerEvent) {
+		if (!brushActive) return;
+		down = true;
+		canvas?.setPointerCapture(event.pointerId);
+		stamp(event);
+		event.preventDefault();
+	}
+
+	function pointermove(event: PointerEvent) {
+		if (down) stamp(event);
+	}
+
+	function pointerup() {
+		if (!down) return;
+		down = false;
+		strokes++;
+		studio.commitMask();
+	}
+</script>
+
+<div class="picture" class:fill>
+	<canvas
+		bind:this={canvas}
+		class:brushing={brushActive}
+		style:--height={height}
+		aria-label="Your photo or its value map"
+		onpointerdown={pointerdown}
+		onpointermove={pointermove}
+		onpointerup={pointerup}
+		onpointercancel={pointerup}
+	></canvas>
+	{#if toggle}
+		<div class="views" role="group" aria-label="Show">
+			{#each views as view (view.id)}
+				<button
+					type="button"
+					aria-pressed={studio.settings.show === view.id}
+					onclick={() => (studio.settings.show = view.id)}
+				>
+					{view.label}
+				</button>
+			{/each}
+		</div>
+	{/if}
+	{#if enlarge}
+		<button
+			type="button"
+			class="enlarge"
+			aria-label="Enlarge the picture"
+			onclick={() => openPanel('lightbox')}
+		>
+			<svg
+				width="18"
+				height="18"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg
+			>
+		</button>
+	{/if}
+</div>
+
+<style>
+	/* The controls sit on the picture, so it keeps all the room it is given. */
+	.picture {
+		position: relative;
+		min-width: 0;
+	}
+
+	/* Filling a frame, the controls sit in that frame's corners instead. */
+	.picture.fill {
+		position: static;
+		width: 100%;
+		height: 100%;
+	}
+
+	canvas {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: var(--height);
+		object-fit: contain;
+		border-radius: 16px;
+		background: var(--surface);
+	}
+
+	.fill canvas {
+		height: 100%;
+		max-height: none;
+		border-radius: 0;
+		background: none;
+	}
+
+	canvas.brushing {
+		cursor: crosshair;
+		touch-action: none;
+	}
+
+	.views {
+		position: absolute;
+		left: 12px;
+		bottom: 12px;
+		display: flex;
+		padding: 4px;
+		border-radius: 16px;
+		background: var(--bg);
+		box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+	}
+
+	.views button {
+		min-height: 40px;
+		padding: 0 14px;
+		border: 0;
+		border-radius: 12px;
+		background: transparent;
+		font-size: 15px;
+		font-weight: 700;
+	}
+
+	.views button[aria-pressed='true'] {
+		background: var(--accent);
+		color: var(--on-accent);
+	}
+
+	.enlarge {
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
+		display: grid;
+		place-items: center;
+		width: 48px;
+		height: 48px;
+		border: 0;
+		border-radius: 14px;
+		background: var(--bg);
+		box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+	}
+</style>

@@ -1,0 +1,223 @@
+:root {
+	/* Night Easel: a dark studio, so the picture is the brightest thing on screen. */
+	--bg: #17161c;
+	--surface: #24222c;
+	--control: #24222c;
+	--bar: #201e27;
+	--border: #5a5668;
+	--line: #34313d;
+	--text: #f3f0ea;
+	--text-secondary: #b7b2c2;
+	--accent: #f2b632;
+	--accent-hover: #ffd166;
+	--on-accent: #241b03;
+	--danger: #ff9b8a;
+	font-family:
+		'Manrope Variable',
+		system-ui,
+		-apple-system,
+		sans-serif;
+	color-scheme: dark;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-size: 16px;
+	line-height: 1.4;
+	-webkit-text-size-adjust: 100%;
+}
+
+button,
+input {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 2px;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 1.1;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+a {
+	color: var(--accent);
+}
+
+a:hover {
+	color: var(--accent-hover);
+}
+
+.muted {
+	color: var(--text-secondary);
+	font-size: 15px;
+}
+
+.label {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.screen {
+	width: 100%;
+	max-width: 560px;
+	min-height: 100dvh;
+	margin: 0 auto;
+	padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 0
+		max(20px, env(safe-area-inset-left));
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	min-height: 56px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 16px;
+	background: var(--accent);
+	color: var(--on-accent);
+	font-size: 17px;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.button:not(.soft):not(:disabled):hover {
+	background: var(--accent-hover);
+}
+
+.button.soft {
+	background: var(--surface);
+	color: var(--text);
+}
+
+.button.small {
+	min-height: 44px;
+	padding: 0 16px;
+	border-radius: 14px;
+	font-size: 15px;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	border: 0;
+	background: none;
+	color: var(--accent);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.link:hover {
+	color: var(--accent-hover);
+}
+
+.card {
+	border-radius: 16px;
+	background: var(--surface);
+}
+
+.row-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 52px;
+	padding: 8px 16px;
+	border: 0;
+	border-radius: 14px;
+	background: var(--surface);
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	gap: 10px;
+	margin-top: auto;
+	padding: 10px 0 max(16px, env(safe-area-inset-bottom));
+	background: var(--bg);
+}
+
+.actions .grow {
+	flex: 1;
+}
+
+.message {
+	padding: 10px 14px;
+	border-radius: 14px;
+	background: var(--surface);
+	color: var(--danger);
+	font-size: 15px;
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	min-width: 0;
+}
+
+/* Inside a study step: the heading, and the button that moves on, kept in reach. */
+.step-head {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.step-head h1 {
+	font-size: 24px;
+}
+
+.step-actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-top: auto;
+	padding: 12px 0 16px;
+	background: linear-gradient(transparent, var(--panel, var(--bg)) 14px);
+}
