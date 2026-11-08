@@ -1,0 +1,11 @@
+# Streams the database to object storage (Tigris on Fly.io, or any S3-compatible store).
+# The values come from the secrets that `fly storage create` sets.
+dbs:
+  - path: ${DATABASE_PATH}
+    replicas:
+      - type: s3
+        bucket: ${BUCKET_NAME}
+        path: huevalue.db
+        endpoint: ${AWS_ENDPOINT_URL_S3}
+        region: ${AWS_REGION}
+        sync-interval: 10s

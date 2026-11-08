@@ -1,0 +1,49 @@
+# Deploys the API to staging on Fly.io when a change to it reaches main.
+# Needs the FLY_API_TOKEN repository secret; until it is set, this job does nothing.
+name: API deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ['api/**', 'data/**', 'openapi.yaml', '.github/workflows/api-deploy.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: api-deploy-staging
+  cancel-in-progress: false
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: staging
+    env:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+    steps:
+      - name: Check for the Fly.io token
+        id: token
+        run: |
+          if [ -z "$FLY_API_TOKEN" ]; then
+            echo "No FLY_API_TOKEN secret yet, so nothing is deployed." >> "$GITHUB_STEP_SUMMARY"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.token.outputs.ready == 'true'
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+        if: steps.token.outputs.ready == 'true'
+      - name: Deploy
+        if: steps.token.outputs.ready == 'true'
+        run: >
+          flyctl deploy . --remote-only
+          --config api/fly.staging.toml --dockerfile api/Dockerfile
+          --build-arg VERSION=${{ github.sha }}
+      - name: Check it answers
+        if: steps.token.outputs.ready == 'true'
+        run: |
+          for i in $(seq 20); do
+            curl -sf https://hue-value-api-staging.fly.dev/v1/health | grep -q '"${{ github.sha }}"' && exit 0
+            sleep 6
+          done
+          echo "Staging did not report the new version." && exit 1
