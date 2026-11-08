@@ -1,0 +1,346 @@
+openapi: 3.0.3
+info:
+  title: Hue & Value API
+  version: 0.1.0
+  description: |
+    The catalog of paints and pigments behind Hue & Value, and later accounts and palettes.
+    Both the Go server and the app's TypeScript client are generated from this file, so a
+    change starts here.
+servers:
+  - url: https://api.huevalue.com
+    description: Production
+  - url: http://localhost:8080
+    description: Local
+tags:
+  - name: system
+  - name: catalog
+
+paths:
+  /v1/health:
+    get:
+      tags: [system]
+      operationId: getHealth
+      summary: Whether the server is up, and which build it runs
+      responses:
+        '200':
+          description: The server is up.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Health' }
+
+  /v1/brands:
+    get:
+      tags: [catalog]
+      operationId: listBrands
+      summary: Every brand, with its product lines
+      responses:
+        '200':
+          description: The brands, by name.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [brands]
+                properties:
+                  brands:
+                    type: array
+                    items: { $ref: '#/components/schemas/Brand' }
+
+  /v1/lines:
+    get:
+      tags: [catalog]
+      operationId: listLines
+      summary: Every product line, such as W&N Artisan or Cobra Artist
+      parameters:
+        - name: brand
+          in: query
+          description: Only the lines of this brand.
+          schema: { type: string, example: winsor-newton }
+      responses:
+        '200':
+          description: The lines.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [lines]
+                properties:
+                  lines:
+                    type: array
+                    items: { $ref: '#/components/schemas/Line' }
+
+  /v1/lines/{line}:
+    get:
+      tags: [catalog]
+      operationId: getLine
+      summary: One product line
+      parameters:
+        - $ref: '#/components/parameters/LineId'
+      responses:
+        '200':
+          description: The line.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Line' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /v1/lines/{line}/items:
+    get:
+      tags: [catalog]
+      operationId: listItems
+      summary: Every paint in a product line, in catalog order
+      parameters:
+        - $ref: '#/components/parameters/LineId'
+        - name: family
+          in: query
+          description: Only paints of this color family.
+          schema: { $ref: '#/components/schemas/Family' }
+      responses:
+        '200':
+          description: The paints.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Item' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /v1/lines/{line}/items/{item}:
+    get:
+      tags: [catalog]
+      operationId: getItem
+      summary: One paint
+      parameters:
+        - $ref: '#/components/parameters/LineId'
+        - name: item
+          in: path
+          required: true
+          schema: { type: string, example: blue }
+      responses:
+        '200':
+          description: The paint.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Item' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /v1/items/search:
+    get:
+      tags: [catalog]
+      operationId: searchItems
+      summary: Search paints in every line by name and pigment codes
+      description: |
+        Works as the app's color picker does. Pigment codes in the query (PB29, P Bk 9, PR101+PY42)
+        find paints containing them, grouped by how closely their pigments match; other words narrow
+        those by name. Without codes, the query matches names and codes across every line. An empty
+        query browses one line by color family.
+      parameters:
+        - name: q
+          in: query
+          schema: { type: string, example: phthalo PB15 }
+        - name: line
+          in: query
+          description: The line an empty query browses.
+          schema: { type: string, default: artisan }
+      responses:
+        '200':
+          description: The results, grouped.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SearchResult' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /v1/pigments:
+    get:
+      tags: [catalog]
+      operationId: listPigments
+      summary: Every pigment the mixing model knows
+      responses:
+        '200':
+          description: The pigments.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [pigments]
+                properties:
+                  pigments:
+                    type: array
+                    items: { $ref: '#/components/schemas/Pigment' }
+
+  /v1/pigments/{code}:
+    get:
+      tags: [catalog]
+      operationId: getPigment
+      summary: One pigment, with the paints that contain it
+      parameters:
+        - name: code
+          in: path
+          required: true
+          schema: { type: string, example: PB29 }
+      responses:
+        '200':
+          description: The pigment.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PigmentDetail' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+components:
+  parameters:
+    LineId:
+      name: line
+      in: path
+      required: true
+      schema: { type: string, example: artisan }
+
+  responses:
+    NotFound:
+      description: Nothing has that id.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+
+  schemas:
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string, example: not_found }
+        message: { type: string, example: No such address. }
+
+    Health:
+      type: object
+      required: [status, version, env]
+      properties:
+        status: { type: string, example: ok }
+        version: { type: string, example: v0.1.0 }
+        env: { type: string, enum: [local, staging, production] }
+
+    Brand:
+      type: object
+      required: [id, name, lines]
+      properties:
+        id: { type: string, example: winsor-newton }
+        name: { type: string, example: Winsor & Newton }
+        lines:
+          type: array
+          items: { $ref: '#/components/schemas/Line' }
+
+    Medium:
+      type: string
+      enum: [water-mixable oil, oil, acrylic, watercolor, colored pencil]
+
+    Line:
+      type: object
+      required: [id, brand, name, label, medium, white, itemCount]
+      properties:
+        id: { type: string, example: artisan }
+        brand: { type: string, description: The brand's id., example: winsor-newton }
+        name: { type: string, example: Artisan }
+        label: { type: string, description: How the app names the line., example: Winsor & Newton Artisan }
+        medium: { $ref: '#/components/schemas/Medium' }
+        white: { type: string, description: The line's titanium white., example: Titanium White }
+        itemCount: { type: integer, example: 36 }
+
+    Family:
+      type: string
+      enum: [blue, green, yellow, orange, red, pink, violet, earth, gray]
+
+    RGB:
+      type: array
+      description: Linear RGB, each from 0 to 1, as the mixing model uses it.
+      minItems: 3
+      maxItems: 3
+      items: { type: number, format: double }
+
+    PigmentPart:
+      type: object
+      required: [code, parts]
+      properties:
+        code: { type: string, example: PB15 }
+        parts: { type: number, format: double, example: 1 }
+
+    Item:
+      type: object
+      required: [line, id, name, label, family, code, rgb, strength, pureL, hue, chroma, recipe]
+      properties:
+        line: { type: string, example: artisan }
+        id: { type: string, example: blue }
+        name: { type: string, example: French Ultramarine }
+        label: { type: string, description: A short name used in sentences., example: Ultramarine }
+        family: { $ref: '#/components/schemas/Family' }
+        code: { type: string, description: The pigment codes printed on the tube., example: PB29 }
+        rgb: { $ref: '#/components/schemas/RGB' }
+        strength: { type: number, format: double, description: Tinting strength for the mixing model. }
+        pureL: { type: number, format: double, description: Lightness straight from the tube, 0 to 100. }
+        hue: { type: number, format: double }
+        chroma: { type: number, format: double }
+        near: { type: string, nullable: true, description: The paint in this line that darkens it in the same family. }
+        comp: { type: string, nullable: true, description: The paint in this line that is its complement. }
+        note: { type: string, nullable: true }
+        favorite: { type: integer, nullable: true, description: Set for the paints the app suggests first. }
+        recipe:
+          type: array
+          nullable: true
+          description: The pigments it is modeled from, or null when its color was set by hand.
+          items: { $ref: '#/components/schemas/PigmentPart' }
+
+    Pigment:
+      type: object
+      required: [code, rgb, strength]
+      properties:
+        code: { type: string, example: PB29 }
+        rgb: { $ref: '#/components/schemas/RGB' }
+        strength: { type: number, format: double }
+
+    PigmentDetail:
+      allOf:
+        - $ref: '#/components/schemas/Pigment'
+        - type: object
+          required: [items]
+          properties:
+            items:
+              type: array
+              description: The paints modeled with this pigment.
+              items: { $ref: '#/components/schemas/ItemRef' }
+
+    ItemRef:
+      type: object
+      required: [line, id, name]
+      properties:
+        line: { type: string }
+        id: { type: string }
+        name: { type: string }
+
+    SearchResult:
+      type: object
+      required: [intro, groups]
+      properties:
+        intro: { type: string }
+        groups:
+          type: array
+          items: { $ref: '#/components/schemas/SearchGroup' }
+
+    SearchGroup:
+      type: object
+      required: [title, items]
+      properties:
+        title: { type: string, example: Same pigments · 2 }
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/SearchItem' }
+
+    SearchItem:
+      type: object
+      required: [line, id, name, meta, showLine]
+      properties:
+        line: { type: string }
+        id: { type: string }
+        name: { type: string }
+        meta: { type: string, example: PB29 · value 2.4 }
+        showLine: { type: boolean, description: Show the line beside the name, because the results span lines. }
