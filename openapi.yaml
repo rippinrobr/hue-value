@@ -75,7 +75,7 @@ paths:
       operationId: getLine
       summary: One product line
       parameters:
-        - $ref: '#/components/parameters/Line'
+        - $ref: '#/components/parameters/LineId'
       responses:
         '200':
           description: The line.
@@ -90,7 +90,7 @@ paths:
       operationId: listItems
       summary: Every paint in a product line, in catalog order
       parameters:
-        - $ref: '#/components/parameters/Line'
+        - $ref: '#/components/parameters/LineId'
         - name: family
           in: query
           description: Only paints of this color family.
@@ -115,7 +115,7 @@ paths:
       operationId: getItem
       summary: One paint
       parameters:
-        - $ref: '#/components/parameters/Line'
+        - $ref: '#/components/parameters/LineId'
         - name: item
           in: path
           required: true
@@ -192,7 +192,7 @@ paths:
 
 components:
   parameters:
-    Line:
+    LineId:
       name: line
       in: path
       required: true
