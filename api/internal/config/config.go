@@ -23,6 +23,10 @@ type Config struct {
 	LogLevel slog.Level
 	// ShutdownTimeout is how long open requests get to finish when the server stops.
 	ShutdownTimeout time.Duration
+	// DatabasePath is the SQLite file.
+	DatabasePath string
+	// DataDir holds the catalog seed files that `server seed` loads.
+	DataDir string
 }
 
 // Load reads the configuration. getenv is os.Getenv outside of tests.
@@ -33,6 +37,8 @@ func Load(getenv func(string) string) (Config, error) {
 		Version:         or(getenv("APP_VERSION"), "dev"),
 		LogLevel:        slog.LevelInfo,
 		ShutdownTimeout: 10 * time.Second,
+		DatabasePath:    or(getenv("DATABASE_PATH"), "huevalue.db"),
+		DataDir:         or(getenv("DATA_DIR"), "../data"),
 	}
 	switch c.Env {
 	case "local", "staging", "production":

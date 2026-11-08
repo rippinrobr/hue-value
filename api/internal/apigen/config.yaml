@@ -1,0 +1,9 @@
+# Generates the API's types and server interface from openapi.yaml. Run `go generate ./...`
+# from api/ after changing the contract.
+package: apigen
+output: apigen.gen.go
+generate:
+  models: true
+  std-http-server: true
+  strict-server: true
+  embedded-spec: true

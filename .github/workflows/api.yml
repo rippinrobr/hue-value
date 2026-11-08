@@ -1,31 +1,68 @@
-# Checks the API on every pull request and on main: formatting, go vet and the tests.
+# Checks the API: on every pull request, on main, and on pushes to working branches.
+#
+# This repo's cloud workspace can't download Go packages, so on a working branch this job also
+# fetches them, regenerates the code from openapi.yaml, and commits go.mod, go.sum and
+# apigen.gen.go back to the branch. On main and in pull requests it only checks that those
+# files are already up to date.
 name: API
 
 on:
   pull_request:
     paths: ['api/**', 'data/**', 'openapi.yaml', 'app/tests/golden/cases/search.json', '.github/workflows/api.yml']
   push:
-    branches: [main]
     paths: ['api/**', 'data/**', 'openapi.yaml', 'app/tests/golden/cases/search.json', '.github/workflows/api.yml']
 
+permissions:
+  contents: write
+
 concurrency:
-  group: api-${{ github.ref }}
+  group: api-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     defaults:
       run:
         working-directory: api
+    env:
+      # Keep go.mod on the Go version it names, rather than moving it up.
+      GOTOOLCHAIN: local
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version-file: api/go.mod
-          cache-dependency-path: api/go.sum
+          cache: false
+      - name: Fetch packages and regenerate code
+        run: |
+          go get -tool github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@v2.4.1
+          go get modernc.org/sqlite@v1.34.5 github.com/oapi-codegen/runtime@v1.1.1
+          go generate ./...
+          go mod tidy
+      - name: Commit the regenerated files to the branch
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        run: |
+          if [ -n "$(git status --porcelain .)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A .
+            git commit -m "Regenerate the API code and its package list"
+            git push
+          fi
+      - name: The generated files are up to date
+        if: github.event_name != 'push' || github.ref == 'refs/heads/main'
+        run: git diff --exit-code -- .
       - name: Formatting
         run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
       - run: go vet ./...
       - run: go test -race ./...
+      - name: The server starts, seeds and answers
+        run: |
+          export DATABASE_PATH=$RUNNER_TEMP/ci.db DATA_DIR=../data PORT=8080
+          go run ./cmd/server seed
+          (go run ./cmd/server > $RUNNER_TEMP/server.log 2>&1 &)
+          for i in $(seq 30); do curl -sf localhost:8080/v1/health && break; sleep 1; done
+          curl -sf localhost:8080/v1/brands | head -c 300; echo
+          curl -sf "localhost:8080/v1/items/search?q=PB29" | head -c 300; echo

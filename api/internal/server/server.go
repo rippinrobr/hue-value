@@ -9,13 +9,27 @@ import (
 	"runtime/debug"
 	"time"
 
+	"github.com/rippinrobr/hue-value/api/internal/apigen"
+	"github.com/rippinrobr/hue-value/api/internal/catalog"
 	"github.com/rippinrobr/hue-value/api/internal/config"
 )
 
-// New returns the API's handler, with request logging and panic recovery around it.
-func New(cfg config.Config, log *slog.Logger) http.Handler {
+// New returns the API's handler, with request logging and panic recovery around it. The routes
+// come from openapi.yaml, through the generated apigen package.
+func New(cfg config.Config, log *slog.Logger, cat *catalog.Catalog) http.Handler {
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /v1/health", health(cfg))
+	badRequest := func(w http.ResponseWriter, r *http.Request, err error) {
+		writeError(w, http.StatusBadRequest, "bad_request", err.Error())
+	}
+	strict := apigen.NewStrictHandlerWithOptions(&handlers{cfg: cfg, cat: cat}, nil,
+		apigen.StrictHTTPServerOptions{
+			RequestErrorHandlerFunc: badRequest,
+			ResponseErrorHandlerFunc: func(w http.ResponseWriter, r *http.Request, err error) {
+				log.Error("handler failed", "path", r.URL.Path, "error", err)
+				writeError(w, http.StatusInternalServerError, "internal", "Something went wrong.")
+			},
+		})
+	apigen.HandlerWithOptions(strict, apigen.StdHTTPServerOptions{BaseRouter: mux, ErrorHandlerFunc: badRequest})
 	return recoverPanics(log, logRequests(log, jsonMisses(mux)))
 }
 
@@ -38,20 +52,6 @@ func jsonMisses(mux *http.ServeMux) http.Handler {
 		}
 		writeError(w, http.StatusNotFound, "not_found", "No such address.")
 	})
-}
-
-// Health is the body of GET /v1/health.
-type Health struct {
-	Status  string `json:"status"`
-	Version string `json:"version"`
-	Env     string `json:"env"`
-}
-
-func health(cfg config.Config) http.HandlerFunc {
-	body := Health{Status: "ok", Version: cfg.Version, Env: cfg.Env}
-	return func(w http.ResponseWriter, r *http.Request) {
-		writeJSON(w, http.StatusOK, body)
-	}
 }
 
 // Error is the body of every error response.
