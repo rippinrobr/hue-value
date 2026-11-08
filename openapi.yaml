@@ -119,7 +119,7 @@ paths:
         - name: item
           in: path
           required: true
-          schema: { type: string, example: french-ultramarine }
+          schema: { type: string, example: blue }
       responses:
         '200':
           description: The paint.
@@ -270,7 +270,7 @@ components:
       required: [line, id, name, label, family, code, rgb, strength, pureL, hue, chroma, recipe]
       properties:
         line: { type: string, example: artisan }
-        id: { type: string, example: french-ultramarine }
+        id: { type: string, example: blue }
         name: { type: string, example: French Ultramarine }
         label: { type: string, description: A short name used in sentences., example: Ultramarine }
         family: { $ref: '#/components/schemas/Family' }

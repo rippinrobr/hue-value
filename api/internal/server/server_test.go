@@ -153,9 +153,9 @@ func TestItems(t *testing.T) {
 		Name string `json:"name"`
 		Code string `json:"code"`
 	}
-	get(t, h, http.MethodGet, "/v1/lines/artisan/items/french-ultramarine", &one)
+	get(t, h, http.MethodGet, "/v1/lines/artisan/items/blue", &one)
 	if one.Name != "French Ultramarine" || one.Code != "PB29" {
-		t.Errorf("french-ultramarine %+v", one)
+		t.Errorf("artisan/blue %+v", one)
 	}
 	if rec := get(t, h, http.MethodGet, "/v1/lines/artisan/items/nope", nil); rec.Code != 404 {
 		t.Errorf("missing item: %d", rec.Code)
